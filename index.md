@@ -1,6 +1,7 @@
 ---
-nav_exclude: true
-search_exclude: true
+title: Home
+nav_order: 1
+permalink: /
 ---
 
 # Hello there! 👋
