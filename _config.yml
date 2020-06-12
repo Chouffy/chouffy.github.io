@@ -65,6 +65,6 @@ search_tokenizer_separator: /[\s/]+/
 heading_anchors: true
 
 # Footer content appears at the bottom of every page's main content
-footer_content: "Copyright &copy; since 2020 Chouffy. Distributed by an <a href=\"https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt\">MIT license.</a>"
+footer_content: "Copyright since 2020 &copy; Chouffy. This work is licensed under <a href=\"https://github.com/chouffy/chouffy.github.io/tree/master/LICENSE.txt\">CC BY 4.0</a>."
 
 ## end of theme settings
