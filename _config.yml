@@ -21,33 +21,11 @@
 title: Chouffy's Notes
 email: notes@chouffy.net
 description: Notes on research I do, mostly related to IT software & hardware.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://chouffy.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 
-
-## just-the-docs theme settings 
-
-# Enable or disable the site search
-# Supports true (default) or false
-search_enabled: true
-
-# Enable support for hyphenated search words:
-search_tokenizer_separator: /[\s/]+/
-
-# Heading anchor links appear on hover over h1-h6 tags in page content
-# allowing users to deep link to a particular heading on a page.
-#
-# Supports true (default) or false/nil
-heading_anchors: true
-
-# Footer content appears at the bottom of every page's main content
-footer_content: "Copyright &copy; since 2020 Chouffy. Distributed by an <a href=\"https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt\">MIT license.</a>"
-
-## end of theme settings
-
-
 # Build settings
-theme: just-the-docs
+remote_theme: just-the-docs
 plugins:
   - jekyll-feed
 
@@ -70,3 +48,23 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+## just-the-docs theme settings 
+
+# Enable or disable the site search
+# Supports true (default) or false
+search_enabled: true
+
+# Enable support for hyphenated search words:
+search_tokenizer_separator: /[\s/]+/
+
+# Heading anchor links appear on hover over h1-h6 tags in page content
+# allowing users to deep link to a particular heading on a page.
+#
+# Supports true (default) or false/nil
+heading_anchors: true
+
+# Footer content appears at the bottom of every page's main content
+footer_content: "Copyright &copy; since 2020 Chouffy. Distributed by an <a href=\"https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt\">MIT license.</a>"
+
+## end of theme settings
