@@ -22,7 +22,7 @@ title: Chouffy's Notes
 email: notes@chouffy.net
 description: Notes on research I do, mostly related to IT software & hardware.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://chouffy.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://chouffy.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 remote_theme: pmarsceill/just-the-docs
