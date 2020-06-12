@@ -22,7 +22,7 @@ title: Chouffy's Notes
 email: notes@chouffy.net
 description: Notes on research I do, mostly related to IT software & hardware.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://chouffy.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 
 
 ## just-the-docs theme settings 
@@ -41,7 +41,7 @@ search_tokenizer_separator: /[\s/]+/
 heading_anchors: true
 
 # Footer content appears at the bottom of every page's main content
-footer_content: "Footer to be defined"
+footer_content: "Copyright &copy; since 2020 Chouffy. Distributed by an <a href=\"https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt\">MIT license.</a>"
 
 ## end of theme settings
 
