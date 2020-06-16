@@ -93,6 +93,8 @@ Be careful to update `layout:` in your posts to ones defined in the theme.
 Search need to be initialized with `bundle exec just-the-docs rake search:init`  
 `_config.yml` options are [here](https://pmarsceill.github.io/just-the-docs/docs/configuration/)
 
+For HTTPS, don't forget to put "https://" [in your CNAME](https://github.com/pmarsceill/just-the-docs/issues/287) and enforce HTTPS in GitHub Pages settings.
+
 # Templates 
 
 ## Layout
