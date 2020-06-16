@@ -2,7 +2,7 @@
 parent: Devices
 ---
 
-# Libratone API
+# Libratone Zipp
 
 *Goal*: Send commands (voicing, volume, playback) to Libratone Zipp speaker from anything, not just the iOS/Android app. Request of documentation has been declined by Libratone.
 
