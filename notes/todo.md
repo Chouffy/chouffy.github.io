@@ -10,6 +10,4 @@ parent: Home
 
 ## Notes
 
-* Lanuages
-    * CSS
-        * Add PDF concerning flexboxsheet
+* Add TOC for big notes
