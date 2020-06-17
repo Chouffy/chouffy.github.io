@@ -202,4 +202,4 @@ Tag | Role
 
 ## Reference
 
-*[HTML - Build a Website | Tutorial](https://www.youtube.com/playlist?list=PLLAZ4kZ9dFpMSXUYwxDFOvyxlssug29Fu) by Mike Dane
+* [HTML - Build a Website | Tutorial](https://www.youtube.com/playlist?list=PLLAZ4kZ9dFpMSXUYwxDFOvyxlssug29Fu) by Mike Dane
