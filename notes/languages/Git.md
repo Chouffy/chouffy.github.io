@@ -36,7 +36,7 @@ parent: Languages
 
 ### Connection
 
-`git remote add REPO https -//URL` - add remote repo  
+`git remote add REPO https://URL` - add remote repo  
 `git remote remove REPO` - remove repo  
 `git remote -v` - check connected git  
 
