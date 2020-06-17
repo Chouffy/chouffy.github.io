@@ -261,3 +261,7 @@ Transition with steps and with position change:
 ```
 
 `.box-anim:hover {}`: Selector possible
+
+## Reference
+
+* [CSS - Style Your Website | Tutorial](https://www.youtube.com/playlist?list=PLLAZ4kZ9dFpNO7ScZFr-WTmtcBY3AN1M7) by Mike Dane
