@@ -7,6 +7,7 @@ parent: Home
 ## Website
 
 * Fix search, with content included
+* Wrote a proper read-me for Github
 
 ## Notes
 
