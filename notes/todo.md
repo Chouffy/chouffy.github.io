@@ -6,4 +6,10 @@ parent: Home
 
 ## Website
 
-- [ ] Fix search, with content included
+* Fix search, with content included
+
+## Notes
+
+* Lanuages
+    * CSS
+        * Add PDF concerning flexboxsheet
