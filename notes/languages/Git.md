@@ -1,5 +1,5 @@
 ---
-parent - Languages
+parent: Languages
 ---
 
 # Git
