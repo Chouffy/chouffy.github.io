@@ -6,4 +6,4 @@ parent: Devices
 
 ## Modern Standby
 
-* (Check of S states)[https://www.laptopmag.com/articles/how-to-use-modern-standby]
+* [Check of S states](https://www.laptopmag.com/articles/how-to-use-modern-standby)
