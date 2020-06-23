@@ -4,7 +4,8 @@ parent: Devices
 
 # Libratone Zipp
 
-*Goal*: Send commands (voicing, volume, playback) to Libratone Zipp speaker from anything, not just the iOS/Android app. Request of documentation has been declined by Libratone.
+*Goal*: Send commands (voicing, volume, playback) to Libratone Zipp speaker from anything, not just the iOS/Android app. Request of documentation has been declined by Libratone.  
+Except I missed it, there's no License document with used framework.
 
 ## Network sniffing
 
