@@ -12,7 +12,11 @@ parent: Softwares
 
 ### Change machine hostname with no capslock
 
-`HKEY_LOCAL_MACHINE\SYSTEM\CURRENTCONTROLSET\CONTROL\COMPUTERNAME`
+`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\ComputerName\ComputerName`
+
+### Change network name
+
+`secpol.msc` > Network List Manager Policies > Connection Name
 
 ## Control Panel
 
