@@ -1,12 +1,22 @@
 ---
 parent: Softwares
+nav_order: 10
 ---
 
-# TyperTask
+# Good Softwares
+
+## PortableApps
+
+### Remove splash screen
+
+In the same directory than `AppPortable.exe`
+Put `AppPortable.ini` with proper parameter
+
+## TyperTask
 
 The best software for quick keyboard shortcuts!
 
-## Strings
+### Strings
 
 ```
 
