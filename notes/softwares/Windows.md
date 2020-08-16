@@ -6,17 +6,13 @@ parent: Softwares
 
 ## Tidbits
 
-### Extract MSI archive
-
-`msiexec /a PathToMSIFile /qb TARGETDIR=DirectoryToExtractTo`
-
-### Change machine hostname with no capslock
-
-`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\ComputerName\ComputerName`
-
-### Change network name
-
-`secpol.msc` > Network List Manager Policies > Connection Name
+* Extract MSI archive: `msiexec /a PathToMSIFile /qb TARGETDIR=DirectoryToExtractTo`
+* Change machine hostname with no capslock: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\ComputerName\ComputerName`
+* Change network name: `secpol.msc` > Network List Manager Policies > Connection Name
+* Modern Standby: [Check S states](https://www.laptopmag.com/articles/how-to-use-modern-standby)
+* Webcam: Disable Frame server mode: [(source)](https://www.winhelponline.com/blog/webcam-anniversary-update-windows-10-yuys-standard/)
+    * `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Media Foundation\Platform` create DWORD `EnableFrameServerMode` with 0
+    * `HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows Media Foundation\Platform` create DWORD `EnableFrameServerMode` with 0
 
 ## Control Panel
 
