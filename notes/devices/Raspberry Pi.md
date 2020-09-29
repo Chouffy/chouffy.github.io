@@ -14,3 +14,7 @@ parent: Devices
 1. [Installed ufw](https://www.raspberrypi.org/documentation/configuration/security.md)
 1. [Installed log2ram](https://github.com/azlux/log2ram) to prevent SD card wearing.
 1. [Activated Pi-Hole DHCP server](https://discourse.pi-hole.net/t/how-do-i-use-pi-holes-built-in-dhcp-server-and-why-would-i-want-to/3026)
+
+## USB WLAN / Wifi network interface
+
+ The `EW-7811Un 802.11n Wireless Adapter` is a `Realtek RTL8188CUS`.
