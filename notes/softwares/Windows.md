@@ -14,12 +14,16 @@ parent: Softwares
     * `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Media Foundation\Platform` create DWORD `EnableFrameServerMode` with 0
     * `HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows Media Foundation\Platform` create DWORD `EnableFrameServerMode` with 0
 
-## Control Panel
+## Control Panel / Settings
 
 ### Open performances options panel
 
 You can't open this panel if you're not an admin (System > Advanced system settings).
 Instead, start `C:\Windows\System32\SystemPropertiesPerformance.exe`.
+
+### Reinstall Setting app - Setting app doesn't open
+
+Taken from [this website](https://www.maketecheasier.com/fix-settings-app-not-working-in-windows-10/): open a PowerShell admin command line and execute `Get-AppXPackage | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}`
 
 ## Commande line shortcuts
 
