@@ -13,6 +13,10 @@ parent: Softwares
 * Webcam: Disable Frame server mode: [(source)](https://www.winhelponline.com/blog/webcam-anniversary-update-windows-10-yuys-standard/)
     * `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Media Foundation\Platform` create DWORD `EnableFrameServerMode` with 0
     * `HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows Media Foundation\Platform` create DWORD `EnableFrameServerMode` with 0
+* Remove "Folders" from This PC, remove **sub-folders** of:
+    * `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\`
+    * `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace`
+    * [Source](https://www.howtogeek.com/222057/how-to-remove-the-folders-from-%E2%80%9Cthis-pc%E2%80%9D-on-windows-10/)
 
 ## Control Panel / Settings
 
