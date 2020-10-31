@@ -28,5 +28,9 @@ Check also common Linux setup in the Linux page!
 
 1. Download `docker` install script `curl -sSL https://get.docker.com >> docker.sh`
 1. Run the script `sh ./docker.sh`
+1. Add `pi` user to `docker` group `sudo usermod -aG docker pi`
+1. Install Portainer for ARM `sudo docker pull portainer/portainer:linux-arm`
+1. Create a container that will contain Portainer `sudo docker run --restart always -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer:linux-arm`
+1. Go to `https://[RASPBERRY_PI_IP_ADDRESS]:9000` and enjoy!
 
 [Source](https://www.wundertech.net/portainer-raspberry-pi-install-how-to-install-docker-and-portainer/)
