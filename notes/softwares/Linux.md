@@ -25,6 +25,9 @@ parent: Softwares
 
 * Update packages `sudo apt update && sudo apt upgrade`
 * Check free disk space `df -h`
+* Check system stats
+    * `htop` for processes
+    * `nmon` for the whole system
 
 ## Recover
 
