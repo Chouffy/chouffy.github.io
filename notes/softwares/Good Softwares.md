@@ -99,3 +99,12 @@ The best software for quick keyboard shortcuts!
 {CtrlDown}
 {Control}
 ```
+
+## KiTTY / PuTTY
+
+### Fix screen output
+
+In the setting for a connection, go to :
+
+* *Window > Appearance*, Change font to *Lucida Console*
+* *Window > Translation*, Change remote character set to *ISO-8859-1:1998 (Latin-1, West Europe)*
