@@ -21,6 +21,17 @@ parent: Softwares
 
 * On a lapptop: disable standby on lid close: in `/etc/systemd/logind.conf`, uncomment and change `HandleLidSwitch=ignore`
 
+## Usability
+
+### *Screen* Terminal Multiplexer
+
+[Complete guide here](https://www.howtogeek.com/662422/how-to-use-linuxs-screen-command/)
+* Start `screen`
+* List sessions ID `screen -ls`
+* In a session:
+    * Detach `CTRL+A d`
+    * Reattach `screen -r session_ID`
+
 ## Maintenance
 
 * Update packages `sudo apt update && sudo apt upgrade`
