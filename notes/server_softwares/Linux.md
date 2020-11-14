@@ -20,7 +20,7 @@ last_modified_date: 2020-11-14
 
 ### Power Management
 
-* On a lapptop: disable standby on lid close: in `/etc/systemd/logind.conf`, uncomment and change `HandleLidSwitch=ignore`
+* On a laptop: disable standby on lid close: in `/etc/systemd/logind.conf`, uncomment and change `HandleLidSwitch=ignore`
 
 ### Format & mount a USB stick
 
