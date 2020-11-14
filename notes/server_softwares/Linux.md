@@ -22,6 +22,21 @@ last_modified_date: 2020-11-14
 
 * On a lapptop: disable standby on lid close: in `/etc/systemd/logind.conf`, uncomment and change `HandleLidSwitch=ignore`
 
+### Format & mount a USB stick
+
+1. `ls /mnt` check where the usb stick is mounted
+1. `sudo fdisk /dev/sda` if the usb stick is on `sda`
+    1. `p` to list existing partition
+    1. `g` to create a new GPT partition table or `o` for a DOS partition table
+    1. `n` to create a new partition
+    1. `w` write to disk and exit
+1. `sudo mkfs.ext4 /dev/sda1` to create a ext4 partition or `sudo mkfs -t vfat -I /dev/sda1` for vfat/fat32
+1. `sudo mkdir -p /mnt/usbdrive` to create a directory that will host the partition
+    * Choose `/mnt` for temporary mounts
+    * Choose `/media` for automatics mounts
+1. `sudo mount /dev/sda1 /mnt/usbdrive -o umask=000` to mount the usb key
+1. `sudo umount /dev/sda1` to unmount
+
 ## Usability
 
 ### *Screen* Terminal Multiplexer
