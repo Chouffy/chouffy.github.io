@@ -26,6 +26,7 @@ parent: Softwares
 ### *Screen* Terminal Multiplexer
 
 [Complete guide here](https://www.howtogeek.com/662422/how-to-use-linuxs-screen-command/)
+
 * Start `screen`
 * List sessions ID `screen -ls`
 * In a session:
