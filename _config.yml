@@ -65,7 +65,7 @@ search_tokenizer_separator: /[\s/]+/
 heading_anchors: true
 
 # Footer content appears at the bottom of every page's main content
-footer_content: "Copyright since 2020 &copy; Chouffy. This work is licensed under <a href=\"https://github.com/chouffy/chouffy.github.io/tree/master/LICENSE.txt\">CC BY 4.0</a>."
+footer_content: "This work is licensed under <a href=\"https://github.com/chouffy/chouffy.github.io/tree/master/LICENSE.txt\">CC BY 4.0</a>."
 
 # Aux links for the upper right navigation
 aux_links:
