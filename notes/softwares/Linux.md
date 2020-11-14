@@ -43,6 +43,10 @@ parent: Softwares
 
 ## Recover
 
+### Check logs
+
+* System messages: `cat /var/log/messages | tail -n 50`
+
 ### Bootloader
 
 Try [Super Grub2 Disk](https://www.supergrubdisk.org/)
