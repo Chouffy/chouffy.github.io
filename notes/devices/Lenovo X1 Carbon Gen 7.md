@@ -1,5 +1,6 @@
 ---
 parent: Devices
+last_modified_date: 2020-11-14
 ---
 
 # Lenovo X1 Carbon Gen 7
@@ -12,6 +13,8 @@ Current configuration with an Intel i7-8665U:
 
 FIVR Control | Voltage
 -|-
-CPU Core | -95.7 mV
-CPU Cache | -95.7 mV
+CPU Core | -100.6 mV
+CPU Cache | -100.6 mV
 Intel GPU | 0 mV
+
+Intel GPU undervolting make the machine unstable
