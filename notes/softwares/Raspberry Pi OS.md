@@ -11,7 +11,7 @@ parent: Softwares
 1. Download image [here](https://www.raspberrypi.org/downloads/raspberry-pi-os/)
 1. Enable SSH by placing a `ssh` file in the boot partition
 1. Login with user `pi` and password `raspberry`
-1. Change password with `passwd`
+1. Change user password with `passwd` and root password with `sudo passwd`
 1. Config with `sudo raspi-config`
 
 Check also common Linux setup in the Linux page!
@@ -22,7 +22,7 @@ Check also common Linux setup in the Linux page!
 1. At the bottom, uncomment and change `interface eth0` and following
 1. If you want to use Cloudflare DNS: `static domain_name_servers=1.1.1.1 1.0.0.1 2606:4700:4700::1111 2606:4700:4700::1001`
 
-## Docker & Portainer
+## Docker
 
 ### Setup
 
