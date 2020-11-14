@@ -1,5 +1,6 @@
 ---
-parent: Softwares
+parent: Server Softwares
+last_modified_date: 2020-10-29
 ---
 
 # FreeNAS
