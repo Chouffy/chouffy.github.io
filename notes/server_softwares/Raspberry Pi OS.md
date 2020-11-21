@@ -40,7 +40,7 @@ Check also common Linux setup in the Linux page!
 
 ### Duplicati 
 
-### Install on Raspberry Pi OS
+#### Install on Raspberry Pi OS
 
 1. Install *Mono Framework* `sudo apt install mono-complete ca-certificates-mono`
 1. Sync certificates `sudo cert-sync /etc/ssl/certs/ca-certificates.crt`
@@ -79,10 +79,7 @@ Check also common Linux setup in the Linux page!
     * Source data: `/etc, /home, /root, /var` excluding `/var/lock/, /var/run` and *Temporary file*
     * Options: `zip-compression-level: 1` - default on Linux is 6, but this slow down the Raspberry Pi
 
-
-
 Sources:
 
 * [Backup Domoticz with Duplicati - Sancla](https://sancla.com/domoticz/how-to-backup-domoticz-with-duplicati/)
 * [Help with installing on Raspberry Pi - Duplicati forum](https://forum.duplicati.com/t/help-with-installing-on-raspberry-pi/397/3?u=jonmikelv)
-
