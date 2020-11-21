@@ -108,3 +108,11 @@ In the setting for a connection, go to :
 
 * *Window > Appearance*, Change font to *Lucida Console*
 * *Window > Translation*, Change remote character set to *ISO-8859-1:1998 (Latin-1, West Europe)*
+
+## Duplicati
+
+A very good backup solution, if you have a good storage provider.
+
+Command | Usage
+-|-
+`Duplicati.CommandLine.exe test <storage-URL> all`|Test every backup

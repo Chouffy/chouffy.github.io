@@ -37,6 +37,11 @@ last_modified_date: 2020-11-14
 1. `sudo mount /dev/sda1 /mnt/usbdrive -o umask=000` to mount the usb key
 1. `sudo umount /dev/sda1` to unmount
 
+### Tips & Tricks
+
+* `id $user` to get user PUID & GUID
+* `ndcu` to tree files & folder, and explore space taken
+
 ## Usability
 
 ### *Screen* Terminal Multiplexer
