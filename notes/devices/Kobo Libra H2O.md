@@ -1,5 +1,6 @@
 ---
 parent: Devices
+last_modified_date: 2020-11-21
 ---
 
 # Kobo Libra H2O
