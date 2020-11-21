@@ -44,7 +44,7 @@ Promote & support Scrum, but not the team boss:
 * Servant-leader for the Scrum
 * Help those outside the Scrum Team, protect from outside interactions
 
-### Facilitator role
+#### Facilitator role
 
 Scrum Master help the *Product Owner*:
 * Ensure goal, scope, product domain is understood
