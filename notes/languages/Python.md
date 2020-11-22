@@ -1,9 +1,11 @@
 ---
 parent: Languages
-has_toc: true
 ---
 
 # Python
+
+1. TOC
+{:toc}
 
 ## Organization
 
