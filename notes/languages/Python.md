@@ -1,5 +1,6 @@
 ---
 parent: Languages
+has_toc: true
 ---
 
 # Python
