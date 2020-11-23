@@ -4,6 +4,9 @@ parent: Languages
 
 # Python
 
+1. TOC
+{:toc}
+
 ## Organization
 
 ### General
