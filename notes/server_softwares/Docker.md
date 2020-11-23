@@ -7,7 +7,7 @@ last_modified_date: 2020-11-14
 
 This will be also about project connected to or running on Docker, like Portainer.
 
-## Docker software
+## [Docker software](https://www.docker.com/)
 
 A *container* run an *image*.  
 Data are in `/var/lib/docker/volumes/`
@@ -26,6 +26,7 @@ Images management:
 
 * List `docker images`
 * Remove `docker rmi image_name`
+* List of images are in the [Docker Hub](https://hub.docker.com/)
 
 Other commands:
 
@@ -33,10 +34,19 @@ Other commands:
 * List all containers `docker ps -a`
 * Run a command in a container `docker exec container_name command`
 
-## Portainer
+## [Portainer](https://www.portainer.io/)
 
 Helps managing containers.
 
 Run `docker run --restart always -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce`
 
 Fix `0.0.0.0` IP in exposed port: change *Public IP* in Endpoints - [Source](https://documentation.portainer.io/v2.0/troubleshooting/troubleshooting/#exposed-ports-in-the-container-view-redirects-me-to-0000-what-can-i-do)
+
+## [Watchtower](https://containrrr.dev/watchtower/)
+
+Update containers automatically. Run the quick start script to install.
+
+Environment variables:
+
+* `TZ:timezone`: Timezone
+*  `Europe/Amsterdam:* * 5 * * *`: [cron](https://pkg.go.dev/github.com/robfig/cron@v1.2.0#hdr-CRON_Expression_Format) setting to check for update each day at 0500.
