@@ -1,7 +1,7 @@
 ---
 parent: Softwares
 nav_order: 10
-last_modified_date: 2020-11-20
+last_modified_date: 2020-11-25
 ---
 
 # Good Softwares
@@ -108,7 +108,7 @@ The best software for quick keyboard shortcuts!
 In the setting for a connection, go to :
 
 * *Window > Appearance*, Change font to *Lucida Console*
-* *Window > Translation*, Change remote character set to *ISO-8859-1:1998 (Latin-1, West Europe)*
+* *Window > Translation*, Change remote character set to *ISO-8859-1:1998 (Latin-1, West Europe)* ... but this will break other softwares.
 
 ## Duplicati
 
