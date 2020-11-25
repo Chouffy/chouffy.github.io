@@ -1,6 +1,6 @@
 ---
 parent: Server Softwares
-last_modified_date: 2020-11-14
+last_modified_date: 2020-11-25
 ---
 
 # Docker
@@ -33,8 +33,9 @@ Other commands:
 * Get Docker directory `docker info`
 * List all containers `docker ps -a`
 * Run a command in a container `docker exec container_name command`
+* Do some spring cleanup - (*Be careful with that!*) `docker system prune --all`
 
-## [Portainer](https://www.portainer.io/)
+## [Portainer - Web container management](https://www.portainer.io/)
 
 Helps managing containers.
 
@@ -42,11 +43,11 @@ Run `docker run --restart always -d -p 9000:9000 -v /var/run/docker.sock:/var/ru
 
 Fix `0.0.0.0` IP in exposed port: change *Public IP* in Endpoints - [Source](https://documentation.portainer.io/v2.0/troubleshooting/troubleshooting/#exposed-ports-in-the-container-view-redirects-me-to-0000-what-can-i-do)
 
-## [Watchtower](https://containrrr.dev/watchtower/)
+## [Watchtower - Automatic container update](https://containrrr.dev/watchtower/)
 
 Update containers automatically. Run the quick start script to install.
 
 Environment variables:
 
 * `TZ:timezone`: Timezone
-*  `Europe/Amsterdam:* * 5 * * *`: [cron](https://pkg.go.dev/github.com/robfig/cron@v1.2.0#hdr-CRON_Expression_Format) setting to check for update each day at 0500.
+*  `Europe/Amsterdam: 0 0 5 * * *`: [cron](https://pkg.go.dev/github.com/robfig/cron@v1.2.0#hdr-CRON_Expression_Format) setting to check for update each day at 0500.
