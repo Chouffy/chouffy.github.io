@@ -1,6 +1,6 @@
 ---
 parent: Server Softwares
-last_modified_date: 2020-11-21
+last_modified_date: 2020-11-25
 ---
 
 # Raspberry Pi OS
@@ -28,6 +28,13 @@ Check also common Linux setup in the Linux page!
 1. Edit `sudo nano /etc/dhcpcd.conf`
 1. At the bottom, uncomment and change `interface eth0` and following
 1. If you want to use Cloudflare DNS: `static domain_name_servers=1.1.1.1 1.0.0.1 2606:4700:4700::1111 2606:4700:4700::1001`
+
+### Overclock
+
+1. CPU: in `raspi-config`
+1. SD card:
+    * `sudo bash -c 'printf "dtoverlay=sdhost,overclock_50=100\n" >> /boot/config.txt'` - [Source](https://www.jeffgeerling.com/blog/2016/how-overclock-microsd-card-reader-on-raspberry-pi-3)
+    * `sudo cat /sys/kernel/debug/mmc0/ios` to check the clock
 
 ## Software install
 
