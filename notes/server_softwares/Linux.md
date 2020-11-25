@@ -1,6 +1,6 @@
 ---
 parent: Server Softwares
-last_modified_date: 2020-11-21
+last_modified_date: 2020-11-25
 ---
 
 # Linux
@@ -24,23 +24,41 @@ last_modified_date: 2020-11-21
 
 ### Format & mount a USB stick
 
-1. `ls /mnt` check where the usb stick is mounted
+1. Several options to see devices
+    * `sudo blkid` to locate block devices
+    * `sudo lsblk` to list mounted block devices
+    * `ls /dev` to check where the usb stick is mounted
 1. `sudo fdisk /dev/sda` if the usb stick is on `sda`
     1. `p` to list existing partition
     1. `g` to create a new GPT partition table or `o` for a DOS partition table
     1. `n` to create a new partition
     1. `w` write to disk and exit
-1. `sudo mkfs.ext4 /dev/sda1` to create a ext4 partition or `sudo mkfs -t vfat -I /dev/sda1` for vfat/fat32
-1. `sudo mkdir -p /mnt/usbdrive` to create a directory that will host the partition
+1. `sudo mkfs.ext4 /dev/sda1` to create a ext4 partition
+1. `sudo mkdir /media/usbdrive` to create a directory that will host the partition
     * Choose `/mnt` for temporary mounts
     * Choose `/media` for automatics mounts
-1. `sudo mount /dev/sda1 /mnt/usbdrive -o umask=000` to mount the usb key
+1. `sudo mount /dev/sda1 /media/usbdrive -o umask=000` to mount the usb key with all user access
 1. `sudo umount /dev/sda1` to unmount
+1. If you want to make it permanent
+    * Edit `sudo nano /etc/fstab`
+    * Add a line `/dev/sda1       /media/usbdrive           ext4    defaults        0       0 `
+    * [(Check how fstab works here)](https://www.howtogeek.com/howto/38125/htg-explains-what-is-the-linux-fstab-and-how-does-it-work/)
+
+### Test read/write speed
+
+1. `sync; dd if=/dev/zero of=tempfile bs=1M count=256; sync`: write to *tempfile* 256 Mb
+1. `sudo /sbin/sysctl -w vm.drop_caches=3`: clear the cache
+1. `dd if=tempfile of=/dev/null bs=1M count=256`: read *tempfile*
+
+[Source](https://www.shellhacks.com/disk-speed-test-read-write-hdd-ssd-perfomance-linux/)
 
 ### Tips & Tricks
 
-* `id $user` to get user PUID & GUID
-* `ndcu` to tree files & folder, and explore space taken
+* System variables
+    * `id $user` to get user PUID & GUID
+* Files & filesystem
+    * `ndcu` to tree files & folder, and explore space taken
+    * `fsck /dev/sda1` to check for partition corruption
 
 ## Usability
 
