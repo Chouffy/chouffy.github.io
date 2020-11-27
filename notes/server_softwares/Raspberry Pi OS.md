@@ -85,8 +85,38 @@ Check also common Linux setup in the Linux page!
 1. If wished, set-up system-wide backup:
     * Source data: `/etc, /home, /root, /var` excluding `/var/lock/, /var/run` and *Temporary file*
     * Options: `zip-compression-level: 1` - default on Linux is 6, but this slow down the Raspberry Pi
+    * If only upload, in order to help the Raspberry Pi
+        * `asynchronous-concurrent-upload-limit:`1
+        * `asynchronous-upload-limit:1`
 
 Sources:
 
 * [Backup Domoticz with Duplicati - Sancla](https://sancla.com/domoticz/how-to-backup-domoticz-with-duplicati/)
 * [Help with installing on Raspberry Pi - Duplicati forum](https://forum.duplicati.com/t/help-with-installing-on-raspberry-pi/397/3?u=jonmikelv)
+
+### Samba - Windows Share
+
+1. Install it `sudo apt install samba samba-common-bin`
+1. Create a share on root directory `sudo mkdir -m 1777 /share`
+    * 1 is sticky bit
+    * 777 is everyone permission to r/w/e
+1. Edit samba configuration `sudo nano /etc/samba/smb.conf`
+    * Add at the bottom of the file
+        ```
+        [share]
+        Comment = share
+        Path = /share
+        Browseable = yes
+        Writeable = Yes
+        guest only = no
+        create mask = 0777
+        directory mask = 0777
+        valid users = joe, greg
+        ```
+    * This set up a r/w share only for *joe* and *greg* users
+    * Check all options [here](https://www.samba.org/samba/docs/current/man-html/smb.conf.5.html)
+1. Add a user
+    1. Create a new UNIX user `sudo adduser joe`
+    1. Add user to samba `sudo smbpasswd -a joe`
+1. Add samba to *ufw* exception, if you have it `sudo ufw allow Samba`
+1. Restart samba `sudo samba restart`
