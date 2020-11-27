@@ -4,4 +4,7 @@ _site
 .jekyll-metadata
 Gemfile.lock
 vendor
+
+# Ignore Private directories
 Private/
+Private*/
