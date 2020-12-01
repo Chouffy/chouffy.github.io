@@ -13,6 +13,7 @@ last_modified_date: 2020-11-25
 * Configuration
     * Check status & list configuration `sudo ufw status`
     * Allow a port `sudo ufw allow PORT`
+    * Remove an allowance `sudo ufw remove PORT`
     * Rate limit a port (>6 connections within 30 sec) `sudo ufw limit PORT`
 * Verify
     * Check added rules `sudo ufw show added`
