@@ -9,7 +9,7 @@ last_modified_date: 2020-11-25
 
 ### Install Firewall
 
-* Install `sudo apt install ufw`
+* Install `sudo apt install ufw numbered`
 * Configuration
     * Check status & list configuration `sudo ufw status`
     * Allow a port `sudo ufw allow PORT`
@@ -60,6 +60,9 @@ last_modified_date: 2020-11-25
 * Files & filesystem
     * `ndcu` to tree files & folder, and explore space taken
     * `fsck /dev/sda1` to check for partition corruption
+* Date & Time
+    * `timedatectl` to check
+    * `sudo timedatectl set-timezone TZ`
 
 ## Usability
 
