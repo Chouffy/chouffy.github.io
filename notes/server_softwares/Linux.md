@@ -19,6 +19,13 @@ last_modified_date: 2020-11-25
     * Check added rules `sudo ufw show added`
 * Enable `sudo ufw enable`
 
+### Install FTP server
+
+1. `sudo apt install vsftpd`
+1. `sudo nano /etc/vsftpd.conf`
+1. `sudo ufw allow 21`
+1. `sudo systemctl restart vsftpd`
+
 ### Power Management
 
 * On a laptop: disable standby on lid close: in `/etc/systemd/logind.conf`, uncomment and change `HandleLidSwitch=ignore`
@@ -93,3 +100,16 @@ last_modified_date: 2020-11-25
 ### Bootloader
 
 Try [Super Grub2 Disk](https://www.supergrubdisk.org/)
+
+### Services with systemctl
+
+* `sudo systemctl status SERVICE`
+* Service management
+    * `sudo systemctl restart SERVICE`
+    * `sudo systemctl start SERVICE`
+    * `sudo systemctl stop SERVICE`
+    * `sudo systemctl kill SERVICE`
+* Service enable/disable
+    * `sudo systemctl enable SERVICE`
+    * `sudo systemctl disable SERVICE`
+    * `sudo systemctl is-enabled SERVICE`
