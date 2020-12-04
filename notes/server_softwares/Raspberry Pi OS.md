@@ -1,6 +1,6 @@
 ---
 parent: Server Softwares
-last_modified_date: 2020-11-25
+last_modified_date: 2020-12-04
 ---
 
 # Raspberry Pi OS
@@ -52,7 +52,7 @@ Check also common Linux setup in the Linux page!
 1. Install *Mono Framework* `sudo apt install mono-complete ca-certificates-mono`
 1. Sync certificates `sudo cert-sync /etc/ssl/certs/ca-certificates.crt`
 1. `wget` the download `.deb.` from the [Duplicati website](https://www.duplicati.com/download)
-1. Install `sudo apt-get install ./duplicati*.deb`
+1. Install `sudo apt install ./duplicati*.deb` or `sudo dpkg -i duplicati*.deb`
 1. Check for additional missing dependencies `sudo apt -f install`
 1. Allow Duplicati in the firewall `sudo ufw allow 8200`
 1. Set up Duplicati as a service
@@ -93,6 +93,7 @@ Sources:
 
 * [Backup Domoticz with Duplicati - Sancla](https://sancla.com/domoticz/how-to-backup-domoticz-with-duplicati/)
 * [Help with installing on Raspberry Pi - Duplicati forum](https://forum.duplicati.com/t/help-with-installing-on-raspberry-pi/397/3?u=jonmikelv)
+* [How To Backup Nextcloud](https://kevq.uk/how-to-backup-nextcloud/)
 
 ### Samba - Windows Share
 
