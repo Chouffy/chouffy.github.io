@@ -1,6 +1,6 @@
 ---
 parent: Server Softwares
-last_modified_date: 2020-11-25
+last_modified_date: 2020-12-04
 ---
 
 # Linux
@@ -22,7 +22,7 @@ last_modified_date: 2020-11-25
 ### Install FTP server
 
 1. `sudo apt install vsftpd`
-1. `sudo nano /etc/vsftpd.conf`
+1. `sudo nano /etc/vsftpd.conf` to edit configuration
 1. `sudo ufw allow 21`
 1. `sudo systemctl restart vsftpd`
 
@@ -65,7 +65,7 @@ last_modified_date: 2020-11-25
 * System variables
     * `id $user` to get user PUID & GUID
 * Files & filesystem
-    * `ndcu` to tree files & folder, and explore space taken
+    * `ncdu` to tree files & folder, and explore space taken
     * `fsck /dev/sda1` to check for partition corruption
 * Date & Time
     * `timedatectl` to check
