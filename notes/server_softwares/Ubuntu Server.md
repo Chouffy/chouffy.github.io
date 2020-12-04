@@ -1,6 +1,6 @@
 ---
 parent: Server Softwares
-last_modified_date: 2020-12-01
+last_modified_date: 2020-12-04
 ---
 
 # Ubuntu Server
@@ -18,6 +18,7 @@ last_modified_date: 2020-12-01
 
 * Bundle application & all dependencies
 * App are executed encapsulated
+* Automatically updated
 * Commands
     * `snap list`
     * `snap install APP`
