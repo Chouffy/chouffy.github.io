@@ -13,6 +13,9 @@ last_modified_date: 2020-12-04
 1. Allow 80 and 443 in firewall
 1. Edit trusted domain `sudo nextcloud.occ config:system:set trusted_domains 1 --value=domain.example.com`
 1. `sudo nextcloud.enable-https lets-encrypt`
+1. Add NAT translation on the home router
+1. Add domain A record in my DNS zone
+1. Setup Sendgrid for SMTP server
 
 ## Other stuff
 
@@ -31,6 +34,7 @@ Based on [How To Backup Nextcloud](https://kevq.uk/how-to-backup-nextcloud/)
 
 1. Create `ncbackup` user
 1. Edit `/usr/sbin/ncbackup.sh` with
+
     ```bash
     #!/bin/bash
     # Output to a logfile
@@ -55,6 +59,7 @@ Based on [How To Backup Nextcloud](https://kevq.uk/how-to-backup-nextcloud/)
 
     echo "Nextcloud backup completed successfully."
     ```
+
 1. Make the file executable `sudo chmod +x /usr/sbin/ncbackup.sh`
 1. Allow the file to be executed without sudo interaction
     1. `sudo visudo`
@@ -64,3 +69,12 @@ Based on [How To Backup Nextcloud](https://kevq.uk/how-to-backup-nextcloud/)
 1. Schedule the backup
     1. Open crontab `sudo crontab -u ncbackup -e`
     1. Make the script run at 0200 each day `0 2 * * * sudo /usr/sbin/ncbackup.sh`
+
+Sources:
+
+* [Reference page for the Snap](https://github.com/nextcloud/nextcloud-snap)
+* [How To Setup A Nextcloud Server In Ubuntu](https://kevq.uk/how-to-setup-a-nextcloud-server-in-ubuntu)
+* [OCC Command line tool](https://docs.nextcloud.com/server/15/admin_manual/configuration_server/occ_command.html)
+    * [Most notably the config commmand](https://docs.nextcloud.com/server/15/admin_manual/configuration_server/occ_command.html#config-commands) instead of changing `config.php`
+    * Get example: `sudo nextcloud.occ config:system:get version`
+    * Set example: `sudo nextcloud.occ config:system:set logtimezone --value="Europe/Berlin"`
