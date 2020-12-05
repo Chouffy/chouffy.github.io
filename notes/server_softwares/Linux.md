@@ -30,6 +30,13 @@ last_modified_date: 2020-12-04
 
 * On a laptop: disable standby on lid close: in `/etc/systemd/logind.conf`, uncomment and change `HandleLidSwitch=ignore`
 
+Check temperatures:
+
+1. `sudo apt install lm-sensors`
+1. `sudo apt-get install lm-sensors`
+1. `sudo /etc/init.d/kmod start`
+1. `sensors`
+
 ### Format & mount a USB stick
 
 1. Several options to see devices
