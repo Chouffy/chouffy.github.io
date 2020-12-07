@@ -68,7 +68,7 @@ Based on [How To Backup Nextcloud](https://kevq.uk/how-to-backup-nextcloud/)
     * To add it back `sudo usermod -s /bin/bash ncbackup`
 1. Schedule the backup
     1. Open crontab `sudo crontab -u ncbackup -e`
-    1. Make the script run at 0200 each day `0 2 * * * sudo /usr/sbin/ncbackup.sh`
+    1. Make the script run at 0200 every day `0 2 * * * sudo /usr/sbin/ncbackup.sh`
 
 Sources:
 
@@ -78,3 +78,37 @@ Sources:
     * [Most notably the config commmand](https://docs.nextcloud.com/server/15/admin_manual/configuration_server/occ_command.html#config-commands) instead of changing `config.php`
     * Get example: `sudo nextcloud.occ config:system:get version`
     * Set example: `sudo nextcloud.occ config:system:set logtimezone --value="Europe/Berlin"`
+
+## Good apps
+
+### [Preview Generator](https://github.com/rullzer/previewgenerator) for thumbnails
+
+1. Install from app store
+1. `sudo nextcloud.occ preview:generate-all`
+1. Make a script for that and schedule it
+    1. Edit `/usr/sbin/ncpreviewgenerator.sh` with
+
+        ```bash
+        #!/bin/bash
+        # Output to a logfile
+        exec &> /home/ncbackup/PreviewGenerator/"$(date '+%Y-%m-%d %T').txt"
+
+        echo "Starting Nextcloud Preview Generator..."
+        nextcloud.occ preview:pre-generate
+        echo "Done."
+
+        # Remove logs older than 14 days
+        find /home/ncbackup/PreviewGenerator -mtime +14 -type f -delete
+        echo "Removed old logs"
+
+        echo "Nextcloud Preview Generator completed successfully."
+        ```
+
+    1. `sudo chmod +x /usr/sbin/ncpreviewgenerator.sh`
+    1. `sudo visudo`
+    1. `ncbackup ALL=(ALL) NOPASSWD: /usr/sbin/ncpreviewgenerator.sh`
+    1. Remove shell access from `ncbackup` user `sudo usermod -s /sbin/nologin ncbackup`
+    1. Schedule the backup
+        1. Open crontab `sudo crontab -u ncbackup -e`
+        1. Make the script run every hour every day `0 * * * * sudo /usr/sbin/ncpreviewgenerator.sh`
+
