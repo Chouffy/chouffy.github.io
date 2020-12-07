@@ -24,6 +24,7 @@ last_modified_date: 2020-12-04
     * `snap install APP`
     * `snap remove APP`
     * `snap logs APP`
+    * `sudo snap revert APP` to go one version before
     * On services
         * `snap services`
         * `snap logs APP.SERVICE`
