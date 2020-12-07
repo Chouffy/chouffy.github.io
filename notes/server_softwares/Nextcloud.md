@@ -110,5 +110,5 @@ Sources:
     1. Remove shell access from `ncbackup` user `sudo usermod -s /sbin/nologin ncbackup`
     1. Schedule the backup
         1. Open crontab `sudo crontab -u ncbackup -e`
-        1. Make the script run every hour every day `0 * * * * sudo /usr/sbin/ncpreviewgenerator.sh`
+        1. Make the script run every hour every hour `30 * * * * sudo /usr/sbin/ncpreviewgenerator.sh`
 
