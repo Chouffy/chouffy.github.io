@@ -83,6 +83,7 @@ Sources:
 
 ### [Preview Generator](https://github.com/rullzer/previewgenerator) for thumbnails
 
+1. Suggested: change the preview generation behavior - [great post here](http://chrisweber.com/blog/nextcloud-image-previews), I just changed quality to 70
 1. Install from app store
 1. `sudo nextcloud.occ preview:generate-all`
 1. Make a script for that and schedule it
@@ -111,4 +112,3 @@ Sources:
     1. Schedule the backup
         1. Open crontab `sudo crontab -u ncbackup -e`
         1. Make the script run every hour every hour `30 * * * * sudo /usr/sbin/ncpreviewgenerator.sh`
-
