@@ -26,6 +26,7 @@ last_modified_date: 2020-12-04
 ### Data
 
 * `sudo nextcloud.export -abc` to export everything except user data
+* `sudo nextcloud.occ files:scan-app-data` to force scan all app data
 * User data are in `/var/snap/nextcloud/common/`
 
 ### Backup
