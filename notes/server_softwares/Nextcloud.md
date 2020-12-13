@@ -1,6 +1,6 @@
 ---
 parent: Server Softwares
-last_modified_date: 2020-12-04
+last_modified_date: 2020-12-13
 ---
 
 # Nextcloud
@@ -113,3 +113,15 @@ Sources:
     1. Schedule the backup
         1. Open crontab `sudo crontab -u ncbackup -e`
         1. Make the script run every hour every hour `30 * * * * sudo /usr/sbin/ncpreviewgenerator.sh`
+
+### RainLoop Webmail
+
+* [Original project docs](http://www.rainloop.net/docs/)
+* [Rainloop-nextcloud project](https://github.com/pierre-alain-b/rainloop-nextcloud)
+
+1. Install plugin
+1. Login to admin panel in `root/index.php/apps/rainloop/app/`
+    1. Change admin password
+    1. Add domain
+1. Login with standard link using user mail and mail password
+1. Enable automatic login in Settings > Additional Settings
