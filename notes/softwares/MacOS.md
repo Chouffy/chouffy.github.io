@@ -1,9 +1,13 @@
 ---
 parent: Softwares
-last_modified_date: 2020-12-10
+last_modified_date: 2020-12-13
 ---
 
 # MacOS
+
+## Setup
+
+* Install MacOS from USB drive: [Apple Guide](https://support.apple.com/en-us/HT201372)
 
 ## Tips
 

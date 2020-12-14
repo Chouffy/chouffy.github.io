@@ -125,3 +125,7 @@ Sources:
     1. Add domain
 1. Login with standard link using user mail and mail password
 1. Enable automatic login in Settings > Additional Settings
+
+### Music
+
+* [Project GitHub](https://github.com/owncloud/music)
