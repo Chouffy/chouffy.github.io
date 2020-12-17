@@ -117,3 +117,5 @@ A very good backup solution, if you have a good storage provider.
 Command | Usage
 -|-
 `Duplicati.CommandLine.exe test <storage-URL> all`|Test every backup
+
+* [Command-line Duplicati Client](https://pypi.org/project/duplicati-client/)
