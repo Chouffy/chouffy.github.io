@@ -10,12 +10,14 @@ last_modified_date: 2020-11-18
 
 ## Introduction
 
+(This is based on the 2017 edition)
+
 Framework for developing, delivering, sustaining complex products.
 * Small team of peoples = essence of scrum
 * Founded on empiricism: knowledge comes from experience & making decisions on what is known
 * Iterative, incremental approach to optimize predictability and control risk
 
-Must be implemented wholly
+Must be implemented wholly.
 
 Links:
 
