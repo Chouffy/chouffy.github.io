@@ -4,11 +4,15 @@ last_modified_date: 2020-12-21
 ---
 
 # Scrum
+{: .no_toc }
+
+## Table of contents
+{: .no_toc .text-delta }
 
 1. TOC
 {:toc}
 
-## Introduction
+---
 
 (This is based on the 2017 edition)
 
