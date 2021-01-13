@@ -114,6 +114,10 @@ Sources:
         1. Open crontab `sudo crontab -u ncbackup -e`
         1. Make the script run every hour every hour `30 * * * * sudo /usr/sbin/ncpreviewgenerator.sh`
 
+Notes:
+
+* Use `-vvv` argument to output each opened file
+
 ### RainLoop Webmail
 
 * [Original project docs](http://www.rainloop.net/docs/)
