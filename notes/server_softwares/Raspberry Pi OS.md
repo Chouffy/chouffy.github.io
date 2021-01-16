@@ -45,7 +45,7 @@ Check also common Linux setup in the Linux page!
 1. Add `pi` user to `docker` group `sudo usermod -aG docker pi`
 1. Log-out and log-in
 
-### Duplicati 
+### Duplicati
 
 #### Install on Raspberry Pi OS
 
