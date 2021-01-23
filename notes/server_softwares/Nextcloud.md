@@ -95,8 +95,8 @@ Sources:
         # Output to a logfile
         exec &> /home/ncbackup/PreviewGenerator/"$(date '+%Y-%m-%d %T').txt"
 
-        echo "Starting Nextcloud Preview Generator..."
-        nextcloud.occ preview:pre-generate
+        echo "Starting Nextcloud Preview Generator (with logs)..."
+        nextcloud.occ preview:pre-generate -vvv
         echo "Done."
 
         # Remove logs older than 14 days
