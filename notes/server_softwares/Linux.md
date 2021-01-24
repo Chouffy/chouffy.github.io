@@ -67,6 +67,11 @@ Check temperatures:
 
 [Source](https://www.shellhacks.com/disk-speed-test-read-write-hdd-ssd-perfomance-linux/)
 
+### Cron - Job scheduler
+
+* Edit cron of an user `sudo crontab -u USER -e`
+* Check if the cron expression is correct: [crontab guru](https://crontab.guru/)
+
 ### Tips & Tricks
 
 * System variables
