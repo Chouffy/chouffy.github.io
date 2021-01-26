@@ -9,14 +9,16 @@ last_modified_date: 2020-12-04
 
 ### Install Firewall
 
-* Install `sudo apt install ufw numbered`
+* Install `sudo apt install ufw`
 * Configuration
     * Check status & list configuration `sudo ufw status`
     * Allow a port `sudo ufw allow PORT`
     * Remove an allowance `sudo ufw remove PORT`
     * Rate limit a port (>6 connections within 30 sec) `sudo ufw limit PORT`
+    * Enable `sudo ufw enable`
 * Verify
     * Check added rules `sudo ufw show added`
+    * Check existing rules with numbers `sudo ufw status numbered`
 * Enable `sudo ufw enable`
 
 ### Install FTP server
