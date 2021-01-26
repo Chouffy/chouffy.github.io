@@ -36,6 +36,14 @@ Check also common Linux setup in the Linux page!
     * `sudo bash -c 'printf "dtoverlay=sdhost,overclock_50=100\n" >> /boot/config.txt'` - [Source](https://www.jeffgeerling.com/blog/2016/how-overclock-microsd-card-reader-on-raspberry-pi-3)
     * `sudo cat /sys/kernel/debug/mmc0/ios` to check the clock
 
+### Date & Time
+
+Rasperry OS manage time with `timedatectl`:
+
+* Show existing date & time: `date`
+* Show status `timedatectl status`
+* Enable NTP `timedatectl set-ntp True` then restart the NTP service `sudo systemctl restart systemd-timesyncd.service`
+
 ## Software install
 
 ### Docker
