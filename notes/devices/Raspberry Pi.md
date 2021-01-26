@@ -4,6 +4,10 @@ parent: Devices
 
 # Raspberry Pi
 
+## GPIO
+
+Pinout on Raspberry 1 B and following are the same, save for the less pins.
+
 ## USB WLAN / Wifi network interface
 
  The `EW-7811Un 802.11n Wireless Adapter` is a `Realtek RTL8188CUS`
