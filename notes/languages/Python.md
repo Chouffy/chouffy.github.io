@@ -13,6 +13,11 @@ parent: Languages
 
 ---
 
+## Setup
+
+* PC: check [Python website](https://www.python.org/)
+* Raspberry Pi OS: `sudo apt install python3-pip` for Python 3
+
 ## Organization
 
 ### General
