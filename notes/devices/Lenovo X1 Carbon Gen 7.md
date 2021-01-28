@@ -1,6 +1,5 @@
 ---
 parent: Devices
-last_modified_date: 2020-11-14
 ---
 
 # Lenovo X1 Carbon Gen 7

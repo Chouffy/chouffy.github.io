@@ -1,6 +1,5 @@
 ---
 parent: Business
-last_modified_date: 2020-12-21
 ---
 
 # Scrum

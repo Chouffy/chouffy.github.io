@@ -1,6 +1,5 @@
 ---
 parent: Softwares
-last_modified_date: 2020-12-13
 ---
 
 # MacOS
