@@ -50,3 +50,9 @@ Environment variables:
 
 * `TZ:timezone`: Timezone
 *  `Europe/Amsterdam: 0 0 5 * * *`: [cron](https://pkg.go.dev/github.com/robfig/cron@v1.2.0#hdr-CRON_Expression_Format) setting to check for update each day at 0500.
+
+## [Chrony / Docker-NTP](https://github.com/cturra/docker-ntp)
+
+Provide a NTP server.
+
+* `123:UDP` need to be exposed
