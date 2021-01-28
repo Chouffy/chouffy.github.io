@@ -118,3 +118,9 @@ Command | Usage
 `Duplicati.CommandLine.exe test <storage-URL> all`|Test every backup
 
 * [Command-line Duplicati Client](https://pypi.org/project/duplicati-client/)
+
+
+## Preview like MacOS
+
+* Install [QuickLook](https://github.com/QL-Win/QuickLook)
+* Install this addon for Office documents [QuickLook.Plugin.OfficeViewer-Native](https://github.com/QL-Win/QuickLook.Plugin.OfficeViewer-Native)
