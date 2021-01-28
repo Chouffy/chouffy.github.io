@@ -86,7 +86,18 @@ Check temperatures:
 
 ## Usability
 
-### *Screen* Terminal Multiplexer
+### Tip & Tricks
+
+* Health
+    * Check system temperatures: `sensors`
+    * Check CPU frequency `cat /proc/cpuinfo`
+
+### Command-line kung-fu
+
+* `watch` to _watch_ regularly an output
+* `| grep x` to pipe to grep which is going to select lines with `x`
+
+#### *Screen* Terminal Multiplexer
 
 [Complete guide here](https://www.howtogeek.com/662422/how-to-use-linuxs-screen-command/)
 
