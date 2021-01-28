@@ -89,7 +89,6 @@ Check temperatures:
 ### Tip & Tricks
 
 * Health
-    * Check system temperatures: `sensors`
     * Check CPU frequency `cat /proc/cpuinfo`
 
 ### Command-line kung-fu
