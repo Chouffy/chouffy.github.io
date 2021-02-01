@@ -6,9 +6,11 @@ parent: Devices
 
 ## GPIO
 
-Pinout on Raspberry 1 B and following are the same, save for the less pins.
+Pinout on Raspberry 1 model B rev 2 and following are the same, save for the less pins.
 
 ### I2C Development
+
+[I2C introduction](https://www.abelectronics.co.uk/kb/article/1090/i2c-part-1---introducing-i2c)
 
 #### Setup
 
@@ -17,13 +19,26 @@ Pinout on Raspberry 1 B and following are the same, save for the less pins.
 1. Reboot
 1. Test if I2C device is found `sudo i2cdetect -y 1`
 
-[Source](https://www.instructables.com/Raspberry-Pi-I2C-Python/)
+[Source](https://www.abelectronics.co.uk/kb/article/1/i2c-part-2---enabling-i-c-on-the-raspberry-pi)
 
-#### AHT20 Temperature & Humidity sensor
+#### Usage
 
-* [How to connect this I2C sensor to the Raspberry Pi](https://learn.adafruit.com/adafruit-aht20/python-circuitpython)
-* How to use it with Python
-    1. `sudo apt-get install python-smbus`
+* [Programming I2C with Python](https://www.abelectronics.co.uk/kb/article/1094/i2c-part-4---programming-i-c-with-python)
+* Use hexadecimal (start with `0xF`) or binary (`0b1111`)
+* Setup
+    1. `sudo apt install python3-pip python3-smbus`
+    1. `pip3 install smbus2`
+    1. Then usage:
+
+        ```python
+        from smbus2 import SMBus
+        i2c_bus = SMBus(1)  # Create a new I2C bus on bus 1
+        data_read = i2c_bus.read_i2c_block_data(I2C_ADDR, 0x0, 1)
+        i2c_bus.write_i2c_block_data(I2C_ADDR, 0x0 , I2C_COMMAND)
+        ```
+* Documentation:
+    * [smbus2](https://smbus2.readthedocs.io/en/latest/index.html)
+    * [A simple read example](https://github.com/DcubeTechVentures/HIH6130/blob/master/Python/HIH6130.py)
 
 ## Network
 
