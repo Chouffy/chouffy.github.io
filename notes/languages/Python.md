@@ -30,10 +30,30 @@ Text|Action
 `x = name.fctA(par)` | Populate var x with the function
 `from math import *` | Import every module from *math*
 
+#### Numbers
+
+* `123` is integer
+* `123.0` is float
+
+#### Decimal
+
+* Integer to Decimal: `bin(int)` but remove leading 0
+* Advanced: use `format()` - [documentation](https://docs.python.org/2/library/string.html#format-specification-mini-language)
+    * Example: `format(14, '#010b')` to output `'0b00001110'`
+    * _The # makes the format include the 0b prefix, and the 010 size formats the output to fit in 10 characters width, with 0 padding; 2 characters for the 0b prefix, the other 8 for the binary digits._ ([Source](https://stackoverflow.com/questions/16926130/convert-to-binary-and-keep-leading-zeros-in-python))
+* How to manage bitmasks = work with one bit - [Source](https://realpython.com/python-bitwise-operators/#bitmasks)
+    * Get a bit by shifting everything to the right
+        ```python
+        def get_normalized_bit(value, bit_index):
+            return (value >> bit_index) & 1
+        ```
+
 #### Text
 
 Text|Action
 -|-
+`print(x)` | Print text in `x`
+`print(x, end =",")` | Print text in x and finish by ","
 `"x\nhey"` or `"x\hey"` | new line between x and hey
 [Link](https://python-reference.readthedocs.io/en/latest/docs/str/escapes.html) | Escape characters list
 
@@ -139,6 +159,10 @@ for item in items:          # Go through all items
 for item in [a, b]:         # same with 2 items
 for item in string:         # same with string - treat is char
 ```
+
+### Switch
+
+Does not exist in Python, so needs to use If.
 
 ### Try
 
