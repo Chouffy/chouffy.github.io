@@ -86,11 +86,6 @@ Check temperatures:
 
 ## Usability
 
-### Tip & Tricks
-
-* Health
-    * Check CPU frequency `cat /proc/cpuinfo`
-
 ### Command-line kung-fu
 
 * `less` to redirect output to a pager
@@ -105,19 +100,16 @@ Check temperatures:
 * List sessions ID `screen -ls`
 * In a session:
     * Detach `CTRL+A d`
-    * Reattach `screen -r session_ID`
-
-## Maintenance
-
-### Update
-
-* Update packages `sudo apt update && sudo apt upgrade`
+    * Rename `CTRL+A :sessionname  <Your_session_name>`
+* Reattach `screen -r session_ID`
 
 ### CPU & Processes
 
 * Check system stats
     * `htop` for processes
     * `nmon` for the whole system
+* Health
+    * Check CPU frequency `cat /proc/cpuinfo`
 
 ### Disk & Data
 
@@ -134,6 +126,12 @@ Check temperatures:
 * Stop a disk
     1. Unmount `sudo umount /dev/sdXX`
     1. Spin down `sudo hdparm -Y /dev/sdXX`
+
+### Power & Battery
+
+* Check status & stats about battery
+    1. List paths `upower -e`
+    1. Get status `upower -i <path>`
 
 ## Recover
 
