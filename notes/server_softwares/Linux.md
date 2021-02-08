@@ -93,6 +93,7 @@ Check temperatures:
 
 ### Command-line kung-fu
 
+* `less` to redirect output to a pager
 * `watch` to _watch_ regularly an output
 * `| grep x` to pipe to grep which is going to select lines with `x`
 
@@ -108,11 +109,31 @@ Check temperatures:
 
 ## Maintenance
 
+### Update
+
 * Update packages `sudo apt update && sudo apt upgrade`
-* Check free disk space `df -h`
+
+### CPU & Processes
+
 * Check system stats
     * `htop` for processes
     * `nmon` for the whole system
+
+### Disk & Data
+
+* Check free disk space `df -h`
+* View SMART data - [Source](https://www.thomas-krenn.com/en/wiki/SMART_tests_with_smartctl)
+    1. Install `smartmontools`
+    1. View SMART data & status `sudo smartctl -i /dev/sdXX`
+    1. Find estimate for SMART test `sudo smartctl -c /dev/sdXX`
+    1. Launch a test: `sudo smartctl -t short /dev/sdXX`.
+        * Possible options instead of `short`:
+        * `long`
+        * `conveyance` (after transport) for ATA disks
+    1. Read the result `sudo smartctl -l selftest /dev/sdXX`
+* Stop a disk
+    1. Unmount `sudo umount /dev/sdXX`
+    1. Spin down `sudo hdparm -Y /dev/sdXX`
 
 ## Recover
 
