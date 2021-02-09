@@ -85,12 +85,14 @@ parent: Server Softwares
     1. Spin down `sudo hdparm -Y /dev/sdXX`
 * Erase a disk `sudo dd if=/dev/urandom of=/dev/sdXX bs=10M` - [Source](https://www.addictivetips.com/ubuntu-linux-tips/ways-to-securely-erase-a-hard-drive-on-linux/)
 
-#### View SMART disk data - [Source](https://www.thomas-krenn.com/en/wiki/SMART_tests_with_smartctl)
+#### View SMART disk data
+
+[Source](https://www.thomas-krenn.com/en/wiki/SMART_tests_with_smartctl)
 
 1. Install `smartmontools`
 1. View SMART data & status `sudo smartctl -i /dev/sdXX`
 1. Find estimate  & current SMART test `sudo smartctl -c /dev/sdXX`
-1. Launch a test: `sudo smartctl -t short /dev/sdXX`.
+1. Launch a test: `sudo smartctl -t short /dev/sdXX`
     * Possible options instead of `short`:
     * `long`
     * `conveyance` (after transport) for ATA disks
@@ -105,7 +107,9 @@ parent: Server Softwares
 
 1. Read the result `sudo smartctl -l selftest /dev/sdXX`
 
-#### Test read/write speed - [Source](https://www.shellhacks.com/disk-speed-test-read-write-hdd-ssd-perfomance-linux/)
+#### Test read/write speed
+
+[Source](https://www.shellhacks.com/disk-speed-test-read-write-hdd-ssd-perfomance-linux/)
 
 1. `sync; dd if=/dev/zero of=tempfile bs=1M count=256; sync`: write to *tempfile* 256 Mb
 1. `sudo /sbin/sysctl -w vm.drop_caches=3`: clear the cache
