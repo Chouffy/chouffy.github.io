@@ -85,7 +85,7 @@ parent: Server Softwares
     1. Spin down `sudo hdparm -Y /dev/sdXX`
 * Erase a disk `sudo dd if=/dev/urandom of=/dev/sdXX bs=10M` - [Source](https://www.addictivetips.com/ubuntu-linux-tips/ways-to-securely-erase-a-hard-drive-on-linux/)
 
-#### View SMART disk data
+#### View SMART disk data - [Source](https://www.thomas-krenn.com/en/wiki/SMART_tests_with_smartctl)
 
 1. Install `smartmontools`
 1. View SMART data & status `sudo smartctl -i /dev/sdXX`
@@ -94,17 +94,22 @@ parent: Server Softwares
     * Possible options instead of `short`:
     * `long`
     * `conveyance` (after transport) for ATA disks
+    * If the HDD go to sleep (especially true for USB ones), try the following:
+
+        ```bash
+        while true; do
+            dd if=/dev/sdXX iflag=direct count=1 of=/dev/null
+            sleep 60
+        done
+        ```
+
 1. Read the result `sudo smartctl -l selftest /dev/sdXX`
 
-[Source](https://www.thomas-krenn.com/en/wiki/SMART_tests_with_smartctl)
-
-#### Test read/write speed
+#### Test read/write speed - [Source](https://www.shellhacks.com/disk-speed-test-read-write-hdd-ssd-perfomance-linux/)
 
 1. `sync; dd if=/dev/zero of=tempfile bs=1M count=256; sync`: write to *tempfile* 256 Mb
 1. `sudo /sbin/sysctl -w vm.drop_caches=3`: clear the cache
 1. `dd if=tempfile of=/dev/null bs=1M count=256`: read *tempfile*
-
-[Source](https://www.shellhacks.com/disk-speed-test-read-write-hdd-ssd-perfomance-linux/)
 
 #### Format & mount a USB stick
 
