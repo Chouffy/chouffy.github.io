@@ -1,8 +1,9 @@
 ---
 parent: Server Softwares
+nav_order: 99
 ---
 
-# OpenBSD
+# OpenBSD - Not updated
 
 FreeNAS runs on OpenBSD.
 
