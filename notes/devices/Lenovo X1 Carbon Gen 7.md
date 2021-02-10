@@ -12,8 +12,6 @@ Current configuration with an Intel i7-8665U:
 
 FIVR Control | Voltage
 -|-
-CPU Core | -100.6 mV
-CPU Cache | -100.6 mV
-Intel GPU | 0 mV
-
-Intel GPU undervolting make the machine unstable
+CPU Core & CPU Cache | -100.6 mV
+Intel GPU & iGPU Unslice | -20.5 mV
+System Agent | 0 mV
