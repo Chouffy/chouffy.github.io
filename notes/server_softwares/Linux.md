@@ -121,20 +121,20 @@ parent: Server Softwares
     * `sudo blkid` to locate block devices
     * `sudo lsblk` to list mounted block devices
     * `ls /dev` to check where the usb stick is mounted
-1. `sudo fdisk /dev/sda` if the usb stick is on `sda`
+1. `sudo fdisk /dev/sdXX`
     1. `p` to list existing partition
     1. `g` to create a new GPT partition table or `o` for a DOS partition table
     1. `n` to create a new partition
     1. `w` write to disk and exit
-1. `sudo mkfs.ext4 /dev/sda1` to create a ext4 partition
+1. `sudo mkfs.ext4 /dev/sdXX00` to create a ext4 partition
 1. `sudo mkdir /media/usbdrive` to create a directory that will host the partition
     * Choose `/mnt` for temporary mounts
     * Choose `/media` for automatics mounts
-1. `sudo mount /dev/sda1 /media/usbdrive -o umask=000` to mount the usb key with all user access
-1. `sudo umount /dev/sda1` to unmount
+1. `sudo mount /dev/sdXX00 /media/usbdrive -o umask=000` to mount the usb key with all user access
+1. `sudo umount /dev/sdXX00` to unmount
 1. If you want to make it permanent
     * Edit `sudo nano /etc/fstab`
-    * Add a line `/dev/sda1       /media/usbdrive           ext4    defaults        0       0 `
+    * Add a line `/dev/sdXX00       /media/usbdrive           ext4    defaults        0       0 `
     * [(Check how fstab works here)](https://www.howtogeek.com/howto/38125/htg-explains-what-is-the-linux-fstab-and-how-does-it-work/)
 
 ### Power & Battery
