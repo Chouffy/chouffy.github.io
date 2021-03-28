@@ -1,5 +1,6 @@
 ---
 has_children: true
+parent: Softwares
 ---
 
 # Windows
