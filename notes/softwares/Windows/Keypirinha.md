@@ -5,6 +5,8 @@ parent: Windows
 
 # Keypirinha
 
+A really good keystroke launcher, and also capable to search for stuff when configured!
+
 ## Configuration
 
 [Multiple profiles can be defined.](https://keypirinha.com/configuration.html#machine-and-user-specific-settings)
