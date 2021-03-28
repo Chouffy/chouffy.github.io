@@ -1,8 +1,8 @@
 ---
-parent: Softwares
+parent: Windows
 ---
 
-# Windows
+# Windows 10
 
 ## Tidbits
 
