@@ -55,6 +55,7 @@ parent: Server Softwares
 * `watch` to _watch_ regularly an output
 * `| grep x` to pipe to grep which is going to select lines with `x`
 * `id $user` to get user PUID & GUID
+* `tar -xvzf file.tar.gz` to extract tarball and zip
 
 #### *Screen* Terminal Multiplexer
 
