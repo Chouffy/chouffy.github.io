@@ -24,11 +24,7 @@ hotkey_history = Win+Alt+Space
 * [PackageControl](https://github.com/ueffel/Keypirinha-PackageControl), a nice package manager
     * Everything is prefixed with `PackageControl:`
     * Restart Keypirinha is recommended
-* [WinSys](https://github.com/kvnxiao/keypirinha-winsys), some useful shortcuts to Windows 10
-* [Currency](https://github.com/AvatarHurden/keypirinha-currency), can convert using ISO codes, like *5 usd in eur*
-* [Cvt](https://github.com/DrorHarari/keypirinha-cvt), can convert area, data, ...
-* [Kill](https://github.com/ueffel/Keypirinha-Plugin-Kill), can kill apps
-* [WindowsApps](https://github.com/ueffel/Keypirinha-WindowsApps) to catalog UWA
+    * All packages are [listed here](https://ue.spdns.de/packagecontrol/)
 
 ### FilesCatalog
 
@@ -90,7 +86,7 @@ url = https://la-conjugaison.nouvelobs.com/rechercher/index.php?l=en&q=%s
 history_keep = all
 
 # Other
-[site/French conjugation - ConjugFR]
+[site/Keepa - Amazon Price compare]
 url = https://keepa.com/#!product/3-%s
 ```
 
