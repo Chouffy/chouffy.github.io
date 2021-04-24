@@ -23,11 +23,9 @@ In the setting for a connection, go to :
 
 ## Duplicati
 
-A very good backup solution, if you have a good storage provider.
-
-Command | Usage
--|-
-`Duplicati.CommandLine.exe test <storage-URL> all`|Test every backup
+A very good backup solution, if you have a good storage provider.  
+In Ubuntu, installed in `/usr/lib/duplicati/`, and use `'` in command line
+Documentation for command line is [here](https://duplicati.readthedocs.io/en/latest/04-using-duplicati-from-the-command-line/)
 
 * [Command-line Duplicati Client](https://pypi.org/project/duplicati-client/)
 
