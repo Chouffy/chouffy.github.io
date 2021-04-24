@@ -54,8 +54,8 @@ parent: Server Softwares
 * `less` to redirect output to a pager
 * `watch` to _watch_ regularly an output
 * `| grep x` to pipe to grep which is going to select lines with `x`
+* `clear` to clear the command line
 * `id $user` to get user PUID & GUID
-* `tar -xvzf file.tar.gz` to extract tarball and zip
 
 #### *Screen* Terminal Multiplexer
 
@@ -137,6 +137,11 @@ parent: Server Softwares
     * Edit `sudo nano /etc/fstab`
     * Add a line `/dev/sdXX00       /media/usbdrive           ext4    defaults        0       0 `
     * [(Check how fstab works here)](https://www.howtogeek.com/howto/38125/htg-explains-what-is-the-linux-fstab-and-how-does-it-work/)
+
+### Files
+
+* `tar -xvzf file.tar.gz` to extract tarball and zip
+* `find / -name filename` to find *filename* in entire system (/) or active folder (.), and `sudo` to avoid permissions problems
 
 ### Power & Battery
 
