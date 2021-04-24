@@ -21,10 +21,11 @@ hotkey_history = Win+Alt+Space
 
 ## Packages
 
-* [PackageControl](https://github.com/ueffel/Keypirinha-PackageControl), a nice package manager
-    * Everything is prefixed with `PackageControl:`
-    * Restart Keypirinha is recommended
-    * All packages are [listed here](https://ue.spdns.de/packagecontrol/)
+[PackageControl](https://github.com/ueffel/Keypirinha-PackageControl), a nice package manager
+
+* Everything is prefixed with `PackageControl:`
+* Restart Keypirinha is recommended
+* All packages are [listed here](https://ue.spdns.de/packagecontrol/)
 
 ### FilesCatalog
 
