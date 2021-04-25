@@ -43,6 +43,18 @@ parent: Server Softwares
 * Edit cron of an user `sudo crontab -u USER -e`
 * Check if the cron expression is correct: [crontab guru](https://crontab.guru/)
 
+### [Cockpit](https://cockpit-project.org/) - Remote administration of server
+
+1. `sudo apt-get install cockpit cockpit-machines`
+1. `sudo ufw allow 9090`
+1. If you cannot update packages, `network manager` may be in use, check with `nmcli d`
+    * `sudo systemctl disable network-manager.service`
+    * `sudo systemctl stop network-manager.service`
+
+### Install on VirtualBox
+
+* Enable guest automatic resolution change: `sudo apt install virtualbox-guest-dkms`
+
 ## Tips & Tricks
 
 * Date & Time
@@ -63,9 +75,11 @@ parent: Server Softwares
 
 * Start `screen`
 * List sessions ID `screen -ls`
-* In a session:
-    * Detach `CTRL+A d`
-    * Rename `CTRL+A :sessionname  <Your_session_name>`
+* In a session - Hotkey `CTRL+A` then:
+    * `d`: Detach
+    * `[`: Copy mode
+        * `CTRL+u` to scroll up, `CTRL+d` to scroll down
+    * `:sessionname  <Your_session_name>`: Rename
 * Reattach `screen -r session_ID`
 
 ### CPU & Processes
@@ -176,3 +190,87 @@ Try [Super Grub2 Disk](https://www.supergrubdisk.org/)
     * `sudo systemctl enable SERVICE`
     * `sudo systemctl disable SERVICE`
     * `sudo systemctl is-enabled SERVICE`
+
+## KVM - Virtual Machines
+
+### Setup KVM
+
+Based on [this great tutorial by OSTechnix](https://ostechnix.com/install-and-configure-kvm-in-ubuntu-20-04-headless-server/).
+
+1. Install QEMU and some other libs
+    1. `sudo apt install qemu qemu-kvm libvirt-clients libvirt-daemon-system virtinst bridge-utils`
+    1. `systemctl status libvirtd` - must be enabled and started
+
+1. Configure network bridge
+    1. `ip a` list existing network, including `virbr` which is the preinstalled bridge
+    1. Disable netfilter on bridge
+        1. Create `/etc/sysctl.d/bridge.conf` and add the following
+
+            ```bash
+            net.bridge.bridge-nf-call-ip6tables=0
+            net.bridge.bridge-nf-call-iptables=0
+            net.bridge.bridge-nf-call-arptables=0
+            ```
+
+        1. Create `/etc/udev/rules.d/99-bridge.rules` and add `ACTION=="add", SUBSYSTEM=="module", KERNEL=="br_netfilter", RUN+="/sbin/sysctl -p /etc/sysctl.d/bridge.conf"`
+    1. Remove default KVM brige
+        1. `virsh net-destroy default`
+        1. `virsh net-undefine default`
+        1. `ip link` check that `virbr` interfaces are gone
+    1. Edit `/etc/netplan/00-installer-config.yaml`
+        1. Backup first
+        1. Add a new section under defined interface - Careful about the identation
+
+            ```bash
+            network:
+              ethernets:
+                enp0sXYZ:
+                  #config
+              bridges:
+                br0:
+                  interfaces: [ enp0s3 ]
+                  addresses: [192.168.225.52/24]
+                  gateway4: 192.168.225.1
+                  mtu: 1500
+                  nameservers:
+                    addresses: [8.8.8.8,8.8.4.4]
+                  parameters:
+                    stp: true
+                    forward-delay: 4
+                  dhcp4: no
+                  dhcp6: no
+              version: 2
+            ```
+
+        1. `sudo netplan --debug  apply` apply
+        1. `ip a` to check, also `brctl show br0`
+    1. Configure KVM to use this bridge
+        1. Edit `host-bridge.xml` somewhere and add:
+
+            ```xml
+            <network>
+              <name>host-bridge</name>
+              <forward mode="bridge"/>
+              <bridge name="br0"/>
+            </network>
+            ```
+        1. `virsh net-define host-bridge.xml`
+        1. `virsh net-start host-bridge`
+        1. `virsh net-autostart host-bridge`
+        1. `virsh net-list --all` to check
+
+### Manage VM
+
+* `virt-install` to create a Virtual Machine
+* `sudo virsh --all` ...
+    * `list` to list VM
+    * Status
+        * `start ID/Name`
+        * `reboot ID/Name`
+        * `suspend ID/Name`
+        * `shutdown ID/Name`
+    * To edit a VM
+        * `edit ID/Name`
+    * To delete a VM
+        1. `undefine ID/Name`
+        1. `sudo virsh destroy ID/Name`
