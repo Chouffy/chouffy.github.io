@@ -56,6 +56,7 @@ parent: Server Softwares
 1. Install OS and Guest addition
 1. Enable guest automatic resolution change: `sudo apt install virtualbox-guest-dkms`
 1. Disable animations `gsettings set org.gnome.desktop.interface enable-animations false`
+1. Allow user to access Shared Folder `sudo adduser $USER vboxsf`
 
 ## Tips & Tricks
 
