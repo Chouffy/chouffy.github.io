@@ -53,7 +53,9 @@ parent: Server Softwares
 
 ### Install on VirtualBox
 
-* Enable guest automatic resolution change: `sudo apt install virtualbox-guest-dkms`
+1. Install OS and Guest addition
+1. Enable guest automatic resolution change: `sudo apt install virtualbox-guest-dkms`
+1. Disable animations `gsettings set org.gnome.desktop.interface enable-animations false`
 
 ## Tips & Tricks
 
