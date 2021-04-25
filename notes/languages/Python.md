@@ -272,3 +272,59 @@ data = "{ 'k1': 'w1' }"         # JSON string
 dictData = json.loads(data)     # load a JSON string in dictData
 print(dictData['k1'])           # print content of k1
 ```
+
+## Package application
+
+[Tutorial](https://packaging.python.org/tutorials/packaging-projects/):
+
+1. Create the structure
+    ```
+    packaging_tutorial/
+    └── src/
+        └── example_pkg/
+            └── __init__.py
+            └── example_pkg.py
+    ```
+1. Configure metadata
+    ```cfg
+    [metadata]
+    # replace with your username:
+    name = example-pkg-YOUR-USERNAME-HERE
+    version = 0.0.1
+    author = Example Author
+    author_email = author@example.com
+    description = A small example package
+    long_description = file: README.md
+    long_description_content_type = text/markdown
+    url = https://github.com/pypa/sampleproject
+    project_urls =
+        Bug Tracker = https://github.com/pypa/sampleproject/issues
+    classifiers =
+        Programming Language :: Python :: 3
+        License :: OSI Approved :: MIT License
+        Operating System :: OS Independent
+
+    [options]
+    package_dir =
+        = src
+    packages = find:
+    python_requires = >=3.6
+
+    [options.packages.find]
+    where = src
+    ```
+1. Create README
+1. Create LICENSE
+1. Update if necessary
+    * Windows `py -m pip install --upgrade build`
+    * Unix `python3 -m pip install --upgrade build`
+1. Generate
+    * Windows `py -m build`
+    * Unix `python3 -m build`
+1. Install `pip install C:/some-dir/some-file.whl`
+
+To use this example: `from example_pkg import example_pkg`
+
+## Tips
+
+* `time.sleep(1)` to pause 1 sec
