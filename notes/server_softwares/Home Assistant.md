@@ -28,8 +28,9 @@ parent: Server Softwares
 
 * Entity to use: [Media Player](https://developers.home-assistant.io/docs/core/entity/media-player)
 * Example of [integrations](https://www.home-assistant.io/integrations/#media-player):
-    * [Harman Kardon AVR integration](https://www.home-assistant.io/integrations/harman_kardon_avr/) which use [this module](https://github.com/Devqon/hkavr)
-    * [Frontier Silicon integration](https://github.com/home-assistant/core/tree/dev/homeassistant/components/frontier_silicon) with [this module](https://github.com/zhelev/python-afsapi/tree/master/afsapi)
+    * Simple: [Harman Kardon AVR integration](https://www.home-assistant.io/integrations/harman_kardon_avr/) which use [this module](https://github.com/Devqon/hkavr)
+    * Simple: [Clementine Music Player integration](https://github.com/home-assistant/core/blob/dev/homeassistant/components/clementine/media_player.py) which use [this module]()
+    * Async: [Frontier Silicon integration](https://github.com/home-assistant/core/tree/dev/homeassistant/components/frontier_silicon) with [this module](https://github.com/zhelev/python-afsapi/tree/master/afsapi)
 
 * [Command lists](https://www.loxwiki.eu/display/LOX/Libratone+Zipp+WLan+Lautsprecher)
     * Made and described in [this blog post](https://benjaminhanke.de/baublog/technik/libratone-zipp-wlan-lautsprecher-in-loxone-einbinden/)
