@@ -27,6 +27,7 @@ Text|Action
 `#` | Comment, sinlge line
 \`\`\` | Comment, multiple lines
 `var x` | Declare a new var, any type
+`var _x` | Private variable
 `x = name.fctA(par)` | Populate var x with the function
 `from math import *` | Import every module from *math*
 
