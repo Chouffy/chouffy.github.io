@@ -31,6 +31,10 @@ Text|Action
 `x = name.fctA(par)` | Populate var x with the function
 `from math import *` | Import every module from *math*
 
+#### Naming Convention
+
+[See here](https://pythonguides.com/python-naming-conventions/)
+
 #### Numbers
 
 * `123` is integer
@@ -274,7 +278,9 @@ dictData = json.loads(data)     # load a JSON string in dictData
 print(dictData['k1'])           # print content of k1
 ```
 
-## Package application
+## Development
+
+### Package application
 
 [Tutorial](https://packaging.python.org/tutorials/packaging-projects/):
 
@@ -325,6 +331,20 @@ print(dictData['k1'])           # print content of k1
 1. Install `pip install C:/some-dir/some-file.whl`
 
 To use this example: `from example_pkg import example_pkg`
+
+### Publish an application on PyPI
+
+[There's a good tutorial here](https://realpython.com/pypi-publish-python-package/)
+
+1. Configure `setup.py`
+1. Document with Readme and License
+1. Increment version in `setup.py` and `__init__.py`
+    * Or with `bump2version --current-version 1.0.0 minor setup.py PROJECT/__init__.py`
+1. Install `pip install twine wheel` if necessary
+1. Create archive and wheel `python setup.py sdist bdist_wheel`
+1. Check `twine check dist/*`
+1. Upload to TestPyPI `twine upload --repository-url https://test.pypi.org/legacy/ dist/*`
+1. Upload to PyPi `twine upload dist/*`
 
 ## Tips
 
