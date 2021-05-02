@@ -81,7 +81,7 @@ parent: Server Softwares
 * In a session - Hotkey `CTRL+A` then:
     * `d`: Detach
     * `[`: Copy mode
-        * `CTRL+u` to scroll up, `CTRL+d` to scroll down
+        * Page-Up to scroll up, Page-Down to scroll down
     * `:sessionname  <Your_session_name>`: Rename
 * Reattach `screen -r session_ID`
 
@@ -92,6 +92,7 @@ parent: Server Softwares
     * `nmon` for the whole system
 * Health
     * Check CPU frequency `cat /proc/cpuinfo`
+* System information `dmidecode`
 
 ### Disk & Data
 
@@ -159,6 +160,17 @@ parent: Server Softwares
 
 * `tar -xvzf file.tar.gz` to extract tarball and zip
 * `find / -name filename` to find *filename* in entire system (/) or active folder (.), and `sudo` to avoid permissions problems
+
+### Network & Internet
+
+* Edit network configuration with netplan `/etc/netplan/00-installer-config.yaml`
+* Disable IPv6 - [Source](https://itsfoss.com/disable-ipv6-ubuntu-linux/)
+
+    ```bash
+    sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1
+    sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1
+    sudo sysctl -w net.ipv6.conf.lo.disable_ipv6=1
+    ```
 
 ### Power & Battery
 
