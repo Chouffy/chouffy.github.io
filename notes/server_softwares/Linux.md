@@ -45,8 +45,11 @@ parent: Server Softwares
 
 ### [Cockpit](https://cockpit-project.org/) - Remote administration of server
 
-1. `sudo apt-get install cockpit cockpit-machines`
+1. `sudo apt-get install cockpit` and with:
+    * `cockpit-machines` for KVM
+    * `cockpit-docker` for Docker
 1. `sudo ufw allow 9090`
+1. `sudo systemctl restart cockpit.socket`
 1. If you cannot update packages, `network manager` may be in use, check with `nmcli d`
     * `sudo systemctl disable network-manager.service`
     * `sudo systemctl stop network-manager.service`
