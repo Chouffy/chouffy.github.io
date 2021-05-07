@@ -218,6 +218,18 @@ Text|Action
 `a.readlines()` | read each lines in array [line1, lineN]
 `a.write("text")` | Mode "w": overwrite the file with text<br>Mode "a": append text at end of file
 
+### UDP Communication
+
+Text|Action
+-|-
+`import socket`|
+`my_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)` | Initiate a new UDP socket
+To send something |
+`resp = my_socket.sendto(data, (host, port))` | Send *data* to host:port
+To receive something |
+`my_socket.bind(("", port))` | Bind the socket to port
+`data, ip = my_socket.recvfrom(1024)` | Receive incoming data and ip. Must be in a loop
+
 ## Classes & Objects
 
 ### Definition
