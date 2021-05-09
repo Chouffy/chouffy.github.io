@@ -124,6 +124,23 @@ Like List but immutable
 * `x = (4, 5)`
 * `x = ([1,2],[3,4])`
 
+### Thread-based parallelism
+
+The following function will return "Spun off" before "Done", as there's a wait function. [Source](https://stackoverflow.com/questions/6683475/non-blocking-python-process-or-thread)
+
+```python
+import threading, time
+
+def my_threaded_func(arg, arg2):
+    print("Running thread! Args:", (arg, arg2))
+    time.sleep(2)
+    print("Done!")
+
+thread = threading.Thread(target=my_threaded_func, args=("I'm a", "thread"))
+thread.start()
+print("Spun off thread")
+```
+
 ### Modules management
 
 * `pip install x`
