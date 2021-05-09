@@ -201,6 +201,13 @@ x.index("a")                # return start index of string/char
 x.replace("old", "new")     # replace in x "old" by "new"
 ```
 
+#### Base conversion (decimal, hexadecimal, binary)
+
+```python
+import binascii
+y = binascii.hexlify(x)     # convert x in hexadecimal
+```
+
 ### Numbers
 
 Text|Action
@@ -218,17 +225,21 @@ Text|Action
 `a.readlines()` | read each lines in array [line1, lineN]
 `a.write("text")` | Mode "w": overwrite the file with text<br>Mode "a": append text at end of file
 
-### UDP Communication
+### Network
+
+#### UDP Communication
 
 Text|Action
 -|-
 `import socket`|
-`my_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)` | Initiate a new UDP socket
-To send something |
-`resp = my_socket.sendto(data, (host, port))` | Send *data* to host:port
+`UDPServerSocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)` | Initiate a new UDP socket
 To receive something |
-`my_socket.bind(("", port))` | Bind the socket to port
-`data, ip = my_socket.recvfrom(1024)` | Receive incoming data and ip. Must be in a loop
+`UDPServerSocket.bind((localIP, port))` | Bind the socket to port
+`data, address = UDPServerSocket.recvfrom(1024)` | Receive incoming data and ip with a buffer size of 1024. Must be in a loop
+To send something |
+`UDPServerSocket.sendto(data, (host, port))` | Send *data* to host:port
+
+[Source](https://pythontic.com/modules/socket/udp-client-server-example)
 
 ## Classes & Objects
 
