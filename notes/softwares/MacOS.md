@@ -7,6 +7,7 @@ parent: Softwares
 ## Setup
 
 * Install MacOS from USB drive: [Apple Guide](https://support.apple.com/en-us/HT201372)
+* Install MacOS in VirtualBox: [Script on GitHub](https://github.com/myspaghetti/macos-virtualbox/)
 
 ## Tips
 
