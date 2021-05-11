@@ -131,12 +131,13 @@ The following function will return "Spun off" before "Done", as there's a wait f
 ```python
 import threading, time
 
-def my_threaded_func(arg, arg2):
-    print("Running thread! Args:", (arg, arg2))
+def my_threaded_func(arg):
+    print("Running thread! Args:", (arg))
     time.sleep(2)
     print("Done!")
 
-thread = threading.Thread(target=my_threaded_func, args=("I'm a", "thread"))
+thread = threading.Thread(target=my_threaded_func, args=("I'm a thread",))
+# Note the ,) at the end: Thread expect arg to be iterable, so you have to pass a tuple
 thread.start()
 print("Spun off thread")
 ```
@@ -269,6 +270,8 @@ class ClassName:
         self.a  = a
     def function(self):	
         return a
+    def functionb(self, x: int) # x must be of type int
+        return x
 ```
 
 ### Usage
