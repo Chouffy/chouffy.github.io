@@ -4,6 +4,16 @@ nav_order: 10
 ---
 
 # Good Softwares
+{: .no_toc }
+
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+---
+
 
 ## PortableApps
 
@@ -33,8 +43,8 @@ Useful commands:
 * `Duplicati.CommandLine.exe delete <storage-URL> --version=<int>` to delete all files that belong to version <int>
 * `Duplicati.CommandLine.exe test <storage-URL> <all/#> [<options>]` to check either all or a number (#) of sample
 
-
 ## Paint.Net (Paint/Photoshop alternative)
 
 * [Official site](https://www.getpaint.net/index.html)
 * [Great plugin pack](https://forums.getpaint.net/topic/110234-red-ochre-plugin-pack-101-march-2017/)
+
