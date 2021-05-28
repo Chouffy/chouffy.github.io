@@ -39,10 +39,17 @@ There's also a [command-line Duplicati client](https://pypi.org/project/duplicat
 Documentation for command line is [here](https://duplicati.readthedocs.io/en/latest/04-using-duplicati-from-the-command-line/).  
 Useful commands:
 
-* `Duplicati.CommandLine.exe delete <storage-URL> --version=<int>` to delete all files that belong to version <int>
+* `Duplicati.CommandLine.exe delete <storage-URL> --version=<int>` to delete all files that belong to version `<int>`
 * `Duplicati.CommandLine.exe test <storage-URL> <all/#> [<options>]` to check either all or a number (#) of sample
 
 ## Paint.Net (Paint/Photoshop alternative)
 
 * [Official site](https://www.getpaint.net/index.html)
 * [Great plugin pack](https://forums.getpaint.net/topic/110234-red-ochre-plugin-pack-101-march-2017/)
+
+## Visual Studio Code (Text/Code editor)
+
+* [How to make VSCode portable](https://code.visualstudio.com/docs/editor/portable)
+* Extensions that I use:
+    * *markdownlint*
+    * *REST Client* to make some API calls
