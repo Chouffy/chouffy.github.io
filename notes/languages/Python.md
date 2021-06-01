@@ -280,6 +280,9 @@ class ClassName:
 from filename import ClassName
 object = ClassName("a", "b")
 print(object.a)
+
+# Delete an object
+del object
 ```
 
 ### Inheritance
