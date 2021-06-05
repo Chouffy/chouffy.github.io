@@ -2,7 +2,7 @@
 parent: Server Softwares
 ---
 
-# Alpine Server
+# Alpine Linux
 
 ## Setup
 
