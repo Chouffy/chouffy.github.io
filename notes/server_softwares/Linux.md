@@ -22,10 +22,13 @@ parent: Server Softwares
 * Install `sudo apt install ufw`
 * Configuration
     * Check status & list configuration `sudo ufw status`
+    * Set default incoming to deny `ufw default deny incoming` and `ufw default allow outgoing` for instance
     * Allow a port `sudo ufw allow PORT`
-    * Remove an allowance `sudo ufw remove PORT`
+    * Remove an allowance `sudo ufw delete PORT`
     * Rate limit a port (>6 connections within 30 sec) `sudo ufw limit PORT`
+    * `PORT` can be replaced with a known app like `SSH` or specific protocol like `PORT/tcp`
     * Enable `sudo ufw enable`
+    * On alpine `rc-update add ufw default`
 * Verify
     * Check added rules `sudo ufw show added`
     * Check existing rules with numbers `sudo ufw status numbered`
