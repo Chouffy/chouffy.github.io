@@ -20,6 +20,14 @@ parent: Windows
     * [Source](https://www.howtogeek.com/222057/how-to-remove-the-folders-from-%E2%80%9Cthis-pc%E2%80%9D-on-windows-10/)
 * Manage a service: `net start/stop servicename`
 
+## Network & Connections
+
+### Bluetooth
+
+* Connect to an A2DP client:
+    1. Pair device to PC
+    1. Install *Bluetooth Audio Receiver* from the Windows Store 
+
 ## Control Panel / Settings
 
 ### Open performances options panel
