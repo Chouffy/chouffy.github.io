@@ -9,7 +9,7 @@ This will be also about project connected to or running on Docker, like Portaine
 ## [Docker software](https://www.docker.com/)
 
 A *container* run an *image*.  
-Data are in `/var/lib/docker/volumes/`
+Data are in `/var/lib/docker/volumes/`.
 
 Container management:
 
@@ -36,7 +36,7 @@ Other commands:
 
 ## [Portainer - Web container management](https://www.portainer.io/)
 
-Helps managing containers.
+Helps to manage containers.
 
 Run `docker run --restart always -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce`
 
