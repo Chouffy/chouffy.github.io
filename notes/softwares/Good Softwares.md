@@ -50,7 +50,3 @@ Useful commands:
 ## Visual Studio Code (Text/Code editor)
 
 * [How to make VSCode portable](https://code.visualstudio.com/docs/editor/portable)
-* Extensions that I use:
-    * *markdownlint* to make proper Markdown files
-    * *REST Client* to make some API calls
-    * *URL Encode* to code and decode URL
