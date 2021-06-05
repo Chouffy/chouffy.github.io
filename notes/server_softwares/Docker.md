@@ -49,7 +49,7 @@ Update containers automatically. Run the quick start script to install.
 Environment variables:
 
 * `TZ:timezone`: Timezone
-*  `Europe/Amsterdam: 0 0 5 * * *`: [cron](https://pkg.go.dev/github.com/robfig/cron@v1.2.0#hdr-CRON_Expression_Format) setting to check for update each day at 0500.
+* `WATCHTOWER_SCHEDULE: 0 0 5 * * *`: [cron](https://pkg.go.dev/github.com/robfig/cron@v1.2.0#hdr-CRON_Expression_Format) setting to check for update each day at 0500.
 
 ## [Chrony / Docker-NTP](https://github.com/cturra/docker-ntp)
 
