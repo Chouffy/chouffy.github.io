@@ -37,7 +37,7 @@ Check also common Linux setup in the Linux page!
 
 ### Date & Time
 
-Rasperry OS manage time with `timedatectl`:
+Raspberry OS manage time with `timedatectl`:
 
 * Show existing date & time: `date`
 * Show status `timedatectl status`
