@@ -4,7 +4,7 @@ _site
 .jekyll-metadata
 Gemfile.lock
 vendor
-ltex.*
+.vscode/
 
 # Ignore Private directories
 Private/
