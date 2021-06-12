@@ -202,6 +202,11 @@ except:
 
 ## Functions
 
+```python
+# Know the type of the variable (float, int, str, list, dict, tuple)
+x = isinstance(var, str) # x = True if var:str
+```
+
 ### Text
 
 Is an index
@@ -232,6 +237,12 @@ Text|Action
 -|-
 `str(x)` | int to str
 `int(x)` or `float(x)` | str to int or float
+
+### Bytearrays
+
+```python
+[hex(i) for i in data]  # print content of data in pretty hexadecimal
+```
 
 ### Files
 
