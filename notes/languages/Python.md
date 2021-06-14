@@ -263,8 +263,8 @@ Text|Action
 `import socket`|
 `UDPServerSocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)` | Initiate a new UDP socket
 To receive something |
-`UDPServerSocket.bind((localIP, port))` | Bind the socket to port
-`data, address = UDPServerSocket.recvfrom(1024)` | Receive incoming data and ip with a buffer size of 1024. Must be in a loop
+`UDPServerSocket.bind(("", port))` | Bind the socket to port
+`data, address = UDPServerSocket.recvfrom(1024)` | Receive incoming data and ip with a buffer size of 1024
 To send something |
 `UDPServerSocket.sendto(data, (host, port))` | Send *data* to host:port
 
