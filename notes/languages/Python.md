@@ -402,7 +402,4 @@ To use this example: `from example_pkg import example_pkg`
 1. Check `twine check dist/*`
 1. Upload to TestPyPI `twine upload --repository-url https://test.pypi.org/legacy/ dist/*`
 1. Upload to PyPi `twine upload dist/*`
-
-## Tips
-
-* `time.sleep(1)` to pause 1 sec
+1. Make a release in GitHub
