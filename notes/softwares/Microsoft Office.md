@@ -2,7 +2,7 @@
 parent: Softwares
 ---
 
-# Office
+# Microsoft Office
 
 ## Excel
 
