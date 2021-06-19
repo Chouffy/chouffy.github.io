@@ -354,6 +354,7 @@ import json
 data = "{ 'k1': 'w1' }"         # JSON string
 dictData = json.loads(data)     # load a JSON string in dictData
 print(dictData['k1'])           # print content of k1
+data['k1'].get['k12','']        # Get [k1][k12], otherwise return ''
 ```
 
 ## Development
