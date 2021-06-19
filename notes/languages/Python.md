@@ -67,7 +67,8 @@ Text|Action
 Text|Action
 -|-
 `list = [a, b, c]` | Declare a list "list" with variables a b c, can be any type
-`list = [[a,b][c,d]`| 
+`list = [[a,b][c,d]`| List in list
+`print(*list, sep=", ")` | print each item in *list* with , as separator
 
 #### Access
 
@@ -179,6 +180,7 @@ Good for index!
 ```python
 for item in items:          # Go through all items
     do something with item  # item is one of the items
+    break                   # Break the current loop
 for item in [a, b]:         # same with 2 items
 for item in string:         # same with string - treat is char
 ```
