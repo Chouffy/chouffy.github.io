@@ -256,6 +256,25 @@ Text|Action
 `a.readlines()` | read each lines in array [line1, lineN]
 `a.write("text")` | Mode "w": overwrite the file with text<br>Mode "a": append text at end of file
 
+### Logs - Logging class
+
+Example inspired from this [StackOverflow thread](https://stackoverflow.com/a/54424164)
+
+```python
+_log_level=logging.DEBUG 
+_log_format = logging.Formatter('[%(asctime)s] [%(levelname)s] - %(message)s')
+_LOGGER = logging.getLogger(__name__)                                  
+_LOGGER.setLevel(_log_level)                                       
+
+# writing to stdout                                                     
+handler = logging.StreamHandler(sys.stdout)                             
+handler.setLevel(_log_level)                                        
+handler.setFormatter(_log_format)                                        
+_LOGGER.addHandler(handler)                                            
+                                                                  
+_LOGGER.debug("Logging has been setup")   
+```
+
 ### Network
 
 #### UDP Communication
