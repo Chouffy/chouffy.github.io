@@ -28,5 +28,19 @@ parent: Server Softwares
 ### Setup
 
 * Follow [setup guide here](https://developers.home-assistant.io/docs/development_environment/)
-* Then [don't forget to checkout a seperate branch](https://developers.home-assistant.io/docs/development_submitting)
+* Then [don't forget to check out a separate branch](https://developers.home-assistant.io/docs/development_submitting)
 * Start Home Assistant `hass -c config`
+
+#### HTTPS Setup
+
+1. Install [Let's Encrypt add-on](https://github.com/home-assistant/addons/blob/master/letsencrypt/DOCS.md) and follow the documentation
+1. Configure `configuration.yaml`
+
+    ```yaml
+    http:
+        base_url: https://<domain>:8123
+        ssl_certificate: /ssl/fullchain.pem
+        ssl_key: /ssl/privkey.pem
+    ```
+
+1. Restart the server
