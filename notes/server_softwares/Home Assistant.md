@@ -22,6 +22,8 @@ parent: Server Softwares
     * [View current published repo](https://hacs-repositories.web.app/)
     * [Install HACS](https://hacs.xyz/docs/installation/prerequisites/)
     * [Add a custom repo](https://hacs.xyz/docs/faq/custom_repositories)
+* Ressources
+    * Icons: [Material Design Icons](https://materialdesignicons.com/) - use it like `mdi:home`
 
 ### Setup
 
