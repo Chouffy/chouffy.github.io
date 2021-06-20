@@ -135,7 +135,9 @@ Notes:
 
 ### OVH Dynamic IP
 
-OK, it's not an app, just a script that I run every 6 hours:
+OK, it's not an app, just a script that I run every 6 hours.
+
+You need to set-up first a DynHost username - see [this documentation](https://docs.ovh.com/gb/en/domains/hosting_dynhost/).
 
 ```bash
 #!/bin/bash
