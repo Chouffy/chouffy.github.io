@@ -18,7 +18,7 @@ parent: Server Softwares
 
 ## Other stuff
 
-* Host X.X.X.X was not connected to because it violates local access rules. -> [Fix here](https://help.nextcloud.com/t/violates-local-access-rules-in-talk-9/84471/2)
+* Host `X.X.X.X` was not connected to because it violates local access rules. → [Fix here](https://help.nextcloud.com/t/violates-local-access-rules-in-talk-9/84471/2)
 
 ## Maintenance
 
@@ -75,7 +75,7 @@ Sources:
 * [Reference page for the Snap](https://github.com/nextcloud/nextcloud-snap)
 * [How To Setup A Nextcloud Server In Ubuntu](https://kevq.uk/how-to-setup-a-nextcloud-server-in-ubuntu)
 * [OCC Command line tool](https://docs.nextcloud.com/server/15/admin_manual/configuration_server/occ_command.html)
-    * [Most notably the config commmand](https://docs.nextcloud.com/server/15/admin_manual/configuration_server/occ_command.html#config-commands) instead of changing `config.php`
+    * [Most notably the config command](https://docs.nextcloud.com/server/15/admin_manual/configuration_server/occ_command.html#config-commands) instead of changing `config.php`
     * Get example: `sudo nextcloud.occ config:system:get version`
     * Set example: `sudo nextcloud.occ config:system:set logtimezone --value="Europe/Berlin"`
 
@@ -111,7 +111,7 @@ Sources:
     1. Remove shell access from `ncbackup` user `sudo usermod -s /sbin/nologin ncbackup`
     1. Schedule the backup
         1. Open crontab `sudo crontab -u ncbackup -e`
-        1. Make the script run every hour every hour `30 * * * * sudo /usr/sbin/ncpreviewgenerator.sh`
+        1. Make the script run every 30 min `30 * * * * sudo /usr/sbin/ncpreviewgenerator.sh`
 
 Notes:
 
@@ -132,3 +132,20 @@ Notes:
 ### Music
 
 * [Project GitHub](https://github.com/owncloud/music)
+
+### OVH Dynamic IP
+
+OK, it's not an app, just a script that I run every 6 hours:
+
+```bash
+#!/bin/bash
+# Output to a logfile
+exec &> /home/ncbackup/DDNS/"$(date '+%Y-%m-%d %T').txt"
+echo "Starting DDNS update ..."
+
+curl -i -H "Authorization: Basic COPY_YOUR_KEY_HERE=" ""https://www.ovh.com/nic/update?system=dyndns'&'hostname=DOMAIN.EXAMPLE.ORG""
+
+# Remove logs older than 14 days
+find /home/ncbackup/DDNS -mtime +14 -type f -delete
+echo "Removed old logs"
+```
