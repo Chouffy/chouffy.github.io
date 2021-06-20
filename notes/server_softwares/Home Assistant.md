@@ -34,11 +34,11 @@ parent: Server Softwares
 #### HTTPS Setup
 
 1. Install [Let's Encrypt add-on](https://github.com/home-assistant/addons/blob/master/letsencrypt/DOCS.md) and follow the documentation
+1. Go to Configuration > General and define *External URL* and *Internal URL*
 1. Configure `configuration.yaml`
 
     ```yaml
     http:
-        base_url: https://<domain>:8123
         ssl_certificate: /ssl/fullchain.pem
         ssl_key: /ssl/privkey.pem
     ```
