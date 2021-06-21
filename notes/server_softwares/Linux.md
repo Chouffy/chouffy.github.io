@@ -13,6 +13,8 @@ parent: Server Softwares
 
 ---
 
+Please note: I mainly use Ubuntu Server, so your mileage may vary with other distros.
+
 ## Setup
 
 * On a laptop: disable standby on lid close: in `/etc/systemd/logind.conf`, uncomment and change `HandleLidSwitch=ignore`
@@ -76,7 +78,6 @@ parent: Server Softwares
 * `watch` to _watch_ regularly an output
 * `| grep x` to pipe to grep which is going to select lines with `x`
 * `clear` to clear the command line
-* `id $user` to get user PUID & GUID
 
 #### *Screen* Terminal Multiplexer
 
@@ -177,6 +178,11 @@ parent: Server Softwares
     sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1
     sudo sysctl -w net.ipv6.conf.lo.disable_ipv6=1
     ```
+
+### Users & Groups
+
+* `id $user` to get user PUID & GUID
+* Setup SFTP for without Shell: [nice tutorial from Digial Ocean](https://www.digitalocean.com/community/tutorials/how-to-enable-sftp-without-shell-access-on-ubuntu-18-04)
 
 ### Power & Battery
 
