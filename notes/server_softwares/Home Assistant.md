@@ -12,6 +12,20 @@ parent: Server Softwares
 1. Create the VM `sudo virt-install --name hassos --graphics vnc,listen=0.0.0.0 --memory=2048 --vcpus=2 --disk=/var/lib/libvirt/images/hassos.qcow2,format=qcow2 --boot uefi --import --os-variant=debian9 --network=bridge=br0`
 1. Login in http://homeassistant.local:8123
 
+#### HTTPS Setup
+
+1. Install [Let's Encrypt add-on](https://github.com/home-assistant/addons/blob/master/letsencrypt/DOCS.md) and follow the documentation
+1. Go to Configuration > General and define *External URL* and *Internal URL*
+1. Configure `configuration.yaml`
+
+    ```yaml
+    http:
+        ssl_certificate: /ssl/fullchain.pem
+        ssl_key: /ssl/privkey.pem
+    ```
+
+1. Restart the server
+
 ## Development
 
 * Home Assistant Developers wiki
@@ -31,16 +45,3 @@ parent: Server Softwares
 * Then [don't forget to check out a separate branch](https://developers.home-assistant.io/docs/development_submitting)
 * Start Home Assistant `hass -c config`
 
-#### HTTPS Setup
-
-1. Install [Let's Encrypt add-on](https://github.com/home-assistant/addons/blob/master/letsencrypt/DOCS.md) and follow the documentation
-1. Go to Configuration > General and define *External URL* and *Internal URL*
-1. Configure `configuration.yaml`
-
-    ```yaml
-    http:
-        ssl_certificate: /ssl/fullchain.pem
-        ssl_key: /ssl/privkey.pem
-    ```
-
-1. Restart the server
