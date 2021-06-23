@@ -35,8 +35,9 @@ parent: Softwares
     var gr = new GlideRecord('table_name');
     gr.get('sys_id');
     ```
-    
+
 * Delete a record: `gr.deleteRecord();`
+* Update a field in a record: `gr.FIELD = VALUE;`and then `gr.update()`;
 
 [Source](https://servicenowguru.com/scripting/gliderecord-query-cheat-sheet/)
 
