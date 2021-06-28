@@ -45,3 +45,11 @@ parent: Server Softwares
 * Then [don't forget to check out a separate branch](https://developers.home-assistant.io/docs/development_submitting)
 * Start Home Assistant `hass -c config`
 
+### More verbose log
+
+Add the following to your `configuration.yaml`, according to [logger integration doc](https://www.home-assistant.io/integrations/logger/).
+
+```yaml
+logger:
+  default: info
+```
