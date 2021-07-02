@@ -277,6 +277,23 @@ _LOGGER.debug("Logging has been setup")
 
 ### Network
 
+#### Requests: PUT, GET, POST
+
+Example of a POST:
+
+```python
+import requests
+user = "user"
+pwd = "password"
+headers = {"Content-Type":"application/json"}
+data_JSON = {
+    "id": "value",
+}
+response = requests.post(url, auth=(user, pwd), headers=headers, json=data_JSON)
+```
+
+You can use `data=` instead of `json=`.
+
 #### UDP Communication
 
 Text|Action
