@@ -50,3 +50,11 @@ Useful commands:
 ## Visual Studio Code (Text/Code editor)
 
 * [How to make VSCode portable](https://code.visualstudio.com/docs/editor/portable)
+
+## Cygwin (Linux on Windows)
+
+* [Official website](https://www.cygwin.com/)
+* [Portable installer](https://github.com/vegardit/cygwin-portable-installer)
+* Use `Lucida Console` instead of `Courrier`
+* Useful commands:
+    * `apt-cyg` packet manager, similar to `apt`
