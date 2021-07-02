@@ -29,15 +29,23 @@ parent: Softwares
 
 ### Work with Records
 
-* Get a record
+#### Get a record
 
-    ```js
-    var gr = new GlideRecord('table_name');
-    gr.get('sys_id');
-    ```
+```js
+var gr = new GlideRecord('table_name');     
+gr.get('sys_id');
+```
 
-* Delete a record: `gr.deleteRecord();`
-* Update a field in a record: `gr.FIELD = VALUE;`and then `gr.update()`;
+#### Update a record
+
+```js
+gr.FIELD = VALUE;
+gr.update();
+```
+
+#### Delete a record
+
+ `gr.deleteRecord();`
 
 [Source](https://servicenowguru.com/scripting/gliderecord-query-cheat-sheet/)
 
