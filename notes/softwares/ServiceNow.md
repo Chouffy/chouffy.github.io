@@ -61,6 +61,7 @@ Pass username and password directly: `https://INSTANCE.service-now.com/login.do?
 * Useful shortcuts using `CTRL+/`
     * `pop` pop in/out
     * `tn` show technical names
-    * `sys_id ...` to search globally for sys_id ...
-    * `nav` to search into the Application list
-    * `hist` to search into the History list
+    * `sys_id ...` search globally for sys_id ...
+    * `nav` search into the Application list
+    * `hist` search into the History list
+    * `sa` switch in top 10 apps 
