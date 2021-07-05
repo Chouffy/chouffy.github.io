@@ -27,7 +27,7 @@ parent: Windows
 
 ### Network & Connections
 
-* Change machine hostname with no capslock: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\ComputerName\ComputerName`
+* Change machine hostname with no caps lock: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\ComputerName\ComputerName`
 * Change network name: `secpol.msc` > Network List Manager Policies > Connection Name
 
 #### Wi-Fi Hotspot
@@ -39,14 +39,14 @@ parent: Windows
 
 * Connect to an A2DP client:
     1. Pair device to PC
-    1. Install *Bluetooth Audio Receiver* from the Windows Store 
+    1. Install *Bluetooth Audio Receiver* from the Windows Store
 
 ### Control Panel / Settings
 
-* Open performances options panel (System > Advanced system settings, unaccessible if admin) `C:\Windows\System32\SystemPropertiesPerformance.exe`.
-* Reinstall Setting app - Setting app doesn't open: Powershell `Get-AppXPackage | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}` - [Source](https://www.maketecheasier.com/fix-settings-app-not-working-in-windows-10/)
+* Open performances options panel (System > Advanced system settings, inaccessible if admin) `C:\Windows\System32\SystemPropertiesPerformance.exe`.
+* Reinstall Setting app - Setting app doesn't open: PowerShell `Get-AppXPackage | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}` - [Source](https://www.maketecheasier.com/fix-settings-app-not-working-in-windows-10/)
 
-## Commande-line kung-fu
+## Command-line Kung Fu
 
 ### Services
 
