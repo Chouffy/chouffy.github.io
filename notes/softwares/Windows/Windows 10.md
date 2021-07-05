@@ -30,6 +30,11 @@ parent: Windows
 * Change machine hostname with no capslock: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\ComputerName\ComputerName`
 * Change network name: `secpol.msc` > Network List Manager Policies > Connection Name
 
+#### Wi-Fi Hotspot
+
+* Beware that old `netsh wlan start hosted network` doesn't work anymore with newer Windows 10 version! The *Mobile Hotspot* feature is different under the hood - [Source](https://stackoverflow.com/questions/41829382/wlanhostednetworkstartusing-or-how-windows-10-builtin-mobile-hotspot-works)
+* [TwiDam77's WiFi HotSpot (Soft AP)](https://www.microsoft.com/en-us/p/wifi-hotspot-soft-ap/9n0bhfm56zlm?activetab=pivot:overviewtab) is great to start/stop hotspot even without Internet
+
 #### Bluetooth
 
 * Connect to an A2DP client:
