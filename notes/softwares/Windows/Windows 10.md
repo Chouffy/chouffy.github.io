@@ -15,6 +15,10 @@ parent: Windows
     * `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace`
     * [Source](https://www.howtogeek.com/222057/how-to-remove-the-folders-from-%E2%80%9Cthis-pc%E2%80%9D-on-windows-10/)
 
+### CPU & Processes
+
+* Start a software on login with admin: create a scheduled task
+
 ### Power & Battery
 
 * Modern Standby: [Check S states](https://www.laptopmag.com/articles/how-to-use-modern-standby)
