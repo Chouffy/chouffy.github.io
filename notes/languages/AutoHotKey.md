@@ -14,7 +14,7 @@ An open-source scripting language for Windows!
 
 Hotkey is created by single pair of colons
 
-1. `::` if an hotstring
+1. `::` if a Hotstring
 1. Key combo like `j` or Hotstring like `btw`
 1. `::`
 1. Content, like `Send, text`
@@ -26,9 +26,9 @@ Hotkey is created by single pair of colons
 
 * [Full list of Keys](https://www.autohotkey.com/docs/KeyList.htm)
 * [Full description of Hotkeys, including Symbols](https://www.autohotkey.com/docs/Hotkeys.htm)
-* [Full description of Hotstrings](https://www.autohotkey.com/docs/Hotstrings.htm)
+* [Full description of Hotstring](https://www.autohotkey.com/docs/Hotstrings.htm)
 
-Symbon | Description
+Symbol | Description
 :-: | -
 `#` | Windows key
 `!` | Alt key
@@ -39,7 +39,7 @@ Symbon | Description
 #### Window-specific
 
 An action can be enabled in a certain window thanks to a directive (#).  
-This affects all hotkeys/hotstring beneath them in the script, and only the most recent is in effect.  
+This affects all hotkeys/Hotstring beneath them in the script, and only the most recent is in effect.  
 [More detail in doc](https://www.autohotkey.com/docs/commands/_IfWinActive.htm)
 
 ```autohotkey
