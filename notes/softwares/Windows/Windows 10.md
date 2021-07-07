@@ -29,11 +29,14 @@ parent: Windows
 
 * Change machine hostname with no caps lock: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\ComputerName\ComputerName`
 * Change network name: `secpol.msc` > Network List Manager Policies > Connection Name
+* A great firewall is [TinyWall](https://tinywall.pados.hu/)
 
 #### Wi-Fi Hotspot
 
 * Beware that old `netsh wlan start hosted network` doesn't work anymore with newer Windows 10 version! The *Mobile Hotspot* feature is different under the hood - [Source](https://stackoverflow.com/questions/41829382/wlanhostednetworkstartusing-or-how-windows-10-builtin-mobile-hotspot-works)
 * [TwiDam77's WiFi HotSpot (Soft AP)](https://www.microsoft.com/en-us/p/wifi-hotspot-soft-ap/9n0bhfm56zlm?activetab=pivot:overviewtab) is great to start/stop hotspot even without Internet
+    * Afterward, need to start sharing the Internet connection in *Network Connections* → Properties
+* If you have a firewall, you need to clear out `svchost.exe` for ports 68 out and 53, 67 in.
 
 #### Bluetooth
 
