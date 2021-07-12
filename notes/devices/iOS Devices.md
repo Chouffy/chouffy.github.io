@@ -11,6 +11,12 @@ parent: Devices
     * 7th generation: *Volume Down + Side/Top*
     * Other: *Home + Side/Top*
 
+## Repair
+
+* iPhone 6
+    * [iFixit - Rear case](https://www.ifixit.com/Guide/iPhone+6+Rear+Case+Replacement/31503)
+    * [iFixit - Front sensors](https://www.ifixit.com/Guide/iPhone+6+Front-Facing+Camera+and+Sensor+Cable+Replacement/31672)
+
 ## Nice apps
 
 * Use iPad/iPhone as a mirror or secondary screen with touch: [SpaceDesk](https://spacedesk.net/)
