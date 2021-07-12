@@ -34,6 +34,7 @@ parent: Windows
 * Change machine hostname with no caps lock: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\ComputerName\ComputerName`
 * Change network name: `secpol.msc` > Network List Manager Policies > Connection Name
 * A great firewall is [TinyWall](https://tinywall.pados.hu/)
+* View active network connections: TCPView by Sysinternals to know the executable, PID and service
 
 #### Wi-Fi Hotspot
 
