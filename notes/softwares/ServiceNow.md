@@ -64,4 +64,5 @@ Pass username and password directly: `https://INSTANCE.service-now.com/login.do?
     * `sys_id ...` search globally for sys_id ...
     * `nav` search into the Application list
     * `hist` search into the History list
-    * `sa` switch in top 10 apps 
+    * `sa` switch in top 10 apps
+    * `<table>` open table view
