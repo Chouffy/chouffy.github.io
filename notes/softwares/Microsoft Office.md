@@ -6,24 +6,12 @@ parent: Softwares
 
 ## Excel
 
-### Date & Time: convert UNIX epoch to Excel format
+### Excel UI
 
-`(A1/86400)+25569+(-5/24)` with A1 the data cell
+* Move the cursor in a selection box: **F2**
+* Select only visible cells: **Alt + ;**
 
-### Data validation: List without a Range
-
-Use comma: `xx,yy,zz`
-
-### Move the cursor in a selection box
-
-Press **F2**
-
-### Embedded a part of a document
-
-In Excel, click on copy
-In the target app (Word, Powerpoint), click on *Paste Special > Link > Excel spreadsheet*
-
-### Unhide all tabs
+#### Un-hide all tabs
 
 **Alt+F11** for VBA
 **F5** for execution
@@ -39,9 +27,10 @@ Sub UnhideAllSheets()
 End Sub
 ```
 
-### Select only visible cells
+### Data
 
-**Alt + ;**
+* Date & Time: convert UNIX epoch to Excel format → `(A1/86400)+25569+(-5/24)` with A1 the data cell
+* Data validation: List without a Range → Use comma: `xx,yy,zz`
 
 ## PowerQuery / PowerBI
 
@@ -51,15 +40,15 @@ Define PK: `Table.AddKey`
 
 ## Word
 
-### Show Fields code
+### Word UI
 
-**Shift-F9**
+* Show Fields code: **Shift-F9**
 
 ## Outlook
 
-### Clear "Recent Location" drop-down list
+### Calendar
 
-Delete keys in: `HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Outlook\Preferences\LocationMRU`
+* Clear "Recent Location" drop-down list → Delete keys in: `HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Outlook\Preferences\LocationMRU`
 
 ## PowerPoint
 
