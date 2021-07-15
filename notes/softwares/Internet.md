@@ -2,7 +2,7 @@
 parent: Softwares
 ---
 
-# Network
+# Internet
 
 ## Video & Media
 
