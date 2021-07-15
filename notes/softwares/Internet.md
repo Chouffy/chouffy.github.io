@@ -4,14 +4,23 @@ parent: Softwares
 
 # Internet
 
-## Video & Media
+## Content
 
-### YouTube Converter / Download
+### Video & Media
 
-[Y2mate.com](https://www.y2mate.com/)
+* YouTube Converter / Download: [Y2mate.com](https://www.y2mate.com/)
 
-## Underliying
+### Image Compression Proxy
 
-### Reverse from IP to DNS
+Use [Bandwidth Hero](https://bandwidth-hero.com/). Setup:
 
-`nslookup IP`
+1. Deploy a Heroku instance of [Bandwidth Hero Proxy](https://github.com/ayastreb/bandwidth-hero-proxy)
+    * Take note of the URL, the username and password if any
+1. Install the browser extension like on [Firefox](https://addons.mozilla.org/en-US/firefox/addon/bandwidth-hero/).
+    * On Firefox mobile, you need to use Firefox Nightly and [manually add the extension in a Collection](https://blog.mozilla.org/addons/2020/09/29/expanded-extension-support-in-firefox-for-android-nightly/).
+1. Configure the *Data Compression Service* URL to `https://USERNAME:PASSWORD@host.heroku.com`
+    * Otherwise you can have `401 error`
+
+## DNS
+
+* Reverse from IP to DNS: `nslookup IP`
