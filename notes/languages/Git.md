@@ -9,7 +9,7 @@ parent: Languages
 
 ## Setup
 
-`git init` - initialize dir with git  
+`git init` - initialize directory with git  
 
 ## Staging Area
 
@@ -24,6 +24,10 @@ parent: Languages
 `git log` - See all commit  
 `git checkout master` or `<commit-hash>` - Go back to the latest or specified commit  
 `git reset HEAD -- <file or folder>` - Remove a file/folder from staging area  
+
+### Sign-off
+
+Some projects require a sign-off, which add `Signed-off-by: NAME <MAIL@EXAMPLE.COM>` in the comment.
 
 ## Branching
 
@@ -43,6 +47,6 @@ parent: Languages
 
 ### Operations
 
-`git clone` - copy latest repo from remote  
+`git clone` - copy the latest repo from remote  
 `git push` - push to remote  
 `git pull` - pull latest from remote  
