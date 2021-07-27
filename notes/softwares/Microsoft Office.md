@@ -16,7 +16,7 @@ parent: Softwares
 **Alt+F11** for VBA
 **F5** for execution
 
-```vba
+```vb
 Sub UnhideAllSheets()
     Dim ws As Worksheet
  
@@ -34,9 +34,9 @@ End Sub
 
 ## PowerQuery / PowerBI
 
-Comment: `//` or `/*` and `*/`
-Library: `=#shared`
-Define PK: `Table.AddKey`
+* Comment: `//` or `/*` and `*/`
+* Library: `=#shared`
+* Define PK: `Table.AddKey`
 
 ## Word
 
