@@ -34,6 +34,8 @@ title: Markdown
 Code block with language   
 \```   
 
+[List of all supported language](https://github.com/jincheng9/markdown_supported_languages)
+
 If published on Jekyll, use `{% raw %}` and `{% endraw %}`.
 
 Horizontal rule: ---
