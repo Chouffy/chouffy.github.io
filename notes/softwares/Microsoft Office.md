@@ -52,6 +52,10 @@ Define PK: `Table.AddKey`
 
 ## PowerPoint
 
+### Toolbar
+
+* A great toolbar: [Instrumenta](https://github.com/iappyx/Instrumenta)
+
 ### Master slides
 
 * Change default slide when creating new slide: put this slide as the 3rd item in the master view. [Source](https://superuser.com/questions/548038/change-default-slide-layout-in-powerpoint#637148)
