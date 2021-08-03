@@ -24,7 +24,7 @@ parent: Languages
 
 Text|Action
 -|-
-`#` | Comment, sinlge line
+`#` | Comment, single line
 \`\`\` | Comment, multiple lines
 `var x` | Declare a new var, any type
 `var _x` | Private variable
@@ -442,3 +442,18 @@ To use this example: `from example_pkg import example_pkg`
 1. Upload to TestPyPI `twine upload --repository-url https://test.pypi.org/legacy/ dist/*`
 1. Upload to PyPi `twine upload dist/*`
 1. Make a release in GitHub
+
+### Virtual environment - *venv*
+
+Useful to use one library for one project!
+
+* *System packages* are coming with Python
+* *Site packages* are installed by user, using *pip* for instance
+
+How to use - [Source](https://realpython.com/python-virtual-environments-a-primer/)
+
+1. `pip install virtualenv` to install *virtualenv*
+1. Create a directory for your project
+1. `python -m venv env` set up the venv in folder `env` - it won't contain existing site package by default
+1. `.\env\Scripts\activate` to activate the venv
+    * If you have an error about PowerShell scripts, try `Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser` - [Source](https://dev.to/aka_anoop/enabling-virtualenv-in-windows-powershell-ka3)
