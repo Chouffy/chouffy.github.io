@@ -66,3 +66,8 @@ Pass username and password directly: `https://INSTANCE.service-now.com/login.do?
     * `hist` search into the History list
     * `sa` switch in top 10 apps
     * `<table>` open table view
+
+### Theming
+
+* Set an ServiceNow Banner logo (top left in the application): go to *Basic Setup → My Company*
+* Set a default theme: in `sys_user_preference.list`, define `glide.css.theme.ui16` value with theme sys_id.
