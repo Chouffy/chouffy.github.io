@@ -20,7 +20,7 @@ parent: Softwares
 * An XML can be created from one or many record
 * sys_id will be kept
 
-## Developments
+## JS Development
 
 ### JS Scripts
 
@@ -48,6 +48,14 @@ gr.update();
  `gr.deleteRecord();`
 
 [Source](https://servicenowguru.com/scripting/gliderecord-query-cheat-sheet/)
+
+## REST Development
+
+* Use *REST API Explorer* to build out requests
+
+### Get records from a table
+
+* `sysparm_query`: Build the query on desktop and right-click -> *Copy Query* - [Source](https://developer.servicenow.com/dev.do#!/learn/learning-plans/quebec/servicenow_application_developer/app_store_learnv2_rest_quebec_more_about_query_parameters)
 
 ## Admin
 
