@@ -240,6 +240,14 @@ Text|Action
 `str(x)` | int to str
 `int(x)` or `float(x)` | str to int or float
 
+#### Random
+
+```python
+import random
+x = random.randint(0,10)
+print(x)
+```
+
 ### Bytearrays
 
 ```python
