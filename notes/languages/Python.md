@@ -367,16 +367,17 @@ Text|Action
 ## JSON
 
 ```python
-import json	
+import json
 data = "{ 'k1': 'w1' }"         # JSON string
 dictData = json.loads(data)     # load a JSON string in dictData
 print(dictData['k1'])           # print content of k1
 data['k1'].get['k12','']        # Get [k1][k12], otherwise return ''
+len(data)                       # Get number of items in data
 ```
 
 ## Development
 
-### Package application
+### Package an application for pip
 
 [Tutorial](https://packaging.python.org/tutorials/packaging-projects/):
 
@@ -556,3 +557,10 @@ if __name__ == '__main__':
     app = MainApp()         # Instantiate the MainApp class
     app.run()
 ```
+
+### Publish application
+
+#### Android
+
+1. `pip install buildozer` or `python -m pip buildozer`
+1. `buildozer init` to create default `buildozer.spec` file
