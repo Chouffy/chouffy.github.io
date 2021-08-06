@@ -61,8 +61,8 @@ Please note: I mainly use Ubuntu Server, so your mileage may vary with other dis
 
 ### Install on VirtualBox
 
-1. Install OS and Guest addition
-1. Enable guest automatic resolution change: `sudo apt install virtualbox-guest-dkms`
+1. Install `gcc make perl` packages
+1. Install Guest addition
 1. Disable animations `gsettings set org.gnome.desktop.interface enable-animations false`
 1. Allow user to access Shared Folder `sudo adduser $USER vboxsf`
 
