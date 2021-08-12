@@ -4,6 +4,17 @@ parent: Devices
 
 # Lenovo X1 Carbon Gen 7
 
+## Middle mouse button for click and scroll
+
+[TPMiddle](https://sdx1.net/tools/tpmiddle/) was great to do it, but is incompatible with the X1C7.
+
+Good thing there's W10Wheel:
+
+1. In the *ELAN TrackPoint for Thinkpad* application, choose "Middle Button Action": *Middle Click*
+1. In the *Windows Settings* application, go to *Devices → Mouse* and check "Scroll inactive windows [...]"
+1. Download and launch [W10Wheel](https://github.com/ykon/w10wheel.net)
+1. In the taskbar, right-click on the W10Wheels icons and set "Trigger" to "MiddleDrag"
+
 ## Undervolting
 
 [ThrottleStop Guide 2020](https://www.ultrabookreview.com/31385-the-throttlestop-guide/)
