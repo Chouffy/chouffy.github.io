@@ -16,9 +16,15 @@ parent: Server Softwares
 1. Add domain A record in my DNS zone
 1. Setup Sendgrid for SMTP server
 
-## Other stuff
+### Other stuff
 
 * Host `X.X.X.X` was not connected to because it violates local access rules. → [Fix here](https://help.nextcloud.com/t/violates-local-access-rules-in-talk-9/84471/2)
+
+## Integrations with other devices
+
+### Outlook calendar
+
+Use [Outlook CalDav Synchronizer](https://github.com/aluxnimm/outlookcaldavsynchronizer) - but untestes
 
 ## Maintenance
 
