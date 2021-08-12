@@ -148,6 +148,14 @@ print("Spun off thread")
 * `pip install x`
 * `pip uninstall x`
 
+### Import
+
+Several ways are possible to import variables - [Source](https://www.geeksforgeeks.org/how-to-import-variables-from-another-file-in-python/):
+
+* `import <file_name>` and then use `<file_name>.<variable_name>` to access variable
+* `from <file_name> import <variable_names>` and use variables
+* `from <file_name> import *` and then use variables directly.
+
 ## Loops
 
 Operators: `<,<=, ==, !=, =>, >`
