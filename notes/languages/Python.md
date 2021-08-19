@@ -366,6 +366,14 @@ class Child(Parent):
 
 ## XML
 
+Import XML as dict- Use [xmltodict](https://github.com/martinblech/xmltodict):
+
+```python
+import xmltodict
+dico = xmltodict.parse('<?xml version="1.0" ?><PAGE><LOCK> ...')
+dico['PAGE']['LOCK']
+```
+
 ### Structure
 
 ```xml
