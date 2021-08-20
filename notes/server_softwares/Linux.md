@@ -217,6 +217,9 @@ Try [Super Grub2 Disk](https://www.supergrubdisk.org/)
     * `sudo systemctl enable SERVICE`
     * `sudo systemctl disable SERVICE`
     * `sudo systemctl is-enabled SERVICE`
+* Services mask/unmask
+    * `sudo systemctl unmask SERVICE`
+    * `sudo systemctl mask SERVICE`
 
 ## KVM - Virtual Machines
 
