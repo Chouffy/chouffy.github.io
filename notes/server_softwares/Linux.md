@@ -101,6 +101,24 @@ Please note: I mainly use Ubuntu Server, so your mileage may vary with other dis
     * Check CPU frequency `cat /proc/cpuinfo`
 * System information `dmidecode`
 
+### Services with systemctl
+
+* `sudo systemctl status SERVICE`
+* Service management
+    * `sudo systemctl restart SERVICE`
+    * `sudo systemctl start SERVICE`
+    * `sudo systemctl stop SERVICE`
+    * `sudo systemctl kill SERVICE`
+* Service enable/disable
+    * `sudo systemctl enable SERVICE`
+    * `sudo systemctl disable SERVICE`
+    * `sudo systemctl is-enabled SERVICE`
+* Services mask/unmask
+    * `sudo systemctl unmask SERVICE`
+    * `sudo systemctl mask SERVICE`
+* Service status
+    * `sudo systemctl status SERVICE`
+
 ### Disk & Data
 
 * Check free disk space `df -h`
@@ -208,22 +226,6 @@ Please note: I mainly use Ubuntu Server, so your mileage may vary with other dis
 ### Bootloader
 
 Try [Super Grub2 Disk](https://www.supergrubdisk.org/)
-
-### Services with systemctl
-
-* `sudo systemctl status SERVICE`
-* Service management
-    * `sudo systemctl restart SERVICE`
-    * `sudo systemctl start SERVICE`
-    * `sudo systemctl stop SERVICE`
-    * `sudo systemctl kill SERVICE`
-* Service enable/disable
-    * `sudo systemctl enable SERVICE`
-    * `sudo systemctl disable SERVICE`
-    * `sudo systemctl is-enabled SERVICE`
-* Services mask/unmask
-    * `sudo systemctl unmask SERVICE`
-    * `sudo systemctl mask SERVICE`
 
 ## KVM - Virtual Machines
 
