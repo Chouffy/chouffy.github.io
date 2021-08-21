@@ -179,6 +179,10 @@ Please note: I mainly use Ubuntu Server, so your mileage may vary with other dis
     sudo sysctl -w net.ipv6.conf.lo.disable_ipv6=1
     ```
 
+* Check Wi-Fi adapter status:
+    * `rfkill list wlan` to list status
+    * `rfkill unblock wlan` to unblock
+
 ### Users & Groups
 
 * `id $user` to get user PUID & GUID
