@@ -51,3 +51,10 @@ if var1 == var (
 * Test if something exists
     * File `if exist filename (...)`
     * Folder `if exist folder\ (...)`
+
+### Executables
+
+There's several ways to launch an app:
+
+* `start`
+* `call`
