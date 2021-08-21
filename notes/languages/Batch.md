@@ -14,6 +14,8 @@ Command | Content
 `REM` | Comments / Remarks
 `echo` | Write to console
 `@echo off` | Don't write script content to console
+`a & b` | Do `a` and `b` commands in parallel
+`a && b` | Do `a` and `b` commands in serial
 
 ### Variables
 
@@ -58,3 +60,5 @@ There's several ways to launch an app:
 
 * `start`
 * `call`
+
+Somewhat related: if you want to pass a command in a LNK shortcut to the command line, use `cmd.exe /k yourcommand`
