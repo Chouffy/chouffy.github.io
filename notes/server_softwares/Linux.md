@@ -45,7 +45,7 @@ Please note: I mainly use Ubuntu Server, so your mileage may vary with other dis
 
 ### Cron - Job scheduler
 
-* Edit cron of an user `sudo crontab -u USER -e`
+* Edit cron of a user `sudo crontab -u USER -e`
 * Check if the cron expression is correct: [crontab guru](https://crontab.guru/)
 
 ### [Cockpit](https://cockpit-project.org/) - Remote administration of server
@@ -135,7 +135,7 @@ Please note: I mainly use Ubuntu Server, so your mileage may vary with other dis
 
 1. Install `smartmontools`
 1. View SMART data & status `sudo smartctl -i /dev/sdXX`
-1. Find estimate  & current SMART test `sudo smartctl -c /dev/sdXX`
+1. Find estimate & current SMART test `sudo smartctl -c /dev/sdXX`
 1. Launch a test: `sudo smartctl -t short /dev/sdXX`
     * Possible options instead of `short`:
     * `long`
@@ -164,17 +164,17 @@ Please note: I mainly use Ubuntu Server, so your mileage may vary with other dis
 1. Several options to see devices
     * `sudo blkid` to locate block devices
     * `sudo lsblk` to list mounted block devices
-    * `ls /dev` to check where the usb stick is mounted
+    * `ls /dev` to check where the USB stick is mounted
 1. `sudo fdisk /dev/sdXX`
     1. `p` to list existing partition
     1. `g` to create a new GPT partition table or `o` for a DOS partition table
     1. `n` to create a new partition
     1. `w` write to disk and exit
-1. `sudo mkfs.ext4 /dev/sdXX00` to create a ext4 partition
+1. `sudo mkfs.ext4 /dev/sdXX00` to create an ext4 partition
 1. `sudo mkdir /media/usbdrive` to create a directory that will host the partition
     * Choose `/mnt` for temporary mounts
     * Choose `/media` for automatics mounts
-1. `sudo mount /dev/sdXX00 /media/usbdrive -o umask=000` to mount the usb key with all user access
+1. `sudo mount /dev/sdXX00 /media/usbdrive -o umask=000` to mount the USB key with all user access
 1. `sudo umount /dev/sdXX00` to unmount
 1. If you want to make it permanent
     * Edit `sudo nano /etc/fstab`
@@ -207,7 +207,7 @@ Please note: I mainly use Ubuntu Server, so your mileage may vary with other dis
 ### Users & Groups
 
 * `id $user` to get user PUID & GUID
-* Setup SFTP for without Shell: [nice tutorial from Digial Ocean](https://www.digitalocean.com/community/tutorials/how-to-enable-sftp-without-shell-access-on-ubuntu-18-04)
+* Setup SFTP for without Shell: [nice tutorial from Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-enable-sftp-without-shell-access-on-ubuntu-18-04)
 
 ### Power & Battery
 
@@ -252,13 +252,13 @@ Based on [this great tutorial by OSTechnix](https://ostechnix.com/install-and-co
             ```
 
         1. Create `/etc/udev/rules.d/99-bridge.rules` and add `ACTION=="add", SUBSYSTEM=="module", KERNEL=="br_netfilter", RUN+="/sbin/sysctl -p /etc/sysctl.d/bridge.conf"`
-    1. Remove default KVM brige
+    1. Remove default KVM bridge
         1. `virsh net-destroy default`
         1. `virsh net-undefine default`
         1. `ip link` check that `virbr` interfaces are gone
     1. Edit `/etc/netplan/00-installer-config.yaml`
         1. Backup first
-        1. Add a new section under defined interface - Careful about the identation
+        1. Add a new section under defined interface - Careful about the indentation
 
             ```bash
             network:
@@ -293,6 +293,7 @@ Based on [this great tutorial by OSTechnix](https://ostechnix.com/install-and-co
               <bridge name="br0"/>
             </network>
             ```
+
         1. `virsh net-define host-bridge.xml`
         1. `virsh net-start host-bridge`
         1. `virsh net-autostart host-bridge`
