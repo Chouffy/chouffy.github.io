@@ -188,7 +188,10 @@ Please note: I mainly use Ubuntu Server, so your mileage may vary with other dis
 
 ### Network & Internet
 
-* Edit network configuration with netplan `/etc/netplan/00-installer-config.yaml`
+* View current information (IP, netmask, ...) `ifconfig`
+    * Assign an IP to a network `sudo ifconfig wlan0 192.168.65.1 netmask 255.255.255.0 up` for instance
+* Edit network configuration
+    * with netplan `/etc/netplan/00-installer-config.yaml`
 * Disable IPv6 - [Source](https://itsfoss.com/disable-ipv6-ubuntu-linux/)
 
     ```bash
