@@ -78,6 +78,7 @@ Please note: I mainly use Ubuntu Server, so your mileage may vary with other dis
 * `watch` to _watch_ regularly an output
 * `| grep x` to pipe to grep which is going to select lines with `x`
 * `clear` to clear the command line
+* Check [this Ars introduction](https://arstechnica.com/gadgets/2021/08/linux-bsd-command-line-101-using-awk-sed-and-grep-in-the-terminal/) about redirection, `grep`, `sed`, `awk`.
 
 #### *Screen* Terminal Multiplexer
 
