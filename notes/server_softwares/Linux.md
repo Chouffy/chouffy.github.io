@@ -220,6 +220,7 @@ Please note: I mainly use Ubuntu Server, so your mileage may vary with other dis
 * Check status & stats about battery
     1. List paths `upower -e`
     1. Get status `upower -i <path>`
+* Plan a reboot: `shutdown -r 0:00` to restart at midnight for instance
 
 ## Recover
 
