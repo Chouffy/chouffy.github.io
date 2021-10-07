@@ -27,6 +27,14 @@ Sub UnhideAllSheets()
 End Sub
 ```
 
+#### Remove a password on a protected sheet
+
+1. Open the XLSX as a ZIP
+1. Navigate to `xl` → `worksheets`
+1. Edit the sheet, if trouble to find it: search for `sheetProtection`
+1. Remove everything between `<sheetProtection ... />`
+1. Save the `sheetX.xml` file in the XLSX and reopen the Excel!
+
 ### Data
 
 * Date & Time: convert UNIX epoch to Excel format → `(A1/86400)+25569+(-5/24)` with A1 the data cell
