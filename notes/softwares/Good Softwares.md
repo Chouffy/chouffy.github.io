@@ -18,10 +18,10 @@ nav_order: 10
 
 ### Remove splash screen
 
-In the same directory than `AppPortable.exe`
+In the same directory as `AppPortable.exe`
 Put `AppPortable.ini` with proper parameter
 
-## KiTTY / PuTTY
+## KiTTY
 
 ### Fix screen output
 
@@ -41,6 +41,12 @@ Useful commands:
 
 * `Duplicati.CommandLine.exe delete <storage-URL> --version=<int>` to delete all files that belong to version `<int>`
 * `Duplicati.CommandLine.exe test <storage-URL> <all/#> [<options>]` to check either all or a number (#) of sample
+
+Troubleshooting:
+
+1. Do a `repair` command from the command-line web interface
+1. Do a `list-broken-files` to check affected files and versions
+1. Do a `purge-broken-file` to remove the above
 
 ## Paint.Net (Paint/Photoshop alternative)
 
