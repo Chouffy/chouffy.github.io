@@ -11,6 +11,8 @@ This will be also about project connected to or running on Docker, like Portaine
 A *container* run an *image*.  
 Data are in `/var/lib/docker/volumes/`.
 
+Don't forget to add yourself to the docker group: `usermod -a -G docker USERNAME`
+
 Container management:
 
 * Run `docker run -d --name container_name image` with *image* `nginx` for example
