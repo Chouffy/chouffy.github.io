@@ -37,7 +37,9 @@ parent: Server Softwares
     * `snap install APP`
     * `snap remove APP`
     * `snap logs APP`
+    * `snap info APP` to list all version of one app
     * `sudo snap revert APP` to go one version before
+    * `sudo snap refresh APP` to install latest version
     * On services
         * `snap services`
         * `snap logs APP.SERVICE`
