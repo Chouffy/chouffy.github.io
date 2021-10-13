@@ -31,6 +31,7 @@ Use [Outlook CalDav Synchronizer](https://github.com/aluxnimm/outlookcaldavsynch
 ### Data
 
 * `sudo nextcloud.export -abc` to export everything except user data
+* `sudo nextcloud.occ files:scan --all` to force scan all files, useful to fix checksum issues
 * `sudo nextcloud.occ files:scan-app-data` to force scan all app data
 * User data are in `/var/snap/nextcloud/common/`
 
