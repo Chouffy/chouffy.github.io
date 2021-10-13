@@ -222,6 +222,10 @@ Please note: I mainly use Ubuntu Server, so your mileage may vary with other dis
     1. Get status `upower -i <path>`
 * Plan a reboot: `shutdown -r 0:00` to restart at midnight for instance
 
+### OS-related
+
+* Know which OS, flavor or version you are running `cat /etc/os-release`
+
 ## Recover
 
 ### Check logs
