@@ -31,12 +31,14 @@ parent: Server Softwares
 * Home Assistant Developers wiki
     * [HA Architecture](https://developers.home-assistant.io/docs/architecture_index)
     * [Entities Architecture](https://developers.home-assistant.io/docs/architecture/devices-and-services)
+    * [Creating your 1st component](https://developers.home-assistant.io/docs/creating_component_index)
     * [Validate (custom) components with Hassfest](https://developers.home-assistant.io/blog/2020/04/16/hassfest/)
 * HACS - Home Assistant Community Store
     * [View current published repo](https://hacs-repositories.web.app/)
     * [Install HACS](https://hacs.xyz/docs/installation/prerequisites/)
     * [Add a custom repo](https://hacs.xyz/docs/faq/custom_repositories)
 * Ressources
+    * [Repository of examples](https://github.com/home-assistant/example-custom-config/tree/master/custom_components/)
     * Icons: [Material Design Icons](https://materialdesignicons.com/) - use it like `mdi:home`
 
 ### Setup
