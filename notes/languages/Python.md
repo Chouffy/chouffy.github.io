@@ -13,6 +13,10 @@ parent: Languages
 
 ---
 
+## References
+
+* [A fairly comprehensive list of Python tutorials](https://pythonbasics.org/)
+
 ## Setup
 
 * PC: check [Python website](https://www.python.org/)
@@ -28,8 +32,8 @@ Text|Action
 \`\`\` | Comment, multiple lines
 `var x` | Declare a new var, any type
 `var _x` | Private variable
+`global x` | Use a global variable
 `x = name.fctA(par)` | Populate var x with the function
-`from math import *` | Import every module from *math*
 
 #### Naming Convention
 
@@ -186,8 +190,12 @@ while i<10:
 Good for index!
 
 ```python
-for item in items:          # Go through all items
-    do something with item  # item is one of the items
+# Defining a list
+d = { "one": 1, "two": 2, "three": 3, "four": 4, "five": 5 }
+iterable = d.keys()
+
+for item in iterable:       # Go through all items
+    print(item)             # item is one of the items
     break                   # Break the current loop
 for item in [a, b]:         # same with 2 items
 for item in string:         # same with string - treat is char
@@ -208,13 +216,47 @@ except ValueError as err:
     print(err)              # print err being the rrror
 except:
     do things               # If any error is raised
+else:
+    do things               # If no exception are raised
+finally:
+    do cleanup              # Always executed
 ```
+
+[List of built-in exceptions](https://pythonbasics.org/try-except/)
 
 ## Functions
 
 ```python
+def pretty_sumab(func):  
+    # Define an inner function                                                                                   
+    def inner(a,b):                                                                                         
+        print(str(a) + " + " + str(b) + " is ", end="")                                                     
+        return func(a,b)                                                                                    
+                                                                                                            
+    return inner                                                                                            
+                                                                                                            
+@pretty_sumab   # Decorate the sumab function with the pretty_sumab function                                                                                               
+def sumab(a,b):                                                                                             
+    summed = a + b                                                                                          
+    print(summed)                                                                                      
+                                                                                                            
+if __name__ == "__main__":                                                                                  
+    sumab(5,3)      
+
 # Know the type of the variable (float, int, str, list, dict, tuple)
 x = isinstance(var, str) # x = True if var:str
+```
+
+### Imports
+
+```python
+import os       # Import built-in os module 
+
+import fruit    # Import custom file fruit.py
+fruit.lemon()   # Use an imported function
+
+from time import sleep  # Import only what you are going to use
+sleep(2)        # You can skip the prefix
 ```
 
 ### Text
@@ -329,14 +371,43 @@ To send something |
 ### Definition
 
 ```python
-class ClassName:	
-    def __init__(self, a, b):   # a b are used for initialization
+class Human:
+    def __init__(self, a, b):   # a b are used for initialization - init is the constructor
         self.a  = a
-        self.a  = a
+        self.job = None
     def function(self):	
         return a
     def functionb(self, x: int) # x must be of type int
         return x
+
+    # Getter and Setter, to access and manage variables inside a class
+    def setJob(self, job):
+        self.job = job
+    def getJob(self, job):
+        return self.job
+
+class AliveHuman(Human):     # define a subclass of Human
+    # this class inherit everything that was define in the Human class
+
+    @staticmethod
+    def walk():
+        # Define a method which can be used without instanciating the object first
+        # So this can be called directly like AliveHuman.walk()
+
+    class_name = "abc"
+    @classmethod
+    def printName(cls):
+        # Return a value stored in the Class, not in each instanciation - except if the instanciation is called
+        print(cls.class_name)
+        # somebody = AliveHuman()
+        # somebody.class_name -> Will set the variable as usual
+        # print(somebody.class_name) -> Will return the variable as usual
+        # AliveHuman.class_name -> Will set the Class variable
+        # print(AliveHuman.class_name) -> Will return the Class variable
+
+class PythonHuman(Human, PythonLover):  # define a class that inherit Human and PythonLover
+    ...
+
 ```
 
 ### Usage
@@ -479,9 +550,10 @@ How to use - [Source](https://realpython.com/python-virtual-environments-a-prime
 
 1. `pip install virtualenv` to install *virtualenv*
 1. Create a directory for your project
-1. `python -m venv env` set up the venv in folder `env` - it won't contain existing site package by default
-1. `.\env\Scripts\activate` to activate the venv
+1. `virtualenv toto` set up the venv in folder `toto` - it won't contain existing site package by default
+1. `.\toto\Scripts\activate` to activate the venv
     * If you have an error about PowerShell scripts, try `Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser` - [Source](https://dev.to/aka_anoop/enabling-virtualenv-in-windows-powershell-ka3)
+1. `deactivate` to return to the normal environment
 
 ## Kivy - Cross-platform GUI Python Framework
 
