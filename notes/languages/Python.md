@@ -86,8 +86,8 @@ Text|Action
 
 Text|Action
 -|-
-`list.extend(list2)` | add list2 after list -> `list, list2`
-`list.append(list2)` | add list2 as sub-list in list -> `list, [list2]`
+`list.extend(list2)` | add list2 after list → `list, list2`
+`list.append(list2)` | add list2 as sub-list in list → `list, [list2]`
 `list.insert(position, item)` | insert
 `list.remove(item)` | remove
 `list.clear()` | remove all items
@@ -103,7 +103,7 @@ Text|Action
 `list.index(name)` | search in list for "name"
 `list.count(item)` | count items
 
-### Dictionnary
+### Dictionary
 
 Key:Value pairs
 
@@ -259,7 +259,7 @@ from time import sleep  # Import only what you are going to use
 sleep(2)        # You can skip the prefix
 ```
 
-### Text
+### Text function
 
 Is an index
 
@@ -283,7 +283,7 @@ import binascii
 y = binascii.hexlify(x)     # convert x in hexadecimal
 ```
 
-### Numbers
+### Numbers function
 
 Text|Action
 -|-
@@ -360,7 +360,7 @@ Text|Action
 `UDPServerSocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)` | Initiate a new UDP socket
 To receive something |
 `UDPServerSocket.bind(("", port))` | Bind the socket to port
-`data, address = UDPServerSocket.recvfrom(1024)` | Receive incoming data and ip with a buffer size of 1024
+`data, address = UDPServerSocket.recvfrom(1024)` | Receive incoming data and IP with a buffer size of 1024
 To send something |
 `UDPServerSocket.sendto(data, (host, port))` | Send *data* to host:port
 
@@ -375,7 +375,7 @@ class Human:
     def __init__(self, a, b):   # a b are used for initialization - init is the constructor
         self.a  = a
         self.job = None
-    def function(self):	
+    def function(self):
         return a
     def functionb(self, x: int) # x must be of type int
         return x
