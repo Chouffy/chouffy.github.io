@@ -187,6 +187,14 @@ Please note: I mainly use Ubuntu Server, so your mileage may vary with other dis
 * `tar -xvzf file.tar.gz` to extract tarball and zip
 * `find / -name filename` to find *filename* in entire system (/) or active folder (.), and `sudo` to avoid permissions problems
 
+#### Virtual Systems: Mount QCoW2
+
+1. `sudo apt install libguestfs-tools` to install required tool
+1. `sudo guestmount -a /var/lib/libvirt/images/IMAGE.qcow2 -m DEVICE --ro /mnt/FOLDER`
+    * `DEVICE` being the partition within this image. Make it bogus so a list will be shown
+    * `--ro` if you only want read-only
+1. `sudo guestunmount /mnt`
+
 ### Network & Internet
 
 * View current information (IP, netmask, ...) `ifconfig`
