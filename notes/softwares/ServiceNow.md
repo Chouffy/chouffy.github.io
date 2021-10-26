@@ -20,6 +20,14 @@ parent: Softwares
 * An XML can be created from one or many record
 * sys_id will be kept
 
+### Most Valuable Tables
+
+Table | Name | Function
+-|-|-
+`sys_properties` | System Properties | All properties
+`sys_attachment` | Attachment | Contains all attachments, but not the data like images!
+`sys_attachment_doc` | Attachment Document | Contains attachment data
+
 ## JS Development
 
 ### JS Scripts
@@ -55,7 +63,7 @@ gr.update();
 
 ### Get records from a table
 
-* `sysparm_query`: Build the query on desktop and right-click -> *Copy Query* - [Source](https://developer.servicenow.com/dev.do#!/learn/learning-plans/quebec/servicenow_application_developer/app_store_learnv2_rest_quebec_more_about_query_parameters)
+* `sysparm_query`: Build the query on desktop and right-click → *Copy Query* - [Source](https://developer.servicenow.com/dev.do#!/learn/learning-plans/quebec/servicenow_application_developer/app_store_learnv2_rest_quebec_more_about_query_parameters)
 
 ## Admin
 
