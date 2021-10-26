@@ -24,7 +24,7 @@ parent: Softwares
 
 ### JS Scripts
 
-* Server-side scripting in JS: in _Scripts - Background_ module
+* Server-side scripting in JS: in _Scripts - Background_ module or in `https://instance.sn/nav_to.do?uri=%2Fsys.scripts.do`
 * return a sys_id in a Flow: `return "0dde2d9cdbc264104bca2a8cd396194a";`
 
 ### Work with Records
