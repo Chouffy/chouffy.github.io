@@ -24,3 +24,20 @@ Use [Bandwidth Hero](https://bandwidth-hero.com/). Setup:
 ## DNS
 
 * Reverse from IP to DNS: `nslookup IP`
+
+## Firefox
+
+Great extensions:
+
+* Awesome RSS
+* ClearURLs
+* Enhancer for YouTube™
+* Firefox Multi-Account Containers
+* Kee - Password Manager
+* LeechBlock NG
+* Print Edit WE
+* Simple Translate
+* Temporary Containers
+* uBlock Origin
+* Video Speed Controller
+* Web Archives
