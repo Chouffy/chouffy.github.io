@@ -16,6 +16,7 @@ parent: Languages
 ## References
 
 * [A fairly comprehensive list of Python tutorials](https://pythonbasics.org/)
+* [A great websie for tutorials](https://realpython.com/)
 
 ## Setup
 
