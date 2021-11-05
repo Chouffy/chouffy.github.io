@@ -63,3 +63,7 @@ System Agent | 0 mV
         c. Intel(R) Smart Sound Technology (Intel(R) SST) Audio Controller.
     15. Reboot system.
 1. Reinstall the driver with the package from Lenovo website. If you want to be extra-sure, do so from an elevated command-line.
+
+## Disable adaptive brightness
+
+Use this nice script: [DPST-Control](https://github.com/orev/dpst-control)
