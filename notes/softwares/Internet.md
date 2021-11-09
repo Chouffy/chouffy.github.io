@@ -37,6 +37,7 @@ Great extensions:
 * LeechBlock NG
 * Print Edit WE
 * Simple Translate
+* Snap Links
 * Temporary Containers
 * uBlock Origin
 * Video Speed Controller
