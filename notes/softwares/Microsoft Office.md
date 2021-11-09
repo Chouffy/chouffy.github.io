@@ -6,6 +6,11 @@ parent: Softwares
 
 ## Excel
 
+### Startup option
+
+* Safe mode: hold `CTRL` key
+* New instance: hold `ALT` key
+
 ### Excel UI
 
 * Move the cursor in a selection box: **F2**
