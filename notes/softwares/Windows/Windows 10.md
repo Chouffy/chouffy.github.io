@@ -59,6 +59,8 @@ parent: Windows
 
 ## Command-line Kung Fu
 
+* Use a drag-n-dropped file in a batch: `"%~1"`
+
 ### Services
 
 * Manage a service: `net <start/stop> servicename`
