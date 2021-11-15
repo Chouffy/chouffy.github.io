@@ -37,7 +37,7 @@ End Sub
 1. Open the XLSX as a ZIP
 1. Navigate to `xl` → `worksheets`
 1. Edit the sheet, if trouble to find it: search for `sheetProtection`
-1. Remove everything between `<sheetProtection ... />`
+1. Remove everything between `<sheetProtection ... />`. This is usually just before `</sheetData>`
 1. Save the `sheetX.xml` file in the XLSX and reopen the Excel!
 
 ### Data
