@@ -63,6 +63,10 @@ End Sub
 
 * Clear "Recent Location" drop-down list → Delete keys in: `HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Outlook\Preferences\LocationMRU`
 
+### Teams
+
+* Remove a Teams meeting from an existing invite: Add to the Ribbon the *Don't Host Online* command.
+
 ## PowerPoint
 
 ### Toolbar
