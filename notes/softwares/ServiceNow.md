@@ -33,7 +33,6 @@ Table | Name | Function
 ### JS Scripts
 
 * Server-side scripting in JS: in _Scripts - Background_ module or in `https://instance.sn/nav_to.do?uri=%2Fsys.scripts.do`
-* return a sys_id in a Flow: `return "0dde2d9cdbc264104bca2a8cd396194a";`
 
 ### Work with Records
 
@@ -56,6 +55,22 @@ gr.update();
  `gr.deleteRecord();`
 
 [Source](https://servicenowguru.com/scripting/gliderecord-query-cheat-sheet/)
+
+## Flow Designer development
+
+* Use CTRL+Space for auto-fill
+* Return a sys_id in a Flow: `return "0dde2d9cdbc264104bca2a8cd396194a";`
+
+### Convert a string into an integer
+
+1. Create a Flow variable
+1. Set the flow variable and define this inline script:
+
+    ```js
+    var valString = fd_data._2__look_up_record.record.value;
+    var valInt = parseInt(valString);
+    return valInt;
+    ```
 
 ## REST Development
 
