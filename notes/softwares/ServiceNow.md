@@ -58,7 +58,7 @@ gr.update();
 
 ## Flow Designer development
 
-* Use CTRL+Space for auto-fill
+* Use CTRL+Space for autofill
 * Return a sys_id in a Flow: `return "0dde2d9cdbc264104bca2a8cd396194a";`
 
 ### Convert a string into an integer
