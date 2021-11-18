@@ -28,6 +28,12 @@ Table | Name | Function
 `sys_attachment` | Attachment | Contains all attachments, but not the data like images!
 `sys_attachment_doc` | Attachment Document | Contains attachment data
 
+### Most Valuable Properties
+
+Name | Description
+-|-
+`glide.email.smtp.active` | Email sending enabled
+
 ## JS Development
 
 ### JS Scripts
