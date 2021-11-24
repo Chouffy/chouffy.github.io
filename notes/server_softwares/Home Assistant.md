@@ -4,7 +4,9 @@ parent: Server Softwares
 
 # Home Assistant
 
-## Setup on KVM Ubuntu
+## Setup
+
+### Ubuntu KVM
 
 1. Download the image [here](https://www.home-assistant.io/installation/linux)
 1. Decompress `xz --decompress FILE`
@@ -26,7 +28,23 @@ parent: Server Softwares
 
 1. Restart the server
 
+## Configuration
+
+### Lovelace
+
+* Display an entity attribute:
+
+```yaml
+type: entities
+entities:
+  - type: attribute
+    entity: media_player.abc
+    attribute: sound_mode
+```
+
 ## Development
+
+### Documentation
 
 * Home Assistant Developers wiki
     * [HA Architecture](https://developers.home-assistant.io/docs/architecture_index)
@@ -41,7 +59,7 @@ parent: Server Softwares
     * [Repository of examples](https://github.com/home-assistant/example-custom-config/tree/master/custom_components/)
     * Icons: [Material Design Icons](https://materialdesignicons.com/) - use it like `mdi:home`
 
-### Setup
+### Dev Setup
 
 * Follow [setup guide here](https://developers.home-assistant.io/docs/development_environment/)
 * Then [don't forget to check out a separate branch](https://developers.home-assistant.io/docs/development_submitting)
