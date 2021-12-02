@@ -34,6 +34,14 @@ Name | Description
 -|-
 `glide.email.smtp.active` | Email sending enabled
 
+## Reports
+
+### Show records without a related record
+
+1. Create a report that shows all records
+2. Run it
+3. In the filter, add a related list condition
+
 ## JS Development
 
 ### JS Scripts
