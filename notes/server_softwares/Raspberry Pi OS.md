@@ -207,4 +207,6 @@ For some troubleshooting help:
 
 * Check `sudo systemctl status hostapd.service`, `wpa_supplicant.service` and `dnsmasq.service` if you have troubles
 * If error with `hostapd`: unmask the service, or `rfkill unblock wlan` and then `rfkill list wlan` to check
-* If error with `dnsmasq.service:`: check configuration `sudo nano /etc/dnsmasq.conf`, last line should look like `dhcp-option=6,1.1.1.2,1.0.0.2` and not have a `,` at the end
+* If error with `dnsmasq.service:`:
+    * Check configuration `sudo nano /etc/dnsmasq.conf`, last line should look like `dhcp-option=6,1.1.1.2,1.0.0.2` and not have a `,` at the end
+    * If `DHCP packet received on wlan0 which has no address`, check `ifconfig` and try to manually set the IP `sudo ifconfig wlan0 192.168.4.1`
