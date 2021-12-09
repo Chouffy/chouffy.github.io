@@ -44,6 +44,7 @@ End Sub
 
 * Date & Time: convert UNIX epoch to Excel format → `(A1/86400)+25569+(-5/24)` with A1 the data cell
 * Data validation: List without a Range → Use comma: `xx,yy,zz`
+* New line in a formula: `CHAR(10)`
 
 ## PowerQuery / PowerBI
 
