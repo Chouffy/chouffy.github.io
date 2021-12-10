@@ -6,6 +6,10 @@ parent: Softwares
 
 ## Data
 
+* In a Choice/Reference field:
+    * `*abc` to search data with `abc` in it
+    * `**` to list all possibilities
+
 ### Mass Update
 
 * Single column
@@ -96,9 +100,8 @@ gr.update();
 
 ## Admin
 
-### Auto login
-
-Pass username and password directly: `https://INSTANCE.service-now.com/login.do?user_name=USER&sys_action=sysverb_login&user_password=PASSWORD`
+* Auto login from a URL: `https://INSTANCE.service-now.com/login.do?user_name=USER&sys_action=sysverb_login&user_password=PASSWORD`
+* Access a desktop page directly: `$sp.do`, `$chat.d`o, or `$vtb.do` for example 
 
 ### SN Utils
 
