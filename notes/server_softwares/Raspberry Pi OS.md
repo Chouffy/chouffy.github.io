@@ -210,3 +210,4 @@ For some troubleshooting help:
 * If error with `dnsmasq.service:`:
     * Check configuration `sudo nano /etc/dnsmasq.conf`, last line should look like `dhcp-option=6,1.1.1.2,1.0.0.2` and not have a `,` at the end
     * If `DHCP packet received on wlan0 which has no address`, check `ifconfig` and try to manually set the IP `sudo ifconfig wlan0 192.168.4.1`
+* If no internet on device, try to reapply firewall setting: `sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE`
