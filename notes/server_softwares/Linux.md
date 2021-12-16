@@ -218,7 +218,13 @@ Please note: I mainly use Ubuntu Server, so your mileage may vary with other dis
 * `id $user` to get user PUID & GUID
 * Setup SFTP for without Shell: [nice tutorial from Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-enable-sftp-without-shell-access-on-ubuntu-18-04)
 
-### Power & Battery
+### OS-related
+
+* Know which OS, flavor or version you are running `cat /etc/os-release`
+
+### Hardware-related
+
+#### Power & Battery
 
 * Check system temperature
     1. `sudo apt install lm-sensors`
@@ -230,9 +236,9 @@ Please note: I mainly use Ubuntu Server, so your mileage may vary with other dis
     1. Get status `upower -i <path>`
 * Plan a reboot: `shutdown -r 0:00` to restart at midnight for instance
 
-### OS-related
+#### BIOS
 
-* Know which OS, flavor or version you are running `cat /etc/os-release`
+* Check BIOS version `sudo dmidecode | less`
 
 ## Recover
 
