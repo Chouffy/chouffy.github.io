@@ -144,7 +144,7 @@ Notes:
 
 OK, it's not an app, just a script that I run every 6 hours.
 
-You need to set-up first a DynHost username - see [this documentation](https://docs.ovh.com/gb/en/domains/hosting_dynhost/).
+You need to set-up first a DynHost username - see [this documentation](https://docs.ovh.com/gb/en/domains/hosting_dynhost/) and calculate the [basic header](https://www.blitter.se/utils/basic-authentication-header-generator/).
 
 ```bash
 #!/bin/bash
