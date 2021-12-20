@@ -10,7 +10,7 @@ parent: Languages
 
 ### Inline
 
-In any HTML tag in body, add for example `style="color: blue; ~"`
+In any HTML tag in body, add for example `<p style="color: blue; ...">text</p>`
 
 ### Head - Style with CSS Selectors
 
