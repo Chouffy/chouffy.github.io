@@ -42,3 +42,9 @@ Great extensions:
 * uBlock Origin
 * Video Speed Controller
 * Web Archives
+
+## Various Tools
+
+* [Wi-Fi password to QR Code](https://qifi.org/)
+
+    * Also works by creating a QR code that contains `WIFI:S:SSID;T:WPA;P:PASSWORD;;`
