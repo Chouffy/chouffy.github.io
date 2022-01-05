@@ -29,6 +29,7 @@ Images management:
 * List `docker images`
 * Remove `docker rmi image_name`
 * List of images are in the [Docker Hub](https://hub.docker.com/)
+* An previously downloaded image can be used by referring its image ID
 
 Other commands:
 
