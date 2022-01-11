@@ -54,16 +54,12 @@ Name | Description
 
 ### Work with Records
 
-#### Get a record
-
 ```js
+/* Get a record */
 var gr = new GlideRecord('table_name');     
 gr.get('sys_id');
-```
 
-#### Update a record
-
-```js
+/* Update a record */
 gr.FIELD = VALUE;
 gr.update();
 ```
