@@ -38,6 +38,19 @@ Name | Description
 -|-
 `glide.email.smtp.active` | Email sending enabled
 
+### Delete a Comment or a Work Note from a record
+
+* [Source](https://support.servicenow.com/kb?id=kb_article_view&sysparm_article=KB0520375)
+* Replace below `INSTANCEURL` and `SYSID` by your instance and the sys_id of the affected record
+* Modify or delete the record
+
+```html
+https://INSTANCEURL/sys_journal_field_list.do?sysparm_query=element_id=SYSID
+https://INSTANCEURL/sys_audit_list.do?sysparm_query=documentkey=SYSID
+https://INSTANCEURL/sys_history_set_list.do?sysparm_query=id=SYSID
+https://INSTANCEURL/sys_email_list.do?sysparm_query=instance=SYSID
+```
+
 ## Reports
 
 ### Show records without a related record
