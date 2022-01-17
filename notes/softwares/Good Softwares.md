@@ -64,3 +64,8 @@ Troubleshooting:
 * Use `Lucida Console` instead of `Courrier`
 * Useful commands:
     * `apt-cyg` packet manager, similar to `apt`
+
+## OpenJDK (Java)
+
+* [Download Java interpreter](https://adoptium.net/releases)
+* Open a `jar`: `.\OpenJDK\bin\javaw.exe -jar "PathToJar"`
