@@ -107,6 +107,10 @@ gr.update();
 
 * `sysparm_query`: Build the query on desktop and right-click → *Copy Query* - [Source](https://developer.servicenow.com/dev.do#!/learn/learning-plans/quebec/servicenow_application_developer/app_store_learnv2_rest_quebec_more_about_query_parameters)
 
+## Workspace
+
+* [Overview of all components of the Record view](https://docs.servicenow.com/bundle/rome-servicenow-platform/page/administer/workspace/concept/record-view.html)
+
 ## Admin
 
 * Auto login from a URL: `https://INSTANCE.service-now.com/login.do?user_name=USER&sys_action=sysverb_login&user_password=PASSWORD`
