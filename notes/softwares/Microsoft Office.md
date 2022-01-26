@@ -60,6 +60,16 @@ End Sub
 
 ## Outlook
 
+### Mails
+
+* In a shared mailbox, put deleted items in the shared mailbox Deleted item box - [Source](https://docs.microsoft.com/en-us/outlook/troubleshoot/email-management/deleted-items-go-to-wrong-folder)
+
+    1. In the registry, go to `HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Outlook\Options\General`
+    1. Create/Edit a DWORD `DelegateWastebasketStyle`
+    1. Set it to:
+        * 8 = Stores deleted items in your folder.
+        * 4 = Stores deleted items in the mailbox owner's folder.
+
 ### Calendar
 
 * Clear "Recent Location" drop-down list → Delete keys in: `HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Outlook\Preferences\LocationMRU`
