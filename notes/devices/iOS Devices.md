@@ -22,3 +22,16 @@ parent: Devices
 * Use iPad/iPhone as a mirror or secondary screen with touch: [SpaceDesk](https://spacedesk.net/)
     * On Windows, this installs a service which run as SYSTEM
     * If manual control is needed, switch startup type to Manual and manage with `net start/stop spacedeskService`
+
+## Remote Control
+
+* Use [across](http://www.acrosscenter.com/) to emulate a Bluetooth Mouse/Keyboard from a PC
+
+Useful shortcuts with a Windows keyboard
+
+Shortcut | Action
+-|-
+`Win+H` | Go to Springboard / Home screen
+`Win+Space` | Open the Search bar
+`Win+Tab` | Switch between apps
+`Win+Shift+3` | Take a screenshot
