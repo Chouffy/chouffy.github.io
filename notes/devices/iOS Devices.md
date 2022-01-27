@@ -27,7 +27,7 @@ parent: Devices
 
 * Use [across](http://www.acrosscenter.com/) to emulate a Bluetooth Mouse/Keyboard from a PC
 
-Useful shortcuts with a Windows keyboard
+Useful shortcuts with a Windows keyboard - Shortcuts are also listed in Accessibility → Keyboard → Full Keyboard Access → Commands
 
 Shortcut | Action
 -|-
@@ -35,3 +35,4 @@ Shortcut | Action
 `Win+Space` | Open the Search bar
 `Win+Tab` | Switch between apps
 `Win+Shift+3` | Take a screenshot
+`Win+Alt+D` | Open dock
