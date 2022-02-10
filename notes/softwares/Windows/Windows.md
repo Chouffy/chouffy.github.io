@@ -3,7 +3,7 @@ grand_parent: Softwares
 parent: Windows
 ---
 
-# Windows 10
+# Windows
 
 ## Tips & Tricks
 
