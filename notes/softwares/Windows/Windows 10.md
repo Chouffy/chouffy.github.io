@@ -59,6 +59,7 @@ parent: Windows
 
 ## Command-line Kung Fu
 
+* Shortcut to start a command line in the current directory: create a bat file containing `@cmd`
 * Use a drag-n-dropped file in a batch: `"%~1"`
 
 ### Services
