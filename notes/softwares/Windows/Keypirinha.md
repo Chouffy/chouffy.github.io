@@ -19,6 +19,10 @@ hotkey_run = Alt+Space
 hotkey_history = Win+Alt+Space
 ```
 
+### History
+
+Open `(portable)\Profile\User\Keypirinha.history` and delete necessaries entries.
+
 ## Packages
 
 [PackageControl](https://github.com/ueffel/Keypirinha-PackageControl), a nice package manager
