@@ -13,6 +13,19 @@ parent: Softwares
 
 ---
 
+## Keyboard shortcuts
+
+Key | Action
+-|-
+| Playback
+`J` | Play in reverse
+`K` | Stop
+`L` | Play, tap multiple time to speed up
+| Edit
+`I` | Mark in
+`O` | Mark out
+`Shift+F12` | Append at end of timeline
+
 ## Main views
 
 ### Media
