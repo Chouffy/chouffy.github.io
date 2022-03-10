@@ -352,6 +352,7 @@ response = requests.post(url, auth=(user, pwd), headers=headers, json=data_JSON)
 ```
 
 You can use `data=` instead of `json=`.
+If parameters are passed in the URL, use `params=` instead of `json=`.
 
 #### UDP Communication
 
