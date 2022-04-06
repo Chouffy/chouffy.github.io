@@ -42,6 +42,14 @@ entities:
     attribute: sound_mode
 ```
 
+### Mobile app
+
+* Reinstall the mobile app on a reset phone - [source](https://community.home-assistant.io/t/correct-way-to-reset-app-and-start-over/138122/2)
+    1. remove app from phone
+    1. remove integration in HA via the UI
+    1. redownload app and do onboarding
+    1. after onboarding restart HA and keep your app alive (so screen on)
+
 ## Development
 
 ### Documentation
