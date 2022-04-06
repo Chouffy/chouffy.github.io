@@ -22,7 +22,9 @@ OnePlus' devices have *OnePlusLogKit* and can use it to have `tcpdump`:
 
 If the camera has trouble to focus in *Google Translate*, select *Camera 1* in app settings.
 
-## Install LineageOS
+## LineageOS
+
+### Install
 
 [See the LineageOS wiki page!](https://wiki.lineageos.org/devices/enchilada/)
 
@@ -57,6 +59,11 @@ If the camera has trouble to focus in *Google Translate*, select *Camera 1* in a
 1. Install Google Apps
     1. See [this wiki from LineageOS](https://wiki.lineageos.org/gapps) for download
     1. Sideload the zip
+
+### Update
+
+1. Use the built-in updater
+1. After reboot, check if Magisk is affected and sideload if necessary
 
 ## Magisk
 
