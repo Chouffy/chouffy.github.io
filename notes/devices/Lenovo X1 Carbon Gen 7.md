@@ -4,6 +4,12 @@ parent: Devices
 
 # Lenovo X1 Carbon Gen 7
 
+## Fix for touchpad unresponsive after wake from sleep
+
+In the device manager, disable power management linked to the `Intel(R) Serial IO I2C Host Controller` where the touchpad is linked - [source](https://www.reddit.com/r/thinkpad/comments/jva2o9/touchpad_turns_unresponsive_after_wake_from_sleep/)
+
+However, this fails to stay disables on restart, so it's a limited solution.
+
 ## Middle mouse button for click and scroll
 
 [TPMiddle](https://sdx1.net/tools/tpmiddle/) was great to do it, but is incompatible with the X1C7.
