@@ -22,7 +22,8 @@ Container management:
 * Pause `docker pause container_name` and `docker unpause container_name`
 * Kill `docker kill container_name`
 * Remove `docker rm container_name`
-* Bash `docker attach container_name`
+* Bash/See what's going on `docker attach container_name`
+    * And `CTRL+P` then `CTRL-Q` to detach
 
 Images management:
 
