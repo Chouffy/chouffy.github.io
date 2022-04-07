@@ -16,6 +16,8 @@ parent: Server Softwares
     1. At the bottom, add `AllowUsers XXX` with XXX your user name
     1. Reboot
 * Refer also to the [post-install notes](https://wiki.alpinelinux.org/wiki/Installation#Post-Install)
+* On VM, don't bother to install VM addons - just create an user, allow SSH user and connect to it
+    * If you use NAT, configure port forwarding with Host being the actual PC and Guest the VM
 
 ### Docker
 
