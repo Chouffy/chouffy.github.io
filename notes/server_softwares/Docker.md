@@ -24,6 +24,8 @@ Container management:
 * Remove `docker rm container_name`
 * Bash/See what's going on `docker attach container_name`
     * And `CTRL+P` then `CTRL-Q` to detach
+* Update `docker update [OPTIONS] CONTAINER`
+    * Add restart policy: `docker update --restart=always CONTAINER`
 
 Images management:
 
