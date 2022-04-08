@@ -63,7 +63,7 @@ https://INSTANCEURL/sys_email_list.do?sysparm_query=instance=SYSID
 
 ### JS Scripts
 
-* Server-side scripting in JS: in _Scripts - Background_ module or in `https://instance.sn/nav_to.do?uri=%2Fsys.scripts.do`
+* Server-side scripting in JS: in `Scripts - Background` module or in `https://instance.sn/nav_to.do?uri=%2Fsys.scripts.do`
 
 ### Work with Records
 
@@ -87,6 +87,7 @@ gr.update();
 
 * Use CTRL+Space for autofill
 * Return a sys_id in a Flow: `return "0dde2d9cdbc264104bca2a8cd396194a";`
+* Activate flow execution detail - [guide](https://docs.servicenow.com/bundle/sandiego-application-development/page/administer/flow-designer/task/enable-flow-reporting.html)
 
 ### Convert a string into an integer
 
@@ -114,7 +115,7 @@ gr.update();
 ## Admin
 
 * Auto login from a URL: `https://INSTANCE.service-now.com/login.do?user_name=USER&sys_action=sysverb_login&user_password=PASSWORD`
-* Access a desktop page directly: `$sp.do`, `$chat.d`o, or `$vtb.do` for example 
+* Access a desktop page directly: `$sp.do`, `$chat.do`, or `$vtb.do` for example
 
 ### SN Utils
 
