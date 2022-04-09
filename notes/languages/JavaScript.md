@@ -15,8 +15,17 @@ Types | Content
 boolean | `true` / `false`
 number | `123`
 string | `"hello"`
-array | `[1,2,3]`
+array | `[1,2,["a","b"]]`
 object | `{"color":"red"}`
+
+### Array
+
+Transpose an array:
+
+```js
+array = [ ["a", "b"],["c", "d"]]
+array[0].map((_, colIndex) => array.map(row => row[colIndex]))
+```
 
 ## Functions
 
@@ -29,3 +38,7 @@ if (a === true ){
     // do something
 }
 ```
+
+### Generate chars
+
+Use [Chart.js](https://www.chartjs.org/docs/latest/)
