@@ -40,6 +40,26 @@ msg.payload = date.toString();
 return msg;
 ```
 
+### Variables
+
+```js
+//Node context
+let d = context.get("myData");
+context.set("myData", {color: "red"});
+var myData = context.get('myData') || 0;
+
+//Flow context
+let f = flow.get("sensor");
+flow.set("sensor", 1234);
+var sensor = flow.get('sensor') || 0;
+
+//Global context
+let g = global.get("active");
+global.set("active", false);
+var active = global.get('active') || 0;
+
+```
+
 ### Dashboards
 
 Use [`node-red-dashboard`](https://flows.nodered.org/node/node-red-dashboard)
@@ -49,3 +69,12 @@ Use [`node-red-dashboard`](https://flows.nodered.org/node/node-red-dashboard)
 1. Create an Inject timestamp with topic: dummy
 1. Join the input with the dummy timestamp, after 1 message part
 1. Create a function that return the input payload `return {payload: msg.payload.topic_input};`
+
+### Images
+
+Use [node-red-contrib-chart-image](https://flows.nodered.org/node/node-red-contrib-chart-image)
+
+### MQTT
+
+* If you have a ghost MQTT broker, trying removing all brokers and restart Node-RED
+* If you have `connecting`, check credentials - they are gone on import
