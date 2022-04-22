@@ -50,6 +50,15 @@ entities:
     1. redownload app and do onboarding
     1. after onboarding restart HA and keep your app alive (so screen on)
 
+
+### Automations
+
+#### Notifications
+
+* [Build Actionable notification](https://companion.home-assistant.io/docs/notifications/actionable-notifications/)
+* Get an attribute value with a space: use `{{ states.sensor.abc.attributes["X Y Z"] }}`
+* Use Developer Tools → Services and Template to try out
+
 ## Development
 
 ### Documentation
