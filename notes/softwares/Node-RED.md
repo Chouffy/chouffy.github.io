@@ -72,7 +72,9 @@ Use [`node-red-dashboard`](https://flows.nodered.org/node/node-red-dashboard)
 
 ### Images
 
-Use [node-red-contrib-chart-image](https://flows.nodered.org/node/node-red-contrib-chart-image)
+* [node-red-contrib-chart-image](https://flows.nodered.org/node/node-red-contrib-chart-image) to generate images
+    * ⚠ Not (easily) installable on Alpine because of missing dependencies
+* [node-red-contrib-image-output](https://flows.nodered.org/node/node-red-contrib-image-output) to view them
 
 ### MQTT
 
