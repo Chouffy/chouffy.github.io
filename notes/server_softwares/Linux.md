@@ -227,6 +227,8 @@ Please note: I mainly use Ubuntu Server, so your mileage may vary with other dis
 
 ### Hardware-related
 
+* Sometime `reboot` is not accessible ... then use `systemctl reboot`
+
 #### Power & Battery
 
 * Check system temperature
