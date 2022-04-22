@@ -45,8 +45,10 @@ Please note: I mainly use Ubuntu Server, so your mileage may vary with other dis
 
 ### Cron - Job scheduler
 
-* Edit cron of a user `sudo crontab -u USER -e`
+* Edit cron of a user `sudo crontab -e -u USER` (`-u` to edit specific user)
 * Check if the cron expression is correct: [crontab guru](https://crontab.guru/)
+* Useful commands:
+    * `@reboot COMMAND`
 
 ### [Cockpit](https://cockpit-project.org/) - Remote administration of server
 
