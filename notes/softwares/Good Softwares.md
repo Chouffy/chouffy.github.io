@@ -69,3 +69,13 @@ Troubleshooting:
 
 * [Download Java interpreter](https://adoptium.net/releases)
 * Open a `jar`: `.\OpenJDK\bin\javaw.exe -jar "PathToJar"`
+
+## VirtualBox (Virtual Machine)
+
+* Compact a virtual hard drive `.vdi`
+    1. Defragment the disk
+    1. In the guest:
+        * Linux: `dd if=/dev/zero of=/var/tmp/bigemptyfile bs=4096k ; rm /var/tmp/bigemptyfile`
+        * Windows: `sdelete.exe c: -z` from Sysinternals
+    1. Shutdown
+    1. Run `VBoxManage.exe modifymedium --compact c:\path\to\thedisk.vdi`
