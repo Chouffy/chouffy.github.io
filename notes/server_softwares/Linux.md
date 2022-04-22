@@ -215,12 +215,15 @@ Please note: I mainly use Ubuntu Server, so your mileage may vary with other dis
 
 ### Users & Groups
 
+* `useradd -m USERNAME` add a new user with a Home directory (`-m`)
+* `passwd USERNAME` define a password
 * `id $user` to get user PUID & GUID
 * Setup SFTP for without Shell: [nice tutorial from Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-enable-sftp-without-shell-access-on-ubuntu-18-04)
 
 ### OS-related
 
 * Know which OS, flavor or version you are running `cat /etc/os-release`
+* Install fonts, check package `fonts-liberation`
 
 ### Hardware-related
 
