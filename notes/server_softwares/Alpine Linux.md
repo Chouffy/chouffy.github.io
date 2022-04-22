@@ -10,6 +10,7 @@ parent: Server Softwares
 
 * run `setup-alpine`
 * `sys` is standard hard-disk install mode
+* `adduser NAME` to add user
 * `apk add nano` to install `nano`
 * Configure SSH
     1. Edit `/etc/ssh/sshd_config`
