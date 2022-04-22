@@ -50,7 +50,6 @@ entities:
     1. redownload app and do onboarding
     1. after onboarding restart HA and keep your app alive (so screen on)
 
-
 ### Automations
 
 #### Notifications
