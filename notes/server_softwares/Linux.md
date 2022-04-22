@@ -223,7 +223,7 @@ Please note: I mainly use Ubuntu Server, so your mileage may vary with other dis
 ### OS-related
 
 * Know which OS, flavor or version you are running `cat /etc/os-release`
-* Install fonts, check package `fonts-liberation`
+* Install fonts, check package `fonts-liberation` - can help you to fix `Fontconfig error: Cannot load default config file`
 
 ### Hardware-related
 
