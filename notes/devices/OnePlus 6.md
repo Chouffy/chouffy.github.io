@@ -82,4 +82,5 @@ If the camera has trouble to focus in *Google Translate*, select *Camera 1* in a
 ### Ressources
 
 * [XDA: Best Magisk modules](https://www.xda-developers.com/best-magisk-modules/)
-* Pass SafetyNet with [SafetyNet-Fix](https://github.com/kdrag0n/safetynet-fix/releases/tag/v2.2.1)
+* Pass SafetyNet with [SafetyNet-Fix](https://github.com/kdrag0n/safetynet-fix/releases)
+* Remove navbar [HideNavBar](https://github.com/Magisk-Modules-Repo/HideNavBar/releases)
