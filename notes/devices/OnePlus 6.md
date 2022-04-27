@@ -67,11 +67,17 @@ If the camera has trouble to focus in *Google Translate*, select *Camera 1* in a
 
 ## Magisk
 
-### Install
+### Install via direct sideload
 
 1. [Download the latest release](https://github.com/topjohnwu/Magisk/releases)
 1. On device: Install the APK then reboot to recovery
 1. On PC: rename the `*.apk` to `*.zip`, and sideload it
+
+### Remove all installed modules (may fix bootloop)
+
+1. Install Magisk
+1. Reboot
+1. `adb wait-for-device shell magisk` --remove-modules while booting
 
 ### Ressources
 
