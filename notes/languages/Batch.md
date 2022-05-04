@@ -4,7 +4,7 @@ parent: Languages
 
 # Batch
 
-This one is about Microsoft Batch script language.
+This page is about Microsoft Batch script language.
 
 ## Syntax
 
@@ -47,6 +47,8 @@ if var1 == var (
     * Create `mkdir`
 * Files & folder
     * Rename `REN` or `rename`
+    * Use a drag-n-dropped file in a batch: `"%~1"`
+    * Shortcut to start a command line in the current directory: create a bat file containing `@cmd`
 * Variables stored into a file
     * Save `echo %var%>filename`
     * Load `set /p var=<filename`

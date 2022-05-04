@@ -57,10 +57,6 @@ parent: Windows
 * Open performances options panel (System > Advanced system settings, inaccessible if admin) `C:\Windows\System32\SystemPropertiesPerformance.exe`.
 * Reinstall Setting app - Setting app doesn't open: PowerShell `Get-AppXPackage | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}` - [Source](https://www.maketecheasier.com/fix-settings-app-not-working-in-windows-10/)
 
-## Command-line Kung Fu
-
-* Shortcut to start a command line in the current directory: create a bat file containing `@cmd`
-* Use a drag-n-dropped file in a batch: `"%~1"`
 
 ### Services
 
