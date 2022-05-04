@@ -64,6 +64,13 @@ If the camera has trouble to focus in *Google Translate*, select *Camera 1* in a
 
 1. Use the built-in updater
 1. After reboot, check if Magisk is affected and sideload if necessary
+1. If no sideload is wished
+    1. Download the recovery image [on LineageOS website](https://download.lineageos.org/enchilada)
+    1. Transfer image to phone
+    1. Open the Magisk app, press install and patch the image
+    1. Transfer patched image to PC
+    1. Reboot to bootloader
+    1. Install the bootloader with `fastboot flash boot <recovery_filename>.img` and reboot
 
 ## Magisk
 
