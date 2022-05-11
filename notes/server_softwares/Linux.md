@@ -92,6 +92,8 @@ Please note: I mainly use Ubuntu Server, so your mileage may vary with other dis
     * `d`: Detach
     * `[`: Copy mode
         * Page-Up to scroll up, Page-Down to scroll down
+        * Space to start selection and Space again to stop it
+    * `]`: Paste mode
     * `:sessionname  <Your_session_name>`: Rename
 * Reattach `screen -r session_ID`
 
