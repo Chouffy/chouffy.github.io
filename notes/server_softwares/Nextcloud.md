@@ -20,6 +20,27 @@ parent: Server Softwares
 
 * Host `X.X.X.X` was not connected to because it violates local access rules. → [Fix here](https://help.nextcloud.com/t/violates-local-access-rules-in-talk-9/84471/2)
 
+### Cloudflare Tunnel
+
+* Goal: don't expose Public IP, be protected agains DDoS, avoid firewall set-up
+* [Introduction to Cloudflare Tunnel](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/)
+* Set-up
+    1. Set-up the [Cloudflare Package Repo](https://pkg.cloudflare.com/) if needed
+    1. Edit `/etc/hosts` file to add certificate DNS name to being able to self resolve it - and use this DNS name in the Cloudflare Tunnel Public Hostname (*not* `localhost`, you may end up with Error 502 as the certificate DNS and `localhost` won't match)
+    1. Follow the *New Tunnel* guide in the Cloudflare Tunnel dashboard
+    1. Or if you want to do it manually
+        1. Follow the [step by step CLI guide](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/tunnel-guide/#set-up-a-tunnel-locally-cli-setup)
+        1. Move configuration from `~/.cloudflared/` to `/etc/cloudflared/` before running the tunnel
+        1. Install `cloudflared` as a service:
+
+            ```sh
+            sudo cloudflared service install
+            sudo systemctl start cloudflared
+            sudo systemctl enable cloudflared
+            ```
+* Quick reference:
+    * `cloudflared tunnel list` to list all tunnels
+
 ## Integrations with other devices
 
 ### Outlook calendar
