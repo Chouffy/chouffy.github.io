@@ -25,7 +25,11 @@ Keys | Usage
         * [sqlite to import](https://forum.openstreetmap.fr/t/ign-sur-l-application-osmand/6961/10)
         * Correction needed for `tilesize` in the database from 512 to 256 - [source](https://forum.openstreetmap.fr/t/ign-sur-l-application-osmand/6961/46)
 
-## Android Debug Bridge on WLAN
+## Android Debug Bridge
+
+* If you want to filter out logcat: `adb shell`, then `logcat | grep XYZ`
+
+### Use it via WLAN
 
 If it doesn't work, try in admin
 
