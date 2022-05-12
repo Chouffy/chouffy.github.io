@@ -1,8 +1,8 @@
 ---
-parent: Devices
+parent: Softwares
 ---
 
-# Android Devices
+# Android
 
 ## Useful software packages
 
