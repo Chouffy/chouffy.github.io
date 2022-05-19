@@ -64,6 +64,7 @@ adb connect 192.168.43.1:5555
 
 Useful to use [OsmAnd~](https://f-droid.org/en/packages/net.osmand.plus/) with Android Auto!
 
+1. The above will delete app data, so backup first!
 1. Clear storage of Android Auto
 1. Install [AA-Tweaker](https://github.com/shmykelsa/AA-Tweaker)
 1. Go to AA-Tweaker, select the wished app and tap "Patch custom apps"
