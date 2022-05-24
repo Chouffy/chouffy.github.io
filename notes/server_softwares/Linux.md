@@ -188,7 +188,7 @@ Please note: I mainly use Ubuntu Server, so your mileage may vary with other dis
 
 ### Files
 
-* `tar -xvzf file.tar.gz` to extract tarball and zip
+* `tar -xvf file.tar.gz` to extract tarball and zip (`x` for extract, `v` for verbose, `f` for file)
 * `find / -name filename` to find *filename* in entire system (/) or active folder (.), and `sudo` to avoid permissions problems
 
 #### Virtual Systems: Mount QCoW2
