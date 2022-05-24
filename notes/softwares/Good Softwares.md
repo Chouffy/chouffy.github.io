@@ -72,6 +72,9 @@ Troubleshooting:
 
 ## VirtualBox (Virtual Machine)
 
+* Fix permissions with shared folders on Linux
+    * Message in Ubuntu: `This location could not be displayed.` and `You do not have the permissions necessary to view the contents of "sf_Manager".`
+    * Solution: `sudo adduser $USER vboxsf` and reboot
 * Compact a virtual hard drive `.vdi`
     1. Defragment the disk
     1. In the guest:
