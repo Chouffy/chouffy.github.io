@@ -25,6 +25,15 @@ Keys | Usage
         * [sqlite to import](https://forum.openstreetmap.fr/t/ign-sur-l-application-osmand/6961/10)
         * Correction needed for `tilesize` in the database from 512 to 256 - [source](https://forum.openstreetmap.fr/t/ign-sur-l-application-osmand/6961/46)
 
+### Create work profile with [Island](https://github.com/oasisfeng/island)
+
+* Just install it from the Play Store and set it up!
+* To share file between mainland and island:
+    * In [Material Files](https://github.com/zhanghai/MaterialFiles)
+        1.  Create a new external connection
+        1.  Select a Work folder
+    * This will give a read-only access, but this can be done in both lands
+
 ## Magisk
 
 ### Install via direct sideload
