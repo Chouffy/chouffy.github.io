@@ -56,7 +56,12 @@ Keys | Usage
 
 ## Android Debug Bridge
 
+* Use adb as root: `adb root`
 * If you want to filter out logcat: `adb shell`, then `logcat | grep XYZ`
+
+### Shell commands
+
+* Disable one application `pm disable org.packagename`
 
 ### Use it via WLAN
 
