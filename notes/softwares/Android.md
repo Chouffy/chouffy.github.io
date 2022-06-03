@@ -6,6 +6,8 @@ parent: Softwares
 
 ## Useful software packages
 
+* [Activity Launcher](https://play.google.com/store/apps/details?id=de.szalkowski.activitylauncher) to launch hidden activities
+
 ### Remote control from PC using [scrpy](https://github.com/Genymobile/scrcpy)
 
 Useful keyboard shortcuts:
