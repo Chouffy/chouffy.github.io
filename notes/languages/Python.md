@@ -474,6 +474,8 @@ len(data)                       # Get number of items in data
 
 ## Development
 
+* Launch a python module from the OS: `python3 -m MODULE`
+
 ### Package an application for pip
 
 [Tutorial](https://packaging.python.org/tutorials/packaging-projects/):
@@ -552,7 +554,7 @@ How to use - [Source](https://realpython.com/python-virtual-environments-a-prime
 
 1. `pip install virtualenv` to install *virtualenv*
 1. Create a directory for your project
-1. `virtualenv toto` set up the venv in folder `toto` - it won't contain existing site package by default
+1. `python3 -m virtualenv toto` set up the venv in folder `toto` - it won't contain existing site package by default
 1. `.\toto\Scripts\activate` to activate the venv
     * If you have an error about PowerShell scripts, try `Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser` - [Source](https://dev.to/aka_anoop/enabling-virtualenv-in-windows-powershell-ka3)
 1. `deactivate` to return to the normal environment
