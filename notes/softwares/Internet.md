@@ -48,3 +48,4 @@ Great extensions:
 * [Wi-Fi password to QR Code](https://qifi.org/)
     * Also works by creating a QR code that contains `WIFI:S:SSID;T:WPA;P:PASSWORD;;`
 * [Find most active GitHub Fork](https://techgaun.github.io/active-forks/index.html)
+* [Scrap AirBnb to find the best ones](https://github.com/digital-engineering/airbnb-scraper)
