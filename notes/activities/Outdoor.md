@@ -1,12 +1,10 @@
 ---
-parent: Softwares
+parent: Activities
 ---
 
 # Outdoor
 
-Every software related to outdoor activities: hike, bike, navigate, ...
-
-## Bike
+## Biking
 
 * Maps:
     * [CyclOSM](https://www.cyclosm.org)
