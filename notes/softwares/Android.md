@@ -50,11 +50,13 @@ Keys | Usage
 1. Reboot
 1. `adb wait-for-device shell magisk` --remove-modules while booting
 
-### Ressources
+### List of great Magisk modules
 
 * [XDA: Best Magisk modules](https://www.xda-developers.com/best-magisk-modules/)
 * Pass SafetyNet with [SafetyNet-Fix](https://github.com/kdrag0n/safetynet-fix/releases)
 * Remove navbar [HideNavBar](https://github.com/Magisk-Modules-Repo/HideNavBar/releases)
+* Change default Quickstep provider (given compatible launcher) with [QuickSwitch](https://github.com/skittles9823/QuickSwitch/releases)
+* Install apk automatically without prompt with F-Droid alternative: [Aurora Services](https://gitlab.com/AuroraOSS/AuroraServices/-/releases)
 
 ## Android Debug Bridge
 
