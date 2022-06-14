@@ -66,6 +66,13 @@ Keys | Usage
 ### Shell commands
 
 * Disable one application `pm disable org.packagename`
+* As root, switch from one SIM to the next with `2` being the SIM to be switched to:
+
+    ```sh
+    settings put global multi_sim_data_call 2
+    settings put global config_current_primary_sub 2 simdata
+    am broadcast -a android.intent.action.ACTION_DEFAULT_DATA_SUBSCRIPTION_CHANGED
+    ```
 
 ### Use it via WLAN
 
