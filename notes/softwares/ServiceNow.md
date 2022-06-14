@@ -116,6 +116,7 @@ gr.update();
 
 * Auto login from a URL: `https://INSTANCE.service-now.com/login.do?user_name=USER&sys_action=sysverb_login&user_password=PASSWORD`
 * Access a desktop page directly: `$sp.do`, `$chat.do`, or `$vtb.do` for example
+* Check ServiceNow version: `https://INSTANCE.service-now.com/stats.do`
 
 ### SN Utils
 
