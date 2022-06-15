@@ -20,6 +20,7 @@ Keys | Usage
 ### Propers maps/cartography with [OsmAnd](https://osmand.net/)
 
 * Use the version on F-Droid for all features
+* Store data in `/Android/media/*` to access it outside of the app - like for recorder tracks
 * Regarding the [Online Maps plugin](https://osmand.net/docs/user/plugins/online-map/)
     * Some additional packs can be added directly as URL, such as [Thunderforest](https://www.thunderforest.com/)
     * A lot of additional map packs can be found [on AnyGIS](https://anygis.ru/Web/Html/Osmand_en)
