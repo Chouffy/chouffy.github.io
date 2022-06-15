@@ -78,9 +78,9 @@ entities:
 ### Dev Setup
 
 * Follow [setup guide here](https://developers.home-assistant.io/docs/development_environment/)
-    1. Install Docker - [Guide for Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
+    1. Install Docker - [Guide for Ubuntu](https://docs.docker.com/engine/install/ubuntu/) and don't forget to give right `sudo usermod -a -G docker $USER`
     1. Install Git `sudo apt install git -y`
-    1. Install Visual Studio Code: [snap](https://snapcraft.io/code)
+    1. Install Visual Studio Code: [snap](https://snapcraft.io/code) or `sudo snap install code --classic`
 * Then [don't forget to check out a separate branch](https://developers.home-assistant.io/docs/development_submitting)
 * Start Home Assistant `hass -c config`
 
