@@ -95,6 +95,11 @@ history_keep = all
 url = https://keepa.com/#!product/3-%s
 ```
 
+### PuTTY / KiTTY Portable
+
+The included [PuTTY Package](https://keypirinha.com/packages/putty.html?highlight=putty) can also be used for KiTTY - just configure the `[dist/filebased]` section.
+If not updated, you can install it manually: simply zip the `.ini` and `.py` for the module into `PuTTY.keypirinha-package` and replace the official one.
+
 ## Theme
 
 ```ini
