@@ -10,8 +10,9 @@ parent: Server Softwares
 
 1. Download image [here](https://www.raspberrypi.org/downloads/raspberry-pi-os/)
 1. Enable SSH by placing a `ssh` file in the boot partition
-1. Login with user `pi` and password `raspberry`
-1. Change user password with `passwd` and root password with `sudo passwd`
+1. Create `userconf.txt` in the boot partition containing `username:password`, generated using `echo 'MYPASSWORD' | openssl passwd -6 -stdin`
+1. Boot
+1. Change root password with `sudo passwd`
 1. Config with `sudo raspi-config`
 1. Change swap size if needed - [Source](https://pimylifeup.com/raspberry-pi-swap-file/)
     1. Stop swap `sudo dphys-swapfile swapoff`
