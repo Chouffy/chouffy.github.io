@@ -29,10 +29,10 @@ Use [Bandwidth Hero](https://bandwidth-hero.com/). Setup:
 
 Great extensions:
 
-* Awesome RSS
-* ClearURLs
 * Enhancer for YouTube™
 * Firefox Multi-Account Containers
+* Firefox Translations
+* History Cleaner
 * Kee - Password Manager
 * LeechBlock NG
 * Print Edit WE
