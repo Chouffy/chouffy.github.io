@@ -14,7 +14,7 @@ Data are in `/var/lib/docker/volumes/`.
 Install guide for Linux [here](https://docs.docker.com/engine/install/ubuntu/).
 Don't forget to add yourself to the docker group: `usermod -a -G docker $USER`
 
-Container management:
+### Container management
 
 * Run `docker run -d --name container_name image` with *image* `nginx` for example
 * Stop `docker stop container_name`
@@ -27,14 +27,19 @@ Container management:
 * Update `docker update [OPTIONS] CONTAINER`
     * Add restart policy: `docker update --restart=always CONTAINER`
 
-Images management:
+### Images management
 
 * List `docker images`
 * Remove `docker rmi image_name`
 * List of images are in the [Docker Hub](https://hub.docker.com/)
 * An previously downloaded image can be used by referring its image ID
 
-Other commands:
+### Data management
+
+* Browse data in volumes: `/var/lib/docker/volumes/`
+* Transfer a file from/to a container `docker cp CONTAINER:SRC_PATH DEST_PATH`
+
+### Other commands
 
 * Get Docker directory `docker info`
 * List all containers `docker ps -a`
