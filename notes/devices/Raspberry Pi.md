@@ -46,3 +46,10 @@ Pinout on Raspberry 1 model B rev 2 and following are the same, save for the few
 ### USB WLAN / Wi-Fi network interface
 
 * The `EW-7811Un 802.11n Wireless Adapter` is a `Realtek RTL8188CUS`
+
+## SD Card
+
+* Migrate to smaller SD Card
+    1. Backup
+    1. Use a Linux host to resize the partition
+    1. Make an image and restore it to target SD
