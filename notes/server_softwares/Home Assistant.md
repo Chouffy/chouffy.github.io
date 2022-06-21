@@ -28,6 +28,12 @@ parent: Server Softwares
 
 1. Restart the server
 
+### Migrate to another server
+
+1. Set up the new Home Assistant server
+1. In the old one, go to backups and do a full one
+1. In the new one, import before creating a user (OS) or copy backup in `/config/`
+
 ## Configuration
 
 ### Lovelace
