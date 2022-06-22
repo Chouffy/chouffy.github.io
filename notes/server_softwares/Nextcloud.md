@@ -23,14 +23,14 @@ parent: Server Softwares
 
 ### Cloudflare Tunnel
 
-* Goal: don't expose Public IP, be protected agains DDoS, avoid firewall set-up
+* Goal: don't expose Public IP, be protected against DDoS, avoid firewall set-up
 * [Introduction to Cloudflare Tunnel](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/)
-* Set-up
-    1. Set-up the [Cloudflare Package Repo](https://pkg.cloudflare.com/) if needed
+* Setup
+    1. Setup the [Cloudflare Package Repo](https://pkg.cloudflare.com/) if needed
     1. Edit `/etc/hosts` file to add certificate DNS name to being able to self resolve it - and use this DNS name in the Cloudflare Tunnel Public Hostname (*not* `localhost`, you may end up with Error 502 as the certificate DNS and `localhost` won't match)
     1. Follow the *New Tunnel* guide in the Cloudflare Tunnel dashboard
     1. Or if you want to do it manually
-        1. Follow the [step by step CLI guide](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/tunnel-guide/#set-up-a-tunnel-locally-cli-setup)
+        1. Follow the [step-by-step CLI guide](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/tunnel-guide/#set-up-a-tunnel-locally-cli-setup)
         1. Move configuration from `~/.cloudflared/` to `/etc/cloudflared/` before running the tunnel
         1. Install `cloudflared` as a service:
 
@@ -166,7 +166,7 @@ Notes:
 
 OK, it's not an app, just a script that I run every 6 hours.
 
-You need to set-up first a DynHost username - see [this documentation](https://docs.ovh.com/gb/en/domains/hosting_dynhost/) and calculate the [basic header](https://www.blitter.se/utils/basic-authentication-header-generator/).
+You need to setup first a DynHost username - see [this documentation](https://docs.ovh.com/gb/en/domains/hosting_dynhost/) and calculate the [basic header](https://www.blitter.se/utils/basic-authentication-header-generator/).
 
 ```bash
 #!/bin/bash
