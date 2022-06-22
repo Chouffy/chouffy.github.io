@@ -23,6 +23,11 @@ Put `AppPortable.ini` with proper parameter
 
 ## KiTTY
 
+* In Window → Appearance, Use `Lucida Console` instead of `Courrier`
+* In Connection → Data:
+    * Define an auto-login username
+    * Define a command, like an auto `screen` start: `screen -q && read -n1 -r -p "Press any key to exit, or Ctrl+C to continue." && exit`
+
 ### Fix screen output
 
 In the setting for a connection, go to :
@@ -61,7 +66,6 @@ Troubleshooting:
 
 * [Official website](https://www.cygwin.com/)
 * [Portable installer](https://github.com/vegardit/cygwin-portable-installer)
-* Use `Lucida Console` instead of `Courrier`
 * Useful commands:
     * `apt-cyg` packet manager, similar to `apt`
 
