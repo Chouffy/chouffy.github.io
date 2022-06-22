@@ -19,6 +19,7 @@ parent: Server Softwares
 ### Other stuff
 
 * Host `X.X.X.X` was not connected to because it violates local access rules. → [Fix here](https://help.nextcloud.com/t/violates-local-access-rules-in-talk-9/84471/2)
+* Change trash bin configuration: [see this article](https://docs.nextcloud.com/server/latest/admin_manual/configuration_files/trashbin_configuration.html)
 
 ### Cloudflare Tunnel
 
