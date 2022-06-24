@@ -112,6 +112,12 @@ gr.update();
 
 * [Overview of all components of the Record view](https://docs.servicenow.com/bundle/rome-servicenow-platform/page/administer/workspace/concept/record-view.html)
 
+## Next Experience
+
+### Dashboard Builder
+
+* List of all UX macrocomponents: `sys_ux_macroponent`
+
 ## Admin
 
 * Auto login from a URL: `https://INSTANCE.service-now.com/login.do?user_name=USER&sys_action=sysverb_login&user_password=PASSWORD`
