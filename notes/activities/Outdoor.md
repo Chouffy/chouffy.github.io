@@ -18,3 +18,4 @@ parent: Activities
 ### Water filtration
 
 * [Nice overview of all filtration systems](https://www.outdoorgearlab.com/topics/camping-and-hiking/best-backpacking-water-filter/buying-advice)
+* [Overview with focus on international travel](https://www.rei.com/learn/expert-advice/water-treatment-international.html)
