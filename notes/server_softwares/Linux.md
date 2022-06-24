@@ -69,6 +69,37 @@ Please note: I mainly use Ubuntu Server, so your mileage may vary with other dis
     * `sudo systemctl disable network-manager.service`
     * `sudo systemctl stop network-manager.service`
 
+#### Advanced configuration
+
+* See [this guide](https://cockpit-project.org/guide/latest/listen) to change port. Create file and directory if needed.
+* Configuration file is `/etc/cockpit/cockpit.conf`, not created by default - see [reference](https://cockpit-project.org/guide/latest/cockpit.conf.5)
+* Setup with Cloudflare Tunnel - Based on [this blog post](https://ryan.lovelett.me/posts/letsencrypt-cockpit/).
+    1. Setup a Let's Encrypt certificate below
+    1. Setup a copy script - [See example in Nextcloud](https://chouffy.net/notes/server_softwares/Nextcloud.html#preview-generator-for-thumbnails)
+        ```sh
+        #!/bin/sh
+        FQDN="DOMAIN.COM"
+
+        echo "SSL certificates renewed"
+        cp /etc/letsencrypt/live/$FQDN/fullchain.pem /etc/cockpit/ws-certs.d/$FQDN.crt
+        cp /etc/letsencrypt/live/$FQDN/privkey.pem /etc/cockpit/ws-certs.d/$FQDN.key
+        chown cockpit-ws:cockpit-ws /etc/cockpit/ws-certs.d/$FQDN.crt /etc/cockpit/ws-certs.d/$FQDN.key
+
+        echo "Restarting Cockpit"
+        systemctl restart cockpit
+        ```
+    1. Setup `/etc/cockpit/cockpit.conf`
+        ```conf
+        [WebService]
+        Origins = https://URL:PORT
+        #ProtocolHeader = X-Forwarded-Proto
+        AllowUnencrypted = false
+
+        [Session]
+        IdleTimeout = 10
+        ```
+    1. Setup Cloudflare Tunnel and Access
+
 ### Install on VirtualBox
 
 1. Install `gcc make perl` packages
@@ -116,7 +147,6 @@ Please note: I mainly use Ubuntu Server, so your mileage may vary with other dis
 
 ### Services with systemctl
 
-* `sudo systemctl status SERVICE`
 * Service management
     * `sudo systemctl restart SERVICE`
     * `sudo systemctl start SERVICE`
@@ -130,6 +160,7 @@ Please note: I mainly use Ubuntu Server, so your mileage may vary with other dis
     * `sudo systemctl unmask SERVICE`
     * `sudo systemctl mask SERVICE`
 * Service status
+    * `sudo systemctl list-timers`
     * `sudo systemctl status SERVICE`
 
 ### Disk & Data
@@ -196,6 +227,7 @@ Please note: I mainly use Ubuntu Server, so your mileage may vary with other dis
 
 ### Files
 
+* `zip -r directoryname.zip ./` to zip current directory
 * `tar -xvf file.tar.gz` to extract tarball and zip (`x` for extract, `v` for verbose, `f` for file)
 * `find / -name filename` to find *filename* in entire system (/) or active folder (.), and `sudo` to avoid permissions problems
 
@@ -225,11 +257,27 @@ Please note: I mainly use Ubuntu Server, so your mileage may vary with other dis
     * `rfkill list wlan` to list status
     * `rfkill unblock wlan` to unblock
 
+#### Set up Let's Encrypt with Cloudflare DNS
+
+* [Source](https://ryan.lovelett.me/posts/letsencrypt-cockpit/)
+* See [this documentation on Cloudflare certbot](https://certbot-dns-cloudflare.readthedocs.io/en/stable/)
+    * `cloudflare.ini` can be placed in `/etc/cloudflared`
+    * Define proper permission with `chmod 400`
+* Steps
+    1. `sudo snap install --classic certbot certbot-dns-cloudflare` You may need to proceed with additional commands as explained in the console
+    1. `sudo ln -s /snap/bin/certbot /usr/bin/certbot`
+    1. `sudo certbot certonly --dns-cloudflare --dns-cloudflare-credentials /etc/letsencrypt/cloudflare.ini -d <EXAMPLE.COM>`
+    1. Automated renewal should be set up by the snap, check `systemctl list-timers`
+
 ### Users & Groups
 
-* `useradd -m USERNAME` add a new user with a Home directory (`-m`)
-* `passwd USERNAME` define a password
-* `id $user` to get user PUID & GUID
+* Users
+    * `useradd -m USERNAME` add a new user with a Home directory (`-m`)
+    * `passwd USERNAME` define a password
+    * `id $user` to get user PUID & GUID
+* Groups
+    * `usermod -a -G GROUP $USER` to add self to GROUP
+    * `cat /etc/group` to list all groups
 * Setup SFTP for without Shell: [nice tutorial from Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-enable-sftp-without-shell-access-on-ubuntu-18-04)
 
 ### OS-related
