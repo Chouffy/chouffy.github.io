@@ -264,5 +264,5 @@ Transition with steps and with position change:
 
 ## Reference
 
-* [CSS - Style Your Website | Tutorial](https://www.youtube.com/playlist?list=PLLAZ4kZ9dFpNO7ScZFr-WTmtcBY3AN1M7) by Mike Dane
+* [CSS - Style Your Website, Tutorial](https://www.youtube.com/playlist?list=PLLAZ4kZ9dFpNO7ScZFr-WTmtcBY3AN1M7) by Mike Dane
 * [Flexbox Cheatsheet](https://jonibologna.com/content/flexboxsheet.pdf)by [Joni Bologna](https://jonibologna.com/flexbox-cheatsheet)
