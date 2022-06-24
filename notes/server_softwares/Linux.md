@@ -19,14 +19,22 @@ Please note: I mainly use Ubuntu Server, so your mileage may vary with other dis
 
 * On a laptop: disable standby on lid close: in `/etc/systemd/logind.conf`, uncomment and change `HandleLidSwitch=ignore`
 
+### Setup SSH
+
+* Config lives in `/etc/ssh/sshd_config`
+* `PermitRootLogin no` to deny root to log in
+* `AllowUsers toto` to only allow toto to log in
+* `sudo systemctl restart ssh` to restart the service
+
 ### Install Firewall
 
+* A good tutorial [here](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu-22-04)
 * Install `sudo apt install ufw`
 * Configuration
     * Check status & list configuration `sudo ufw status`
     * Set default incoming to deny `ufw default deny incoming` and `ufw default allow outgoing` for instance
     * Allow a port `sudo ufw allow PORT`
-    * Remove an allowance `sudo ufw delete PORT`
+    * Remove an allowance `sudo ufw delete allow PORT` or `sudo ufw delete RULE_NUMBER`
     * Rate limit a port (>6 connections within 30 sec) `sudo ufw limit PORT`
     * `PORT` can be replaced with a known app like `SSH` or specific protocol like `PORT/tcp`
     * Enable `sudo ufw enable`
@@ -248,6 +256,27 @@ Please note: I mainly use Ubuntu Server, so your mileage may vary with other dis
 #### BIOS
 
 * Check BIOS version `sudo dmidecode | less`
+
+## Security
+
+Source:[OVH](https://docs.ovh.com/us/en/vps/tips-for-securing-a-vps/), [DigitalOcean](https://www.digitalocean.com/community/tutorials/an-introduction-to-securing-your-linux-vps), [DigitalOcean](https://www.digitalocean.com/community/tutorials/recommended-security-measures-to-protect-your-servers)
+
+* Change all account passwords
+* Regarding SSH
+    * Disable all unnecessary users logins, like `root` - [Example](https://www.digitalocean.com/community/tutorials/how-to-disable-root-login-on-ubuntu-20-04)
+    * Change default port (between 49152 and 65535) - [Generator](https://duckduckgo.com/?q=random+number+between+49152+and+65535&t=ffab&ia=answer)
+    * Use SSH Keys instead of passwords
+* Regarding network
+    * Configure firewall like `ufw`
+    * Configure fail2ban
+    * Configure an Intrusion Detection System - [Example](https://www.digitalocean.com/community/tutorials/how-to-install-suricata-on-ubuntu-20-04)
+* Disable unneeded services - [Example](https://www.digitalocean.com/community/tutorials/how-to-migrate-linux-servers-part-1-system-preparation), `sudo ss -atpu`
+* Implement unattended upgrades and livepatch - [Example](https://www.digitalocean.com/community/tutorials/how-to-keep-ubuntu-20-04-servers-updated)
+* Regularly
+    * Update software
+    * Check logs
+    * Check for malware - Example: `maldet`
+    * Make backups
 
 ## Recover
 
