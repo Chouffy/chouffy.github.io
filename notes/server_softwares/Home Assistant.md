@@ -56,6 +56,26 @@ entities:
     1. redownload app and do onboarding
     1. after onboarding restart HA and keep your app alive (so screen on)
 
+### Integrations
+
+#### Calendar from Nextcloud
+
+* Useful to silence notification: just use a calendar to set "Silence" days
+* [Relevant integration page](https://www.home-assistant.io/integrations/caldav/)
+* Events must have a name
+* Configuration to show full days:
+    ```yaml
+    calendar:
+    - platform: caldav
+        username: nextcloud_username
+        password: nextcloud_pass
+        url: https://nextcloud.com
+        custom_calendars:
+        - name: "Name for HA"
+            calendar: "Nextcloud Name"
+            search: ".*"
+    ```
+
 ### Automations
 
 #### Notifications
