@@ -62,6 +62,16 @@ Troubleshooting:
 
 * [How to make VSCode portable](https://code.visualstudio.com/docs/editor/portable)
 
+### LTeX (Grammar/Spell checker)
+
+* [List of supported languages](https://valentjn.github.io/ltex/settings.html#ltexlanguage)
+* [Change language for one document](https://valentjn.github.io/ltex/advanced-usage.html#multilingual-latex-documents-with-the-babel-package). Example in Markdown:
+    ```markdown
+    ---
+    lang: fr
+    ---
+    ```
+
 ## Cygwin (Linux on Windows)
 
 * [Official website](https://www.cygwin.com/)
