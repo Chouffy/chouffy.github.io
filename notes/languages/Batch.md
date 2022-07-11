@@ -22,9 +22,14 @@ Command | Content
 * Set and use a variable
 
     ```batch
-    set message=Hello World
     REM Spaces are significants
+    set message=Hello World
     echo %message%
+
+    REM to define variables to be local:
+    setlocal
+    REM to add something to PATH
+    set PATH=%PATH%;c:\whatever\else
     ```
 
 Environment variables | Content
