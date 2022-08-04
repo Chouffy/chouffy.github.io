@@ -35,6 +35,13 @@ In the setting for a connection, go to :
 * *Window > Appearance*, Change font to *Lucida Console*
 * *Window > Translation*, Change remote character set to *ISO-8859-1:1998 (Latin-1, West Europe)* ... but this will break other softwares.
 
+### Port Forwarding
+
+1. In the setting for a connection, to go to *Connection* → *SSH* → *Tunnels*
+1. Add the port you want to forward:
+    * Source port: the client port you want to listen to
+    * Destination: the port on the target you want to be connected to
+
 ## Duplicati
 
 A very good backup solution, if you have a good storage provider.  
