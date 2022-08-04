@@ -61,6 +61,7 @@ Keys | Usage
 
 ## Android Debug Bridge
 
+* Activate Developer Mode: In Settings → About device → Software info and tap on Build number
 * Use adb as root: `adb root`
 * If you want to filter out logcat: `adb shell`, then `logcat | grep XYZ`
 
