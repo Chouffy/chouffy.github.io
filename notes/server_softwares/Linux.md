@@ -26,6 +26,16 @@ Please note: I mainly use Ubuntu Server, so your mileage may vary with other dis
 * `AllowUsers toto` to only allow toto to log in
 * `sudo systemctl restart ssh` to restart the service
 
+#### Connect to SSH via Cloudflare Tunnel
+
+1. In the Cloudflare Zero Trust dashboard
+    1. Set up an Access Application with an associated access rule
+    1. Set up an SSH Tunnel to the Linux server
+1. On the target client
+    1. [Grab the latest release of cloudlared](https://github.com/cloudflare/cloudflared/releases)
+    1. Set up a local proxy connected to your hostname `cloudflared-windows-amd64.exe access ssh --hostname example.com --url localhost:1234`
+    1. Connect with your favorite SSH client to `user@localhost:1234`
+
 ### Install Firewall
 
 * A good tutorial [here](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu-22-04)
