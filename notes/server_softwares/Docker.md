@@ -50,9 +50,9 @@ Don't forget to add yourself to the docker group: `usermod -a -G docker $USER`
 
 Helps to manage containers.
 
-Run `docker run --restart always -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce`
-
-Fix `0.0.0.0` IP in exposed port: change *Public IP* in Endpoints - [Source](https://documentation.portainer.io/v2.0/troubleshooting/troubleshooting/#exposed-ports-in-the-container-view-redirects-me-to-0000-what-can-i-do)
+* Run `docker run --restart always -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce`
+* Automatically remove old images: define the variable `WATCHTOWER_CLEANUP=true`
+* Fix `0.0.0.0` IP in exposed port: change *Public IP* in Endpoints - [Source](https://documentation.portainer.io/v2.0/troubleshooting/troubleshooting/#exposed-ports-in-the-container-view-redirects-me-to-0000-what-can-i-do)
 
 ## [Watchtower - Automatic container update](https://containrrr.dev/watchtower/)
 
