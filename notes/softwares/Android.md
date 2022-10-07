@@ -8,6 +8,7 @@ parent: Softwares
 
 * [Activity Launcher](https://play.google.com/store/apps/details?id=de.szalkowski.activitylauncher) to launch hidden activities
 * [Save on Device](https://github.com/lmj0011/save-on-device) to save from Send any file to any place, including Nextcloud
+* [MyAndroidTool](http://myandroidtools.com/) to view app components and edit apps data / MySQL database
 
 ### Remote control from PC using [scrpy](https://github.com/Genymobile/scrcpy)
 
