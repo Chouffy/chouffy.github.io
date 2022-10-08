@@ -7,7 +7,7 @@ parent: Softwares
 ## Useful software packages
 
 * [App Manager](https://muntashirakon.github.io/AppManager/) to enable/disable apps and launch hidden activities
-* [MyAndroidTool](http://myandroidtools.com/) to view app components and edit apps data / MySQL database
+* [SQLite database editor](https://play.google.com/store/apps/details?id=com.tomminosoftware.sqliteeditor) to edit app database
 * [Save on Device](https://github.com/lmj0011/save-on-device) to save from Send any file to any place, including Nextcloud
 
 ### Remote control from PC using [scrpy](https://github.com/Genymobile/scrcpy)
