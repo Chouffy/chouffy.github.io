@@ -71,3 +71,7 @@ If the camera has trouble to focus in *Google Translate*, select *Camera 1* in a
     1. Transfer patched image to PC
     1. Reboot to bootloader
     1. Install the bootloader with `fastboot flash boot <recovery_filename>.img` and reboot
+
+### Camera on LineageOS
+
+You can find the proper [GCam](https://www.celsoazevedo.com/) in [this Telegram group](http://t.me/latestgcamop6t).
