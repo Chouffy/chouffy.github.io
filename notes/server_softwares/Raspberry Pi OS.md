@@ -10,7 +10,7 @@ parent: Server Softwares
 
 1. Download image [here](https://www.raspberrypi.org/downloads/raspberry-pi-os/)
 1. Enable SSH by placing a `ssh` file in the boot partition
-1. Create `userconf.txt` in the boot partition containing `username:password`, generated using `echo 'MYPASSWORD' | openssl passwd -6 -stdin`
+1. Create `userconf.txt` in the boot partition containing `username:password`, generated using `echo 'MYPASSWORD' | openssl passwd -6 -stdin`. On Windows, you can use the Git Bash.
 1. Boot
 1. Change root password with `sudo passwd`
 1. Config with `sudo raspi-config`
