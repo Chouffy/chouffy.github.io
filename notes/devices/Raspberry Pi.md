@@ -47,6 +47,12 @@ Pinout on Raspberry 1 model B rev 2 and following are the same, save for the few
 
 * The `EW-7811Un 802.11n Wireless Adapter` is a `Realtek RTL8188CUS`
 
+### Use the Raspberry Pi as a router, wireless access point, ...
+
+* Install [OpenWrt](https://openwrt.org/toh/raspberry_pi_foundation/raspberry_pi), it's much more convenient
+* To use a tethered smartphone, install [corresponding modules](https://openwrt.org/docs/guide-user/network/wan/smartphone.usb.tethering)
+    * To download them by hand, check the URLs in the "Software" page of the Open-WRT installation
+
 ## SD Card
 
 * Migrate to smaller SD Card
