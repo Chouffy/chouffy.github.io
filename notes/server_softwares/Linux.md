@@ -144,6 +144,7 @@ Please note: I mainly use Ubuntu Server, so your mileage may vary with other dis
         * Space to start selection and Space again to stop it
     * `]`: Paste mode
     * `:sessionname  <Your_session_name>`: Rename
+* Detach `screen -d session_ID`
 * Reattach `screen -r session_ID`
 
 ### CPU & Processes
