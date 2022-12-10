@@ -67,6 +67,7 @@ Keys | Usage
 * Activate Developer Mode: In Settings → About device → Software info and tap on Build number
 * Use ADB as root: `adb root`
 * If you want to filter out logcat: `adb shell`, then `logcat | grep XYZ`
+* If you want to know which architecture you're on, then: `adb shell getprop ro.product.cpu.abi`
 
 ### Shell commands
 
