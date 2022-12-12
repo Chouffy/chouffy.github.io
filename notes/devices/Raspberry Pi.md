@@ -46,6 +46,7 @@ Pinout on Raspberry 1 model B rev 2 and following are the same, save for the few
 ### USB WLAN / Wi-Fi network interface
 
 * The `EW-7811Un 802.11n Wireless Adapter` is a `Realtek RTL8188CUS`
+    * You need `kmod-rtl8192cu` in OpenWRT
 
 ### Use the Raspberry Pi as a router, wireless access point, ...
 
