@@ -147,6 +147,20 @@ Please note: I mainly use Ubuntu Server, so your mileage may vary with other dis
 * Detach `screen -d session_ID`
 * Reattach `screen -r session_ID`
 
+#### Vi Text Editor
+
+* Command mode: `ESC`, then all commands starts with `:`
+    * `:w` : save
+    * `:x` : save and quit
+    * `:q` : quit
+    * `:q!`: quit and discard changes
+* Text insert
+    * `i` : insert before cursor
+    * `a` : append after cursor
+* Text delete
+    * `x` : delete character to the right of the cursor
+    * `X` : delete character to the left of the cursor
+
 ### CPU & Processes
 
 * Check system stats
