@@ -18,6 +18,7 @@ parent: Windows
 ### CPU & Processes
 
 * Start a software on login with admin: create a scheduled task
+* Find which software blocks a file: open Sysinternals Process Explorer → Find → Find Handle or DLL
 
 ### Power & Battery
 
