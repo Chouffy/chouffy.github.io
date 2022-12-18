@@ -6,10 +6,15 @@ parent: Softwares
 
 ## Useful software packages
 
-* [App Manager](https://muntashirakon.github.io/AppManager/) to enable/disable apps and launch hidden activities
-* [SQLite database editor](https://play.google.com/store/apps/details?id=com.tomminosoftware.sqliteeditor) to edit app database
-* [Save on Device](https://github.com/lmj0011/save-on-device) to save from Send any file to any place, including Nextcloud
-* [RethinkDNS](https://github.com/celzero/rethink-app) to monitor and filter network traffic by apps, IP, DNS resolver and more
+* Files
+    * [SQLite database editor](https://play.google.com/store/apps/details?id=com.tomminosoftware.sqliteeditor) to edit app database
+    * [Save on Device](https://github.com/lmj0011/save-on-device) to save from Send any file to any place, including Nextcloud
+* Network
+    * [Ning](https://github.com/csicar/Ning) to scan devices on network
+    * [WLANScanner](https://github.com/bewue/WLANScanner) to scan Wi-Fi networks and view their channels
+    * [RethinkDNS](https://github.com/celzero/rethink-app) to monitor and filter network traffic by apps, IP, DNS resolver and more
+* System
+    * [App Manager](https://muntashirakon.github.io/AppManager/) to enable/disable apps and launch hidden activities
 
 ### Remote control from PC using [scrpy](https://github.com/Genymobile/scrcpy)
 
