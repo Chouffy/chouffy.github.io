@@ -18,6 +18,10 @@ string | `"hello"`
 array | `[1,2,["a","b"]]`
 object | `{"color":"red"}`
 
+### Conversion
+
+* From string to float: `var floatValue = +(val);`
+
 ### Array
 
 Transpose an array:
