@@ -34,6 +34,10 @@ parent: Server Softwares
 1. In the old one, go to backups and do a full one
 1. In the new one, import before creating a user (OS) or copy backup in `/config/`
 
+### Enable reverse proxy like Cloudflared
+
+Set up the [HTTP Integration](https://www.home-assistant.io/integrations/http#reverse-proxies).
+
 ## Configuration
 
 ### Lovelace
