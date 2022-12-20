@@ -132,6 +132,8 @@ Sources:
 
 ### Create an Access Point
 
+**Unadvised: just use OpenWrt on the Raspberry Pi!**
+
 From [this guide](https://www.raspberrypi.com/documentation/computers/configuration.html#setting-up-a-routed-wireless-access-point):
 
 1. Install dependencies:
@@ -212,3 +214,18 @@ For some troubleshooting help:
     * Check configuration `sudo nano /etc/dnsmasq.conf`, last line should look like `dhcp-option=6,1.1.1.2,1.0.0.2` and not have a `,` at the end
     * If `DHCP packet received on wlan0 which has no address`, check `ifconfig` and try to manually set the IP `sudo ifconfig wlan0 192.168.4.1`
 * If no internet on device, try to reapply firewall setting: `sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE`
+
+### Cloudflared
+
+Cloudflare's daemon to connect to Tunnels and other things.
+
+The current package cannot install on Rasberry Pi 1 or 2, because the architecture of the package isn't labeled correctly.
+
+Just install it manually:
+
+```sh
+wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm
+sudo cp ./cloudflared-linux-arm /usr/local/bin/cloudflared
+sudo chmod +x /usr/local/bin/cloudflared
+cloudflared -v
+```
