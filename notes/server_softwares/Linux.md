@@ -43,16 +43,19 @@ Please note: I mainly use Ubuntu Server, so your mileage may vary with other dis
 * Configuration
     * Check status & list configuration `sudo ufw status`
     * Set default incoming to deny `ufw default deny incoming` and `ufw default allow outgoing` for instance
+* Allow something
     * Allow a port `sudo ufw allow PORT`
-    * Remove an allowance `sudo ufw delete allow PORT` or `sudo ufw delete RULE_NUMBER`
+    * Allow a port from specific source `sudo ufw allow from 192.168.0.0/24 to any port YYY`
     * Rate limit a port (>6 connections within 30 sec) `sudo ufw limit PORT`
     * `PORT` can be replaced with a known app like `SSH` or specific protocol like `PORT/tcp`
+* Remove something
+    * Remove an allowance `sudo ufw delete allow PORT` or `sudo ufw delete RULE_NUMBER`
+* Enable
     * Enable `sudo ufw enable`
     * On alpine `rc-update add ufw default`
 * Verify
     * Check added rules `sudo ufw show added`
     * Check existing rules with numbers `sudo ufw status numbered`
-* Enable `sudo ufw enable`
 
 ### Install FTP server
 
