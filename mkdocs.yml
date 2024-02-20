@@ -88,6 +88,12 @@ theme:
     # Custom repo icon https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#repository-icon
     repo: fontawesome/brands/github
 
+  # Custom logo https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/#logo
+  logo: assets/icon.svg
+
+  # Define custom favicon https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/#favicon
+  favicon: assets/icon.svg
+
 extra_css:
   # Needed for color
   - stylesheets/color_scheme.css
