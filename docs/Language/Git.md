@@ -48,3 +48,14 @@ Is a file to manage what should be in git and what not
 !pub/*/
 !pub/*/*
 ```
+### Partial sync - Sparse checkout
+[Source](https://stackoverflow.com/questions/600079/how-do-i-clone-a-subdirectory-only-of-a-git-repository)
+```sh
+# Clone the repo without content
+git clone -n --depth=1 --filter=tree:0 https://github.com/cirosantilli/test-git-partial-clone-big-small-no-bigtree 
+cd test-git-partial-clone-big-small-no-bigtree
+# Select two dirs to keep: small and small2
+git sparse-checkout set --no-cone small small2
+# Download everything
+git checkout
+```
