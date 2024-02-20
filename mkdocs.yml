@@ -109,3 +109,10 @@ plugins:
   # Enable Search
   # https://squidfunk.github.io/mkdocs-material/plugins/search/
   - search
+
+  # Show the latest modified date
+  # https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#document-dates
+  # pip install mkdocs-git-revision-date-localized-plugin
+  - git-revision-date-localized:
+      type: timeago
+      enable_creation_date: true
