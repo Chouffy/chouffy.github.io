@@ -2,7 +2,7 @@
 
 ## What is it?
 
-This website contains tips & tricks I've learned when tinkering with software or hardware.
+This website contains tips & tricks I've learned when tinkering with [[Software]] or hardware.
 
 ## What for?
 
