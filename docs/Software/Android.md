@@ -22,6 +22,7 @@ Keys | Usage
 -|-
 `ctrl` + mouse | Pinch to zoom
 `mod` + `r` | Rotate screen
+
 ### Create work profile with [Island](https://github.com/oasisfeng/island)
 * Just install it from the Play Store and set it up!
 * To share file between mainland and island:

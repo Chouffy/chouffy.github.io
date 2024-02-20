@@ -1,4 +1,4 @@
-Is a [[web]] server [[Software]]
+Is a [[Web]] server [[Software]]
 ## Setup
 - [Docker image](https://registry.hub.docker.com/_/caddy)
 - [Caddyfile explanation](https://caddyserver.com/docs/caddyfile-tutorial)

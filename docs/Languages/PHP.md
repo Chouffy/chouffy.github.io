@@ -1,1 +1,0 @@
-Is a [[programming language]] generally used in [[Web]] things.

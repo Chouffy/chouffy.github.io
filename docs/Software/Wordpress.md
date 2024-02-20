@@ -15,7 +15,7 @@ To be checked:
 - `All-in-One WP Migration` to backup website
 - `Starter Templates` to build page
 #### Elementor
-Is a page builder for [[WordPress]] - Similar to [[WordPress Block Editor]]
+Is a page builder for [[Wordpress]] - Similar to [[WordPress Block Editor]]
 
 Notes:
 - Background overlay available in the section menu to darken an image a bit
