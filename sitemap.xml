@@ -81,6 +81,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://chouffy.net/Guide/Publish%20a%20part%20of%20an%20Obsidian%20Vault%20to%20GitHub%20Pages/</loc>
+         <lastmod>2024-02-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://chouffy.net/Hardware/Athom%20Smart%20Plug%20PG01V2/</loc>
          <lastmod>2024-02-20</lastmod>
          <changefreq>daily</changefreq>
@@ -227,11 +232,6 @@
     </url>
     <url>
          <loc>https://chouffy.net/Hardware/Xiaomi%20AX3200/</loc>
-         <lastmod>2024-02-20</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://chouffy.net/How-To/Publish%20a%20part%20of%20an%20Obsidian%20Vault%20to%20GitHub%20Pages/</loc>
          <lastmod>2024-02-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
