@@ -5,6 +5,7 @@ _site
 Gemfile.lock
 vendor
 .vscode/
+venv/
 
 # Ignore Private directories
 Private/
