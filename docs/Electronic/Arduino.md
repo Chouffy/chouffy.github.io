@@ -1,0 +1,1 @@
+Is a [[programming language]] used in [[Electronic]], based on [[C++]]

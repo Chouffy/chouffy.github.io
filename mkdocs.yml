@@ -1,0 +1,105 @@
+# Basic configuration
+site_name: Chouffy's Notes
+site_url: https://chouffy.net
+repo_url: https://github.com/Chouffy/chouffy.github.io
+repo_name: Edit on GitHub
+site_description: This website contains tips & tricks about multiple things I've learned over the years.
+site_author: Chouffy
+copyright: This work is licensed under CC BY 4.0.
+
+markdown_extensions:
+  # Add anchor in each title for better reference
+  # https://www.mkdocs.org/user-guide/configuration/#markdown_extensions
+  - toc:
+      permalink: true
+
+  # Manage table
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#tables
+  #- tables
+
+theme:
+  name: material
+
+  # Override some pages, like 404
+  # https://squidfunk.github.io/mkdocs-material/customization/#setup-and-theme-structure
+  custom_dir: overrides
+
+  # Specify website language. Used by search
+  # https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/
+  language: en 
+
+  features:
+    # Instant navigation
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/
+    - navigation.instant
+    #- navigation.instant.prefetch
+    - navigation.instant.progress
+
+    # Currently viewed anchor update the URL
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#anchor-tracking
+    - navigation.tracking
+
+    # Add tabs which represents top level folder
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-sections-with-sections
+    - navigation.tabs
+
+    # Follow the displayed header in the ToC
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#anchor-following
+    - toc.follow
+
+    # Integrate the right panel (ToC) into the left one
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-integration
+    #- toc.integrate 
+
+    # Display next word suggestion in search 
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/#search-suggestions
+    - search.suggest
+
+
+  # Define two colors for the website
+  # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#automatic-light-dark-mode
+  # Define custom scheme
+  # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#primary-color
+  palette: 
+
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      primary: white
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: grey
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+
+  icon:
+    # Custom repo icon https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#repository-icon
+    repo: fontawesome/brands/github
+
+extra_css:
+  # Needed for color
+  - stylesheets/color_scheme.css
+
+plugins:
+
+  # Transform [[wikilinks]] into [relative](links)
+  # https://github.com/Lisandra-dev/mkdocs-ezlinked-plugin
+  # pip install mkdocs-ezlinked-plugin
+  - ezlinks:
+        wikilinks: true
+
+  # Enable Search
+  # https://squidfunk.github.io/mkdocs-material/plugins/search/
+  - search
