@@ -10,3 +10,12 @@ venv/
 # Ignore Private directories
 Private/
 Private*/
+
+# In Obsidian Git, use the following
+## Ignore everything
+#*
+## But not the content folder and up to 2nd subfolder level
+#!docs/
+#!docs/*
+#!docs/*/
+#!docs/*/*
