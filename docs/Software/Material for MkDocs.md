@@ -1,6 +1,7 @@
 Is a [[Static Websites Generators]] based on [[MkDocs]] written in [[Python]] which can be used to publish [[Obsidian]] notes
 ## Setup
 - [Getting started](https://squidfunk.github.io/mkdocs-material/getting-started/)
+- Start the local server with `mkdocs serve`
 ### Plugins
 - [This fork](https://github.com/Lisandra-dev/mkdocs-ezlinked-plugin) of [ezlinks](https://github.com/orbikm/mkdocs-ezlinks-plugin) to convert Wikilink to relative paths
 ## Source
