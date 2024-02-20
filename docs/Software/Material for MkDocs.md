@@ -3,6 +3,7 @@ Is a [[Static Websites Generators]] based on [[MkDocs]] written in [[Python]] wh
 - [Getting started](https://squidfunk.github.io/mkdocs-material/getting-started/)
 - Start the local server with `mkdocs serve`
 ### Plugins
+- Don't forget to `pip install` plugins as required
 - [This fork](https://github.com/Lisandra-dev/mkdocs-ezlinked-plugin) of [ezlinks](https://github.com/orbikm/mkdocs-ezlinks-plugin) to convert Wikilink to relative paths
 ## Source
 ### Inspiration
