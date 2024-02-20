@@ -1,4 +1,4 @@
-This is a [[How-To]] to publish an extract of an [[Obsidian]] Vault to a [[GitHub]] Pages website:
+This is a [[Guide]] to publish an extract of an [[Obsidian]] Vault to a [[GitHub]] Pages website:
 1. Setup an [[Obsidian]] Vault
 2. Setup [[Material for MkDocs]] with some plugins - take a look at [my mkdocs.yml](https://github.com/Chouffy/chouffy.github.io/blob/main/mkdocs.yml)
 3. Publish the [[Material for MkDocs]] site to [[GitHub]], then GitHub Pages
