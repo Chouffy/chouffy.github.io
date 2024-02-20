@@ -1,8 +1,8 @@
-name: publish 
+name: Publish changes to MkDocs 
 on:
   push:
     branches:
-      - mkdocs
+      - main
 permissions:
   contents: write
 jobs:
