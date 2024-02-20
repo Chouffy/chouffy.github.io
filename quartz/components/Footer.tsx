@@ -14,6 +14,7 @@ export default ((opts?: Options) => {
     return (
       <footer class={`${displayClass ?? ""}`}>
         <hr />
+        {/* Footer
         <p>
           {i18n(cfg.locale).components.footer.createdWith}{" "}
           <a href="https://quartz.jzhao.xyz/">Quartz v{version}</a> © {year}
@@ -25,6 +26,12 @@ export default ((opts?: Options) => {
             </li>
           ))}
         </ul>
+        */}
+        <p>
+          This website is licensed under <a href="https://github.com/chouffy/chouffy.github.io/tree/master/LICENSE.txt">CC BY 4.0</a> and is built using <a href="https://quartz.jzhao.xyz/">Quartz</a> & <a href="https://obsidian.md/">Obsidian</a>.
+          <br/>
+          Did you spot an error? Please <a href="https://github.com/Chouffy/chouffy.github.io/issues">open an issue</a>!
+        </p>
       </footer>
     )
   }

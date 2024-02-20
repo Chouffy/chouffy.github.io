@@ -1,0 +1,1 @@
+Is a [[boot manager]] that can do multi-boot with one [[Universal Serial Bus|USB]] drive
