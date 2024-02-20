@@ -4,5 +4,6 @@ Is a home [[sound speaker]] used for [[Music]]
 Except I missed it, there's no License document with used framework.
 
 Thanks to some other people (see Acknowledgment), I was able to build:
+
 * A Python class to handle communication with the Libratone Zipp: [python_libratone_zipp](https://github.com/Chouffy/python_libratone_zipp
 * A Home Assistant module to provide a GUI for the module: [home_assistant_libratone_zipp](https://github.com/Chouffy/home_assistant_libratone_zipp)

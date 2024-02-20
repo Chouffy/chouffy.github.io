@@ -68,12 +68,14 @@ Tag | Action
 `input[type="checbox"]:checked` | every checkbox which is checked
 `h2:hover` | element which is under cursor
 `ul > li:first-child`<br>`ul > li:nth-last-child(3)` | First child of each li inside ul <br> 3 last child of each li inside ul
+
 ## Sizing
 Tag | Action
 -|-
 100px | Fixed size in pixel
 80% | Relative to screen size
 2em | 2x~16px = double text size
+
 ## Styles
 ### Font
 Tag | Action
@@ -84,6 +86,7 @@ Tag | Action
 `font-variant: small-caps` | 
 `font-weight: bold` | 
 `text-shadow: 2px 3px 2px red` | horizontal vertical blur color <br>*distance of shadow*
+
 ### Color
 Can use CSS name, `#ffffff`, rgb(0,0,0), hsl(0,0,0)
 Some color ideas: [Material color picker](https://m2.material.io/resources/color/), [Material design color](https://hexcolor.co/material-design-colors)
@@ -107,6 +110,7 @@ Tag | Action
 `padding: 10px` | 
 `padding-top: 50px` | also -bottom -left -right
 `padding: 50px 10px 50px 10px` | Clockwise: top, right bottom, left
+
 #### Margin - spacing outside the element
 Tag | Action
 -|-
@@ -114,12 +118,14 @@ Tag | Action
 `margin:-10px` | Negative
 `margin-top: 10px` | also -bottom -left -right
 `margin: 50px 10px 50px 10px` | Clockwise: top, right, bottom, left
+
 #### Float - put elements on the side
 Tag | Action
 -|-
 `float: none` | 
 `float: left` | element on the left side, other content will be on the right
 `float: right` | inverse
+
 #### Display - how elements are displayed
 Tag | Action
 -|-
@@ -133,6 +139,7 @@ Tag | Action
 -|-
 `position: relative` | 
 `top: 20px` | position it 20px away from it should be also bottom left right
+
 #### Absolute - relative to the parent container
 Tag | Action
 -|-
@@ -140,10 +147,12 @@ Tag | Action
 `top: 0px` | position it at 0px relative to the parent container (or document) <br>also bottom left right
 #### Fixed - relative to the viewport
 viewport = the browser window viewport = the browser window 
+
 Tag | Action
 -|-
 `position: fixed` | 
 `top: 0px` | keep the element at the top <br>also bottom left right
+
 ## Flexbox - Grid layout
 *In CSS*:
 ```

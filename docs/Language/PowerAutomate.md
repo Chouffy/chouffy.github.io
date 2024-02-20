@@ -23,6 +23,7 @@ ID | Numeric ID of the file
 Identifier | ID to *select* the file (copy, ...)
 Folder path | Folder path like `foo/bar/`. Note the slashes
 *custom column* | Return content, otherwise null
+
 ### Copy file
 
 Parameter | Value

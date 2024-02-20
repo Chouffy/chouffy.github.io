@@ -1,6 +1,7 @@
 Is an [[Android]] [[phone]].
 ## TCPDump on OnePlus
 OnePlus' devices have *OnePlusLogKit* and can use it to have `tcpdump`:
+
 1. Open `OnePlusLogKit` with `*#800#` > `oneplus Logkit`
 1. Check `Network tcpdump log`
 1. Check `save log`. It's unnecessary to reboot
@@ -15,6 +16,7 @@ If the camera has trouble to focus in *Google Translate*, select *Camera 1* in a
 ## LineageOS
 ### Install
 [See the LineageOS wiki page!](https://wiki.lineageos.org/devices/enchilada/)
+
 1. Activate options on the phone
     1. In Settings → About → Tap "Build Number" x7
     1. In Settings → Developers mode. Activate:

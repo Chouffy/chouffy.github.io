@@ -1,14 +1,12 @@
 Is a [[Software]] that generate [[Static Websites Generators]] based on [[Markdown]] that could live in [[Git]] repositories.
-
-{% raw %}
-# Setup
+## Setup
 
 Install: [follow Jekyll website](https://jekyllrb.com/docs/)
 
 For GitHub Pages, change in `_config.yml`:
 * *baseurl:* to the domain name (*repo_name* for example)
 * Uncomment relevant part for GitHub Pages
-## Useful commands
+### Useful commands
 
 Command | Code
 -|-
@@ -16,7 +14,8 @@ Create | `jekyll new SITE_NAME`
 Serve 1st time | `bundle exec jekyll serve`
 Serve | `jekyll serve`
 Serve drafts | `jekyll serve --draft`
-## File structure
+
+### File structure
 
 Folder name |  Description
 -|-
@@ -28,7 +27,8 @@ Folder name |  Description
 `_site\` | Website itself (output)
 `_config.yaml` | Config file
 `Gemfile` | Ruby dependencies, including plug-in
-# Front Matter
+
+## Front Matter
 
 Gives information about each published pages, in YAML or JSON.
 
@@ -43,7 +43,8 @@ YAML Code | Comment
 `permalink: "/:categories/:year/:month/:day/:title"` | override URL generation by Jekyll with variables 
 `author: "Bob"` | Custom Front Matter variable *author*
 `---` | 
-## Default Front Matter
+
+### Default Front Matter
 
 Useful to avoid define layout
 
@@ -66,8 +67,8 @@ defaults:
     values:
         image: true
 ```
-# Theme
-## Installation from Gem
+## Theme
+### Installation from Gem
 
 Search for themes in [RubyGems](https://rubygems.org/search?utf8=%E2%9C%93&query=jekyll-theme).  
 Be careful to update `layout:` in your posts to ones defined in the theme.
@@ -76,28 +77,28 @@ Be careful to update `layout:` in your posts to ones defined in the theme.
 1. Run `bundle install` to install all *gems* needed
 1. Edit `_config.yml`, change `theme:` to the one selected
 1. Run `bundle exec jekyll serve`
-## *Just The Doc* theme
+### *Just The Doc* theme
 
 [Just The Doc](https://pmarsceill.github.io/just-the-docs/)  
 Search need to be initialized with `bundle exec just-the-docs rake search:init`  
 `_config.yml` options are [here](https://pmarsceill.github.io/just-the-docs/docs/configuration/)
 
 For HTTPS, don't forget to put "https://" [in your CNAME](https://github.com/pmarsceill/just-the-docs/issues/287) and enforce HTTPS in GitHub Pages settings.
-# Templates 
-## Layout
+## Templates 
+### Layout
 
 Create  `layout_name.html` in `_layouts\`.  
 For example, `post.html` affect posts with `layout: post`.
 
 In a layout page, a *parent* layout can be defined in the Front Matter: `layout: "parent_layout"`
-## Includes
+### Includes
 
 Pieces like header or footer to be reused inside layouts.
 
 Create `header.html` in `_includes\`.  
 Can be used in *layout* with: `{% include header.html %}`.  
 A variable can be passed: `{% include header.html color="blue"%}` and accessed with `{{ include.color }}`.
-## Variables
+### Variables
 
 Variables | Comment
 -|-
@@ -108,7 +109,7 @@ Variables | Comment
 `{{ site.author }}` | Same, but defined in `_config.yml`
 
 More variables in [Jekyll doc](https://jekyllrb.com/docs/variables/)
-## For - Loops
+### For - Loops
 Used in *home* layout definition
 ```liquid
 {% for post in site.posts %}
@@ -125,8 +126,8 @@ Used in *home* layout definition
     Do something
 {% endif %}
 ```
-# Entries
-## Post
+## Entries
+### Post
 
 Normal post entry.
 
@@ -136,7 +137,7 @@ Lives in `_posts\` or `_drafts\`, can be in any (sub) directory in with no effec
 File content:
 1. Front Matter
 1. Actual content
-## Page
+### Page
 
 Like *about* page.  
 
@@ -146,16 +147,16 @@ Lives in root directory. If in subdirectory, that'll be reflected on URL.
 In the Front Matter:
 * `layout: "page"`
 * `title: Title`
-# Data
-## Creation
+## Data
+### Creation
 
 Either YAML, JSON or CSV.
 Create `people.yml` in `_data\`
-## Access
+### Access
 
 Raw: `{{ site.data.people }}`  
 A loop can be used.
-# Assets - Static files
+## Assets - Static files
 
 Can be anywhere.
 
@@ -167,8 +168,6 @@ Can be anywhere.
 
 
 Check related default Front Matter 
-# References
+## References
 
 * [Mike Dane tutorial series](https://www.youtube.com/playlist?list=PLLAZ4kZ9dFpOPV5C5Ay0pHaa0RJFhcmcB)
-
-{% endraw %}

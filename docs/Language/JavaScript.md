@@ -9,6 +9,7 @@ Is a [[programming language]] that is core of [[Web]].
 | Command | Action  |
 | ------- | ------- |
 | `//`    | Comment | 
+
 ### Data Types
 Types | Content
 -|-
@@ -17,6 +18,7 @@ number | `123`
 string | `"hello"`
 array | `[1,2,["a","b"]]`
 object | `{"color":"red"}`
+
 ### Conversion
 * From string to float: `var floatValue = +(val);`
 ### Array
@@ -43,5 +45,6 @@ if (a === true ){
 | NOT      | `!`        |
 | OR       | `||`       |
 | Equal    | `==`           |
+
 ### Generate chars
 Use [Chart.js](https://www.chartjs.org/docs/latest/)

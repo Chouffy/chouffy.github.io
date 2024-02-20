@@ -10,7 +10,7 @@ Is a [[Nvidia Graphic Cards software|Nvidia Graphic Card]] made by [[Nvidia]] fo
 	- 4x mini DisplayPort 1.4a
 - Consumption: 70W max
 - Performance
-	- [Ampere](<https://en.wikipedia.org/wiki/Ampere_(microarchitecture)>) architecture
+	- [Ampere](https://en.wikipedia.org/wiki/Ampere_(microarchitecture) architecture
 	- Equivalent to [[Nvidia GeForce RTX 3050]] 
 	- 3328 CUDA Cores
 	- 104 Gen 3 Tensor Cores / 63.9 TFLOPS

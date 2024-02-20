@@ -5,6 +5,7 @@ Is a [[Software]] providing a [[Domain Name Server|DNS]]-over-HTTPS server
 3. One time setup for [[Alpine Linux]]
 	1. `sudo adduser -s /usr/sbin/nologin -D -H doh-proxy`
 	2. Edit a new service in `/etc/init.d/doh-proxy` and set pr
+
 	```sh
 	#!/sbin/openrc-run
 	
@@ -19,6 +20,7 @@ Is a [[Software]] providing a [[Domain Name Server|DNS]]-over-HTTPS server
 	        after syslog network-online
 	}
 	```
+	
 	1. Set proper 755 permissions
 	2. `sudo rc-update add doh-proxy default`
 	3. `sudo rc-service doh-proxy start` 

@@ -31,8 +31,7 @@ Are done in a thing similar to [[SQL]]
 		- `xxx` is to sort where it search
 	- `WHERE type = "person"`
 	- `SORT file.name ASC`
-### Queries type
-[Query type](https://blacksmithgu.github.io/obsidian-dataview/queries/query-types/)
+### [Queries type](<https://blacksmithgu.github.io/obsidian-dataview/queries/query-types/)
 - `/```dataview` to start the query - without the `/`
 - `list`: Create a list of all specified notes 
 	-  `list "File path: " + file.path` to add the file path after the note name

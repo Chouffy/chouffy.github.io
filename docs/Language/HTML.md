@@ -39,6 +39,7 @@ meta name="viewport" content="width=device-width, initial-scale=1.0">
 | `p`    | paragraph       | to be used for each paragraph |
 | `a`    | link            | see below                     |
 | `u`    | underline       |                               |
+
 #### Text formatting
 
 | Tag     | Role              |
@@ -49,6 +50,7 @@ meta name="viewport" content="width=device-width, initial-scale=1.0">
 | `small` | smaller font size |
 | `sup`   | superscript       |
 | `u`        | underline                  |
+
 #### Text attributes
 
 Applicable to body, p, hx
@@ -72,6 +74,7 @@ Tag | Role
 `href="cat.jpg"` | link to a file in same directory
 `href="dir1/page3.html"` | link to page in sub-directory
 `… target="_blank"` | … in new tab
+
 ### Images
 
 `<img ~ '/>`
@@ -81,6 +84,7 @@ Tag | Role
 `src="full_link.jpg"` | hard link to image
 `… alt="Alt Text"` | alternative to image
 `… width="100" height="100"` | size of the image - 100 px <br> if only one size is chosen, HTML adapt with correct aspect ratio
+
 ### Video
 
 `<video ~>Content if video not displayed</video>`
@@ -93,6 +97,7 @@ Tag | Role
 `… poster="thumb.jpg"` | thumbnail for the video
 `… autoplay` | 
 `… loop` | 
+
 ### Lists
 
 Tag | Role
@@ -100,6 +105,7 @@ Tag | Role
 `ul/ol/dl` | list start
 `li` | list item
 `… href~` | attribute
+
 #### ul - unordered list
 `<ul><li>bla</li><li>bla</li></ul>`
 #### ol - ordered list
@@ -152,18 +158,21 @@ Tag | Role
 `input type="password"` | create a password box
 `.. type="date","email","range","file"` | examples of types
 `… value="Default Value"` | define default value
+
 #### Multiple input
 
 Tag | Role
 -|-
 `textarea>Text Message` | Text area with message
 `… rows="10" cols="30"` | define size
+
 #### Selectors
 
 Tag | Role
 -|-
 `input type="checkbox"` | 1 checkbox
 `input name="btn1" type="radio"` <br>`input name="btn1" type="radio"` | 2 radios buttons
+
 ### iFrames
 
 Tag | Role
@@ -171,6 +180,7 @@ Tag | Role
 `iframe src="http://www.">Text<` | iframe to src, Text is displayed if frame not available
 `… width="100" height="100"` | website
 `… frameborder="0"` | no borders
+
 ## Reference
 
 * [HTML - Build a Website | Tutorial](https://www.youtube.com/playlist?list=PLLAZ4kZ9dFpMSXUYwxDFOvyxlssug29Fu) by Mike Dane

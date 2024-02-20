@@ -8,14 +8,7 @@ A nice [[Windows]] [[laptop]] from [[Lenovo]], circa 2020
 In the device manager, disable power management linked to the `Intel(R) Serial IO I2C Host Controller` where the touchpad is linked - [source](https://www.reddit.com/r/thinkpad/comments/jva2o9/touchpad_turns_unresponsive_after_wake_from_sleep/)
 ![[Windows - Disable Power Management of a device]]
 ## Middle mouse button for click and scroll
-[TPMiddle](https://sdx1.net/tools/tpmiddle/) was great to do it, but is incompatible with the X1C7.
-
-Good thing there's W10Wheel:
-1. In the *ELAN TrackPoint for Thinkpad* application, choose "Middle Button Action": *Middle Click*
-1. In the *Windows Settings* application, go to *Devices → Mouse* and check "Scroll inactive windows [...]"
-1. Download and launch [W10Wheel](https://github.com/ykon/w10wheel.net)
-1. In the taskbar, right-click on the W10Wheels icons and set "Trigger" to "MiddleDrag"
-1. In application, disable "autoscroll"
+[TPMiddle](https://sdx1.net/tools/tpmiddle/) was great to do it, but is incompatible with the X1C7 - check out [[W10Wheel.net]]
 ## Undervolting
 [ThrottleStop Guide 2020](https://www.ultrabookreview.com/31385-the-throttlestop-guide/)
 Current configuration with an Intel i7-8665U:
@@ -30,7 +23,6 @@ System Agent | 0 mV
     1. Start Windows and logon with an administrator account.
     2. Right-click Windows logo on taskbar.
     3. Select Device Manager.
-
     4. Select 'Software components' category.
     5. Uninstall each of the following components.
         - Double-click the target component/device to launch Properties
@@ -42,7 +34,6 @@ System Agent | 0 mV
         d. Realtek Audio Effects Component
         e. Realtek Audio Universal Service
         f. Realtek Hardware Support Application
-
     6. Select 'Sound, video and game controllers' category.
     7. Double-click 'Realtek(R) Audio'.
     8. In Details tab, select 'Extended Infs' in the dropdown.

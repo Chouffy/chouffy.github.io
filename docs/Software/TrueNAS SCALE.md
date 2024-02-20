@@ -60,7 +60,7 @@ A dataset can contain all required data accessible via [[Network File System]] -
 ### Install [[Windows]] in a [[Virtualization|VM]]
 See [[Kernel-based Virtual Machine#Install Windows Windows 11 as a Guest]]
 ### Enable [[TPM]] [[Virtualization]]
-⚠️ Not supported OOTB!
+1. ⚠️ Not supported OOTB!
 1. Binary installation
 	1. `sudo chmod +x /bin/apt* /bin/dpkg*`
 	2. Download the [swtpm](https://packages.debian.org/bullseye-backports/swtpm), [swtpm-libs](https://packages.debian.org/bullseye-backports/swtpm-libs), [libtpms0](https://packages.debian.org/bullseye-backports/libtpms0), [swtpm-tools](https://packages.debian.org/bullseye-backports/swtpm-tools), [gnutls-bin](https://packages.debian.org/bullseye/gnutls-bin) packages

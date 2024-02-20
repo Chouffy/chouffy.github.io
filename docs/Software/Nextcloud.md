@@ -71,13 +71,13 @@ echo "Nextcloud backup completed successfully."
     1. Open crontab `sudo crontab -u ncbackup -e`
     1. Make the script run at 0200 every day `0 2 * * * sudo /usr/sbin/ncbackup.sh`
 
-Sources:
-* [Reference page for the Snap](https://github.com/nextcloud/nextcloud-snap)
-* [How To Setup A Nextcloud Server In Ubuntu](https://kevq.uk/how-to-setup-a-nextcloud-server-in-ubuntu)
-* [OCC Command line tool](https://docs.nextcloud.com/server/15/admin_manual/configuration_server/occ_command.html)
-    * [Most notably the config command](https://docs.nextcloud.com/server/15/admin_manual/configuration_server/occ_command.html#config-commands) instead of changing `config.php`
-    * Get example: `sudo nextcloud.occ config:system:get version`
-    * Set example: `sudo nextcloud.occ config:system:set logtimezone --value="Europe/Berlin"`
+- Sources:
+	* [Reference page for the Snap](https://github.com/nextcloud/nextcloud-snap)
+	* [How To Setup A Nextcloud Server In Ubuntu](https://kevq.uk/how-to-setup-a-nextcloud-server-in-ubuntu)
+	* [OCC Command line tool](https://docs.nextcloud.com/server/15/admin_manual/configuration_server/occ_command.html)
+	    * [Most notably the config command](https://docs.nextcloud.com/server/15/admin_manual/configuration_server/occ_command.html#config-commands) instead of changing `config.php`
+	    * Get example: `sudo nextcloud.occ config:system:get version`
+	    * Set example: `sudo nextcloud.occ config:system:set logtimezone --value="Europe/Berlin"`
 ## Good apps
 ### ClamAV for antivirus
 - [Documentation](https://docs.nextcloud.com/server/latest/admin_manual/configuration_server/antivirus_configuration.html)
@@ -94,6 +94,7 @@ occ config:app:set preview jpeg_quality --value="60"
 2. `sudo nextcloud.occ preview:generate-all`
 3. Make a script for that and schedule it
     1. Edit `/usr/sbin/ncpreviewgenerator.sh` with
+        
         ```bash
         #!/bin/bash
         # Output to a logfile

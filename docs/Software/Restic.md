@@ -73,6 +73,7 @@ Multiple passwords (or called `key`) can be defined in one repo:
 | `--verbose`         | to see what is happening                                                                                                                                                                                      |
 | `--verbose=2`       | to see more of what is happening: files and folder                                                                                                                                                            |
 | `--dry-run`         | to try a command but not write anything to the repo                                                                                                                                                           |
+
 ## Scripting
 - Scheduling must be done by host OS, cannot done by Restic
 	- Or use specific things, like [resticker](https://github.com/djmaze/resticker/) for [[Docker]]

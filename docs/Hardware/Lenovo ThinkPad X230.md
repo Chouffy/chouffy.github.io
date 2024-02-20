@@ -3,7 +3,7 @@ aliases: X230
 ---
 A fine [[Windows]] [[laptop]] by [[Lenovo]] from 2012
 ## [[BIOS]]
-It is possible to replace stock BIOS for:
+- It is possible to replace stock BIOS for:
 - a BIOS mod that unlock overclocking or remove whitelist like [1vyrain](https://github.com/n4ru/1vyrain)
 - a [[Coreboot]]
 ## Hardware

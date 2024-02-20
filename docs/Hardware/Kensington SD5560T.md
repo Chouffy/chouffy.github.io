@@ -3,7 +3,7 @@ Is a [[Universal Serial Bus|Thunderbolt]] 3 dock from [[Kensington]]
 - [[Kensington SD5560T Datasheet.pdf]]
 - If the screen is disconnected after power on from sleep, disable power management of the `Thunderbolt 3(TM) Router`
 ## Capabilities
-From the [website](https://www.kensington.com/p/products/device-docking-connectivity-products/laptop-docks-usb-accessories/sd5560t-thunderbolt-3-and-usb-c-dual-4k-hybrid-docking-station-96w-pd-windowsmacos/#Support-block)
+- From the [website](https://www.kensington.com/p/products/device-docking-connectivity-products/laptop-docks-usb-accessories/sd5560t-thunderbolt-3-and-usb-c-dual-4k-hybrid-docking-station-96w-pd-windowsmacos/#Support-block)
 - Transfers
 	- 40Gbps with Thunderbolt 3 capable laptops
 	- 10Gbps for USB-C 3.2 Gen2 laptops

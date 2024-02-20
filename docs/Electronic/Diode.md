@@ -16,10 +16,3 @@ You can calculate with the following formula based on [[Ohm's Law]] :
 $$u=ri \iff r=\frac{u}{i} \iff r=\frac{V_{source}-V_{LED}}{I_{LED}}$$
 ## Schematic
 ![[Pasted image 20230403111716.webp]]
-
-```dataview
-TABLE file.path as "Location"
-FROM [[]] 
-SORT file.name ASC
-SORT file.path ASC
-```

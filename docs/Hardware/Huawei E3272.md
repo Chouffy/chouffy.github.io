@@ -10,7 +10,7 @@ Is a [[WWAN]] [[Universal Serial Bus]] modem
 - HiLink is the NAT mode, where the stick act as a RNDIS interface in Windows
 - TTY is the console mode, more compatible with [[Linux]] via [[Gammu]] for instance
 ### Switch from HiLink to TTY
-This is required if you want to use the stick in [[Home Assistant]] for instance.
+- This is required if you want to use the stick in [[Home Assistant]] for instance.
 - Open the case, and plug the device while shorting the boot pin
 	- Next to the microSD card reader
 	- Bottom right when looking at the stick with USB on top
@@ -48,6 +48,7 @@ This is required if you want to use the stick in [[Home Assistant]] for instance
 | `AT^SETPORT?`  | List current profile         | 
 | `AT^SETPORT=?` | List available profiles      |
 | `AT^RESET`     | Reset the device             |
+
 ## Ressources
 - [Example of AT commands on a Huawei modem](https://openwrt.org/docs/guide-user/network/wan/wwan/at_commands#huawei_e392)
 - [Disable HiLink mode and force tty modem on NEW Huawei E3272 - blog.le-vert.net](https://blog.le-vert.net/?p=196)

@@ -18,7 +18,7 @@ It is based on:
 - "BT Output Device" has to be selected
 - SBC, AAC and AptX worked for me, but not Apt-X HD & LDAC
 #### Add unsupported [[Bluetooth]] adapter to [[piCorePlayer]]
-From [this forum post](https://forums.slimdevices.com/forum/user-forums/linux-unix/111586-picoreplayer-8-0-0-bluetooth-discussion?p=1633747#post1633747):
+1. From [this forum post](https://forums.slimdevices.com/forum/user-forums/linux-unix/111586-picoreplayer-8-0-0-bluetooth-discussion?p=1633747#post1633747):
 1. On a separate computer
 	1. `mkdir -p ~/tmp/lib/firmware/rtl_bt​`
 	2. `cd ~/tmp/lib/firmware/rtl_bt​`

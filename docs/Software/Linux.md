@@ -29,7 +29,8 @@ Please note: I mainly use [[Ubuntu Server]] or [[Debian]], so your mileage may v
 * Setup with Cloudflare Tunnel - Based on [this blog post](https://ryan.lovelett.me/posts/letsencrypt-cockpit/).
     1. Setup a Let's Encrypt certificate below
     1. Setup a copy script - [See example in Nextcloud](https://chouffy.net/notes/server_softwares/Nextcloud.html#preview-generator-for-thumbnails)
-        ```sh
+
+		```sh
         #!/bin/sh
         FQDN="DOMAIN.COM"
 
@@ -41,8 +42,10 @@ Please note: I mainly use [[Ubuntu Server]] or [[Debian]], so your mileage may v
         echo "Restarting Cockpit"
         systemctl restart cockpit
         ```
+        
     1. Setup `/etc/cockpit/cockpit.conf`
-        ```conf
+      
+		```conf
         [WebService]
         Origins = https://URL:PORT
         #ProtocolHeader = X-Forwarded-Proto
@@ -51,6 +54,7 @@ Please note: I mainly use [[Ubuntu Server]] or [[Debian]], so your mileage may v
         [Session]
         IdleTimeout = 10
         ```
+        
     1. Setup Cloudflare Tunnel and Access
 ### Install on VirtualBox
 See [[VirtualBox]] page.
@@ -222,7 +226,7 @@ sudo ln -s /opt/software_name/executable /usr/bin/executable # create a simlink
 ### Display, Media & Sound
 - Instead of changing the DPI to 125% which makes things weird, enable Large Text in Accessability
 ## Security
-Source: [OVH](https://docs.ovh.com/us/en/vps/tips-for-securing-a-vps/), [DigitalOcean](https://www.digitalocean.com/community/tutorials/an-introduction-to-securing-your-linux-vps), [DigitalOcean](https://www.digitalocean.com/community/tutorials/recommended-security-measures-to-protect-your-servers)
+- Source: [OVH](https://docs.ovh.com/us/en/vps/tips-for-securing-a-vps/), [DigitalOcean](https://www.digitalocean.com/community/tutorials/an-introduction-to-securing-your-linux-vps), [DigitalOcean](https://www.digitalocean.com/community/tutorials/recommended-security-measures-to-protect-your-servers)
 * Change all account passwords
 * Regarding SSH
     * Disable all unnecessary users logins, like `root` - [Example](https://www.digitalocean.com/community/tutorials/how-to-disable-root-login-on-ubuntu-20-04)

@@ -1,6 +1,5 @@
 Is a [[Software]] to fetch [[videos]] from [[Microsoft Stream]]. It uses [[Puppeteer]] to fetch tokens.
-
-Links:
+## Links
 - [GitHub](https://github.com/snobu/destreamer)
 ## Notes
 ### Change the browser

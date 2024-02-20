@@ -1,6 +1,5 @@
 Is a wireless [[network]] router that runs on [[OpenWrt]].
-
-Links:
+## Links
 - [AX3200 on the OpenWrt Wiki](https://openwrt.org/toh/xiaomi/ax3200)
 - [AX3200 GitHub projet](https://github.com/mikeeq/xiaomi_ax3200_openwrt)
 ## Install [[OpenWrt]]
@@ -27,29 +26,23 @@ STOK="<STOK>" bash script.sh
 3. Router B: Factory reset
 
 Then follow instruction of [this post](https://forum.openwrt.org/t/adding-openwrt-support-for-xiaomi-redmi-router-ax6s-xiaomi-router-ax3200/111085/936): 
-If an ethernet cable is connected from the lan port of the device to which the method will be applied to the wan port of the second RB01, and the second device is returned to its factory settings from the button, it is added to the first device in mesh mode (mode 3). So the main device will be in mode 4.
 
-First we will confirm that the device is in netmode 4 from this link.
-
-Login to the router, in another tab use your token with link: `http://192.168.31.1/cgi-bin/luci/;stok={token}/api/xqnetwork/get_netmode`
+- If an ethernet cable is connected from the lan port of the device to which the method will be applied to the wan port of the second RB01, and the second device is returned to its factory settings from the button, it is added to the first device in mesh mode (mode 3). So the main device will be in mode 4.
+- First we will confirm that the device is in netmode 4 from this link.
+- Login to the router, in another tab use your token with link: `http://192.168.31.1/cgi-bin/luci/;stok={token}/api/xqnetwork/get_netmode`
 If result is `{"netmode":4,"code":0}` proceed;
-
-Login to the router, in another browser tab use your token with link;
+- Login to the router, in another browser tab use your token with link;
 `http://192.168.31.1/cgi-bin/luci/;stok={token}/api/misystem/set_sys_time?timezone=%20%27%20%3B%20zz%3D%24%28dd%20if%3D%2Fdev%2Fzero%20bs%3D1%20count%3D2%202%3E%2Fdev%2Fnull%29%20%3B%20printf%20%27%A5%5A%25c%25c%27%20%24zz%20%24zz%20%7C%20mtd%20write%20-%20crash%20%3B%20`
 Link returns with result `{"code":0}`
 Restart the router from the interface
-
-When the device is turned on login to the router, in another browser tab use your new token with link;
+- When the device is turned on login to the router, in another browser tab use your new token with link;
 `http://192.168.31.1/cgi-bin/luci/;stok={token}/api/misystem/set_sys_time?timezone=%20%27%20%3B%20bdata%20set%20telnet_en%3D1%20%3B%20bdata%20set%20ssh_en%3D1%20%3B%20bdata%20set%20uart_en%3D1%20%3B%20bdata%20commit%20%3B%20`
 Link returns with result `{"code":0}`
-
-After this, open another browser tab use same token (used in the second step) with link;
+- After this, open another browser tab use same token (used in the second step) with link;
 `http://192.168.31.1/cgi-bin/luci/;stok={token}/api/misystem/set_sys_time?timezone=%20%27%20%3b%20mtd%20erase%20crash%20%3b%20`
 Link returns with result `{"code":0}`
-
-Restart the router from the interface.
-
-After reboot check the result with the link;
+- Restart the router from the interface.
+- After reboot check the result with the link;
 `http://192.168.31.1/cgi-bin/luci/api/xqsystem/bdata`
 Result: 
 `{"ssh_en":"1"..."telnet_en":"1"..."uart_en":"1"...}`

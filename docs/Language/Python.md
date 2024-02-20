@@ -15,6 +15,7 @@ Text|Action
 `var _x` | Private variable
 `global x` | Use a global variable
 `x = name.fctA(par)` | Populate var x with the function
+
 #### Naming Convention
 [See here](https://pythonguides.com/python-naming-conventions/)
 #### Numbers
@@ -38,18 +39,21 @@ Text|Action
 `print(x, end =",")` | Print text in x and finish by ","
 `"x\nhey"` or `"x\hey"` | new line between x and hey
 [Link](https://python-reference.readthedocs.io/en/latest/docs/str/escapes.html) | Escape characters list
+
 ### List
 Text|Action
 -|-
 `list = [a, b, c]` | Declare a list "list" with variables a b c, can be any type
 `list = [[a,b][c,d]`| List in list
 `print(*list, sep=", ")` | print each item in *list* with , as separator
+
 #### Access
 Text|Action
 -|-
 `list[0]` | access item 0 (is "a")
 `list[-1]` | access last item (is "c")
 `list[0:1]` | sub-list from 0 to 1
+
 #### Work with List
 Text|Action
 -|-
@@ -62,11 +66,13 @@ Text|Action
 `list.copy()` | copy item
 `list.sort()` | sort the list by a-z, 0-9
 `list.reverse()` | inverse of sort
+
 #### Search
 Text|Action
 -|-
 `list.index(name)` | search in list for "name"
 `list.count(item)` | count items
+
 ### Dictionary
 Key:Value pairs
 #### Single dimension
@@ -75,6 +81,7 @@ Text|Action
 `dict = {key:work, k1:w1}` | declare
 `dict['key']` or `dict.get('key')` | get
 `dict.get('key', "default value")` | get with fallback
+
 #### Multiple dimensions
 Text|Action
 -|-
@@ -209,6 +216,7 @@ Text|Action
 -|-
 `str(x)` | int to str
 `int(x)` or `float(x)` | str to int or float
+
 #### Random
 ```python
 import random
@@ -227,6 +235,7 @@ Text|Action
 `a.readable()` | bool to check if Read possible
 `a.readlines()` | read each lines in array [line1, lineN]
 `a.write("text")` | Mode "w": overwrite the file with text<br>Mode "a": append text at end of file
+
 ### Logs - Logging class
 Example inspired from this [StackOverflow thread](https://stackoverflow.com/a/54424164)
 
@@ -355,6 +364,7 @@ Text|Action
 -|-
 `data.find('key').text` | get the Text content
 `data.find('key').get('attribute1')` | get the Attribute content
+
 ## JSON
 ```python
 import json

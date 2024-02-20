@@ -24,6 +24,7 @@ An open-source scripting [[programming language]] for [[Windows]]!
 |  `+`   | Shift key                                              |
 |  `&`   | Combine keys/mouse buttons, like `Numpad0 & Numpad1::` |
 |  `$`   | Only trigger with the exact key + avoid self-trigger   | 
+
 ## Examples
 ```autohotkey
 ^j::

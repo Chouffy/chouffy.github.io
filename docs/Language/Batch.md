@@ -13,6 +13,7 @@ Command | Content
 `a & b` | Do `a` and `b` commands in parallel
 `a && b` | Do `a` and `b` commands in serial
 `echo^ test` | After `^`, one can continue the command in a new line but add a space!
+
 ### Variables
 - Environment variables
 	- `set message=Hello World` to set a variable
@@ -31,6 +32,7 @@ set PATH=%PATH%;c:\whatever\else
 | --------------------- | ------------- |
 | `%COMPUTERNAME%`      | Computer name |
 | `%~dp0`               | Current directory of the `.bat` launched              |
+
 ## Loops
 ```batch
 if var1 == var (
