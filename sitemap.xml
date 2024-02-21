@@ -6,6 +6,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://chouffy.net/Electronic/</loc>
+         <lastmod>2024-02-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://chouffy.net/Electronic/Arduino/</loc>
          <lastmod>2024-02-21</lastmod>
          <changefreq>daily</changefreq>
@@ -27,11 +32,6 @@
     </url>
     <url>
          <loc>https://chouffy.net/Electronic/ESP8266/</loc>
-         <lastmod>2024-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://chouffy.net/Electronic/Electronic/</loc>
          <lastmod>2024-02-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -81,7 +81,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://chouffy.net/Guide/</loc>
+         <lastmod>2024-02-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://chouffy.net/Guide/Publish%20a%20part%20of%20an%20Obsidian%20Vault%20to%20GitHub%20Pages/</loc>
+         <lastmod>2024-02-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://chouffy.net/Hardware/</loc>
          <lastmod>2024-02-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -236,6 +246,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://chouffy.net/Language/</loc>
+         <lastmod>2024-02-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://chouffy.net/Language/AutoHotKey/</loc>
          <lastmod>2024-02-21</lastmod>
          <changefreq>daily</changefreq>
@@ -327,6 +342,11 @@
     </url>
     <url>
          <loc>https://chouffy.net/Language/bash/</loc>
+         <lastmod>2024-02-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://chouffy.net/Software/</loc>
          <lastmod>2024-02-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -902,11 +922,6 @@
     </url>
     <url>
          <loc>https://chouffy.net/Software/Snap/</loc>
-         <lastmod>2024-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://chouffy.net/Software/Software/</loc>
          <lastmod>2024-02-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
