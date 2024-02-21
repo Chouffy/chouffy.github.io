@@ -10,4 +10,3 @@ Also, maybe my notes could help one with the same problem!
 ## Hey, let me help you!
 
 Well that's nice of you, [feel free to fork and commit](https://github.com/Chouffy/chouffy.github.io) 😊  
-And remember, sharing is caring!
