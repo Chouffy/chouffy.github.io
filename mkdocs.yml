@@ -7,6 +7,10 @@ site_description: This website contains tips & tricks about multiple things I've
 site_author: Chouffy
 copyright: This work is licensed under CC BY 4.0.
 
+# Enable code action
+# https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#code-actions
+edit_uri: edit/main/docs/
+
 markdown_extensions:
   # Add anchor in each title for better reference
   # https://www.mkdocs.org/user-guide/configuration/#markdown_extensions
@@ -54,6 +58,11 @@ theme:
     # Display next word suggestion in search 
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/#search-suggestions
     - search.suggest
+
+    # Display View and Edit button linked to source code
+    # https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#code-actions
+    - content.action.view
+    - content.action.edit
 
 
   # Define two colors for the website
