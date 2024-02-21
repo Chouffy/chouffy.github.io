@@ -1,3 +1,8 @@
+---
+title: Software
+---
+
+
 Is a set of [[computer]] programs.
 ## Ressources
 ### Ideas for new softwares

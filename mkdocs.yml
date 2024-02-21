@@ -64,6 +64,9 @@ theme:
     - content.action.view
     - content.action.edit
 
+    # Set `index.md` in each docs folder as the header of the section
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#section-index-pages
+    - navigation.indexes 
 
   # Define two colors for the website
   # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#automatic-light-dark-mode
