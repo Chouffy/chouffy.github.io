@@ -124,6 +124,9 @@ entities:
 "allows creating entities which derive their values from other data."
 - [Templating documentation](https://www.home-assistant.io/docs/configuration/templating/)
 - [Integration documentation](https://www.home-assistant.io/integrations/template)
+### Monitor for broken automation
+- Names can changes when updating Home Assistant
+- [The Watchman](https://github.com/dummylabs/thewatchman) create reports to identify broken things
 ## Development
 ### Verbose logging
 - The [Logger integration](https://www.home-assistant.io/integrations/logger/) can help understanding what's going on in [[Home Assistant]] or a custom component

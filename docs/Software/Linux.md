@@ -211,6 +211,7 @@ sudo ln -s /opt/software_name/executable /usr/bin/executable # create a simlink
 ### Hardware-related
 * Sometime `reboot` is not accessible ... then use `systemctl reboot`
 * Test [[Random Access Memory|RAM]] with `sysbench --test=memory --memory-block-size=1M --memory-total-size=1000G`
+* Check PCIe speed: `lspci -vvvv`
 #### Power & Battery
 * Check system temperature
     1. `sudo apt install lm-sensors`
