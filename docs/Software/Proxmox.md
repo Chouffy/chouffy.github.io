@@ -35,6 +35,8 @@ Is a [[Virtualization|Supervisor]] [[Operating System]]
 - Other settings from TrueNAS
 	- Boot loader: UEFI
 	- Display: SPICE
+### [[Universal Serial Bus|USB]] Passthrough
+- The order of creation of passthrough *does* matter, like for [[Home Assistant]]
 ### Remote [[Simple Protocol for Independent Computing Environments|SPICE]] access without going through Web GUI
 - Set up permissions
 	- New role with `VM.Console, VM.Audit`

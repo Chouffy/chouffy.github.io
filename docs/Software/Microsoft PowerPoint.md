@@ -8,6 +8,8 @@ Is a presentation [[Software]], part of the [[Microsoft Office]] suite.
 * Change default slide when creating new slide: put this slide as the 3rd item in the master view. [Source](https://superuser.com/questions/548038/change-default-slide-layout-in-powerpoint#637148)
 ## Configuration
 - Avoid screen being switched from/to mirror and duplicate: Options → Advanced → Display section → Automatically extend display […]
+## Keyboard shortcuts
+- `Alt+F9` to toggle grid square visibility
 ## Export
 ### PNG export
 See [this article](https://learn.microsoft.com/en-us/office/troubleshoot/powerpoint/change-export-slide-resolution)

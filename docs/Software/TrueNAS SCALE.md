@@ -88,7 +88,7 @@ See [[Kernel-based Virtual Machine#Install Windows Windows 11 as a Guest]]
 	2. `sudo virsh -c "qemu+unix:///system?socket=/run/truenas_libvirt/libvirt-sock" start DOMAINVM`
 		1. [[Simple Protocol for Independent Computing Environments]] and [[VNC]] **web** displays available from the interface won't be initialized - so you have to rely on a local [[VNC]] viewer
 		2. Port is not opened if you didn't start the machine from the web UI at least once
-### Display settings for [[Simple Protocol for Independent Computing Environments]]
+### Display settings for [[Simple Protocol for Independent Computing Environments|SPICE]]
 - Port: 5900 or higher
 - Resolution: 1024x768
 - Bind: 0.0.0.0

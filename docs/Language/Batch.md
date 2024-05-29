@@ -44,6 +44,7 @@ if var1 == var (
 ## Files & Folder
 * Folder
     * Create `mkdir`
+    * Delete `rmdir /s `
 * Files & folder
     * Rename `REN` or `rename`
     * Use a drag-n-dropped file in a batch: `"%~1"`

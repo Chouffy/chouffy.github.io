@@ -119,6 +119,7 @@ sudo ln -s /opt/software_name/executable /usr/bin/executable # create a simlink
 * Erase a disk `sudo dd if=/dev/urandom of=/dev/sdXX bs=10M` - [Source](https://www.addictivetips.com/ubuntu-linux-tips/ways-to-securely-erase-a-hard-drive-on-linux/)
 * Check what is mounted where: `findmnt`
 * List all block devices: `lsblk`
+* TRIM a [[Solid-State Drive|SSD]]: `sudo /sbin/fstrim -av`
 #### View SMART disk data
 [Source](https://www.thomas-krenn.com/en/wiki/SMART_tests_with_smartctl)
 1. Install `smartmontools`
@@ -169,6 +170,10 @@ sudo ln -s /opt/software_name/executable /usr/bin/executable # create a simlink
     * `rfkill list wlan` to list status
     * `rfkill unblock wlan` to unblock
 * Check used ports: `ss -tunlp`
+#### Activate [[IPv6]]
+- Edit `/etc/network/interfaces`
+- Add `iface eth0 inet6 dhcp` - more options [here](https://wiki.debian.org/NetworkConfiguration)
+- Apply changes `service networking restart`
 #### Disable [[IPv6]]
 - `ip a` to list network adapters
 - `sudo sysctl -w net.ipv6.conf.ADAPTER.disable_ipv6=1` to disable (temporary) IPv6, with ADAPTER like `br6`
@@ -238,7 +243,7 @@ sudo ln -s /opt/software_name/executable /usr/bin/executable # create a simlink
     * Configure fail2ban
     * Configure an Intrusion Detection System - [Example](https://www.digitalocean.com/community/tutorials/how-to-install-suricata-on-ubuntu-20-04)
 * Disable unneeded services - [Example](https://www.digitalocean.com/community/tutorials/how-to-migrate-linux-servers-part-1-system-preparation), `sudo ss -atpu`
-* Implement unattended upgrades and livepatch - [Example](https://www.digitalocean.com/community/tutorials/how-to-keep-ubuntu-20-04-servers-updated)
+* Implement unattended/automated upgrades and livepatch - [Example](https://www.digitalocean.com/community/tutorials/how-to-keep-ubuntu-20-04-servers-updated)
 * Regularly
     * Update software
     * Check logs

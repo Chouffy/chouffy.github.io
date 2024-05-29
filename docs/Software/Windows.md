@@ -6,7 +6,6 @@ Is an [[Operating System]] from Microsoft.
 - [Dockur/Windows](https://github.com/dockur/windows) puts [[Windows]] in a [[Docker]] with a bit of help of [[Kernel-based Virtual Machine|KVM]]
 ### Windows 11
 - [ExplorerPatcher](https://github.com/valinet/ExplorerPatcher) to have more taskbar flexibility for the taskbar
-- [BloatyNosy](https://github.com/builtbybel/BloatyNosy) to remove some unnecessary features
 - [CTT WinUtil](https://github.com/ChrisTitusTech/winutil) to remove other unnecessary features
 #### Bypass [[TPM]] check
 ##### During setup

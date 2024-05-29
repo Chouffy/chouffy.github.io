@@ -54,10 +54,16 @@ uci commit dhcp
 /etc/init.d/dnsmasq restart
 ```
 - Restart
-### Notes on upgrade
+#### Notes on upgrade
 - Configuration lives in `/etc/adguardhome.yaml`
 - After a `sysupgrade`, no DNS request will be processed
 - AdGuard needs to be reinstalled but old settings will persists 
+### [[Oracle Cloud]]
+- Check the [excellent tutorial here](https://jmcglock.substack.com/p/installing-adguard-home-on-oracle)
+### Encryption
+If using [[Let's Encrypt]], use:
+- Certificates: `fullchain.pem`
+- Private key: `privkey.pem`
 ## Custom Filtering rules
 - See [documentation](https://github.com/AdguardTeam/AdGuardHome/wiki/Hosts-Blocklists#client)
 - Possibility of combining several rules, like `||something.local.net^$client=192.168.0.0/24,dnsrewrite=192.168.0.1`

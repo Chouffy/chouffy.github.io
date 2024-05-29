@@ -31,7 +31,7 @@ Keys | Usage
         1. Select a Work folder
     * This will give a read-only access, but this can be done in both lands
 ## Network
-- [[Domain Name Server|DNS]] over TLS can be configured in `Private DNS`
+- [[Domain Name Server|DNS]] over TLS (DoT) can be configured in `Private DNS`
 ## Reverse engineering
 ### Decompiling APK
 This blog post has some good suggestions.
