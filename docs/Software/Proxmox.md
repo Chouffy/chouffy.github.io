@@ -53,6 +53,15 @@ Is a [[Virtualization|Supervisor]] [[Operating System]]
 #### Limit ZFS Memory usage
 - See [Wiki](https://pve.proxmox.com/wiki/ZFS_on_Linux#sysadmin_zfs_limit_memory_usage)
 ![[ZFS#Random Access Memory RAM]]
+### Serial Console
+- Add Serial device to the VM
+- Edit `/etc/default/grub` with
+```
+GRUB_CMDLINE_LINUX="console=ttyS0,115200n8"
+GRUB_TERMINAL=serial
+GRUB_SERIAL_COMMAND="serial --speed=115200 --unit=0 --word=8 --parity=no --stop=1"
+```
+- Run `update-grub`
 ## Utilization
 ### Best settings when creating a [[Virtualization|VM]]
 - [System](https://pve.proxmox.com/pve-docs/chapter-qm.html#qm_system_settings)

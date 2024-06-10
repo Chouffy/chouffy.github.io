@@ -21,8 +21,10 @@ Links:
 - Configuration file can be held in various directories
 	- Usually in `%APPDATA%/rclone/rclone.conf` or `~/.config/rclone/rclone.conf`
 	- [See doc](https://rclone.org/docs/#config-config-file)
+- Any config can be held as [an environment variable](https://rclone.org/docs/#environment-variables) like `RCLONE_CONFIG_REMOTENAME_CONFIGNAME`
 ## Setup
 - [OneDrive](https://rclone.org/onedrive/)
+- [OVH using S3 (cheaper)](https://help.ovhcloud.com/csm/en-public-cloud-storage-s3-rclone?id=kb_article_view&sysparm_article=KB0047458)
 ### Renew token
 1. Start from a fresh `rclone` session
 2. Create a new connection with `rclone config`

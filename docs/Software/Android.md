@@ -32,6 +32,12 @@ Keys | Usage
     * This will give a read-only access, but this can be done in both lands
 ## Network
 - [[Domain Name Server|DNS]] over TLS (DoT) can be configured in `Private DNS`
+## Files & Apps
+### Extract an APK
+- On a PC with ADB
+- `adb shell pm list packages` to list packages
+- `adb shell pm path com.whatsapp` to list path of the apk
+- `adb pull path-of-app` to extract the apk
 ## Reverse engineering
 ### Decompiling APK
 This blog post has some good suggestions.
