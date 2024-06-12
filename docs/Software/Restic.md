@@ -46,7 +46,8 @@ Links:
 #### Removing snapshots
 - `restic forget snapshotID|policy` to remove one snapshot 
 	- Policy are defined [here](https://restic.readthedocs.io/en/stable/060_forget.html#removing-snapshots-according-to-a-policy)
-	- Policy are chainable like `restic forget --keep-daily 7 --keep-weekly 5 --keep-monthly 12 --keep-yearly 75` for 100 years
+	- Policy are chainable like `restic forget --keep-daily 7 --keep-weekly 5 --keep-monthly 6 --keep-yearly 1` for 100 years
+	- Default policy is grouped per host name and path, can be changed with `--group-by 'tags` for instance
 - `restic prune` to definitely remove data that are unlinked to any snapshot
 	- It is advised to run a `restic check` after
 - And `restic recover` to restore removed snapshot that are not `prune`ed

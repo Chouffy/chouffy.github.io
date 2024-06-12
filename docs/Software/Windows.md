@@ -34,10 +34,11 @@ Run `OOBE\BYPASSNRO` in command line (`Shift + F10`)
 * Modern Standby: [Check S states](https://www.laptopmag.com/articles/how-to-use-modern-standby)
 ### Data & Files
 - [EasyBCD](https://neosmart.net/EasyBCD/) to manage Windows bootloader
-- Symbolic link - [official documentation](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/mklink)
+- Symbolic link / junction - [official documentation](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/mklink)
 	- Create a symbolic link between 2 directories: `mklink /d \linkdir \referedDirectory` ^83db26
 	- `\linkdir` is the directory/file where the link will be created
 	- `\referedDirectory` is the referred directory/file (already existing)
+		- Doesn't work in UNC
 ### Media
 - Reset video driver: `Win + Ctrl + Shift + B`
 - Set an application as High DPI aware programmatically [with a reg edit](https://superuser.com/questions/1230346/overriding-high-dpi-scaling-from-the-command-line/1230356#1230356)

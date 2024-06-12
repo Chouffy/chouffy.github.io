@@ -5,6 +5,8 @@ Is a [[shell]] and [[programming language]] for [[Linux]].
 See also [[PowerShell]]
 ## Commands & Examples
 - `# Comments` 
+- `&&` to combine commands
+- `;` to combine commands even if the previous one fail
 ### File & Data
 #### Check if file exists
 ```sh

@@ -10,6 +10,9 @@ Is a [[programming language]] that is core of [[Web]].
 	- Much better to have them everywhere
 	- Avoid for `if, else, for, while, function`
 	- Put it on `do {} while {};` or inside the arg of `for` loop
+- Usage
+	- Inline `<script type="text/javascript"> ~ </script> `
+	- External: `<script src="script.js"></script>` with `script.js` the external file
 ### Syntax
 - Comments
 	- `//` single line comment
@@ -21,6 +24,7 @@ Is a [[programming language]] that is core of [[Web]].
 	- `var answer = true` to create a boolean
 		- `true` isn't in quoted
 	- `var` is required
+	- `let` can be used in enclosing block `{}`
 	- Other data types
 		- array: `[1,2,["a","b"]]`
 		- object: `{"color":"red"}`
@@ -159,12 +163,6 @@ for (var i = 0; i < 5; i++) {
   }
 }
 ```
-### Array
-Transpose an array:
-```js
-array = [ ["a", "b"],["c", "d"]]
-array[0].map((_, colIndex) => array.map(row => row[colIndex]))
-```
 ## Data Type
 - [[Loosely-typed Language]]
 - `typeof i` to print type of `i`
@@ -204,6 +202,34 @@ var string2Bool = (string1) ? true : false; // return false
 var string3 = 'Hello, world!';
 var string3Bool = (string1) ? true : false; // return true
 
+```
+### Array
+```js
+// Creation
+var fruits = new Array("Apples", "Oranges");
+var someArrays = [ ["a", "b"],["c", "d"]];
+
+// Read
+fruits[0];
+fruits.length; // lenght of an array
+fruits.split("'"); //split a string into an array with ' delimiter
+
+// Update
+fruits[0] = "New Apple";
+
+// Transpose an array
+array[0].map((_, colIndex) => array.map(row => row[colIndex]))
+```
+### Objects
+```js
+// Creation
+var person = {
+	name = "Bob",
+	printName: function(){
+		alert (this.name); // print the 'name' value of the object
+	},
+	age: 23 // no comma at the end	
+}
 ```
 ## Functions
 ```js

@@ -201,6 +201,7 @@ sudo ln -s /opt/software_name/executable /usr/bin/executable # create a simlink
     * `cat /etc/group` to list all groups
 * Setup SFTP for without Shell: [nice tutorial from Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-enable-sftp-without-shell-access-on-ubuntu-18-04)
 * Act as a user: `sudo -u USERNAME command`
+* Mails are stored in `/var/mail/`
 #### Scripts execution
 - Can be stored in `/usr/sbin/user_scripts/`
 - `visudo` can help defining a script that can be run as sudo
