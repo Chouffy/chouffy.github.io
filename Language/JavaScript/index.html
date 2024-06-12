@@ -2153,15 +2153,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#array" class="md-nav__link">
-    <span class="md-ellipsis">
-      Array
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -2199,6 +2190,24 @@
   <a href="#boolean" class="md-nav__link">
     <span class="md-ellipsis">
       Boolean
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#array" class="md-nav__link">
+    <span class="md-ellipsis">
+      Array
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objects
     </span>
   </a>
   
@@ -6701,15 +6710,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#array" class="md-nav__link">
-    <span class="md-ellipsis">
-      Array
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -6747,6 +6747,24 @@
   <a href="#boolean" class="md-nav__link">
     <span class="md-ellipsis">
       Boolean
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#array" class="md-nav__link">
+    <span class="md-ellipsis">
+      Array
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objects
     </span>
   </a>
   
@@ -6846,6 +6864,11 @@
 <li>Put it on <code>do {} while {};</code> or inside the arg of <code>for</code> loop</li>
 </ul>
 </li>
+<li>Usage<ul>
+<li>Inline <code>&lt;script type="text/javascript"&gt; ~ &lt;/script&gt;</code></li>
+<li>External: <code>&lt;script src="script.js"&gt;&lt;/script&gt;</code> with <code>script.js</code> the external file</li>
+</ul>
+</li>
 </ul>
 <h3 id="syntax">Syntax<a class="headerlink" href="#syntax" title="Permanent link">&para;</a></h3>
 <ul>
@@ -6865,6 +6888,7 @@
 </ul>
 </li>
 <li><code>var</code> is required</li>
+<li><code>let</code> can be used in enclosing block <code>{}</code></li>
 <li>Other data types<ul>
 <li>array: <code>[1,2,["a","b"]]</code></li>
 <li>object: <code>{"color":"red"}</code></li>
@@ -7020,11 +7044,6 @@ do { // execute
   }
 }
 </code></pre>
-<h3 id="array">Array<a class="headerlink" href="#array" title="Permanent link">&para;</a></h3>
-<p>Transpose an array:</p>
-<pre><code class="language-js">array = [ [&quot;a&quot;, &quot;b&quot;],[&quot;c&quot;, &quot;d&quot;]]
-array[0].map((_, colIndex) =&gt; array.map(row =&gt; row[colIndex]))
-</code></pre>
 <h2 id="data-type">Data Type<a class="headerlink" href="#data-type" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="../Loosely-typed%20Language" title="Loosely-typed Language">Loosely-typed Language</a></li>
@@ -7065,6 +7084,32 @@ var string2Bool = (string1) ? true : false; // return false
 var string3 = 'Hello, world!';
 var string3Bool = (string1) ? true : false; // return true
 
+</code></pre>
+<h3 id="array">Array<a class="headerlink" href="#array" title="Permanent link">&para;</a></h3>
+<pre><code class="language-js">// Creation
+var fruits = new Array(&quot;Apples&quot;, &quot;Oranges&quot;);
+var someArrays = [ [&quot;a&quot;, &quot;b&quot;],[&quot;c&quot;, &quot;d&quot;]];
+
+// Read
+fruits[0];
+fruits.length; // lenght of an array
+fruits.split(&quot;'&quot;); //split a string into an array with ' delimiter
+
+// Update
+fruits[0] = &quot;New Apple&quot;;
+
+// Transpose an array
+array[0].map((_, colIndex) =&gt; array.map(row =&gt; row[colIndex]))
+</code></pre>
+<h3 id="objects">Objects<a class="headerlink" href="#objects" title="Permanent link">&para;</a></h3>
+<pre><code class="language-js">// Creation
+var person = {
+    name = &quot;Bob&quot;,
+    printName: function(){
+        alert (this.name); // print the 'name' value of the object
+    },
+    age: 23 // no comma at the end  
+}
 </code></pre>
 <h2 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">&para;</a></h2>
 <pre><code class="language-js">// Simple function
@@ -7129,7 +7174,7 @@ var i = 20;
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-06-10T16:33:33+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-06-10</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-06-12T20:24:26+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-06-12</span>
   </span>
 
     
