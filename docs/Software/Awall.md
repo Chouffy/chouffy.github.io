@@ -1,7 +1,7 @@
 ---
 aliases: Alpine Wall
 ---
-Is a [[simplewall]] [[Software]] for [[Alpine Linux]], powered by [[JSON]] (_policy file_) 
+Is a [[simplewall]] [[Software]] for [[Alpine Linux]], powered by [[JavaScript Object Notation]] (_policy file_) 
 ## Setup
 1. Install
     ```bash

@@ -10,6 +10,7 @@ Is a [[Virtualization|Supervisor]] [[Operating System]]
 	- Then disable the `entreprise` repository
 - [Trove of scripts](https://tteck.github.io/Proxmox/)
 	- Change CPU Scaling Governor to `powersave` to save some previous Watts
+	- Clean old kernels
 - [[Secure Shell Protocol|SSH]] port shouldn't be changed as it is used for cluster things
 	- Setup [[Cloudflare]] DNS with Proxmox: [Guide](https://3os.org/infrastructure/proxmox/lets-encrypt-cloudflare/)
 ### Activate IOMMU / PCIe Passthrough
@@ -64,6 +65,7 @@ GRUB_SERIAL_COMMAND="serial --speed=115200 --unit=0 --word=8 --parity=no --stop=
 - Run `update-grub`
 ## Utilization
 ### Best settings when creating a [[Virtualization|VM]]
+- [Windows 10 guest best practices](https://pve.proxmox.com/wiki/Windows_10_guest_best_practices)
 - [System](https://pve.proxmox.com/pve-docs/chapter-qm.html#qm_system_settings)
 	- QEMU Agent: enabled
 		- Need to be installed with `qemu-guest-agent` or [Fedora VirtIO drivers](https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/stable-virtio/virtio-win.iso)
@@ -73,7 +75,7 @@ GRUB_SERIAL_COMMAND="serial --speed=115200 --unit=0 --word=8 --parity=no --stop=
 		- `x86-64-v3` works fine
 		- `host` will match the Host CPU, but will impact migration to to other systems
 - [Memory](https://pve.proxmox.com/pve-docs/chapter-qm.html#qm_memory)
-	- Ballooning: enabled
+	- Ballooning: enabled, disable on Windows
 	- Minimum memory: don't use on Windows
 	- 1 GB must be made available for the host
 - [Network](https://pve.proxmox.com/pve-docs/chapter-qm.html#qm_network_device)
@@ -88,7 +90,8 @@ GRUB_SERIAL_COMMAND="serial --speed=115200 --unit=0 --word=8 --parity=no --stop=
 - [Storage](https://pve.proxmox.com/pve-docs/chapter-qm.html#qm_hard_disk)
 	- Controller: VirtIO SCSI ([source](https://pve.proxmox.com/pve-docs/chapter-qm.html#qm_hard_disk)) single with IO Thread enabled
 	- Image Format: raw disk image by default if you use [[Logical Volume Manager|LVM]] or [[ZFS]]
-	- Cache: none ([source](https://pve.proxmox.com/wiki/Performance_Tweaks#Disk_Cache))
+	- Cache: `none` ([source](https://pve.proxmox.com/wiki/Performance_Tweaks#Disk_Cache))
+		- `writeback` is faster, but can result in data lose
 	- Discard: enabled + SSD emulation: enabled, to let the OS [[TRIM]]
 	- IO Thread: enabled
 - For [[Windows]]

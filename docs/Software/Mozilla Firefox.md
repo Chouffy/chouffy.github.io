@@ -5,9 +5,10 @@ aliases:
 Is a [[Web]] [[Software]] navigator that run on all [[Operating System]]
 [Link to pick version to download](https://www.mozilla.org/en-US/firefox/all/)
 ## Configuration
-In `about:config`
-- Remove the `...` inside the address bar: `browser.urlbar.resultMenu.keyboardAccessible` to `false`
-- Do not close on last tab: `browser.tabs.closeWindowWithLastTab` to `false`
+- Edit in `about:config`
+	- Remove the `...` inside the address bar: `browser.urlbar.resultMenu.keyboardAccessible` to `false`
+	- Do not close on last tab: `browser.tabs.closeWindowWithLastTab` to `false`
+- Start an older version of Firefox with a "newer" profile: `firefox -allow-downgrade`
 ### Screenshots
 - Tool available `CTRL+Shift+M` or in the Inspection → Responsive Design Mode 
 - Device Pixel Ratio: multiplier of the resolution of the viewport, similar to `@2x` in [[Figma]] for instance

@@ -3,6 +3,7 @@ aliases: AHK
 ---
 An open-source scripting [[programming language]] for [[Windows]]!
 ## Basics
+- An elevated AHK process will start elevated processes by default
 ## Hotstrings
 - Hotkey is created by single pair of colons, like `::mail::mail@example.com`
 	- If the hotstring contains an emoji, save the file in `UTF-8 BOM` format - [See documentation](https://www.autohotkey.com/docs/v1/FAQ.htm#nonascii)
@@ -54,5 +55,8 @@ return
 MsgBox, You pressed ALT+Q in any window.
 return
 ```
+### Launch a command unelevated from an elevated script
+- Use [`ShellRun`](https://github.com/Lexikos/AutoHotkey-Release/blob/master/installer/source/Lib/ShellRun.ahk)
+- And call it like `ShellRun("command.exe")`
 ## Reference
 * [Official tutorial](https://www.autohotkey.com/docs/Tutorial.htm)

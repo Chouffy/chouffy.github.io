@@ -4,7 +4,8 @@ aliases: JS
 Is a [[programming language]] that is core of [[Web]].
 ## Setup
 * [Install NodeJS on Ubuntu](https://github.com/nodesource/distributions/blob/master/README.md)
-## Language
+## Overview
+- Case-sensitive
 - Semi-colons
 	- Mandatory when it's not clear for the language where a new statement starts (example: no new line)
 	- Much better to have them everywhere
@@ -13,28 +14,60 @@ Is a [[programming language]] that is core of [[Web]].
 - Usage
 	- Inline `<script type="text/javascript"> ~ </script> `
 	- External: `<script src="script.js"></script>` with `script.js` the external file
-### Syntax
+## Syntax
 - Comments
 	- `//` single line comment
 	- `/*` to comment until `*/`
-- Variable creation
+- Variable creation with `var`
+	- Scoped to the function body
 	- `var name = "Bob";` to create a string variable `name`
 		- Single or Double quote doesn't matter, but needs to be consistent
 	- `var i = 0;` to create an integer `i`
 	- `var answer = true` to create a boolean
 		- `true` isn't in quoted
-	- `var` is required
-	- `let` can be used in enclosing block `{}`
-	- Other data types
-		- array: `[1,2,["a","b"]]`
-		- object: `{"color":"red"}`
+	- Variable creation with a [[#Truthy and Falsy]] short circuit evaluation: `let defaultName = username || 'Stranger'; // username if defined, Stranger otherwise`
+- Variable creation with `let`
+	- Introduced in ES6
+	- Scoped to the immediate enclosing block denoted with `{ }`
+- Constant variable creation with `const`
+	- Must have a value defined at declaration, cannot be changed
 - Variable naming
-	- Don't use reserved words like `case, var`
-	- Use `camelCase`
+	- Cannot start with number
+	- Don't use reserved keywords like `case, var`, full list [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords)
+	- Use `camelCase` and are case sensitive
 	- Don't use long variables names
 	- Put the data type at the end of the variable: `personCount, personList, personObj`
-### Operations
-#### Mathematics
+### `var` vs `let`
+- [Good answer on StackOverflow](https://stackoverflow.com/a/11444416)
+- Scoping difference
+```js
+function run() {
+  var foo = "Foo";
+  let bar = "Bar";
+
+  console.log(foo, bar); // Foo Bar
+
+  {
+    var moo = "Mooo"
+    let baz = "Bazz";
+    console.log(moo, baz); // Mooo Bazz
+  }
+
+  console.log(moo); // Mooo
+  console.log(baz); // ReferenceError
+}
+
+run();
+```
+- Hoisting (great [blog](https://dev.to/godcrampy/the-secret-of-hoisting-in-javascript) on it)
+	- `var` is hoisted and initialized, will return `undefined` before the declaration statement is reach
+	- `let` is hoisted but not initialized, will return `ReferenceError`
+- Global object property
+	- `var` create a property on the global object but not `let`
+- Redeclaration
+	- In strict mode, `let` can be re-declared
+## Operations
+### Mathematics
 - `+` or `-`
 	- `++i` or `i++` will add 1 to `i`; same for `--i` or `i--`
 		- Prefix: `++i` → `++` is run "before" `i`, which have an impact
@@ -43,22 +76,31 @@ Is a [[programming language]] that is core of [[Web]].
 - `%`, Modulo, remainder of a division
 - Spaces like `(a + b)` is for readability
 - `()` to change priority
-#### String
+### String
 - `a + b` to concatenate content of string `a` and `b`
 - `\'` escape character to avoid interpreting `'` as quote, and same for `\"`
 - `\n` new line
 - `\t` tab
 - `\\` backslash (that is different than `/` forward slash)
-#### Comparaison operators
+#### String interpolation
+- Template literal is wrapped by backticks
+- Placeholder is like `${placeHolder}` 
+```js
+const myPet = 'armadillo';
+console.log(`I own a pet ${myPet}.`);
+// Output: I own a pet armadillo.
+```
+### Comparaison operators
 - `a < b`, `a <= b`, `a == b`, `a != b`, `a >= b`, `a > b` gives back a boolean
 	- ⚠️ `a = b` is assigning `b` to `a`
 - Because of [[Loosely-typed Language]], it can compare strings (`'3'`) to integer (`3`) and gives the correct result
-	- `a === b` to check if `a` matches `b` value *and* data type
-#### Boolean operators
+	- `a === b` to check if `a` matches `b` value *and* data type (identity operator) and `!==` inverse
+### Boolean operators
 - `a < b && b < c`: *and*, both must be true
 - `b > a || b > c`: *or*, either must be true
-- `!varBool`: *invert*, must be false
-##### If
+- `!varBool`: *not* or *negate*, must be false
+## Conditions & Loops
+### If
 ```js
 // Single-line - the next statement after 'if' is run
 if (a < b) console.log('Hi!'); 
@@ -92,19 +134,21 @@ if (a < b) {
 } else
 	// Do something within the 1st if
 }
-
-// Ternary operator
+```
+#### Ternary operator
+```js
 var valveOpen = true;
 var openStatusString = (valveOpen) ? 'open' : 'closed';
 //                     (condition)   (true)    (false)
+valvePosition > 30 ? 'High pressure' : 'Low pressure';
 ```
-##### Switch
+### Switch
 ```js
 var level = 5; // works with string or integer
 var message = '';
 
 switch (level) {
-  case 0:
+  case 0: // works also with case 'some text':
     message = 'Empty';
     break;
 
@@ -122,12 +166,67 @@ switch (level) {
 
   default: // Default, doesn't need break
     message = 'Uh-oh!';
+    break;
 }
 ```
-##### While
+### For
 ```js
-var i = 0;
-var done = false;
+for (let i = 0; i <= 5; i++) {
+//   ^- initialization of the iterator variable, don't forget var!
+//              ^- comparaison
+//                     ^- increment (after work)
+  // do the work (done before increment)
+  // use break if necessary
+}
+```
+#### Array looping
+```js
+const animals = ['Grizzly Bear', 'Sloth', 'Sea Lion'];
+for (let i = 0; i < animals.length; i++){
+  console.log(animals[i]);
+}
+```
+#### Nested loops
+```js
+const myArray = [6, 19, 20];
+const yourArray = [19, 81, 2];
+for (let i = 0; i < myArray.length; i++) {
+  for (let j = 0; j < yourArray.length; j++) {
+    if (myArray[i] === yourArray[j]) {
+      console.log('Both arrays have the number: ' + yourArray[j]);
+    }
+  }
+}
+```
+### For In
+- Loops for [[#Objects]]
+```js
+let spaceship = {
+  crew: {
+    captain: { 
+      name: 'Lily', 
+      degree: 'Computer Engineering', 
+      cheerTeam() { console.log('You got this!') } 
+    },
+    'chief officer': { 
+      name: 'Dan', 
+      degree: 'Aerospace Engineering', 
+      agree() { console.log('I agree, captain!') } 
+    }
+  }
+}; 
+
+for (let crewMember in spaceship.crew) { // let crewMember → Copy the value, no reference!
+  console.log(`${crewMember}: ${spaceship.crew[crewMember].name}`);
+  // Returns "captain: Lily"
+  //         "chief officer: Dan"
+}
+
+```
+### While
+```js
+let i = 0;
+let done = false;
 while (!done) { // while expect `true` to go inside the loop
   if (i < 5) {
     ++i;
@@ -137,39 +236,31 @@ while (!done) { // while expect `true` to go inside the loop
     break; // get out of the while loop
 }
 ```
-##### For
-```js
-for (var i = 0; i < 5; i++) {
-//   ^- initialization, don't forget var!
-//              ^- comparaison
-//                     ^- increment (after work)
-  // do the work (done before increment)
-}
-```
-##### Do While
+### Do While
 ```js
 // Execute the loop before comparaison
-var i = 0;
+let i = 0;
 do { // execute
   // do something
+  // use break as necessary
   ++i;
-} while (i < 5); // evaluate
-```
-##### Nested Loop
-```js
-for (var i = 0; i < 5; i++) {
-  for (var j = 0; j < 3; j++) { // different variable
-    // do something
-  }
-}
+} while (i < 5); // evaluate - don't forget the ; at the end
 ```
 ## Data Type
 - [[Loosely-typed Language]]
 - `typeof i` to print type of `i`
-- Available data type
-	- boolean: `true` / `false`
+- Fundamental data type
+	- Number, with or without decimals: `2` or `41.1` without quotes
+	- BigInt, any number greater than 253-1 or less than -(253-1): `1234567890123456n`
+	- String: group of characters surrounded by `'` or `"`
+	- Boolean: `true` / `false` without quotes
+	- Null: intentional absence of value, `null` without quotes
+	- Undefined: declared variable which lacks a value (≠ than Null): `undefined` without quotes
+	- Symbol: unique identifiers
+	- Object: collection of related data like `{"color":"red"}`
+- Other data type
 	- array: `[1,2,["a","b"]]`
-	- object: `{"color":"red"}`
+
 ### String
 ```js
 var someString = 'Hi!'; // Creation
@@ -192,7 +283,15 @@ var int1 = 0;
 var int1Bool = (i) ? true : false; // returns true
 var int2 = 10;
 var int2Bool = (i) ? true : false; // returns false
-
+```
+#### Truthy and Falsy
+- List of falsy (evaluate to `false`):
+	- `0`
+	- Empty strings like `""` and `''`
+	- `null`
+	- `undefined`
+	- `NaN`: not a number
+```js
 // Boolean with string //
 // Defined string will return `true`, `false` otherwis
 var string1;
@@ -202,50 +301,257 @@ var string2Bool = (string1) ? true : false; // return false
 var string3 = 'Hello, world!';
 var string3Bool = (string1) ? true : false; // return true
 
+// Variable short-circuit evaluation for creation
+let username = '';
+let defaultName = username || 'Stranger'; // username if defined, Stranger otherwise
 ```
 ### Array
+- `let`, `var`, `const` can be used for declaration
+	- With `const`, variables cannot be reassigned but remains mutable: contant can be changed
+- List of possible methods: [Codecademy](https://www.codecademy.com/resources/docs/javascript/arrays)
 ```js
 // Creation
-var fruits = new Array("Apples", "Oranges");
-var someArrays = [ ["a", "b"],["c", "d"]];
+let fruits = ["Apples", "Oranges"];
 
-// Read
-fruits[0];
+// Read (non-mutating)
+fruits[0]; // data at index 0, out of band index will return undefined
 fruits.length; // lenght of an array
 fruits.split("'"); //split a string into an array with ' delimiter
+fruits.slice(first, last+1); // Export array from first index to last index
 
 // Update
-fruits[0] = "New Apple";
-
+fruits[0] = "New Apple"; // Replace an item
+fruits.push("Banana","Pineapple"); // Add an item at the end of the array
+fruits.pop(); // Remove the last item at the end of the array
+// Other used methods: .join, .splice, .shift, .unshift, .concat
+```
+#### Nested Array
+```js
+const nestedArr = [[1], [2, 3]];
+console.log(nestedArr[1]); // Output: [2, 3]
+console.log(nestedArr[1][0]); // Output: 2
+```
+#### Advanced
+```js
 // Transpose an array
 array[0].map((_, colIndex) => array.map(row => row[colIndex]))
 ```
 ### Objects
+- See also [[#Reference in Objects]]
+- See also [[#For In]] for looping
+- If key starts with `_keyName`, it is private and shouldn't be altered
+#### Property
+- Unordered data
+	- Organized in key-value pairs like `key : 'value'`
+	- Value can be in any [[#Data Type]]
+- Non defined property will return `undefined`
+- Objects are mutable → can be modified after creation
+	- Variable is replaced if the property already exist
+	- Variable is created if property doesn't exist
 ```js
 // Creation
-var person = {
-	name = "Bob",
-	printName: function(){
-		alert (this.name); // print the 'name' value of the object
-	},
-	age: 23 // no comma at the end	
-}
+let spaceship = {
+  'Fuel Type': 'diesel',
+  color: 'silver' // Quotes on key can be omited if no special characters are used
+};
+
+// Usage
+spaceship.color;
+spaceship['color']; // same but variables can be used instead of fixed text
+let colorShip = spaceship.color; // Copy the content, no reference passing
+spaceship.color = 'grey'; // update the value as it is a reference
+
+// Delete
+delete spaceship.color;
 ```
+##### Dealing with `const`
+- `const` objects cannot be reassigned but can be mutated
+```js
+const spaceship = {type: 'shuttle'};
+spaceship = {type: 'alien'}; // TypeError: Assignment to constant variable.
+spaceship.type = 'alien'; // Changes the value of the type property
+spaceship.speed = 'Mach 5'; // Creates a new key of 'speed' with a value of 'Mach 5'
+```
+#### Methods
+- If data stored in an object is a function, it's a method
+```js
+const alienShip = {
+  //invade: function () { // pre-ES6 form
+  invade () { // post ES6
+    console.log('Hello we are Aliens!')
+  }
+};
+
+alienShip.invade();
+```
+#### Nested Objects
+- Objects can be defined within objects
+```js
+const spaceship = {
+     telescope: {
+        yearBuilt: 2018
+     },
+    crew: {
+        captain: { 
+            name: 'Sandra', 
+            encourageTeam() { console.log('We got this!') } 
+         },
+		'co pilot': {
+			name: 'Bob'
+		}
+    },
+	passengers: [
+	    {
+	      name: 'Matthieu'
+	    }
+	],
+}; 
+
+spaceship.crew['co pilot'].name;
+spaceship.passengers[0].name; // array instead of key-value pairs - allow iteration
+```
+#### This
+- `this` reference the calling object
+- Unavailable when using [[#Arrow Function]]
+```js
+const goat = {
+  dietType: 'herbivore',
+  makeSound() {
+    console.log('baaa');
+  },
+  diet() {
+    console.log(this.dietType);
+    return `I like ${this.dietType}.`
+  },
+  eat: () => {
+    return `I like ${this.dietType}.` // this is undefined in arrow functions
+  }
+};
+
+goat.diet(); 
+// Output: herbivore
+```
+#### Getter
+- Methods to return the internal property of an object
+- Starts with `get` then `functName() {…}`
+- Properties cannot have the same name than the getter/setter
+	- Workaround: use underscore in `_propertyName`
+- Use like a property like `objName.property`, without `()`
+```js
+const person = {
+  _firstName: 'John',
+  _lastName: 'Doe',
+  get fullName() {
+    if (this._firstName && this._lastName){
+      return `${this._firstName} ${this._lastName}`;
+    } else {
+      return 'Missing a first name or a last name.';
+    }
+  }
+}
+
+// To call the getter method: 
+person.fullName; // 'John Doe'
+```
+#### Setter
+- Methods to reassign value of existing property within an object
+- Defined using `set` them `functName() {…}`
+- Use it like a value assignment like `newObj.newAge = 20;`
+```js
+const person = {
+  _age: 37,
+  set age(newAge){
+    if (typeof newAge === 'number'){
+      this._age = newAge;
+    } else {
+      console.log('You must assign a number to age');
+    }
+  }
+};
+person.age = 20;
+```
+#### Factory functions
+
 ## Functions
+- Are also [[#Objects & Methods|Objects]], hence can have properties & methods
+	- `exampleFunction.name` to print the name of the function as it was created ([Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name))
+### Scope
+- Global scope: variables declared outside of blocks `{ … }`
+- Local scope: variables declared inside of block
+### Function declaration
+- Loads before any code is executed
 ```js
 // Simple function
 function sayHi() {
   // Do stuff
   var c = 0; // scope: local function
+  // return value is `undefined`
 }
 sayHi(); // call sayHi
 
-// Function with parameter
-function toCelsius(fahrenheit) {
+// Function with 2 parameters with one default
+function toCelsius(fahrenheit, param2 = 'default value') {
     return (5 / 9) * (fahrenheit - 32);
 }
-var c = toCelsius(70);
+var c = toCelsius(70, parmX);
 
+```
+#### Function rename
+- The below works because of [[#Reference passing]]
+```js
+// veryLongFunctionName() is defined before
+const busy = veryLongFunctionName;
+busy();
+busy.name; // Print the original name
+
+const busy = veryLongFunctionName(); // won't work, as we are assigning the value, not the function itself
+```
+### Helper functions
+- Function called within a function
+```js
+function multiplyByNineFifths(number) {
+  return number * (9/5);
+};
+
+function getFahrenheit(celsius) {
+  return multiplyByNineFifths(celsius) + 32;
+};
+
+getFahrenheit(15); // Returns 59
+```
+### Function Expression / Anonymous Function
+- Loads only when the interpreter reach the line
+- Common practice to use `const`
+- Aren't hoisted so need to be declared before use
+	- But have a copy of the local variables from the scope where they are defined
+- Can be used right away, where function declaration need to parse the whole script
+- Can be used as an argument to another function, while function declaration not
+```js
+// Declare an anonymous function
+const calculateArea = function (width, height) {
+	return width * height;
+}
+// Use it
+calculateArea(5,4);
+```
+#### Arrow Function
+- In ES6+
+```js
+// pre-ES6
+var greeting = function() {
+  console.log('Hello World!');  
+};
+
+// ES6
+// zero parameters, no braces (implicit return)
+const greeting = () => console.log('Hello World'); 
+// one parameters, no braces (implicit return)
+const someFunct = param1 => giveBack.something; 
+// 2+ parameters
+const otherFunct = (param1, param2) => { /* do something;*/ return abc;}; 
+```
+### Immediately-Invoked Function Expression
+```js
 // Anonymous self-executing function
 var i = 20;
 (function() {
@@ -263,9 +569,251 @@ var i = 20;
   }
 )();
 ```
-### Generate chars
-Use [Chart.js](https://www.chartjs.org/docs/latest/)
+### High-Order & Callback function
+- A Higher-Order function is a function that
+	- Accepts functions as parameters
+		- Such passed function is called callback function
+	- Return a function
+	- or both
+```js
+const higherOrderFunc = param => {
+  param();
+  return `I just invoked ${param.name} as a callback function!`
+}
+ 
+const anotherFunc = () => {
+  return 'I\'m being invoked by the higher-order function!';
+}
+
+higherOrderFunc(anotherFunc);
+```
+### Factory Function
+- Function to create objects
+```js
+// Define
+const monsterFactory = (name, age, energySource, catchPhrase) => {
+  return { 
+    name: name, // long version
+    age, // property value shorthand (destructuring)
+    energySource,
+    scare() {
+      console.log(catchPhrase);
+    } 
+  }
+};
+
+// Use
+const ghost = monsterFactory('Ghouly', 251, 'ectoplasm', 'BOO!');
+ghost.scare(); // 'BOO!'
+```
+### Destructured Assignment
+- Save time when referring data inside an object
+- Use it with `const { objectKey } = object` will assign to `objectKey` the value of `object.objectKey`
+```js
+// Declaration
+const vampire = {
+  name: 'Dracula',
+  residence: 'Transylvania',
+  preferences: {
+    day: 'stay inside',
+    night: 'satisfy appetite'
+  }
+};
+
+// Usual way of doing it
+const residence = vampire.residence; 
+console.log(residence); // Prints 'Transylvania' 
+
+// Destructured Assignment
+const { residence } = vampire; 
+console.log(residence); // Prints 'Transylvania'
+
+// Even works with propery of an object!
+const { day } = vampire.preferences; 
+console.log(day); // Prints 'stay inside'
+
+// Pass the whole object too at the same time!
+const { preferences } = vampire;
+console.log(preferences.day); // Works too! Print 'stay inside'
+```
 ## Error handling
 - Error line can be misplaced due to parsing
+## Objects & Methods
+- Methods are objects properties containing a function definition
+	- [Codecademy  definition](https://www.codecademy.com/resources/docs/javascript/methods?page_ref=catalog)
+```js
+const car = {
+  make: 'Honda',
+  model: 'Civic',
+  year: 2019,
+  printOut: function () {
+    console.log(this.year + ' ' + this.make + ' ' + this.model);
+  },
+};
+
+car.printOut();
+// Output: 2019 Honda Civic
+
+// Referenced as a property
+var method = car.printOut;
+
+car.year = 2020;
+
+method();
+// Output: undefined undefined undefined;
+// 'this' is being referenced outside an object context
+// can be fixed by explicitly setting the object context with 'bind()'
+
+method = car.printOut.bind(car);
+
+method();
+// Output: 2020 Honda Civic
+```
+### Built-in Objects methods
+- List of Object methods on [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#Methods)
+- `const arrayKey = Object.keys(objName)` return an array of all keys
+- `const arrayName = Object.entries(objName)` return an array of keys & values
+- `const returnedArray = Object.assign(target, source)` copies all properties from source to target
+### Reference passing
+- Variables are passed by reference
+- A mutation of a global variable inside a function will be registered at the global variable
+- Even if the variable name is different
+- No reference on Object copy like `let obj = otherObj;`
+#### Reference in Objects
+- Call by sharing is used
+- Replacement of Object aren't passed along
+```js
+function replace(ref) {
+    ref = {};           // this code does _not_ affect the object passed
+}
+
+function update(ref) {
+    ref.key = 'newvalue';  // this code _does_ affect the _contents_ of the object
+}
+
+var a = { key: 'value' };
+replace(a);  // a still has its original value - it's unmodfied
+update(a);   // the _contents_ of 'a' are changed
+
+```
+- Update of the Object are passed along
+```js
+let spaceship = {
+  'Fuel Type' : 'Turbo Fuel',
+  homePlanet : 'Earth'
+};
+
+// Write your code below
+let greenEnergy = obj => {
+  obj['Fuel Type'] = 'avocado oil';
+};
+
+let remotelyDisable = obj => {
+	obj.disabled = true;
+}
+
+greenEnergy(spaceship); // update the spaceship object
+remotelyDisable(spaceship); // update the spaceship object too
+```
+### Data Type
+#### Number
+- [Mozilla documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
+#### String
+- [Mozilla documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
+```js
+'This is a string'.length // Number of characters
+'This is a string'.toUpperCase(); // Transform
+'This is a string'.startsWith('T'); // Test to true
+'  This is a string  '.trim(); // Remove whitespace
+```
+#### Array
+##### Iterators
+- For looping, instead of using [[#For]], iteration methods / iterators can be used
+- Iterators: methods to manipulate elements and return values
+- Full list [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#instance_methods)
+###### ForEach
+- Execute the same code for each array element
+```js
+onst artists = ['Picasso', 'Kahlo', 'Matisse', 'Utamaro'];
+// Long version
+artists.forEach (
+	function(artist) {
+		console.log(artist + ' is one of my favorite artists.');
+	}
+)
+// Short version
+artists.forEach(artist => {
+  console.log(artist + ' is one of my favorite artists.');
+});
+
+// artists is the identifier
+// forEach is the iterator
+// (...) is the callback function
+```
+###### Map
+- Pass each element of an array inside a defined function
+- Returns a new array
+```js
+const numbers = [1, 2, 3, 4, 5];
+const squareNumbers = numbers.map(number => {
+  return number * number;
+});
+console.log(squareNumbers);
+```
+###### Filter
+- Test each element if they match the function, and copy them to a new array if `true`
+- Returns a new array
+```js
+const things = ['desk', 'chair', 5, 'backpack', 3.14, 100];
+const onlyNumbers = things.filter(thing => {
+  return typeof thing === 'number';
+});
+console.log(onlyNumbers);
+```
+###### FindIndex
+- Find the location of an element in the array
+- Returns the first element that evaluate to `true`
+- Returns `-1` if nothing is found
+```js
+const jumbledNums = [123, 25, 78, 5, 9]; 
+const lessThanTen = jumbledNums.findIndex(num => {
+  return num < 10;
+}); // lessThanTen returns 3
+```
+###### Reduce
+- Returns a single value after iterating through the array
+```js
+const numbers = [1, 2, 4, 10];
+const summedNums = numbers.reduce((accumulator, currentValue) => {
+  return accumulator + currentValue
+}, 100) // second argument of the reduce() function, which is the initial value
+console.log(summedNums) // Output: 17
+```
+### Interaction
+```js
+console.log(5); // print 5 to console
+```
+### Mathematics
+- [Mozilla documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
+```js
+Math.random(); // Random number between 0 (inclusive) and 1 (exclusive)
+Math.floor(); // Round to nearest whole number
+```
+## Classes
+- Quickly produce similar Objects
+### Constructor
+- Is a function called every time a new instance of a class
+- Must use `this`
+```js
+class Dog {
+  constructor(name) {
+    this.name = name;
+    this.behavior = 0;
+  }
+}
+
+```
 ## Reference
 - ServiceNow - Learn Javascript on the Now Platform
+- [Codecademy - Learn JavaScript](https://www.codecademy.com/learn/introduction-to-javascript)
+- [Codecademy - Learn Intermediate JavaScript](https://www.codecademy.com/courses/learn-intermediate-javascript/)
