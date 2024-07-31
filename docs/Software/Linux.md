@@ -155,6 +155,7 @@ sudo ln -s /opt/software_name/executable /usr/bin/executable # create a simlink
 * `find / -name filename` to find *filename* in entire system (/) or active folder (.), and `sudo` to avoid permissions problems
 * `cp -a` to copy everything (`-Archive`)
 * `find /path/to/folder -name "thing to search"` to find something
+* Edit a text file on GUI: `mousepad`
 #### Virtual Systems: Mount QCoW2
 1. `sudo apt install libguestfs-tools` to install required tool
 1. `sudo guestmount -a /var/lib/libvirt/images/IMAGE.qcow2 -m DEVICE --ro /mnt/FOLDER`

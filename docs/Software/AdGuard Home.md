@@ -57,6 +57,7 @@ uci commit dhcp
 #### Notes on upgrade
 - Configuration lives in `/etc/adguardhome.yaml`
 - After a `sysupgrade`, no DNS request will be processed
+	- Needs to configure DNS port back to 53
 - AdGuard needs to be reinstalled but old settings will persists 
 ### [[Oracle Cloud]]
 - Check the [excellent tutorial here](https://jmcglock.substack.com/p/installing-adguard-home-on-oracle)

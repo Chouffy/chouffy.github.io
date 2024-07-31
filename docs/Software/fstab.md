@@ -10,6 +10,8 @@ Is a [[Linux]] system configuration file read by the `mount` command to determin
 	- Options
 	- Dumping ≈ outdated method of backup for cases when the system went down.  You should leave this as “0”.
 	- Passing = 1 to do `fsck` on mount, 0 otherwise
+- In Debian, fstab mounts are converted into [[systemd]] units
+	- Use `systemctl daemon-reload`, then `mount -a`
 ### Options
 - `auto` / `noauto`
 	- Specify whether the partition should be automatically mounted on boot.  You can block specific partitions from mounting at boot-up by using “noauto”.

@@ -10,5 +10,7 @@ Is a [[Software]] to [[stream desktop software]], similar to [[Nvidia GameStream
 ### Configure resolution automatically
 - Use [[NirCmd]] ![[NirCmd#Set the display to a specific resolution]]
 - With this command to be set in Configuration → General → Command Preparations: `cmd /C path\to\nircmd-x64\nircmd.exe setdisplay %SUNSHINE_CLIENT_WIDTH% %SUNSHINE_CLIENT_HEIGHT% 32 %SUNSHINE_CLIENT_FPS%`
+### Configure DPI automatically
+- Use [SetDPI](https://github.com/imniko/SetDPI)
 ## [[iOS]]
-- Custom [[Screen Resolution]] like iPad in 4:3 needs to be created in graphic driver
+- Custom [[Screen Resolution]] like iPad in 4:3 needs to be created in graphic driver, otherwise Sunshine will crash

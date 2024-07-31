@@ -2,10 +2,11 @@
 aliases: JS
 ---
 Is a [[programming language]] that is core of [[Web]].
-## Setup
-* [Install NodeJS on Ubuntu](https://github.com/nodesource/distributions/blob/master/README.md)
 ## Overview
 - Case-sensitive
+- Whitespace insensitive
+	- `fetch (something)` ===  `fetch(something)`
+	- New Line can be input everywhere
 - Semi-colons
 	- Mandatory when it's not clear for the language where a new statement starts (example: no new line)
 	- Much better to have them everywhere
@@ -66,6 +67,9 @@ run();
 	- `var` create a property on the global object but not `let`
 - Redeclaration
 	- In strict mode, `let` can be re-declared
+### Get a value from Web browser
+- In the [[HTML]]: `<input type="text" id="input" value="">`
+- In the JS: `const inputField = document.querySelector('#input');`
 ## Operations
 ### Mathematics
 - `+` or `-`
@@ -84,7 +88,7 @@ run();
 - `\\` backslash (that is different than `/` forward slash)
 #### String interpolation
 - Template literal is wrapped by backticks
-- Placeholder is like `${placeHolder}` 
+- Placeholder is like `${placeHolder}`, `${someArray[0]` or `${await placeHolder}` 
 ```js
 const myPet = 'armadillo';
 console.log(`I own a pet ${myPet}.`);
@@ -470,8 +474,6 @@ const person = {
 };
 person.age = 20;
 ```
-#### Factory functions
-
 ## Functions
 - Are also [[#Objects & Methods|Objects]], hence can have properties & methods
 	- `exampleFunction.name` to print the name of the function as it was created ([Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name))
@@ -636,8 +638,281 @@ console.log(day); // Prints 'stay inside'
 const { preferences } = vampire;
 console.log(preferences.day); // Works too! Print 'stay inside'
 ```
-## Error handling
-- Error line can be misplaced due to parsing
+### Function Chaining
+- Example in [[#Promises]] ![[#^be854a]]
+### Promises
+- Object that represent the eventual outcome of an asynchronous operation
+- Can have state
+	- `pending`: initial state, operation isn't completed yet
+	- `fulfilled`: operation successful, resolved value available
+	- `rejected`: operation failed, failure reason available
+- Default function
+	- `resolve()` change status to Fulfilled
+	- `reject()` change status to Rejected
+- Simple example
+```js
+const executorFunction = (resolve, reject) => {
+ if (someCondition) {
+     resolve('I resolved!');
+ } else {
+     reject('I rejected!'); 
+ }
+}
+const myFirstPromise = new Promise(executorFunction);
+```
+- Example with [[Node.js#^98fbc5]] `setTimeout()` and with a function that wrap around the Promise
+```js
+const returnPromiseFunction = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(( ) => {resolve('I resolved!')}, 1000);
+  });
+};
+
+const prom = returnPromiseFunction();
+```
+#### Then
+- `.then()` handle the result of a promise (both success & failure)
+```js
+let prom = new Promise((resolve, reject) => {
+  let num = Math.random();
+  if (num < .5 ){
+    resolve('Yay!');
+  } else {
+    reject('Ohhh noooo!');
+  }
+});
+
+// Sucess handler function
+const handleSuccess = (resolvedValue) => {
+  console.log(resolvedValue);
+};
+
+// Failure handler function
+const handleFailure = (rejectionReason) => {
+  console.log(rejectionReason);
+};
+
+prom.then(handleSuccess, handleFailure);
+```
+- `.then()` can be chained for a cleaner code
+```js
+prom
+ .then((resolvedValue) => {
+   console.log(resolvedValue);
+ })
+ .then(null, (rejectionReason) => {
+   console.log(rejectionReason);
+ });
+```
+
+	^be854a
+#### Catch
+- `.catch()` can be used instead of using `.then(null, handleFailure)`
+```js
+prom
+ .then((resolvedValue) => {
+   console.log(resolvedValue);
+ })
+ .catch((rejectionReason) => {
+   console.log(rejectionReason);
+ });
+```
+#### Composition
+- Chain promises together in a structured way
+- Do use composition, don't use function nesting
+- Do a `return` at every promise, this doesn't throw an error
+```js
+firstPromiseFunction()
+.then((firstResolveVal) => {
+  return secondPromiseFunction(firstResolveVal);
+})
+.then((secondResolveVal) => {
+  console.log(secondResolveVal);
+});
+```
+#### Promise.all()
+- Accept an array of promises and returns a single promise
+- If every promise resolves, returns an array with resolve value from each promises
+- If any promise rejects, fail fast: immediately reject with the reason that promise rejected
+```js
+let myPromises = Promise.all([returnsPromOne(), returnsPromTwo(), returnsPromThree()]);
+
+myPromises
+  .then((arrayOfValues) => {
+    console.log(arrayOfValues);
+  })
+  .catch((rejectionReason) => {
+    console.log(rejectionReason);
+  });
+
+```
+### Async Await
+- Introduced in ES8
+- Returns a [[#Promises]], so `then` and `catch` are available
+	- If nothing is returned from the function, return a promise with value `undefined`
+	- If a non-promise value is returned from the function, return a promise resolved to that value
+	- If a promise is returned from the function, return that promise
+#### Async
+```js
+// Function declaration
+async function myFunc() {
+  // Function body here
+  return 'something';
+};
+
+// Function expression
+const myFunc = async (param1, param2) => {
+// const myFunc = async param1 => { // with one parameter
+  // Function body here
+  return 'something';
+};
+
+myFunc();
+```
+#### Await
+- Returns resolved value of a promise
+- Await halt execution of the `async` function
+- Can only be used in `async` function
+- Logic reads like synchronous code
+```js
+async function asyncFuncExample(){
+  let resolvedValue = await myPromise();
+  console.log(resolvedValue);
+}
+
+asyncFuncExample(); // Prints: I am resolved now!
+```
+#### Chained Await
+- Code just like in synchronous
+```js
+async function asyncAwaitVersion() {
+  let firstValue = await returnsFirstPromise();
+  console.log(firstValue);
+  let secondValue = await returnsSecondPromise(firstValue);
+  console.log(secondValue);
+}
+```
+#### Try Catch for Await
+- Catch synchronous & async errors
+- See [[#Try Catch]]
+```js
+async function usingTryCatch() {
+ try {
+   let resolveValue = await asyncFunction('thing that will fail');
+   let secondValue = await secondAsyncFunction(resolveValue);
+ } catch (err) {
+   // Catches any errors in the try block
+   console.log(err);
+ }
+}
+
+usingTryCatch();
+```
+- As Async are still promises, we can use the native [[#Catch]]
+```js
+async function usingPromiseCatch() {
+   let resolveValue = await asyncFunction('thing that will fail');
+}
+
+let rejectedPromise = usingPromiseCatch();
+rejectedPromise.catch((rejectValue) => {
+console.log(rejectValue);
+})
+```
+#### Parallel/Concurrent Await
+- Don't use await in the variable declaration, but when using it
+```js
+async function waiting() {
+ const firstValue = await firstAsyncThing();
+ const secondValue = await secondAsyncThing();
+ console.log(firstValue, secondValue);
+}
+
+async function concurrent() {
+ const firstPromise = firstAsyncThing();
+ const secondPromise = secondAsyncThing();
+ console.log(await firstPromise, await secondPromise);
+ console.log(`This: ${await firstPromise} is the 1st promise`)
+}
+```
+#### Await Promise.all
+- Similar to [[#Promise.all()]]
+```js
+async function asyncPromAll() {
+  const resultArray = await Promise.all([asyncTask1(), asyncTask2(), asyncTask3(), asyncTask4()]);
+  for (let i = 0; i<resultArray.length; i++){
+    console.log(resultArray[i]); 
+  }
+}
+```
+### Requests
+- [Codecademy](https://www.codecademy.com/resources/docs/javascript/requests) Documentation
+#### Synchronous Fetch() GET
+- Create a request object, send it to the API and return a [[#Promises]]
+- Documentation on [MDN](https://developer.mozilla.org/en-US/docs/Web/API/fetch) 
+```js
+fetch('https://api-to-call.com/endpoint')
+.then(response => {
+	if(reponse.ok) { return response.json(); } // convert response to JSON if OK is truthy
+	throw new Error('Request failed!');
+}, networkError => console.log(networkError.message)
+).then(jsonResponse => {
+	// do something
+});
+```
+#### Synchronous Fetch() POST
+```js
+fetch('https://api-to-call.com/endpoint', {
+	method: 'POST',
+	body: JSON.stringify({id: '200'})
+})
+.then(response => {
+	if(reponse.ok) { return response.json(); } // convert response to JSON if OK is truthy
+	throw new Error('Request failed!');
+}, networkError => console.log(networkError.message) // no ;
+).then(jsonResponse => {
+	// do something
+});
+```
+#### Async Fetch() Get
+```js
+const getData = async () => {
+	try {
+		const response = await fetch('http://endpoint');
+		if(reponse.ok) {
+			const jsonResponse = await reponse.json();
+			// code to execute with jsonResponse
+		}
+		throw new Error('Request failed!');
+	} catch (error) {
+		console.log(error);
+	}
+}
+```
+#### Async Fetch() POST
+```js
+const getData = async () => {
+	try {
+		const response = await fetch('http://endpoint', {
+			method: 'POST',
+			body: JSON.stringify({id: 200})
+			header: {
+			  'Content-type': 'application/json',
+			  'apikey': apiKey // apiKey is a variable
+			}
+		});
+		if(reponse.ok) {
+			const jsonResponse = await reponse.json();
+			// code to execute with jsonResponse
+		}
+		throw new Error('Request failed!');
+	} catch (error) {
+		console.log(error);
+	}
+}
+```
+### [[JavaScript Object Notation|JSON]] in [[JavaScript]]
+- Use `JSON.stringify` to make a string our of data - [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) documentation
 ## Objects & Methods
 - Methods are objects properties containing a function definition
 	- [Codecademy  definition](https://www.codecademy.com/resources/docs/javascript/methods?page_ref=catalog)
@@ -792,6 +1067,7 @@ console.log(summedNums) // Output: 17
 ### Interaction
 ```js
 console.log(5); // print 5 to console
+console.log(varA, varB) // print the content of varA, space, varB
 ```
 ### Mathematics
 - [Mozilla documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
@@ -799,21 +1075,185 @@ console.log(5); // print 5 to console
 Math.random(); // Random number between 0 (inclusive) and 1 (exclusive)
 Math.floor(); // Round to nearest whole number
 ```
+### Error (Object)
+- Useful to convey non-standard errors
+#### Create an error
+- Will continue the program
+```js
+console.log(Error('Your password is too weak.'));
+console.log(new Error('Your password is too weak.'));
+// Prints: Error: Your password is too weak.
+```
+#### Throw an error
+- Will halt the program
+```js
+throw Error('Something wrong happened');
+// Error: Something wrong happened
+
+console.log('This will never run');
+```
+#### Try Catch
+- If an error is `throw`, `catch` will execute
+```js
+try {
+  throw Error('This error will get caught');
+  // `throw` isn't mandatory, `catch` also works with built-in JS
+} catch (e) {
+  console.log(e);
+}
+// Prints: This error will get caught
+
+console.log('The thrown error that was caught in the try...catch statement!');
+// Prints: 'The thrown error that was caught in the try...catch statement!'
+```
 ## Classes
-- Quickly produce similar Objects
+- Quickly produce similar Object
 ### Constructor
 - Is a function called every time a new instance of a class
-- Must use `this`
+- Must use `this` to define properties
 ```js
 class Dog {
   constructor(name) {
-    this.name = name;
-    this.behavior = 0;
+    this._name = name;
+    this._behavior = 0;
   }
 }
-
 ```
+### Methods
+- Similar as [[#Objects]] but there cannot be commas `,` between methods
+```js
+class Dog {
+  constructor(name) {
+	  // see above
+  }
+
+  // Getter
+  get name() {
+    return this._name;
+  }
+  get behavior() {
+    return this._behavior;
+  }
+
+  // Method
+  incrementBehavior() {
+    this._behavior++;
+  }
+}
+```
+### Instance
+- Instance contains the property names & method of the class, but with unique property value
+```js
+const halley = new Dog('Halley'); // Create new Dog instance
+console.log(halley.name); // Log the name value saved to halley
+// Output: 'Halley'
+```
+### Methods calls
+```js
+let nikko = new Dog('Nikko'); // Create dog named Nikko
+nikko.incrementBehavior(); // Add 1 to nikko instance's behavior
+let bradford = new Dog('Bradford'); // Create dog name Bradford
+console.log(nikko.behavior); // Logs 1 to the console
+console.log(bradford.behavior); // Logs 0 to the console
+```
+### Class inheritance
+- (sub)Class can inherit from parent class (the superclass)
+- All parent properties & methods are available to the subclass
+```js
+// let Animal a class defined above, similar to Dog
+class Cat extends Animal {
+  constructor(name, usesLitter) {
+    super(name); // Call the constructor of the parent class with same set of parameter than defined in the parent constructor
+    this._usesLitter = usesLitter;
+  }
+  
+  get usesLitter() {
+    return this._usesLitter;
+  }
+}
+```
+### Static Methods
+- Methods that can be called at the class level, but not in individual instances
+- Example: `Date.now()`
+```js
+class Animal {
+  constructor(name) {
+    this._name = name;
+    this._behavior = 0;
+  }
+    
+  static generateName() {
+    const names = ['Angel', 'Spike', 'Buffy', 'Willow', 'Tara'];
+    const randomNumber = Math.floor(Math.random()*5);
+    return names[randomNumber];
+  }
+} 
+
+// Usage
+console.log(Animal.generateName()); // returns a name
+const tyson = new Animal('Tyson'); 
+tyson.generateName(); // TypeError 
+```
+## Runtime Environment
+- [[Web]] browser like [[Mozilla Firefox|Firefox]] or [[Chromium]]
+### [[Node.js]]
+* [Install NodeJS on Ubuntu](https://github.com/nodesource/distributions/blob/master/README.md)
+## Coding errors
+- Error line can be misplaced due to parsing
+### Error Types
+- `SyntaxError`: a typo create a code that cannot be interpreted by the compiler
+- `ReferenceError`: the variable doesn't exist
+- `TypeError`: Operation requested on the wrong type
+- More on the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error)
+### Debugging with console log
+- Print out all starting variables, existing values, arguments
+- At the next piece of logic, print out updated values to check them
+## Modules
+- Pieces of scripts that can be reused
+- Import
+	- See [[Node.js#Import JavaScript Modules]]
+	- ES6 uses `import`/`export` syntax
+		- See [Codecademy course](https://www.codecademy.com/courses/learn-intermediate-javascript/articles/implementing-modules-using-es-6-syntax)
+## Concepts
+### Currying
+- See [Codecademy - Currying in JavaScript](https://www.codecademy.com/courses/learn-intermediate-javascript/articles/javascript-currying)
+### Design Patterns
+- See [Codecademy - Design Patterns](https://www.codecademy.com/courses/learn-intermediate-javascript/articles/javascript-design-patterns)
+- 3 purposes-built categories:
+- Creational (or instanciated)
+	- [[#Factory Function]]
+	- Singleton
+		- 1 instance of a [[#Classes|class]]
+		- Shared ressource with a single point of access
+		- In constructor, check for existing class and return `this` if already exist
+	- Abstract Factory
+	- Constructor
+	- Prototype
+- Structural
+	- *Relationship between objects*
+	- Facade
+		- Single class that takes all of the complexity of the subsystem and hide it
+		- Used in microservices
+	- Proxy
+		- Protect access to an object by acting as a placeholder that intercept and redefine the operation
+		- Built-in handler called `traps` to call the target object
+		- Used alongside with `Reflect` object
+	- Flyweight
+	- Adapter
+	- Decorator
+	- Composite
+	- Bridge
+- Behavioral
+	- *Messages between unrelated objects by delegating how objects can communicate, and encapsulate communication behavior to decouple messages between senders & receivers*
+	- Iterator
+	- Mediator
+		- Central interface to encapsulate how different parts of code can communicate with each other
+		- Prevents direct relationship between classes
+	- Observer
+		- 1+ object can "subscribe" to the changes made to another object
+	- Visitor
 ## Reference
 - ServiceNow - Learn Javascript on the Now Platform
 - [Codecademy - Learn JavaScript](https://www.codecademy.com/learn/introduction-to-javascript)
 - [Codecademy - Learn Intermediate JavaScript](https://www.codecademy.com/courses/learn-intermediate-javascript/)
+- [Youtube -  What the heck is the event loop anyway? | Philip Roberts | JSConf EU](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
