@@ -1,7 +1,9 @@
 Is an [[Operating System]] made by [[Apple]], based [[OpenBSD]].
 ## Setup
-* Install MacOS from USB drive: [Apple Guide](https://support.apple.com/en-us/HT201372)
-* Install MacOS in VirtualBox: [Script on GitHub](https://github.com/myspaghetti/macos-virtualbox/)
+* Install MacOS
+	* From USB drive: [Apple Guide](https://support.apple.com/en-us/HT201372)
+	* In VirtualBox: [Script on GitHub](https://github.com/myspaghetti/macos-virtualbox/)
+	* On [[Docker]]: [Docker-OSX](https://github.com/sickcodes/Docker-OSX)
   * To change screen resolution: `VBoxManage setextradata "vm_name" "VBoxInternal2/EfiGraphicsResolution" "resolution"`
   * Supported resolutions: `5120x2880  2880x1800  2560x1600  2560x1440  1920x1200  1600x1200  1680x1050  1440x900   1280x800   1024x768   640x480`
   * For audio, *OpenCore bootloader could solve issue*

@@ -13,8 +13,7 @@ Is a [[Linux]] [[Operating System]] running on phones and tablets.
 	    * Require to give permission via adb: `adb shell pm grant com.jpwolfso.privdnsqt android.permission.WRITE_SECURE_SETTINGS`
 * System
     * [App Manager](https://muntashirakon.github.io/AppManager/) to enable/disable apps and launch hidden activities
-* Multimedia
-	* [Oto Music](https://play.google.com/store/apps/details?id=com.piyush.music) - to test
+    * [Fake Traveler](https://github.com/mcastillof/FakeTraveler) to mock the GPS location
 ### Remote control from PC using [scrpy](https://github.com/Genymobile/scrcpy)
 Useful keyboard shortcuts:
 

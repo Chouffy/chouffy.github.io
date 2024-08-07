@@ -110,6 +110,10 @@ A workaround is to create a group, then assign the user to it:
 * Manage a service: `net <start/stop> servicename`
 * Scheduled task: run a task on-demand - `schtasks /Run /TN "task name"`
 * If a service is run as `SYSTEM`, the `%USERPROFILE%\` will be located at `%WINDIR%\System32\config\systemprofile\`
+## Remote Desktop Connection
+- Reduce latency
+	- Edit the required parameters in Group Policy → Computer → Administrative → Windows Components → Remote Desktop Services → Remote Desktop Session Host → Remote Session Environment
+	- Edit the registry with [those recommended settings](https://github.com/Upinel/BetterRDP/) (also here [[UpinelBetterRDP - Edit.reg]])
 ## Start a software
 * Start a UWP app: `start shell:AppsFolder\Microsoft.Windows.Photos_8wekyb3d8bbwe!App` and replace name with UWP name in `.\AppData\Local\Packages\` - [Source](https://stackoverflow.com/questions/13257571/call-command-vs-start-with-wait-option)
 * Do not close automatically: `Cmd /k`
