@@ -10,10 +10,12 @@ Is a [[Linux]] [[Software]] that can be used to send & receive [[infrared]] comm
 	- A [[PN2222 Transistor]] + [[Resistor]] can be used to drive more power according to this [schema](https://www.instructables.com/Creating-a-Raspberry-Pi-Universal-Remote-With-LIRC/)
 ### IR Receiver
 - Has 3 pin, when looking at the window (`VS1838B`)
-	- Left: Data → Raspberry Pi GPIO
+	- Left: Data → [[Raspberry Pi#GPIO]]
 	- Middle: Ground → Ground
 	- Right: Power → 3.3v
-- Sur mon montage → Ground = Pin 9
+- When I'm using it on [[Raspberry Pi]] 1
+	- Ground = Pin 9
+	- Data = Pin 11 (GPIO17)
 ## [[Software]] with [[Raspberry Pi]]
 ### Receiver setup
 [Source](https://www.instructables.com/Setup-IR-Remote-Control-Using-LIRC-for-the-Raspber/), assuming IR Receiver on GPIO 17

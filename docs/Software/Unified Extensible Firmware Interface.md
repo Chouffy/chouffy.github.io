@@ -7,7 +7,8 @@ Is a set of specification & [[Software]] platform that is used to boot and inter
 - Boot Order Lock also lock book order and shim selection
 ### USB Key preparation
 - In [[Rufus]], prepare a non-bootable MBR FAT32 key
-- Then copy the required files, for example from [[Clonezilla]]
+- Copy the required files, for example from [[Clonezilla]]
+- Boot of `USB HDD`
 ## UEFI Shell
 - Works similarly to a bash shell
 - The bootloader is searching for `/EFI/BOOT/bootx64.efi` by default ^333cb0

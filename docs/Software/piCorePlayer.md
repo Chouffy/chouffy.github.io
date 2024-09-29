@@ -30,6 +30,8 @@ It is based on:
 3. Send the package to your [[piCorePlayer|pCP]]
 	1. Place it in `/mnt/mmcblk0p2/tce/optional/`
 	2. Change `/mnt/mmcblk0p2/tce/onboot.lst` and add your package `firmware-bluetooth-rtl8761bu.tcz` on top
+##  [[infrared|Infrared control]]
+- [[Linux Infrared Remote Control]] can be used to control devices via IR
 ## Usage
 - [[Secure Shell Protocol|SSH]]: `tc:piCore` by default, can be changed when Beta is activated, Main page → Security
 	- Set up passwordless login: follow [[Secure Shell Protocol#Create keys]]

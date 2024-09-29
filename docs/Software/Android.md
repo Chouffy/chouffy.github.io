@@ -39,5 +39,6 @@ Keys | Usage
 - `adb pull path-of-app` to extract the apk
 ## Reverse engineering
 ### Decompiling APK
-This blog post has some good suggestions.
+- [This blog post](https://yasoob.me/posts/reverse-engineering-android-apps-apktool/) has some good suggestions using `apktool`
 * [JADX](https://github.com/skylot/jadx) Dex to Java decompiler
+	* [Online version](http://www.javadecompilers.com/apk)

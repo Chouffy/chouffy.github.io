@@ -120,6 +120,16 @@ entities:
 * Use Developer Tools → Services and Template to try out
 ### Statistics
 - [How to fix statistic data - Forum post](https://community.home-assistant.io/t/how-to-fix-statistics-data-e-g-energy-data/360966)
+#### Clean the Statistics/Recorder database
+Using the [[Secure Shell Protocol|SSH]] add-on:
+```sh
+cd ~/config
+sqlite3 home-assistant_v2.db
+.header on
+.mode column
+.width 50, 10,
+SELECT states_meta.entity_id as Entity, count(states.metadata_id) as Count FROM states INNER JOIN states_meta ON states.metadata_id = states_meta.metadata_id GROUP BY states.metadata_id ORDER BY count(states.metadata_id) DESC LIMIT 30;
+```
 ### Templates
 "allows creating entities which derive their values from other data."
 - [Templating documentation](https://www.home-assistant.io/docs/configuration/templating/)
