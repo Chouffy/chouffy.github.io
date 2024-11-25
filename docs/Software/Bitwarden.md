@@ -2,7 +2,7 @@
 aliases:
   - Vaultwarden
 ---
-Is a [[password manager]], alternative to [[KeePass]]
+Is a [[Software]] [[password manager]], alternative to [[KeePass]]
 ## Server Setup
 ### Official server
 - [GitHub](https://github.com/bitwarden/server)

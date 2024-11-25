@@ -1,0 +1,59 @@
+Windows Registry Editor Version 5.00
+
+;BetterRDP Optimization Settings
+;Backup your current registry settings before applying this file.
+
+;Allow GPU and RemoteFx during RDP sessions.
+;Ensure RDP is using graphics acceleration for a better visual experience.
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services]
+"SelectTransport"=dword:00000000
+"fEnableRemoteFXAdvancedRemoteApp"=dword:00000001
+"MaxCompressionLevel"=dword:00000002
+"VisualExperiencePolicy"=dword:00000001
+"GraphicsProfile"=dword:00000002
+
+
+;Optimize the capture frame rate for RDP sessions to achieve 60 FPS.
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services]
+"VGOptimization_CaptureFrameRate"=dword:0000003c
+
+;Optimize the compression ratio for improved image quality over RDP.
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services]
+;"VGOptimization_CompressionRatio"=dword:00000002
+;"ImageQuality"=dword:00000003
+
+;Sets the flow control for Display vs Channel Bandwidth.
+;Tailor the bandwidth settings for RemoteFX devices, including controllers.
+;Source:https://www.reddit.com/r/killerinstinct/comments/4fcdhy/an_excellent_guide_to_optimizing_your_windows_10/
+;[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\TermDD]
+;"FlowControlDisable"=dword:00000001
+;"FlowControlDisplayBandwidth"=dword:0000010
+;"FlowControlChannelBandwidth"=dword:0000090
+;"FlowControlChargePostCompression"=dword:00000000
+
+;Increase system responsiveness by adjusting foreground vs background tasks priority.
+;Source:https://www.reddit.com/r/killerinstinct/comments/4fcdhy/an_excellent_guide_to_optimizing_your_windows_10/
+;[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile]
+;"SystemResponsiveness"=dword:00000000
+
+;Sets the interval for desktop composition (DWM) - 60 FPS.
+;Source: https://support.microsoft.com/en-us/help/2885213/frame-rate-is-limited-to-30-fps-in-windows-8-and-windows-server-2012-r
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations]
+"DWMFRAMEINTERVAL"=dword:0000000f
+
+;Remove artificial latency delays in RDP.
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp]
+"InteractiveDelay"=dword:00000000
+
+;Disable bandwidth throttling to potentially improve network performance.
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters]
+"DisableBandwidthThrottling"=dword:00000001
+
+;Enabling Large MTU packets can improve network performance.
+;"DisableLargeMtu"=dword:00000000
+
+; This setting is optional and affects the display driver model used in RDP sessions.
+; Uncomment the following lines if you wish to use XDDM drivers on Nvidia cards.
+; Note: May not be beneficial for AMD cards or certain configurations.
+;[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services]
+;"fEnableWddmDriver"=dword:00000001

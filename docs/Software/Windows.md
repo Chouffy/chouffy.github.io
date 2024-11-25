@@ -39,6 +39,9 @@ Run `OOBE\BYPASSNRO` in command line (`Shift + F10`)
 	- `\linkdir` is the directory/file where the link will be created
 	- `\referedDirectory` is the referred directory/file (already existing)
 		- Doesn't work in UNC
+#### Clean `WinSxS` folder
+* Use the *Disk Clean-Up* feature
+- `Dism.exe /online /Cleanup-Image /StartComponentCleanup /ResetBase` according to [this](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/clean-up-the-winsxs-folder?view=windows-11#use-the-resetbase-switch-with-the-startcomponentcleanup-parameter)
 ### Media
 - Reset video driver: `Win + Ctrl + Shift + B`
 - Set an application as High DPI aware programmatically [with a reg edit](https://superuser.com/questions/1230346/overriding-high-dpi-scaling-from-the-command-line/1230356#1230356)

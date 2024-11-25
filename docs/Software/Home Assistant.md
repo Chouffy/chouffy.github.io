@@ -3,7 +3,7 @@ Is an [[Home automation]] [[Software|platform]], runs on [[Python]]
 ### [[Proxmox]]
 - This scrip helps to set up a VM: `bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/vm/haos-vm.sh)"`
 ### [[Raspberry Pi]]
-- Raspberry Pi 2 images are still present in GitHub [releases](https://github.com/pajikos/sms-gammu-gateway)
+- Raspberry Pi 2 images are still present in GitHub releases
 ### [[Ubuntu]] [[Kernel-based Virtual Machine|KVM]]
 1. Download the image [here](https://www.home-assistant.io/installation/linux)
 1. Decompress `xz --decompress FILE`
@@ -119,6 +119,7 @@ entities:
 * Get an attribute value with a space: use `{{ states.sensor.abc.attributes["X Y Z"] }}`
 * Use Developer Tools → Services and Template to try out
 ### Statistics
+- Energy statistics can be corrected in Developer tools → Statistics → Adjust sum
 - [How to fix statistic data - Forum post](https://community.home-assistant.io/t/how-to-fix-statistics-data-e-g-energy-data/360966)
 #### Clean the Statistics/Recorder database
 Using the [[Secure Shell Protocol|SSH]] add-on:
@@ -137,6 +138,9 @@ SELECT states_meta.entity_id as Entity, count(states.metadata_id) as Count FROM 
 ### Monitor for broken automation
 - Names can changes when updating Home Assistant
 - [The Watchman](https://github.com/dummylabs/thewatchman) create reports to identify broken things
+### Energy
+- Several energy sources can be defined, each coupled with a cost
+- Fixed-cost can be defined as 
 ## Development
 ### Verbose logging
 - The [Logger integration](https://www.home-assistant.io/integrations/logger/) can help understanding what's going on in [[Home Assistant]] or a custom component

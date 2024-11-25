@@ -35,7 +35,7 @@ meta name="viewport" content="width=device-width, initial-scale=1.0">
 | ------ | --------------- | ----------------------------- |
 | `br/`  | break           | new line                      |
 | `chr/` | horizontal rule | horizontal line               |
-| `hX`   | header          | with `X` from 1 to 6            |
+| `hX`   | header          | with `X` from 1 to 6          |
 | `p`    | paragraph       | to be used for each paragraph |
 | `a`    | link            | see below                     |
 | `u`    | underline       |                               |

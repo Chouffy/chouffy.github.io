@@ -71,3 +71,6 @@ tasklist /fi "ImageName eq MyApp.exe" /fo csv 2>NUL | find /I "myapp.exe">NUL
 if "%ERRORLEVEL%"=="0" echo Program is running
 if "%ERRORLEVEL%"=="1" echo Program isn't running
 ```
+
+## Reference
+- [SS64 CMD Reference](https://ss64.com/nt/)
