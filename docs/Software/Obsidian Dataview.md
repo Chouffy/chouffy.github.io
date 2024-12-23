@@ -43,6 +43,7 @@ Are done in a thing similar to [[SQL]]
 	- `from #tag`
 	- `from "folder/sub"`
 	- `from [[noteA]]` all notes with links coming into `noteA` 
+		- `from [[]]` is the self note
 	- `from outgoing([[noteA]])` all notes with links coming out of (leaving) `noteA`
 	- Operators
 		- And: `from #a and #b`
@@ -89,6 +90,6 @@ GROUP BY "Task: " +
 
 ## Ressources
 - [An Introduction to Dataview - Part 1](https://www.youtube.com/watch?v=sEgzrRNkgsE)
-- [# An Introduction to Dataview - Part 2](https://www.youtube.com/watch?v=jW5pD4SioFM)
+- [An Introduction to Dataview - Part 2](https://www.youtube.com/watch?v=jW5pD4SioFM)
 ### Examples
 - [Make a query for meetings within a project](https://youtu.be/JTObSymEvWA?t=557)

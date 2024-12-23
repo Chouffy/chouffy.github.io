@@ -15,6 +15,7 @@ Links:
 - Follow [this guide](https://openwrt.org/docs/guide-user/virtualization/virtualbox-vm) to install on [[VirtualBox]]
 - After LAN setup, the LUCi interface is available on `192.168.56.2`
 ## Software
+- Build custom builds using [OpenWrt ASU](https://github.com/openwrt/asu)
 - Additional packets
 	- It uses [[LuCI]] as the user front-end
 	- You can use [[iPerf]] to measure performance

@@ -68,3 +68,5 @@ If using [[Let's Encrypt]], use:
 ## Custom Filtering rules
 - See [documentation](https://github.com/AdguardTeam/AdGuardHome/wiki/Hosts-Blocklists#client)
 - Possibility of combining several rules, like `||something.local.net^$client=192.168.0.0/24,dnsrewrite=192.168.0.1`
+### Block local addresses being resolved in [[IPv6]]
+- Add the following custom filtering rule: `||*.lan^$dnstype=AAAA`
