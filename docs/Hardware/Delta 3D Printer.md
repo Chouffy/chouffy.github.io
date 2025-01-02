@@ -1,0 +1,1 @@
+Is a type of [[3D Print|3D Printer]] that works by moving the nozzle with 3 slides, which triangulate to a XYZ point. 

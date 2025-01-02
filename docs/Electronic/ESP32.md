@@ -1,6 +1,12 @@
 Is an [[Electronic]] board perfect for [[DIY project]] developed by [[Espressif]]
 ## Description
-It's the successor of the [[ESP8266]]
+- Successor of the [[ESP8266]]
+- Different boards: check the [module list](https://www.espressif.com/en/products/modules)
+- Different versions
+	- `WROOM`
+	- `WROVER` 
+		- `ESP32-D0WDQ6`
+		- 8 MB SPI PSRAM
 ### Datasheet
 See [[esp32_datasheet_en.pdf]]
 ### Pinout
