@@ -1,0 +1,1 @@
+Is the amount of [[current]] it takes to a [[Microcontroller]] to maintain a "0" or "1" input.

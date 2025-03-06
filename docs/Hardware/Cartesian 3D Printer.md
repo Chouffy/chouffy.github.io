@@ -1,1 +1,1 @@
-Is a type of [[3D Print|3D Printer]] that works by moving the nozzle on a X Y axis, and moving the plate on the Z axis. 
+Is a type of [[3D Print|3D Printer]] that works by moving the [[3D Print Nozzle|Nozzle]] on a X Y axis, and moving the plate on the Z axis. 

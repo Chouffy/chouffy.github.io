@@ -10,7 +10,7 @@ Is a type of [[3D Print|3D Printing]] that uses melted thermoplastic disposed by
 - Diameter
 	- 1.75 mm (standard)
 	- 2.85 mm (less common)
-- Material
+- Material (see also [Bambu Filament Guide](https://bambulab.com/en/filament-guide))
 	- [[Acrylonitrile Butadiene Styrene polymer|ABS]]
 	- [[Polylactic Acid|PLA]]
 	- [[Polyvinyl Alcohol|PVA]]
@@ -19,6 +19,7 @@ Is a type of [[3D Print|3D Printing]] that uses melted thermoplastic disposed by
 	- [[High-Density Polyethylene|HDPE]]
 	- [[High-Impact Polystyrene|HIPS]]
 	- [[Polyamide Nylon|PA]]
+	- [[Thermoplastic Polyurethane|TPU]]
 	- Composite materials
 		- [[Carbon Fiber|CF]]
 		- [[Wood Fibers]]
@@ -33,3 +34,4 @@ Is a type of [[3D Print|3D Printing]] that uses melted thermoplastic disposed by
 		- Painter's tape
 		- Kapton tape
 		- [[Acrylonitrile Butadiene Styrene polymer|ABS]] cement
+- [[Infill]]

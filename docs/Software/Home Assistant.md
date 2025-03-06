@@ -68,6 +68,7 @@ entities:
     1. remove integration in HA via the UI
     1. redownload app and do onboarding
     1. after onboarding restart HA and keep your app alive (so screen on)
+- If notifications doesn't work, check that [[Firebase]] domain isn't blocked 
 ### Integrations
 #### Calendar from Nextcloud
 * Useful to silence notification: just use a calendar to set "Silence" days

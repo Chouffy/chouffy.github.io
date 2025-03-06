@@ -1,6 +1,7 @@
 Is a general-purpose [[computer]] that can runs [[Raspberry Pi OS]] among other things
 ## GPIO
 - ![[GPIO_Pi2.webp|505]]
+	- Pin 2 is at the side of the board
 - [Full GPIO Layout](https://pinout.xyz/#)
 - Pinout on Raspberry 1 model B rev 2 and following are the same, save for the fewer pins.
 ### I2C Development

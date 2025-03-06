@@ -4,6 +4,10 @@ aliases:
 ---
 Is a [[Web]] [[Software]] navigator that run on all [[Operating System]]
 [Link to pick version to download](https://www.mozilla.org/en-US/firefox/all/)
+## Usage
+- Autofill/autocomplete
+	- Remove one entry by selecting it and `Shift+Del`
+	- Disable the feature in Settings → *Remember search and form history*
 ## Configuration
 - Edit in `about:config`
 	- Remove the `...` inside the address bar: `browser.urlbar.resultMenu.keyboardAccessible` to `false`
@@ -43,4 +47,6 @@ Use [Bandwidth Hero](https://bandwidth-hero.com/). Setup:
 2. Get the container ID - this is available in `containers.json` in your Firefox profile directory, in a key called `userContextId` (`47001` for example)
 3. In `about:config`, create a boolean key `network.http.windows-sso.container-enabled.CONTAINERID`, where `CONTAINERID` is from step 1. Set this key to `true`
 4. Enjoy Windows SSO working in the given container!
+### Save Page WE
+- Can save multiple tabs: open tabs then click the extension in the toolbar
 

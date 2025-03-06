@@ -1,1 +1,1 @@
-Is a type of [[3D Print|3D Printer]] that works by moving the nozzle on a X axis, a table or the nozzle on the Z axis, and a table with an angle theta that rotates on a fixed pole. 
+Is a type of [[3D Print|3D Printer]] that works by moving the [[3D Print Nozzle|Nozzle]] on a X axis, a table or the [[3D Print Nozzle|Nozzle]] on the Z axis, and a table with an angle theta that rotates on a fixed pole. 

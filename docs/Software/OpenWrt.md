@@ -1,8 +1,9 @@
 Is an [[Operating System]] based on [[Linux]] for [[network]] router devices.
 Few devices I own that can run it: [[Raspberry Pi]], [[Xiaomi AX3200]], [[TP-Link TL-WR841N]]
-
-Links:
+## Links
 - [Website](https://openwrt.org/)
+	- [Download](https://downloads.openwrt.org/)
+	- [Firmware selector](https://firmware-selector.openwrt.org/)
 - [Forum](https://forum.openwrt.org/)
 ## Hardware
 - Check the [Table of Hardware](https://openwrt.org/toh/start)
@@ -10,7 +11,9 @@ Links:
 	- 4/32 is deprectiated
 	- 8/64 will be soon (in ~2023)
 	- 16/128 is recommended
-- A great device (for me) is [[Xiaomi AX3200]]
+- Possibilities
+	- A great device (for me) is [[Xiaomi AX3200]]
+	- [GL.iNet](https://www.gl-inet.com/) is using OpenWrt as a base
 ### Generic x86/64 ([[Virtualization|VM]])
 - Follow [this guide](https://openwrt.org/docs/guide-user/virtualization/virtualbox-vm) to install on [[VirtualBox]]
 - After LAN setup, the LUCi interface is available on `192.168.56.2`
@@ -53,3 +56,4 @@ Links:
 		- IPv6 Assignment Lenght: 60
 	- DHCP Server - IPv6 Settings
 		- NDP-Proxy: disabled
+### Statistics
