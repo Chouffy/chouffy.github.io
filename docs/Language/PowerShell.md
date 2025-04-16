@@ -28,21 +28,21 @@ See the [[powershell-cheat-sheet.pdf]] - [Source](http://ramblingcookiemonster.g
 	- `Get-Module - ListAvailable` to list all modules
 ## Language
 ### Syntax
-| Command                 | Action                                                                                                                                                                                     |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `# comment`             | Comment                                                                                                                                                                                    |
-| `<# comment block #>`   | Comment block                                                                                                                                                                              |
-| `get-service -Name XYZ` | Call the command `get-service` with parameter `Name` and variable `XYZ`                                                                                                                    |
-| `net view`              | Call the parameter set `view` of the command `net`                                                                                                                                         |
-| `abc; def`              | Call `abc`, then `def `                                                                                                                                                                    |
-| `abc (def)`             | Call `def`, then `abc`                                                                                                                                                                     |
-| `abc \| def`            | Call `abd`, then pipe the *output object* into `def` (new line can be added after `\|` for visibility) (without `\`)                                                                       |
-| `*string*`              | Wildcard                                                                                                                                                                                   |
-| `$_` or `$PSItem`       | Current object in the pipeline                                                                                                                                                             |
-| `{}`                    | Script block to be called within another command                                                                                                                                           |
-| `$a`                    | Call variable `a`                                                                                                                                                                          |
-| `backtick`              | Escape character, or Go to a next line for clarity in script                                                                                                                               |
-| `Set-PSDebug -Trace 2`  | Trace everything on the console                                                                                                                                                            |
+| Command                 | Action                                                                                                               |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `# comment`             | Comment                                                                                                              |
+| `<# comment block #>`   | Comment block                                                                                                        |
+| `get-service -Name XYZ` | Call the command `get-service` with parameter `Name` and variable `XYZ`                                              |
+| `net view`              | Call the parameter set `view` of the command `net`                                                                   |
+| `abc; def`              | Call `abc`, then `def `                                                                                              |
+| `abc (def)`             | Call `def`, then `abc`                                                                                               |
+| `abc \| def`            | Call `abd`, then pipe the *output object* into `def` (new line can be added after `\|` for visibility) (without `\`) |
+| `*string*`              | Wildcard                                                                                                             |
+| `$_` or `$PSItem`       | Current object in the pipeline                                                                                       |
+| `{}`                    | Script block to be called within another command                                                                     |
+| `$a`                    | Call variable `a`                                                                                                    |
+| `backtick`              | Escape character, or Go to a next line for clarity in script                                                         |
+| `Set-PSDebug -Trace 2`  | Trace everything on the console                                                                                      |
 
 ### Value type
 - Object

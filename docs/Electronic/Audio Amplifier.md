@@ -28,9 +28,9 @@ Are types of [[Music|audio]] [[Hardware]] used to amplify sounds
 - Some hiss unless it's an expensive design
 - OK for sub (low) notes
 - Available boards
-	- `ZK-TB21`, `Aiyima TPA3116`
+	- `ZK-TB21`, [[Aiyima TPA3116]]
 		- 50Wx2+100W
-		- TPA3116D2
+		- Based on TPA3116D2
 	- `ZK-HT21`
 		- 160Wx2+220W
 		- TDA7498E

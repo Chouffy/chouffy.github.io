@@ -13,6 +13,8 @@ Is a [[Web]] [[Software]] navigator that run on all [[Operating System]]
 	- Remove the `...` inside the address bar: `browser.urlbar.resultMenu.keyboardAccessible` to `false`
 	- Do not close on last tab: `browser.tabs.closeWindowWithLastTab` to `false`
 - Start an older version of Firefox with a "newer" profile: `firefox -allow-downgrade`
+- Custom themes with Firefox Color
+	- [White & Black](https://color.firefox.com/?theme=XQAAAAIaAQAAAAAAAABBqYhm849SCia2CaaEGccwS-xMDPsqvXkIbAF6EJDWcx9sS_Bi3JZIITDDK-C2nG0G0z0GfwvIswtoHoo9irvTS5DTyKv36m-359GLYucbeuAVj0VgVo9VOpjSuwMvU-af8m5LKpiihbu-KwdVaBd6FudV1y-038da5_bj9t9x5GnU-34b8999pyjXhK6cgouEkL06WatD_0pnx__-VQeg)
 ### Screenshots
 - Tool available `CTRL+Shift+M` or in the Inspection → Responsive Design Mode 
 - Device Pixel Ratio: multiplier of the resolution of the viewport, similar to `@2x` in [[Figma]] for instance

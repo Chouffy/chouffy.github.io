@@ -16,7 +16,6 @@ Is a set of [[productivity]] [[Software]] that can run on a [[NAS]]
 * Change trash bin configuration: [see this article](https://docs.nextcloud.com/server/latest/admin_manual/configuration_files/trashbin_configuration.html)
 * If you have `sudo: nextcloud.occ: command not found`, then maybe your system doesn't add `/snap/bin` to the PATH → Use `sudo /snap/bin/nextcloud.occ`
 ### Cloudflare Tunnel
-![[Cloudflare Tunnel]]
 ## Integrations with other devices
 ### Outlook calendar
 Use [Outlook CalDav Synchronizer](https://github.com/aluxnimm/outlookcaldavsynchronizer) - but untestes
@@ -150,3 +149,5 @@ curl -i -H "Authorization: Basic COPY_YOUR_KEY_HERE=" ""https://www.ovh.com/nic/
 find /home/ncbackup/DDNS -mtime +14 -type f -delete
 echo "Removed old logs"
 ```
+### Maps
+- Mark a picture folder to be scanned: add an empty file `.index.maps`

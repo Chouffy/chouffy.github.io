@@ -85,7 +85,8 @@ Process:
 #### Bluetooth
 * Connect to an A2DP client:
     1. Pair device to PC
-    1. Install *Bluetooth Audio Receiver* from the Windows Store
+    2. Install *Bluetooth Audio Receiver* from the Windows Store
+- Alternative driver that support other codec: [Link](https://www.bluetoothgoodies.com/a2dp/)
 ### Control Panel / Settings
 * Open performances options panel (System > Advanced system settings, inaccessible if admin) `C:\Windows\System32\SystemPropertiesPerformance.exe`.
 * Reinstall Setting app - Setting app doesn't open: PowerShell `Get-AppXPackage | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}` - [Source](https://www.maketecheasier.com/fix-settings-app-not-working-in-windows-10/)

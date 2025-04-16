@@ -1,3 +1,7 @@
+---
+aliases:
+  - LuCI
+---
 Is an [[Operating System]] based on [[Linux]] for [[network]] router devices.
 Few devices I own that can run it: [[Raspberry Pi]], [[Xiaomi AX3200]], [[TP-Link TL-WR841N]]
 ## Links
@@ -23,7 +27,7 @@ Few devices I own that can run it: [[Raspberry Pi]], [[Xiaomi AX3200]], [[TP-Lin
 	- It uses [[LuCI]] as the user front-end
 	- You can use [[iPerf]] to measure performance
 	- [[AdGuard Home]] can be installed - package `adguardhome` - see [[AdGuard Home#OpenWrt]]
-	- Tailscale can be installed - [documentation](https://openwrt.org/docs/guide-user/services/vpn/tailscale/start)
+	- [[Tailscale]] can be installed - [documentation](https://openwrt.org/docs/guide-user/services/vpn/tailscale/start)
 	- [[Let's Encrypt]] can be installed with [acmesh](https://github.com/acmesh-official/acme.sh/wiki/dnsapi) - package `acme acme-dnsapi luci-app-acme`
 		- If you use [[Cloudflare]], you'll need: `dns_cf` and 3 variables: `CF_Token` (API) and `CF_Account_ID` + `CF_Zone_ID` (visible in the Cloudflare dashboard)
 	- [[Dynamic DNS]] can be installed with `luci-app-ddns`
@@ -56,4 +60,25 @@ Few devices I own that can run it: [[Raspberry Pi]], [[Xiaomi AX3200]], [[TP-Lin
 		- IPv6 Assignment Lenght: 60
 	- DHCP Server - IPv6 Settings
 		- NDP-Proxy: disabled
-### Statistics
+### Statistics in [[Home Assistant]]
+- See [OpenWRT Metrics & Automations with Home Assistant - Jon Brito](https://jonbrito.dev/articles/openwrt-mqtt-ha)
+- Setup statistics collection
+	- `opkg update`
+	- `opkg install luci-app-statistics collectd-mod-mqtt collectd-mod-rrdtool collectd-mod-uptime collectd-mod-conntrack collectd-mod-thermal`
+- Setup [[MQTT]] server like [[Mosquito MQTT Broker]]
+- Setup [[MQTT]] client in `/etc/collectd/conf.d/mqtt.conf`
+	```c
+	LoadPlugin mqtt
+	<Plugin "mqtt">
+	  <Publish "OpenWRT">
+	    Host "192.168.1.xxx" # Your MQTT broker IP address
+	    Port 1883
+	    User "openwrt"
+	    Password "YourSuperSecretPassword"
+	    ClientId "OpenWRT"
+	    Prefix "collectd"
+	    Retain true
+	  </Publish>
+	</Plugin>
+	```
+- In [[Home Assistant]], listen for the new MQTT topics

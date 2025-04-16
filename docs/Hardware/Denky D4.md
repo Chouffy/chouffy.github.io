@@ -9,6 +9,4 @@ Is a [[Linky]] reader based of a [[ESP32]]
 ## Setup
 - Linky I1 & I2 to the two ports (no polarity)
 - Flash the [[Tasmota]] firmware
-- Configure using web interface 
-	- Configuration du module
-		- Board type
+- Configure using web interface:  Configuration du module → Board type
