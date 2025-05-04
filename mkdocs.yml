@@ -128,3 +128,8 @@ plugins:
   - git-revision-date-localized:
       type: timeago
       enable_creation_date: true
+
+  # Open external links in a new tab
+  # https://github.com/JakubAndrysek/mkdocs-open-in-new-tab
+  - open-in-new-tab:
+      add_icon: true
