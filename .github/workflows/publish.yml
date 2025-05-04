@@ -29,5 +29,5 @@ jobs:
           restore-keys: |
             mkdocs-material-
         # Required install of Python Markdown modules
-      - run: pip install mkdocs-material mkdocs-ezlinked-plugin mkdocs-git-revision-date-localized-plugin
+      - run: pip install mkdocs-material mkdocs-ezlinked-plugin mkdocs-git-revision-date-localized-plugin mkdocs-open-in-new-tab
       - run: mkdocs gh-deploy --force
