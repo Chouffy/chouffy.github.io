@@ -1,0 +1,1 @@
+Is a [[Windows]] [[Software]] to [[stress-test]] [[Central Processing Unit|CPU]], [[Random Access Memory|RAM]], … with benchmarks.

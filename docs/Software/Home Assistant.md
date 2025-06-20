@@ -161,7 +161,7 @@ SELECT states_meta.entity_id as Entity, count(states.metadata_id) as Count FROM 
     * [Add a custom repo](https://hacs.xyz/docs/faq/custom_repositories)
 * Ressources
     * [Repository of examples](https://github.com/home-assistant/example-custom-config/tree/master/custom_components/)
-    * Icons: [Material Design Icons](https://materialdesignicons.com/) - use it like `mdi:home`
+    * Icons: [Material Design Icons](https://pictogrammers.com/library/mdi/) - use it like `mdi:home`
     * Unit of Measurement list - [const.py](https://github.com/home-assistant/core/blob/dev/homeassistant/const.py)
 ### Dev Setup
 * Follow [setup guide here](https://developers.home-assistant.io/docs/development_environment/)

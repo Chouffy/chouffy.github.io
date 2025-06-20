@@ -81,4 +81,4 @@ Few devices I own that can run it: [[Raspberry Pi]], [[Xiaomi AX3200]], [[TP-Lin
 	  </Publish>
 	</Plugin>
 	```
-- In [[Home Assistant]], listen for the new MQTT topics
+- In [[Home Assistant]], listen for the new MQTT topics, see [[OpenWrt + Home Assistant - MQTT Topics]]

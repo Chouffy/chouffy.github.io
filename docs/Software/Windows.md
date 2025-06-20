@@ -63,6 +63,8 @@ Run `OOBE\BYPASSNRO` in command line (`Shift + F10`)
 * View active network connections: TCPView by Sysinternals to know the executable, PID and service
 * Connect to a SMB share without being tied to your domain: `localhost\username`
 * Avoid automatic setup of network devices: *Settings → Advanced network settings → Advanced sharing settings → Private network* → Untick "Set up network connected devices automatically"
+#### File Sharing
+- Test access with `\\localhost` before trying on the remote host
 #### Wi-Fi Hotspot
 * Beware that old `netsh wlan start hosted network` doesn't work anymore with newer Windows 10 version! The *Mobile Hotspot* feature is different under the hood - [Source](https://stackoverflow.com/questions/41829382/wlanhostednetworkstartusing-or-how-windows-10-builtin-mobile-hotspot-works)
 * [TwiDam77's WiFi HotSpot (Soft AP)](https://www.microsoft.com/en-us/p/wifi-hotspot-soft-ap/9n0bhfm56zlm?activetab=pivot:overviewtab) is great to start/stop hotspot even without Internet
@@ -104,6 +106,7 @@ According to [this tutorial](https://www.eightforums.com/threads/tutorial-how-to
 - In Device Manager, go to Action → "Scan for hardware changes"
 #### Manage permission in an AzureAD-enrolled environment
 AzureAD-enrolled systems have weird User account (`azuread\firstmiddlelastname`) that doesn't exist in "standard" Windows things, like Sharing Permissions.
+(Note: Microsoft account lives in `MicrosoftAccount\<live_id_username>`)
 A workaround is to create a group, then assign the user to it:
 - `net localgroup AADLocalAdminGroup /add`
 - `net localgroup AADLocalAdminGroup azuread\firstmiddlelastname /add`

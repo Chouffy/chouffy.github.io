@@ -1,4 +1,4 @@
-Is a [[Software]] that can be used for [[3D Print]]
+Is a [[CAD]] [[Software]] that can be used for [[3D Print]]
 ## Usage
 - Create a Body
 - Create a Sketch

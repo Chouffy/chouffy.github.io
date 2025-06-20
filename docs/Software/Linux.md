@@ -85,6 +85,8 @@ sudo chmod +x /opt/software_name/executable # make the executable executable
 sudo ln -s /opt/software_name/executable /usr/bin/executable # create a simlink
 ```
 ### CPU & Processes
+- Check capabilities `lscpu`
+	- Can also list active mitigations
 * Check system stats
     * `htop` for processes
     * `nmon` for the whole system
@@ -115,7 +117,7 @@ sudo ln -s /opt/software_name/executable /usr/bin/executable # create a simlink
 * Check for partition corruption `fsck /dev/sdaXX00`
 * Stop a (USB) disk
     1. Unmount `sudo umount /dev/sdXX`
-    1. Spin down `sudo hdparm -Y /dev/sdXX`
+    2. Spin down / park `sudo hdparm -Y /dev/sdXX`
 * Erase a disk `sudo dd if=/dev/urandom of=/dev/sdXX bs=10M` - [Source](https://www.addictivetips.com/ubuntu-linux-tips/ways-to-securely-erase-a-hard-drive-on-linux/)
 * Check what is mounted where: `findmnt`
 * List all block devices: `lsblk`
@@ -190,7 +192,7 @@ sudo ln -s /opt/software_name/executable /usr/bin/executable # create a simlink
     1. `sudo certbot certonly --dns-cloudflare --dns-cloudflare-credentials /etc/letsencrypt/cloudflare.ini -d <EXAMPLE.COM>`
     1. Automated renewal should be set up by the snap, check `systemctl list-timers`
 ### Users & Groups
-* Users
+* Users ^98e6b4
     * `useradd USERNAME` add a new user
 	    * With a Home directory: `-m`
 	    * Remove shell access: `--shell /bin/false`

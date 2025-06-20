@@ -5,6 +5,7 @@ aliases:
 Is a [[programming language]] used to search pattern inside a text
 ## References
 - [RegExr](https://regexr.com/) to visually build and test expressions.
+	- For [[Java]]: [FreeFormatter Java RegEx Tester](https://www.freeformatter.com/java-regex-tester.html)
 - [Search flags](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags)
 ## Cheatsheet
 From [RegExr](https://regexr.com/)

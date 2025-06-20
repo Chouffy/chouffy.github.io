@@ -10,3 +10,4 @@ Is a [[Linky]] reader based of a [[ESP32]]
 - Linky I1 & I2 to the two ports (no polarity)
 - Flash the [[Tasmota]] firmware
 - Configure using web interface:  Configuration du module → Board type
+- If "New Contract Detected", do `EnergyConfig reset` in the console

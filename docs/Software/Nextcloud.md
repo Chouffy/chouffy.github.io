@@ -36,8 +36,8 @@ Use [Outlook CalDav Synchronizer](https://github.com/aluxnimm/outlookcaldavsynch
 	- `path` contains path per user, like `files/RootDir/SubDir`
 ### Backup
 Based on [How To Backup Nextcloud](https://kevq.uk/how-to-backup-nextcloud/)
-1. Create `ncbackup` user
-1. Edit `/usr/sbin/ncbackup.sh` with
+1. Create `ncbackup` user - see [[Linux#^98e6b4]]
+2. Edit `/usr/sbin/ncbackup.sh` with
 ```bash
 #!/bin/bash
 # Output to a logfile

@@ -5,10 +5,8 @@ Is a [[Virtualization|Supervisor]] [[Operating System]]
 - [[Home Assistant]] custom [integration](https://github.com/dougiteixeira/proxmoxve)
 ## Setup
 - In [[VirtualBox]]: see the [guide](https://pve.proxmox.com/wiki/Proxmox_VE_inside_VirtualBox)
-- Remove Subscription notice with [pve-nag-buster](https://github.com/foundObjects/pve-nag-buster)
-	- `wget https://raw.githubusercontent.com/foundObjects/pve-nag-buster/master/install.sh && chmod +x install.sh && ./install.sh`
-	- Then disable the `entreprise` repository
-- [Trove of scripts](https://tteck.github.io/Proxmox/)
+- [Trove of scripts](https://community-scripts.github.io/ProxmoxVE/)
+	- [Post-install script](https://community-scripts.github.io/ProxmoxVE/scripts?id=post-pve-install)
 	- Change CPU Scaling Governor to `powersave` to save some previous Watts
 	- Clean old kernels
 - [[Secure Shell Protocol|SSH]] port shouldn't be changed as it is used for cluster things
@@ -63,41 +61,16 @@ GRUB_TERMINAL=serial
 GRUB_SERIAL_COMMAND="serial --speed=115200 --unit=0 --word=8 --parity=no --stop=1"
 ```
 - Run `update-grub`
+### Create a [[QEMU]] CPU Model
+- Stored in `/etc/pve/virtual-guest/cpu-models.conf`
+- See [Documentation](https://pve.proxmox.com/pve-docs-7/cpu-models.conf.5.html)
+### Disable mitigations
+- Edit `/etc/default/grub`
+	- In `GRUB_CMDLINE_LINUX_DEFAULT`, add `mitigations=off`
+- `update-grub`
+- `reboot`
 ## Utilization
-### Best settings when creating a [[Virtualization|VM]]
-- [Windows 10 guest best practices](https://pve.proxmox.com/wiki/Windows_10_guest_best_practices)
-- [System](https://pve.proxmox.com/pve-docs/chapter-qm.html#qm_system_settings)
-	- QEMU Agent: enabled
-		- Need to be installed with `qemu-guest-agent` or [Fedora VirtIO drivers](https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/stable-virtio/virtio-win.iso)
-	- Machine type: `q35` + BIOS: `OVMF` for PCI Passthrough, otherwise default is fine
-- [CPU](https://pve.proxmox.com/pve-docs/chapter-qm.html#qm_cpu)
-	- Type:
-		- `x86-64-v3` works fine
-		- `host` will match the Host CPU, but will impact migration to to other systems
-- [Memory](https://pve.proxmox.com/pve-docs/chapter-qm.html#qm_memory)
-	- Ballooning: enabled, disable on Windows
-	- Minimum memory: don't use on Windows
-	- 1 GB must be made available for the host
-- [Network](https://pve.proxmox.com/pve-docs/chapter-qm.html#qm_network_device)
-	- Type: VirtIO
-- [Display](https://pve.proxmox.com/pve-docs/chapter-qm.html#qm_display)
-	- Type: `std` or `qxl` for [[Simple Protocol for Independent Computing Environments|SPICE]]
-- [Firmware](https://pve.proxmox.com/pve-docs/chapter-qm.html#qm_bios_and_uefi)
-	- SeaBIOS by default
-	- OVMF for [[Windows|Windows 11]] and [[PCI Express#IOMMU / PCIe Passthrough]]
-		- `pre-enroll-key` for Windows keys + Secure Boot on
-		- Virtual screen resolution is set in the VM BIOS
-- [Storage](https://pve.proxmox.com/pve-docs/chapter-qm.html#qm_hard_disk)
-	- Controller: VirtIO SCSI ([source](https://pve.proxmox.com/pve-docs/chapter-qm.html#qm_hard_disk)) single with IO Thread enabled
-	- Image Format: raw disk image by default if you use [[Logical Volume Manager|LVM]] or [[ZFS]]
-	- Cache: `none` ([source](https://pve.proxmox.com/wiki/Performance_Tweaks#Disk_Cache))
-		- `writeback` is faster, but can result in data lose
-	- Discard: enabled + SSD emulation: enabled, to let the OS [[TRIM]]
-	- IO Thread: enabled
-- For [[Windows]]
-	- Disable tablet device ([source](https://pve.proxmox.com/wiki/Performance_Tweaks#Windows))
-	- Use raw disk ([source](https://pve.proxmox.com/wiki/Performance_Tweaks#Windows))
-	- Don't use [[Kernel-based Virtual Machine|VirtIO]]
+- See [[QEMU#Best settings when creating a Virtualization VM]]
 ### Stop a VM
 - Shutdown simulate an ACPI power off
 - Stop simulate a sudden stops, like a power loss
@@ -118,5 +91,11 @@ GRUB_SERIAL_COMMAND="serial --speed=115200 --unit=0 --word=8 --parity=no --stop=
 		- Find the ZFS path with `zfs list`
 - Update Proxmox: `qm rescan`
 - If you use [[GUID Partition Table]]
+### Backup to USB External Drive
+- Have an existing `ext4` partition
+	- Or create it, check [[fstab#USB Disks]]
+- Create a folder and `mount /dev/sdba1 /mnt/folder`
+- Add the folder in Datacenter, Storage → Add Directory
 ## Sources
 -  [Before I do anything on Proxmox, I do this first...  - YouTube](https://www.youtube.com/watch?v=GoZaMgEgrHw)
+

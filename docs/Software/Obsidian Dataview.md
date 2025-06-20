@@ -7,6 +7,7 @@ Is an [[Obsidian]] plugin that allows you to you to [[database]] everything in a
 	- [Literals: dates, duration, ...](https://blacksmithgu.github.io/obsidian-dataview/reference/literals/)
 - [Visual Query Builder](https://s-blu.github.io/basic-dataview-query-builder/)
 	- Add a space ` ` at the end of the command if it doesn't work
+- [Cheatsheet](https://github.com/seburbandev/obsidian-dataview-cheatsheet)
 ## Metadata
 Are data about the data, like context
 

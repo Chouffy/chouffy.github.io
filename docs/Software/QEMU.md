@@ -1,0 +1,50 @@
+Is a [[Virtualization|Virtual Machine]] [[Software]]
+## CPU Model
+- CPU features per level (v1 → v4) [for x86](https://github.com/qemu/qemu/blob/a9cd5bc6399a80fcf233ed0fffe6067b731227d8/scripts/cpu-x86-uarch-abi.py#L20)
+	- v3: AVX, AVX2, …
+	- v4: AVX-512
+### Flags
+- [List of all models + available features](https://www.qemu.org/docs/master/system/qemu-cpu-models.html)
+	- Also available with `qemu-system-x86_64 -cpu help` 
+- [Hyper-V Enlightenments](https://www.qemu.org/docs/master/system/i386/hyperv.html)
+- See also [[QEMU Custom CPU Model]]
+## Best settings when creating a [[Virtualization|VM]]
+- [Windows 10 guest best practices](https://pve.proxmox.com/wiki/Windows_10_guest_best_practices)
+- [System](https://pve.proxmox.com/pve-docs/chapter-qm.html#qm_system_settings)
+	- QEMU Agent: enabled
+		- Need to be installed with `qemu-guest-agent` or [Fedora VirtIO drivers](https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/stable-virtio/virtio-win.iso)
+	- Machine type: `q35` + BIOS: `OVMF` for PCI Passthrough, otherwise default is fine
+- [CPU](https://pve.proxmox.com/pve-docs/chapter-qm.html#qm_cpu)
+	- Type:
+		- `x86-64-v4` works fine
+			- better than `host` for Windows as it signal that the machine is a VM
+		- ⚠️ Don't use `host`, at least on [[Proxmox]]
+			- decrease memory performance
+			- match the Host CPU
+			- impact migration to to other systems
+	- vIOMMU
+		- `Intel` has slightly better memory latency
+- [Memory](https://pve.proxmox.com/pve-docs/chapter-qm.html#qm_memory)
+	- Ballooning: enabled, disable on Windows
+	- Minimum memory: don't use on Windows
+	- 1 GB must be made available for the host
+- [Network](https://pve.proxmox.com/pve-docs/chapter-qm.html#qm_network_device)
+	- Type: VirtIO
+- [Display](https://pve.proxmox.com/pve-docs/chapter-qm.html#qm_display)
+	- Type: `std` or `qxl` for [[Simple Protocol for Independent Computing Environments|SPICE]]
+- [Firmware](https://pve.proxmox.com/pve-docs/chapter-qm.html#qm_bios_and_uefi)
+	- SeaBIOS by default
+	- OVMF for [[Windows|Windows 11]] and [[PCI Express#IOMMU / PCIe Passthrough]]
+		- `pre-enroll-key` for Windows keys + Secure Boot on
+		- Virtual screen resolution is set in the VM BIOS
+- [Storage](https://pve.proxmox.com/pve-docs/chapter-qm.html#qm_hard_disk)
+	- Controller: VirtIO SCSI ([source](https://pve.proxmox.com/pve-docs/chapter-qm.html#qm_hard_disk)) single with IO Thread enabled
+	- Image Format: raw disk image by default if you use [[Logical Volume Manager|LVM]] or [[ZFS]]
+	- Cache: `none` ([source](https://pve.proxmox.com/wiki/Performance_Tweaks#Disk_Cache))
+		- `writeback` is faster, but can result in data lose
+	- Discard: enabled + SSD emulation: enabled, to let the OS [[TRIM]]
+	- IO Thread: enabled
+- For [[Windows]]
+	- Disable tablet device ([source](https://pve.proxmox.com/wiki/Performance_Tweaks#Windows))
+	- Use raw disk ([source](https://pve.proxmox.com/wiki/Performance_Tweaks#Windows))
+	- Don't use [[Kernel-based Virtual Machine|VirtIO]]
