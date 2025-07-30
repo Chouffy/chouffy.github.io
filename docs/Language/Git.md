@@ -23,6 +23,7 @@ Some projects require a sign-off, which add `Signed-off-by: NAME <MAIL@EXAMPLE.C
 `git merge <branch-name>` - merge branch-name into current branch  
 `git branch -d <branch-name>` - delete a branch  
 ## Repo
+- if asked, use the `manager` credential system
 ### Connection
 `git remote add REPO https://URL` - add remote repo  
 `git remote remove REPO` - remove repo  
