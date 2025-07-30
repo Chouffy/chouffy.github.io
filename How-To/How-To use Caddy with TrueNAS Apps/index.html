@@ -12,25 +12,25 @@
         <meta name="author" content="Chouffy">
       
       
-        <link rel="canonical" href="https://chouffy.net/Software/Logitech%20Media%20Server/">
+        <link rel="canonical" href="https://chouffy.net/How-To/How-To%20use%20Caddy%20with%20TrueNAS%20Apps/">
       
       
-        <link rel="prev" href="../Logical%20Volume%20Manager/">
+        <link rel="prev" href="../How-To%20resize%20a%20Bitlocker%20partition%20without%20unencrypting%20it/">
       
       
-        <link rel="next" href="../MQTT/">
+        <link rel="next" href="../How-To%20use%20a%20PC%20as%20a%20second%20display/">
       
       
       <link rel="icon" href="../../assets/icon.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
     
     
       
-        <title>Logitech Media Server - Chouffy's Notes</title>
+        <title>How To use Caddy with TrueNAS Apps - Chouffy's Notes</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#setup" class="md-skip">
+        <a href="#why" class="md-skip">
           Skip to content
         </a>
       
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Logitech Media Server
+              How To use Caddy with TrueNAS Apps
             
           </span>
         </div>
@@ -212,7 +212,7 @@
         <a href="https://github.com/Chouffy/chouffy.github.io" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     Edit on GitHub
@@ -301,11 +301,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../How-To/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -345,13 +347,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../Software/" class="md-tabs__link">
           
   
   
@@ -399,7 +399,7 @@
       <a href="https://github.com/Chouffy/chouffy.github.io" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     Edit on GitHub
@@ -2811,6 +2811,8 @@
       
   
   
+    
+  
   
   
     
@@ -2826,22 +2828,27 @@
       
         
       
-    
-    
-    
-      
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../How-To/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -2854,13 +2861,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             How To
@@ -2876,7 +2883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../How-To/How-To%20publish%20a%20part%20of%20an%20Obsidian%20Vault%20to%20GitHub%20Pages/" class="md-nav__link">
+      <a href="../How-To%20publish%20a%20part%20of%20an%20Obsidian%20Vault%20to%20GitHub%20Pages/" class="md-nav__link">
         
   
   
@@ -2899,7 +2906,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../How-To/How-To%20resize%20a%20Bitlocker%20partition%20without%20unencrypting%20it/" class="md-nav__link">
+      <a href="../How-To%20resize%20a%20Bitlocker%20partition%20without%20unencrypting%20it/" class="md-nav__link">
         
   
   
@@ -2919,10 +2926,89 @@
                 
   
   
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    How To use Caddy with TrueNAS Apps
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    How To use Caddy with TrueNAS Apps
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how" class="md-nav__link">
+    <span class="md-ellipsis">
+      How
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
   
   
     <li class="md-nav__item">
-      <a href="../../How-To/How-To%20use%20a%20PC%20as%20a%20second%20display/" class="md-nav__link">
+      <a href="../How-To%20use%20a%20PC%20as%20a%20second%20display/" class="md-nav__link">
         
   
   
@@ -3512,8 +3598,6 @@
       
   
   
-    
-  
   
   
     
@@ -3895,25 +3979,36 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../Software/" class="md-nav__link ">
               
   
   
@@ -3926,13 +4021,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Software
@@ -3948,7 +4043,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../AdGuard%20Home/" class="md-nav__link">
+      <a href="../../Software/AdGuard%20Home/" class="md-nav__link">
         
   
   
@@ -3971,7 +4066,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Advanced%20Package%20Tool/" class="md-nav__link">
+      <a href="../../Software/Advanced%20Package%20Tool/" class="md-nav__link">
         
   
   
@@ -3994,7 +4089,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Alpine%20Linux/" class="md-nav__link">
+      <a href="../../Software/Alpine%20Linux/" class="md-nav__link">
         
   
   
@@ -4017,7 +4112,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Amazon%20Web%20Services/" class="md-nav__link">
+      <a href="../../Software/Amazon%20Web%20Services/" class="md-nav__link">
         
   
   
@@ -4040,7 +4135,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Analog%20Devices%20SigmaStudio/" class="md-nav__link">
+      <a href="../../Software/Analog%20Devices%20SigmaStudio/" class="md-nav__link">
         
   
   
@@ -4063,7 +4158,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Android%20Auto/" class="md-nav__link">
+      <a href="../../Software/Android%20Auto/" class="md-nav__link">
         
   
   
@@ -4086,7 +4181,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Android%20Debug%20Bridge/" class="md-nav__link">
+      <a href="../../Software/Android%20Debug%20Bridge/" class="md-nav__link">
         
   
   
@@ -4109,7 +4204,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Android/" class="md-nav__link">
+      <a href="../../Software/Android/" class="md-nav__link">
         
   
   
@@ -4132,7 +4227,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Apache/" class="md-nav__link">
+      <a href="../../Software/Apache/" class="md-nav__link">
         
   
   
@@ -4155,7 +4250,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../AppArmor/" class="md-nav__link">
+      <a href="../../Software/AppArmor/" class="md-nav__link">
         
   
   
@@ -4178,7 +4273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Arduino/" class="md-nav__link">
+      <a href="../../Software/Arduino/" class="md-nav__link">
         
   
   
@@ -4201,7 +4296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../AtlasOS/" class="md-nav__link">
+      <a href="../../Software/AtlasOS/" class="md-nav__link">
         
   
   
@@ -4224,7 +4319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Awall/" class="md-nav__link">
+      <a href="../../Software/Awall/" class="md-nav__link">
         
   
   
@@ -4247,7 +4342,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Bitwarden/" class="md-nav__link">
+      <a href="../../Software/Bitwarden/" class="md-nav__link">
         
   
   
@@ -4270,7 +4365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Caddy/" class="md-nav__link">
+      <a href="../../Software/Caddy/" class="md-nav__link">
         
   
   
@@ -4293,7 +4388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Calibre/" class="md-nav__link">
+      <a href="../../Software/Calibre/" class="md-nav__link">
         
   
   
@@ -4316,7 +4411,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CasaOS/" class="md-nav__link">
+      <a href="../../Software/CasaOS/" class="md-nav__link">
         
   
   
@@ -4339,7 +4434,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Chroma%20Subsampling/" class="md-nav__link">
+      <a href="../../Software/Chroma%20Subsampling/" class="md-nav__link">
         
   
   
@@ -4362,7 +4457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Chrony/" class="md-nav__link">
+      <a href="../../Software/Chrony/" class="md-nav__link">
         
   
   
@@ -4385,7 +4480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Clonezilla/" class="md-nav__link">
+      <a href="../../Software/Clonezilla/" class="md-nav__link">
         
   
   
@@ -4408,7 +4503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Cron/" class="md-nav__link">
+      <a href="../../Software/Cron/" class="md-nav__link">
         
   
   
@@ -4431,7 +4526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Custom%20Resolution%20Utility/" class="md-nav__link">
+      <a href="../../Software/Custom%20Resolution%20Utility/" class="md-nav__link">
         
   
   
@@ -4454,7 +4549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Cygwin/" class="md-nav__link">
+      <a href="../../Software/Cygwin/" class="md-nav__link">
         
   
   
@@ -4477,7 +4572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Cypth/" class="md-nav__link">
+      <a href="../../Software/Cypth/" class="md-nav__link">
         
   
   
@@ -4500,7 +4595,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Debian/" class="md-nav__link">
+      <a href="../../Software/Debian/" class="md-nav__link">
         
   
   
@@ -4523,7 +4618,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Destreamer/" class="md-nav__link">
+      <a href="../../Software/Destreamer/" class="md-nav__link">
         
   
   
@@ -4546,7 +4641,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../DisplayCAL/" class="md-nav__link">
+      <a href="../../Software/DisplayCAL/" class="md-nav__link">
         
   
   
@@ -4569,7 +4664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Docker/" class="md-nav__link">
+      <a href="../../Software/Docker/" class="md-nav__link">
         
   
   
@@ -4592,7 +4687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Documentation%20Softwares/" class="md-nav__link">
+      <a href="../../Software/Documentation%20Softwares/" class="md-nav__link">
         
   
   
@@ -4615,7 +4710,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Domain%20Name%20Server/" class="md-nav__link">
+      <a href="../../Software/Domain%20Name%20Server/" class="md-nav__link">
         
   
   
@@ -4638,7 +4733,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Duplicati/" class="md-nav__link">
+      <a href="../../Software/Duplicati/" class="md-nav__link">
         
   
   
@@ -4661,7 +4756,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ESPHome/" class="md-nav__link">
+      <a href="../../Software/ESPHome/" class="md-nav__link">
         
   
   
@@ -4684,7 +4779,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Electron/" class="md-nav__link">
+      <a href="../../Software/Electron/" class="md-nav__link">
         
   
   
@@ -4707,7 +4802,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Electronic%20circuits%20softwares/" class="md-nav__link">
+      <a href="../../Software/Electronic%20circuits%20softwares/" class="md-nav__link">
         
   
   
@@ -4730,7 +4825,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ExcaliDraw/" class="md-nav__link">
+      <a href="../../Software/ExcaliDraw/" class="md-nav__link">
         
   
   
@@ -4753,7 +4848,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Fakespot/" class="md-nav__link">
+      <a href="../../Software/Fakespot/" class="md-nav__link">
         
   
   
@@ -4776,7 +4871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Figma/" class="md-nav__link">
+      <a href="../../Software/Figma/" class="md-nav__link">
         
   
   
@@ -4799,7 +4894,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Firefly%20III/" class="md-nav__link">
+      <a href="../../Software/Firefly%20III/" class="md-nav__link">
         
   
   
@@ -4822,7 +4917,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../FolderSync/" class="md-nav__link">
+      <a href="../../Software/FolderSync/" class="md-nav__link">
         
   
   
@@ -4845,7 +4940,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../FreeCAD/" class="md-nav__link">
+      <a href="../../Software/FreeCAD/" class="md-nav__link">
         
   
   
@@ -4868,7 +4963,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../GNUCash/" class="md-nav__link">
+      <a href="../../Software/GNUCash/" class="md-nav__link">
         
   
   
@@ -4891,7 +4986,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../GParted/" class="md-nav__link">
+      <a href="../../Software/GParted/" class="md-nav__link">
         
   
   
@@ -4914,7 +5009,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../GRUB/" class="md-nav__link">
+      <a href="../../Software/GRUB/" class="md-nav__link">
         
   
   
@@ -4937,7 +5032,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../GUID%20Partition%20Table/" class="md-nav__link">
+      <a href="../../Software/GUID%20Partition%20Table/" class="md-nav__link">
         
   
   
@@ -4960,7 +5055,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Gammu/" class="md-nav__link">
+      <a href="../../Software/Gammu/" class="md-nav__link">
         
   
   
@@ -4983,7 +5078,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../GitHub/" class="md-nav__link">
+      <a href="../../Software/GitHub/" class="md-nav__link">
         
   
   
@@ -5006,7 +5101,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Healthchecks.io/" class="md-nav__link">
+      <a href="../../Software/Healthchecks.io/" class="md-nav__link">
         
   
   
@@ -5029,7 +5124,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../HiveMQ%20Community%20Edition/" class="md-nav__link">
+      <a href="../../Software/HiveMQ%20Community%20Edition/" class="md-nav__link">
         
   
   
@@ -5052,7 +5147,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Home%20Assistant/" class="md-nav__link">
+      <a href="../../Software/Home%20Assistant/" class="md-nav__link">
         
   
   
@@ -5075,7 +5170,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../IPv6/" class="md-nav__link">
+      <a href="../../Software/IPv6/" class="md-nav__link">
         
   
   
@@ -5098,7 +5193,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Icons/" class="md-nav__link">
+      <a href="../../Software/Icons/" class="md-nav__link">
         
   
   
@@ -5121,7 +5216,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../InfluxDB/" class="md-nav__link">
+      <a href="../../Software/InfluxDB/" class="md-nav__link">
         
   
   
@@ -5144,7 +5239,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Java%20Platform/" class="md-nav__link">
+      <a href="../../Software/Java%20Platform/" class="md-nav__link">
         
   
   
@@ -5167,7 +5262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Jekyll/" class="md-nav__link">
+      <a href="../../Software/Jekyll/" class="md-nav__link">
         
   
   
@@ -5190,7 +5285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../KOReader/" class="md-nav__link">
+      <a href="../../Software/KOReader/" class="md-nav__link">
         
   
   
@@ -5213,7 +5308,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Keypirinha/" class="md-nav__link">
+      <a href="../../Software/Keypirinha/" class="md-nav__link">
         
   
   
@@ -5236,7 +5331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../KiTTY/" class="md-nav__link">
+      <a href="../../Software/KiTTY/" class="md-nav__link">
         
   
   
@@ -5259,7 +5354,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../LTeX/" class="md-nav__link">
+      <a href="../../Software/LTeX/" class="md-nav__link">
         
   
   
@@ -5282,7 +5377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Let%27s%20Encrypt/" class="md-nav__link">
+      <a href="../../Software/Let%27s%20Encrypt/" class="md-nav__link">
         
   
   
@@ -5305,7 +5400,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../LineageOS/" class="md-nav__link">
+      <a href="../../Software/LineageOS/" class="md-nav__link">
         
   
   
@@ -5328,7 +5423,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Linux%20Infrared%20Remote%20Control/" class="md-nav__link">
+      <a href="../../Software/Linux%20Infrared%20Remote%20Control/" class="md-nav__link">
         
   
   
@@ -5351,7 +5446,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Linux/" class="md-nav__link">
+      <a href="../../Software/Linux/" class="md-nav__link">
         
   
   
@@ -5374,7 +5469,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Logical%20Volume%20Manager/" class="md-nav__link">
+      <a href="../../Software/Logical%20Volume%20Manager/" class="md-nav__link">
         
   
   
@@ -5394,76 +5489,20 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Logitech Media Server
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Software/Lyrion%20Music%20Server/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Logitech Media Server
+    Lyrion Music Server
     
   </span>
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      Setup
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#plugins" class="md-nav__link">
-    <span class="md-ellipsis">
-      Plugins
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -5476,7 +5515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../MQTT/" class="md-nav__link">
+      <a href="../../Software/MQTT/" class="md-nav__link">
         
   
   
@@ -5499,7 +5538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../MSI%20Afterburner/" class="md-nav__link">
+      <a href="../../Software/MSI%20Afterburner/" class="md-nav__link">
         
   
   
@@ -5522,7 +5561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../MacOS/" class="md-nav__link">
+      <a href="../../Software/MacOS/" class="md-nav__link">
         
   
   
@@ -5545,7 +5584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Magisk/" class="md-nav__link">
+      <a href="../../Software/Magisk/" class="md-nav__link">
         
   
   
@@ -5568,7 +5607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../MarkDownload/" class="md-nav__link">
+      <a href="../../Software/MarkDownload/" class="md-nav__link">
         
   
   
@@ -5591,7 +5630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Material%20for%20MkDocs/" class="md-nav__link">
+      <a href="../../Software/Material%20for%20MkDocs/" class="md-nav__link">
         
   
   
@@ -5614,7 +5653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Memtest86%2B/" class="md-nav__link">
+      <a href="../../Software/Memtest86%2B/" class="md-nav__link">
         
   
   
@@ -5637,7 +5676,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Microsoft%20Design%20Wallpaper/" class="md-nav__link">
+      <a href="../../Software/Microsoft%20Design%20Wallpaper/" class="md-nav__link">
         
   
   
@@ -5660,7 +5699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Microsoft%20Excel/" class="md-nav__link">
+      <a href="../../Software/Microsoft%20Excel/" class="md-nav__link">
         
   
   
@@ -5683,7 +5722,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Microsoft%20Office/" class="md-nav__link">
+      <a href="../../Software/Microsoft%20Office/" class="md-nav__link">
         
   
   
@@ -5706,7 +5745,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Microsoft%20Outlook/" class="md-nav__link">
+      <a href="../../Software/Microsoft%20Outlook/" class="md-nav__link">
         
   
   
@@ -5729,7 +5768,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Microsoft%20PowerPoint/" class="md-nav__link">
+      <a href="../../Software/Microsoft%20PowerPoint/" class="md-nav__link">
         
   
   
@@ -5752,7 +5791,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Microsoft%20Word/" class="md-nav__link">
+      <a href="../../Software/Microsoft%20Word/" class="md-nav__link">
         
   
   
@@ -5775,7 +5814,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Moonlight/" class="md-nav__link">
+      <a href="../../Software/Moonlight/" class="md-nav__link">
         
   
   
@@ -5798,7 +5837,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Mosquito%20MQTT%20Broker/" class="md-nav__link">
+      <a href="../../Software/Mosquito%20MQTT%20Broker/" class="md-nav__link">
         
   
   
@@ -5821,7 +5860,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Mozilla%20Firefox/" class="md-nav__link">
+      <a href="../../Software/Mozilla%20Firefox/" class="md-nav__link">
         
   
   
@@ -5844,7 +5883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Mullvad/" class="md-nav__link">
+      <a href="../../Software/Mullvad/" class="md-nav__link">
         
   
   
@@ -5867,7 +5906,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../MyElectricalData/" class="md-nav__link">
+      <a href="../../Software/MyElectricalData/" class="md-nav__link">
         
   
   
@@ -5890,7 +5929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Network%20File%20System/" class="md-nav__link">
+      <a href="../../Software/Network%20File%20System/" class="md-nav__link">
         
   
   
@@ -5913,7 +5952,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Nextcloud/" class="md-nav__link">
+      <a href="../../Software/Nextcloud/" class="md-nav__link">
         
   
   
@@ -5936,7 +5975,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../NirCmd/" class="md-nav__link">
+      <a href="../../Software/NirCmd/" class="md-nav__link">
         
   
   
@@ -5959,7 +5998,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Node-RED/" class="md-nav__link">
+      <a href="../../Software/Node-RED/" class="md-nav__link">
         
   
   
@@ -5982,7 +6021,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Node.js/" class="md-nav__link">
+      <a href="../../Software/Node.js/" class="md-nav__link">
         
   
   
@@ -6005,7 +6044,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Nvidia%20GameStream/" class="md-nav__link">
+      <a href="../../Software/Nvidia%20GameStream/" class="md-nav__link">
         
   
   
@@ -6028,7 +6067,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Nvidia%20Graphic%20Cards%20software/" class="md-nav__link">
+      <a href="../../Software/Nvidia%20Graphic%20Cards%20software/" class="md-nav__link">
         
   
   
@@ -6051,7 +6090,30 @@
   
   
     <li class="md-nav__item">
-      <a href="../Obsidian%20Dataview/" class="md-nav__link">
+      <a href="../../Software/OCCT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OCCT
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Software/Obsidian%20Dataview/" class="md-nav__link">
         
   
   
@@ -6074,7 +6136,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Obsidian%20Enhanced%20Mindmap%20-%20Mindmark/" class="md-nav__link">
+      <a href="../../Software/Obsidian%20Enhanced%20Mindmap%20-%20Mindmark/" class="md-nav__link">
         
   
   
@@ -6097,7 +6159,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Obsidian%20QuickAdd/" class="md-nav__link">
+      <a href="../../Software/Obsidian%20QuickAdd/" class="md-nav__link">
         
   
   
@@ -6120,7 +6182,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Obsidian%20Tasks/" class="md-nav__link">
+      <a href="../../Software/Obsidian%20Tasks/" class="md-nav__link">
         
   
   
@@ -6143,7 +6205,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Obsidian%20Templates/" class="md-nav__link">
+      <a href="../../Software/Obsidian%20Templates/" class="md-nav__link">
         
   
   
@@ -6166,7 +6228,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../OpenBSD/" class="md-nav__link">
+      <a href="../../Software/OpenBSD/" class="md-nav__link">
         
   
   
@@ -6189,7 +6251,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../OpenRC/" class="md-nav__link">
+      <a href="../../Software/OpenRC/" class="md-nav__link">
         
   
   
@@ -6212,7 +6274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../OpenVPN/" class="md-nav__link">
+      <a href="../../Software/OpenVPN/" class="md-nav__link">
         
   
   
@@ -6235,7 +6297,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../OpenWrt/" class="md-nav__link">
+      <a href="../../Software/OpenWrt/" class="md-nav__link">
         
   
   
@@ -6258,7 +6320,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Operating%20System/" class="md-nav__link">
+      <a href="../../Software/Operating%20System/" class="md-nav__link">
         
   
   
@@ -6281,7 +6343,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../OsmAnd/" class="md-nav__link">
+      <a href="../../Software/OsmAnd/" class="md-nav__link">
         
   
   
@@ -6304,7 +6366,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../PCI%20Express/" class="md-nav__link">
+      <a href="../../Software/PCI%20Express/" class="md-nav__link">
         
   
   
@@ -6327,7 +6389,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Parsec/" class="md-nav__link">
+      <a href="../../Software/Parsec/" class="md-nav__link">
         
   
   
@@ -6350,7 +6412,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Pi-Hole/" class="md-nav__link">
+      <a href="../../Software/Pi-Hole/" class="md-nav__link">
         
   
   
@@ -6373,7 +6435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Plop/" class="md-nav__link">
+      <a href="../../Software/Plop/" class="md-nav__link">
         
   
   
@@ -6396,7 +6458,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Portable%20Document%20Format/" class="md-nav__link">
+      <a href="../../Software/Portable%20Document%20Format/" class="md-nav__link">
         
   
   
@@ -6419,7 +6481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../PortableApps/" class="md-nav__link">
+      <a href="../../Software/PortableApps/" class="md-nav__link">
         
   
   
@@ -6442,7 +6504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Portainer/" class="md-nav__link">
+      <a href="../../Software/Portainer/" class="md-nav__link">
         
   
   
@@ -6465,7 +6527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../PowerTOP/" class="md-nav__link">
+      <a href="../../Software/PowerTOP/" class="md-nav__link">
         
   
   
@@ -6488,7 +6550,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ProtonVPN/" class="md-nav__link">
+      <a href="../../Software/ProtonVPN/" class="md-nav__link">
         
   
   
@@ -6511,7 +6573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Proxmox/" class="md-nav__link">
+      <a href="../../Software/Proxmox/" class="md-nav__link">
         
   
   
@@ -6534,7 +6596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Puppeteer/" class="md-nav__link">
+      <a href="../../Software/Puppeteer/" class="md-nav__link">
         
   
   
@@ -6557,7 +6619,30 @@
   
   
     <li class="md-nav__item">
-      <a href="../Quartz/" class="md-nav__link">
+      <a href="../../Software/QEMU/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    QEMU
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Software/Quartz/" class="md-nav__link">
         
   
   
@@ -6580,7 +6665,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Raspberry%20Pi%20OS/" class="md-nav__link">
+      <a href="../../Software/Raspberry%20Pi%20OS/" class="md-nav__link">
         
   
   
@@ -6603,7 +6688,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Rclone/" class="md-nav__link">
+      <a href="../../Software/Rclone/" class="md-nav__link">
         
   
   
@@ -6626,7 +6711,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Restic/" class="md-nav__link">
+      <a href="../../Software/Restic/" class="md-nav__link">
         
   
   
@@ -6649,7 +6734,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Roundcube/" class="md-nav__link">
+      <a href="../../Software/Roundcube/" class="md-nav__link">
         
   
   
@@ -6672,7 +6757,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../SFR%20on%20OpenWrt/" class="md-nav__link">
+      <a href="../../Software/SFR%20on%20OpenWrt/" class="md-nav__link">
         
   
   
@@ -6695,7 +6780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Screen/" class="md-nav__link">
+      <a href="../../Software/Screen/" class="md-nav__link">
         
   
   
@@ -6718,7 +6803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Secure%20Shell%20Protocol/" class="md-nav__link">
+      <a href="../../Software/Secure%20Shell%20Protocol/" class="md-nav__link">
         
   
   
@@ -6741,7 +6826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Security%20Identifier/" class="md-nav__link">
+      <a href="../../Software/Security%20Identifier/" class="md-nav__link">
         
   
   
@@ -6764,7 +6849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Sendgrid/" class="md-nav__link">
+      <a href="../../Software/Sendgrid/" class="md-nav__link">
         
   
   
@@ -6787,7 +6872,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ShareX/" class="md-nav__link">
+      <a href="../../Software/ShareX/" class="md-nav__link">
         
   
   
@@ -6810,7 +6895,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Short%20Messaging%20Service/" class="md-nav__link">
+      <a href="../../Software/Short%20Messaging%20Service/" class="md-nav__link">
         
   
   
@@ -6833,7 +6918,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Simple%20Protocol%20for%20Independent%20Computing%20Environments/" class="md-nav__link">
+      <a href="../../Software/Simple%20Protocol%20for%20Independent%20Computing%20Environments/" class="md-nav__link">
         
   
   
@@ -6856,7 +6941,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Snap/" class="md-nav__link">
+      <a href="../../Software/Snap/" class="md-nav__link">
         
   
   
@@ -6879,7 +6964,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../SquashFS/" class="md-nav__link">
+      <a href="../../Software/SquashFS/" class="md-nav__link">
         
   
   
@@ -6902,7 +6987,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Squeezelite-ESP32/" class="md-nav__link">
+      <a href="../../Software/Squeezelite-ESP32/" class="md-nav__link">
         
   
   
@@ -6925,7 +7010,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Squeezelite/" class="md-nav__link">
+      <a href="../../Software/Squeezelite/" class="md-nav__link">
         
   
   
@@ -6948,7 +7033,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Static%20Websites%20Generators/" class="md-nav__link">
+      <a href="../../Software/Static%20Websites%20Generators/" class="md-nav__link">
         
   
   
@@ -6971,7 +7056,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Sudo/" class="md-nav__link">
+      <a href="../../Software/Sudo/" class="md-nav__link">
         
   
   
@@ -6994,7 +7079,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Sunshine/" class="md-nav__link">
+      <a href="../../Software/Sunshine/" class="md-nav__link">
         
   
   
@@ -7017,7 +7102,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Super%20Productivity/" class="md-nav__link">
+      <a href="../../Software/Super%20Productivity/" class="md-nav__link">
         
   
   
@@ -7040,7 +7125,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../System%20Rescue/" class="md-nav__link">
+      <a href="../../Software/System%20Rescue/" class="md-nav__link">
         
   
   
@@ -7063,7 +7148,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Tailscale/" class="md-nav__link">
+      <a href="../../Software/Tailscale/" class="md-nav__link">
         
   
   
@@ -7086,7 +7171,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Tftpd64/" class="md-nav__link">
+      <a href="../../Software/Tftpd64/" class="md-nav__link">
         
   
   
@@ -7109,7 +7194,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../TinyWall/" class="md-nav__link">
+      <a href="../../Software/TinyWall/" class="md-nav__link">
         
   
   
@@ -7132,7 +7217,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../TrueNAS%20CORE/" class="md-nav__link">
+      <a href="../../Software/TrueNAS%20CORE/" class="md-nav__link">
         
   
   
@@ -7155,12 +7240,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../TrueNAS%20SCALE/" class="md-nav__link">
+      <a href="../../Software/TrueNAS/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    TrueNAS SCALE
+    TrueNAS
     
   </span>
   
@@ -7178,7 +7263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../TyperTask/" class="md-nav__link">
+      <a href="../../Software/TyperTask/" class="md-nav__link">
         
   
   
@@ -7201,7 +7286,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../UFW%20Firewall/" class="md-nav__link">
+      <a href="../../Software/UFW%20Firewall/" class="md-nav__link">
         
   
   
@@ -7224,7 +7309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Ubuntu%20Server/" class="md-nav__link">
+      <a href="../../Software/Ubuntu%20Server/" class="md-nav__link">
         
   
   
@@ -7247,7 +7332,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../UniExtract2/" class="md-nav__link">
+      <a href="../../Software/UniExtract2/" class="md-nav__link">
         
   
   
@@ -7270,7 +7355,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Unified%20Extensible%20Firmware%20Interface/" class="md-nav__link">
+      <a href="../../Software/Unified%20Extensible%20Firmware%20Interface/" class="md-nav__link">
         
   
   
@@ -7293,7 +7378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Ventoy/" class="md-nav__link">
+      <a href="../../Software/Ventoy/" class="md-nav__link">
         
   
   
@@ -7316,7 +7401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Vi/" class="md-nav__link">
+      <a href="../../Software/Vi/" class="md-nav__link">
         
   
   
@@ -7339,7 +7424,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Video%20Chapters/" class="md-nav__link">
+      <a href="../../Software/Video%20Chapters/" class="md-nav__link">
         
   
   
@@ -7362,7 +7447,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Virtual%20Private%20Network/" class="md-nav__link">
+      <a href="../../Software/Virtual%20Private%20Network/" class="md-nav__link">
         
   
   
@@ -7385,7 +7470,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../VirtualBox/" class="md-nav__link">
+      <a href="../../Software/VirtualBox/" class="md-nav__link">
         
   
   
@@ -7408,7 +7493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Visual%20Studio%20Code/" class="md-nav__link">
+      <a href="../../Software/Visual%20Studio%20Code/" class="md-nav__link">
         
   
   
@@ -7431,7 +7516,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../W10Wheel.net/" class="md-nav__link">
+      <a href="../../Software/W10Wheel.net/" class="md-nav__link">
         
   
   
@@ -7454,7 +7539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Watchtower/" class="md-nav__link">
+      <a href="../../Software/Watchtower/" class="md-nav__link">
         
   
   
@@ -7477,7 +7562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Web%20scripts/" class="md-nav__link">
+      <a href="../../Software/Web%20scripts/" class="md-nav__link">
         
   
   
@@ -7500,7 +7585,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Web%20video%20games/" class="md-nav__link">
+      <a href="../../Software/Web%20video%20games/" class="md-nav__link">
         
   
   
@@ -7523,7 +7608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Web/" class="md-nav__link">
+      <a href="../../Software/Web/" class="md-nav__link">
         
   
   
@@ -7546,7 +7631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../WhatsApp/" class="md-nav__link">
+      <a href="../../Software/WhatsApp/" class="md-nav__link">
         
   
   
@@ -7569,7 +7654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../WinSetView/" class="md-nav__link">
+      <a href="../../Software/WinSetView/" class="md-nav__link">
         
   
   
@@ -7592,7 +7677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Windows%20-%20Disable%20Power%20Management%20of%20a%20device/" class="md-nav__link">
+      <a href="../../Software/Windows%20-%20Disable%20Power%20Management%20of%20a%20device/" class="md-nav__link">
         
   
   
@@ -7615,7 +7700,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Windows%20Firewall/" class="md-nav__link">
+      <a href="../../Software/Windows%20Firewall/" class="md-nav__link">
         
   
   
@@ -7638,7 +7723,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Windows%20Task%20Scheduler/" class="md-nav__link">
+      <a href="../../Software/Windows%20Task%20Scheduler/" class="md-nav__link">
         
   
   
@@ -7661,7 +7746,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Windows/" class="md-nav__link">
+      <a href="../../Software/Windows/" class="md-nav__link">
         
   
   
@@ -7684,7 +7769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Wireshark/" class="md-nav__link">
+      <a href="../../Software/Wireshark/" class="md-nav__link">
         
   
   
@@ -7707,7 +7792,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Wordpress/" class="md-nav__link">
+      <a href="../../Software/Wordpress/" class="md-nav__link">
         
   
   
@@ -7730,7 +7815,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../XMind/" class="md-nav__link">
+      <a href="../../Software/XMind/" class="md-nav__link">
         
   
   
@@ -7753,7 +7838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Xubuntu/" class="md-nav__link">
+      <a href="../../Software/Xubuntu/" class="md-nav__link">
         
   
   
@@ -7776,7 +7861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ZFS/" class="md-nav__link">
+      <a href="../../Software/ZFS/" class="md-nav__link">
         
   
   
@@ -7799,7 +7884,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Zigbee%20Home%20Automation/" class="md-nav__link">
+      <a href="../../Software/Zigbee%20Home%20Automation/" class="md-nav__link">
         
   
   
@@ -7822,7 +7907,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Zoom/" class="md-nav__link">
+      <a href="../../Software/Zoom/" class="md-nav__link">
         
   
   
@@ -7845,7 +7930,30 @@
   
   
     <li class="md-nav__item">
-      <a href="../chmod/" class="md-nav__link">
+      <a href="../../Software/Zscaler/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Zscaler
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Software/chmod/" class="md-nav__link">
         
   
   
@@ -7868,7 +7976,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chown/" class="md-nav__link">
+      <a href="../../Software/chown/" class="md-nav__link">
         
   
   
@@ -7891,7 +7999,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cp/" class="md-nav__link">
+      <a href="../../Software/cp/" class="md-nav__link">
         
   
   
@@ -7914,7 +8022,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dd/" class="md-nav__link">
+      <a href="../../Software/dd/" class="md-nav__link">
         
   
   
@@ -7937,7 +8045,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../doh-server/" class="md-nav__link">
+      <a href="../../Software/doh-server/" class="md-nav__link">
         
   
   
@@ -7960,7 +8068,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../fstab/" class="md-nav__link">
+      <a href="../../Software/fstab/" class="md-nav__link">
         
   
   
@@ -7983,7 +8091,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../iOS/" class="md-nav__link">
+      <a href="../../Software/iOS/" class="md-nav__link">
         
   
   
@@ -8006,7 +8114,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../iPerf/" class="md-nav__link">
+      <a href="../../Software/iPerf/" class="md-nav__link">
         
   
   
@@ -8029,7 +8137,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../interfaces/" class="md-nav__link">
+      <a href="../../Software/interfaces/" class="md-nav__link">
         
   
   
@@ -8052,7 +8160,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../iptables/" class="md-nav__link">
+      <a href="../../Software/iptables/" class="md-nav__link">
         
   
   
@@ -8075,7 +8183,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mailx/" class="md-nav__link">
+      <a href="../../Software/mailx/" class="md-nav__link">
         
   
   
@@ -8098,7 +8206,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mitmproxy/" class="md-nav__link">
+      <a href="../../Software/mitmproxy/" class="md-nav__link">
         
   
   
@@ -8121,7 +8229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../moOde/" class="md-nav__link">
+      <a href="../../Software/moOde/" class="md-nav__link">
         
   
   
@@ -8144,7 +8252,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../paint.net/" class="md-nav__link">
+      <a href="../../Software/paint.net/" class="md-nav__link">
         
   
   
@@ -8167,7 +8275,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../piCorePlayer/" class="md-nav__link">
+      <a href="../../Software/piCorePlayer/" class="md-nav__link">
         
   
   
@@ -8190,7 +8298,30 @@
   
   
     <li class="md-nav__item">
-      <a href="../simplewall/" class="md-nav__link">
+      <a href="../../Software/postfix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Postfix
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Software/simplewall/" class="md-nav__link">
         
   
   
@@ -8213,7 +8344,53 @@
   
   
     <li class="md-nav__item">
-      <a href="../systemd-boot/" class="md-nav__link">
+      <a href="../../Software/stressapptest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Stressapptest
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Software/sysbench/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sysbench
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Software/systemd-boot/" class="md-nav__link">
         
   
   
@@ -8236,7 +8413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../systemd/" class="md-nav__link">
+      <a href="../../Software/systemd/" class="md-nav__link">
         
   
   
@@ -8259,7 +8436,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../unattended-upgrades/" class="md-nav__link">
+      <a href="../../Software/unattended-upgrades/" class="md-nav__link">
         
   
   
@@ -8270,6 +8447,82 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_194" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_194" id="__nav_6_194_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Attachments
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_194_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_194">
+            <span class="md-nav__icon md-icon"></span>
+            Attachments
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Software/Attachments/OpenWrt%20%2B%20Home%20Assistant%20-%20MQTT%20Topics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OpenWrt + Home Assistant   MQTT Topics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -8307,18 +8560,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#setup" class="md-nav__link">
+  <a href="#why" class="md-nav__link">
     <span class="md-ellipsis">
-      Setup
+      Why
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#plugins" class="md-nav__link">
+  <a href="#how" class="md-nav__link">
     <span class="md-ellipsis">
-      Plugins
+      How
     </span>
   </a>
   
@@ -8340,7 +8593,7 @@
 
 
   
-    <a href="https://github.com/Chouffy/chouffy.github.io/edit/main/docs/Software/Logitech Media Server.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/Chouffy/chouffy.github.io/edit/main/docs/How-To/How-To use Caddy with TrueNAS Apps.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -8349,27 +8602,33 @@
     
       
     
-    <a href="https://github.com/Chouffy/chouffy.github.io/raw/main/docs/Software/Logitech Media Server.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/Chouffy/chouffy.github.io/raw/main/docs/How-To/How-To use Caddy with TrueNAS Apps.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
     </a>
   
 
 
-  <h1>Logitech Media Server</h1>
+  <h1>How To use Caddy with TrueNAS Apps</h1>
 
-<p>Is a <a href="." title="Software">Software</a> made by <a href="../Logitech" title="Logitech">Logitech</a> to run a <a href="../Music" title="Music">Music</a> server and serve them to devices.</p>
-<h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
+<p>This is a <a href="../docs/How-To/index" title="How-To">How-To</a> use <a href="../../Software/Caddy/" title="Caddy">Caddy</a> to serve <a href="../../Software/Docker/" title="Docker">Docker</a> apps hosted on <a href="../../Software/TrueNAS/" title="TrueNAS">TrueNAS</a></p>
+<h2 id="why">Why<a class="headerlink" href="#why" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://registry.hub.docker.com/r/lmscommunity/logitechmediaserver/#!">Docker image</a></li>
+<li>Each TrueNAS Apps lives in its own stack, hence cannot communicate to each other<ul>
+<li>The internal <a href="../../Software/Docker/" title="Docker">Docker</a> DNS magic doesn't work</li>
+<li>This blocks <a href="../../Software/Caddy/" title="Caddy">Caddy</a> to access other containers web servers</li>
 </ul>
-<h2 id="plugins">Plugins<a class="headerlink" href="#plugins" title="Permanent link">&para;</a></h2>
+</li>
+</ul>
+<h2 id="how">How<a class="headerlink" href="#how" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>Material Skin</code> for a better theme</li>
-<li><a href="https://github.com/michaelherger/Spotty-Plugin">Spotty</a> to have <a href="../Spotify" title="Spotify">Spotify</a> integration<ul>
-<li>Must run network on <code>host</code> for proper <a href="../Spotify" title="Spotify">Spotify</a></li>
-<li><code>5353</code> port must be made available for <a href="../mDNS" title="mDNS">mDNS</a></li>
-<li>A wide range is necessary for auto discover to works, like <code>sudo ufw allow from 192.168.0.0/24 to any port 30000:50000 proto tcp</code></li>
+<li>In TrueNAS<ul>
+<li>In Network, create a new network interface with an un-routable alias, like <code>172.172.172.1/24</code></li>
+<li>In Apps, expose ports of each apps to be accessible from Caddy, like <code>172.172.172.1:30001</code></li>
+</ul>
+</li>
+<li>In the <code>Caddyfile</code> of <a href="../../Software/Caddy/" title="Caddy">Caddy</a><ul>
+<li>Use the exposed IP &amp; port</li>
 </ul>
 </li>
 </ul>
@@ -8395,7 +8654,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="February 20, 2024 08:35:14"><span class="timeago" datetime="2024-02-20T08:35:14+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="February 20, 2024 08:35:14">2024-02-20</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="July 30, 2025 04:05:53 UTC"><span class="timeago" datetime="2025-07-30T04:05:53+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="July 30, 2025 04:05:53 UTC">2025-07-30</span>
   </span>
 
     
@@ -8405,7 +8664,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="February 20, 2024 08:35:14"><span class="timeago" datetime="2024-02-20T08:35:14+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="February 20, 2024 08:35:14">2024-02-20</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="July 30, 2025 04:05:53 UTC"><span class="timeago" datetime="2025-07-30T04:05:53+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="July 30, 2025 04:05:53 UTC">2025-07-30</span>
   </span>
 
     
@@ -8459,10 +8718,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "toc.follow", "search.suggest", "content.action.view", "content.action.edit", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "toc.follow", "search.suggest", "content.action.view", "content.action.edit", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
       
         <script src="../../js/timeago.min.js"></script>
       
