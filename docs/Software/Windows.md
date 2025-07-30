@@ -93,6 +93,7 @@ Process:
 * Open performances options panel (System > Advanced system settings, inaccessible if admin) `C:\Windows\System32\SystemPropertiesPerformance.exe`.
 * Reinstall Setting app - Setting app doesn't open: PowerShell `Get-AppXPackage | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}` - [Source](https://www.maketecheasier.com/fix-settings-app-not-working-in-windows-10/)
 * Disable Aero Shake / Shake to Minimize: ` HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced` DWORD
+* Check current license activation: `slmgr.vbs -dli`
 #### Change names in Device Manager
 According to [this tutorial](https://www.eightforums.com/threads/tutorial-how-to-change-device-names-in-device-manager.15321/):
 - From the Device Manager, go to the Properties of the device and copy the Driver Key in Details

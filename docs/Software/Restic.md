@@ -1,6 +1,5 @@
 Is a [[Backup]] [[Software]] that can run on [[Windows]], [[Linux]], [[MacOS]]
-
-Links: 
+## Links 
 - [Website](https://restic.net/)
 - [GitHub](https://github.com/restic/restic)
 	- [Releases](https://github.com/restic/restic/releases)

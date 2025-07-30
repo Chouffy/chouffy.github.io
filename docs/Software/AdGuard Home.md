@@ -66,7 +66,7 @@ If using [[Let's Encrypt]], use:
 - Certificates: `fullchain.pem`
 - Private key: `privkey.pem`
 ## Custom Filtering rules
-- See [documentation](https://github.com/AdguardTeam/AdGuardHome/wiki/Hosts-Blocklists#client)
+- See [documentation](https://github.com/AdguardTeam/AdGuardHome/wiki/Hosts-Blocklists)
 - Possibility of combining several rules, like `||something.local.net^$client=192.168.0.0/24,dnsrewrite=192.168.0.1`
 ### Block local addresses being resolved in [[IPv6]]
 - Add the following custom filtering rule: `||*.lan^$dnstype=AAAA`

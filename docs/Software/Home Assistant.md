@@ -10,7 +10,7 @@ Is an [[Home automation]] [[Software|platform]], runs on [[Python]]
 1. Move somewhere like `/var/lib/libvirt/images/hassos.qcow2`
 1. Create the VM `sudo virt-install --name hassos --graphics vnc,listen=0.0.0.0 --memory=2048 --vcpus=2 --disk=/var/lib/libvirt/images/hassos.qcow2,format=qcow2 --boot uefi --import --os-variant=debian9 --network=bridge=br0`
 1. Login in http://homeassistant.local:8123
-### [[TrueNAS SCALE]]
+### [[TrueNAS]]
 [Source](https://community.home-assistant.io/t/alternative-way-of-running-hassos-full-os-on-freenas-without-iocage-or-docker/133738)
 1. Download the image [here](https://www.home-assistant.io/installation/linux)
 2. Unzip it
@@ -93,6 +93,7 @@ entities:
 	- NOT in `~/.ssh/` as it's not shared across containers
 	- In `/config/.ssh/` so it get preserved across updates
 - Set the known host in `/config/.ssh/` for the same reason than keys
+	- Copy it from `/root/.ssh/` after the 1st login
 - Call the command with `ssh HOST_CLIENT@HOST_IP -i /config/.ssh/HOST_privkey -o UserKnownHostsFile=/config/.ssh/HOST_known_hosts 'command'`
 	- `-i` to specify the private key (without `.pub`)
 	- `-o UserKnownHostsFile=/config/.ssh/HOST_known_hosts` to approve the hos
@@ -136,6 +137,7 @@ SELECT states_meta.entity_id as Entity, count(states.metadata_id) as Count FROM 
 "allows creating entities which derive their values from other data."
 - [Templating documentation](https://www.home-assistant.io/docs/configuration/templating/)
 - [Integration documentation](https://www.home-assistant.io/integrations/template)
+- [Sensor documentation](https://www.home-assistant.io/integrations/sensor/), including device class
 ### Monitor for broken automation
 - Names can changes when updating Home Assistant
 - [The Watchman](https://github.com/dummylabs/thewatchman) create reports to identify broken things

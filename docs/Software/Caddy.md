@@ -2,13 +2,14 @@ Is a [[Web]] server [[Software]]
 ## Setup
 - [Docker image](https://registry.hub.docker.com/_/caddy)
 - [Caddyfile explanation](https://caddyserver.com/docs/caddyfile-tutorial)
-- Fix UDP Buffer Size error for QUIC connections: 
+- Fix UDP Buffer Size error for QUIC connections on the host
 	- `sysctl -w net.core.rmem_max=2500000` 
 	- `sysctl -w net.core.wmem_max=2500000`
 ## Usage
 - `caddy reload` to reload configuration
 	- In `/etc/caddy` in the [[Docker]] image
 	- Reload in place with [[Docker]]: `docker exec caddy caddy reload -c /etc/caddy/Caddyfile`
+- HTTP/2 and HTTP/3 messages can be skipped if they are about `:80`
 ## Caddyfile
 ### Overall structure
 ```json

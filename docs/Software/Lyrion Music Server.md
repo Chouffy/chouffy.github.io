@@ -1,4 +1,8 @@
-Is a [[Software]] made by [[Logitech]] to run a [[Music]] server and serve them to devices.
+---
+aliases:
+  - Logitech Media Server
+---
+Is a [[Software]] originally made by [[Logitech]] to run a [[Music]] server and serve them to devices.
 ## Setup
 - [Docker image](https://registry.hub.docker.com/r/lmscommunity/logitechmediaserver/#!)
 ## Plugins

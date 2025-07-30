@@ -6,7 +6,7 @@ Is an [[Operating System]] for [[Raspberry Pi]] based on [[Linux]] to behave lik
 
 It is based on:
 - [[Squeezelite]] for the renderer part
-- [[Logitech Media Server]] for the server + UI part
+- [[Lyrion Music Server]] for the server + UI part
 ## Setup
 1. [Download](https://docs.picoreplayer.org/downloads/) and flash the image on a SD
 2. Boot and access the Raspberry Pi IP on HTTP

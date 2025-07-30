@@ -1,4 +1,6 @@
-is a [[Docker]] automated container update. [Website](https://containrrr.dev/watchtower/)
+is a [[Docker]] automated container update
+## Links
+- [Website](https://containrrr.dev/watchtower/)
 ## Notes
 - Environment variables:
 	* `TZ:timezone`: Timezone

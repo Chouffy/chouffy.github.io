@@ -12,4 +12,4 @@ aliases:
 ---
 Is a [[standard]] size of [[paper]]
 ## Relation between A-Sizes
-![[A Paper Standard-20240308135120314.webp]]
+![[A Paper Standard-20240308135120314.webp|320x437]]

@@ -2,7 +2,6 @@
 aliases: Linux Shell, Linux Shell Scrips, SH
 ---
 Is a [[shell]] and [[programming language]] for [[Linux]].
-See also [[PowerShell]]
 ## Commands & Examples
 - `# Comments` 
 - `&&` to combine commands

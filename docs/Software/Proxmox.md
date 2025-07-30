@@ -26,7 +26,7 @@ Is a [[Virtualization|Supervisor]] [[Operating System]]
 - Reboot
 - Check if active with [[PCI Express#IOMMU / PCIe Passthrough]]
 - Check IOMMU groups with [[PCI Express#PCIe Groups]]
-### Import a [[Virtualization|VM]] from [[TrueNAS SCALE]]
+### Import a [[Virtualization|VM]] from [[TrueNAS]]
 - Disk copy
 	- Copy the raw file from TrueNAS to Proxmox - [[ZFS#Commands]] with [[dd#Transfer between two PC]]
 	- Import the raw file with `qm importdisk <VMID> /path/to/file.raw local --format qcow2`
@@ -47,6 +47,7 @@ Is a [[Virtualization|Supervisor]] [[Operating System]]
 	- In each VM, assign the API token to the Role created
 - Choose a script option
 	- [cv4pve-pepper](https://github.com/Corsinvest/cv4pve-pepper)
+		- API Access: 
 	- Linux only script: [PVE Spice Connect](https://gitlab.com/pawlakm/pve-spice-connect)
 ### Configure [[ZFS]] settings
 #### Limit ZFS Memory usage
@@ -96,6 +97,8 @@ GRUB_SERIAL_COMMAND="serial --speed=115200 --unit=0 --word=8 --parity=no --stop=
 	- Or create it, check [[fstab#USB Disks]]
 - Create a folder and `mount /dev/sdba1 /mnt/folder`
 - Add the folder in Datacenter, Storage → Add Directory
+### Mail managements
+See [[postfix]]
 ## Sources
 -  [Before I do anything on Proxmox, I do this first...  - YouTube](https://www.youtube.com/watch?v=GoZaMgEgrHw)
 

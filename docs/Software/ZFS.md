@@ -82,7 +82,7 @@ See the introduction done by users in [TrueNAS forum](https://www.truenas.com/co
 	- `zfs_arc_min` must be ≤ to `zfs_arc_max`
 		- Default: 1/32 of system memory
 ### Commands
-- Binaries, if not linked, are available in `/sbin` for [[TrueNAS SCALE]]
+- Binaries, if not linked, are available in `/sbin` for [[TrueNAS]]
 - Move a `zvol` from one `zpool` to another: `zfs send aaa/myVol | zfs receive -v bbb/myVol`
 - Resize a `zvol`: `zfs set volsize=new_size tank/name_of_the_zvol`
 - Export a [[Virtualization|VM]]: `dd if=/dev/zvol/pool0/server-xxxxxx of=/tmp/server.raw bs=8m`

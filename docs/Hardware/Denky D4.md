@@ -1,3 +1,7 @@
+---
+aliases:
+  - Teleinfo ESP32
+---
 Is a [[Linky]] reader based of a [[ESP32]]
 ## Notes
 - [GitHub](https://github.com/hallard/Denky-D4) with ReadMe
@@ -5,7 +9,7 @@ Is a [[Linky]] reader based of a [[ESP32]]
 - [3D case](https://www.printables.com/model/580452-denky-d4-case) printable
 - [Forum](https://community.ch2i.eu/category/20/denky-d4)
 - Firmware
-	- [NicolasBernaerts' Modified Tasmota Firmware](https://github.com/NicolasBernaerts/tasmota/tree/master/teleinfo)
+	- [NicolasBernaerts' Modified Tasmota Firmware](https://github.com/NicolasBernaerts/tasmota/tree/master/teleinfo) with [Changelog](https://github.com/NicolasBernaerts/tasmota/blob/master/teleinfo/user_config_override.h)
 ## Setup
 - Linky I1 & I2 to the two ports (no polarity)
 - Flash the [[Tasmota]] firmware

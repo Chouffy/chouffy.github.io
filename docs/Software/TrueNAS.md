@@ -1,3 +1,7 @@
+---
+aliases:
+  - TrueNAS SCALE
+---
 Is an [[Operating System]] for [[server]] based on [[Debian]]. It uses [[ZFS]]
 ## Setup
 - This guide is pretty good:
@@ -93,5 +97,23 @@ See [[Kernel-based Virtual Machine#Install Windows Windows 11 as a Guest]]
 - Resolution: 1024x768
 - Bind: 0.0.0.0
 - Web interface: true
+## Apps
+- Are [[Docker]] Template / Container
+	- Each Custom App is a template, 
+- Use File Browser to manage files of a container
+### Setup a Custom App
+- Create a User & Group for that app
+- Create a Dataset
+	- Atime = off
+	- Exec = on
+	- ACL type = SMB/NFSv4
+	- ACL mode = Passthrough
+- Edit ACL of Dataset to reassign owner & group to created user & group
+- Create the Custom App
+## API
+- [Documentation](https://api.truenas.com/)
+- Callable via
+	- `cli -c task replication query` on the console
+	- `midclt call pool.import_pool '{"guid":"2141522297679488117"}` on [[Secure Shell Protocol|SSH]]
 ## References
 - [TrueNAS SCALE official documentation](https://www.truenas.com/docs/scale/)
