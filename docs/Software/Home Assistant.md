@@ -1,3 +1,7 @@
+---
+aliases:
+  - HA
+---
 Is an [[Home automation]] [[Software|platform]], runs on [[Python]]
 ## Setup
 ### [[Proxmox]]
