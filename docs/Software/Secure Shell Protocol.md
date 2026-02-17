@@ -1,5 +1,7 @@
 ---
-aliases: SSH, OpenSSH
+aliases:
+  - SSH
+  - OpenSSH
 ---
 Is a [[network]] protocol to communicate securily. Used by [[Linux]], among others.
 ## Usage

@@ -12,5 +12,12 @@ Is a "groupware" [[Software]] with mail, calendar and contact fonctions. Part of
 * Clear "Recent Location" drop-down list → Delete keys in: `HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Outlook\Preferences\LocationMRU`
 * Send availability to somebody so he can plan a meeting: use [BookWithMe](https://outlook.office.com/bookwithme<font color="#c00000">/</font>me)
 * Create an [[iCal]] feed URL: search for `Publish a Calendar` and get the ICS feed
+### Time zone in Outlook for Mac
+- The information sync for the time zone between the desktop Outlook for Mac app and the main server is broken
+- To change it manually:
+	1. Click [here](https://outlook.office.com/calendar/options/calendar/view) or go to Outlook for Web → Settings → Calendar → View
+	2. In the *Time Zone* section, change the "Display my calendar in time zone field"
+	3. Press Save
+	4. Press "Yes, update"
 ## Teams
 * Remove a Teams meeting from an existing invite: Add to the Ribbon the *Don't Host Online* command.

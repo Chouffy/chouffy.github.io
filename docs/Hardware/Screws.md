@@ -1,3 +1,7 @@
+---
+aliases:
+  - Vis
+---
 Are used in [[Hardware]] to fix things
 ## Notes
 - M3x2 means:

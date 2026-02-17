@@ -61,6 +61,7 @@ A dataset can contain all required data accessible via [[Network File System]] -
 ## [[Virtualization|Virtual Machine]]
 - Access [[Kernel-based Virtual Machine|virsh]]: `sudo virsh -c "qemu+unix:///system?socket=/run/truenas_libvirt/libvirt-sock" COMMAND`
 - Get the `domain` of the VM: In the TrueNAS interface → Virtualization → Select the VM → Download Logs and observe the name
+- Disable ReBAR and Above 4G decoding
 ### Install [[Windows]] in a [[Virtualization|VM]]
 See [[Kernel-based Virtual Machine#Install Windows Windows 11 as a Guest]]
 ### Enable [[TPM]] [[Virtualization]]

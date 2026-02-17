@@ -1,6 +1,7 @@
 ---
 aliases:
   - PCIe
+  - ASPM
 ---
 Is a [[computer]] expansion bus
 ## PCIe Groups
@@ -9,3 +10,5 @@ Is a [[computer]] expansion bus
 - Is the ability to redirect PCI device(s) to [[Virtualization|Virtual Machine]]
 - On [[Linux]], check if active with `dmesg | grep -e DMAR -e IOMMU -e AMD-Vi`
 	- Should return IOMMU, Directed I/O or Interrupt Remapping is enabled
+## ASPM: Active State Power Management
+- Can be buggy in desktop

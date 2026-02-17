@@ -15,7 +15,9 @@ Is a set of [[productivity]] [[Software]] that can run on a [[NAS]]
 * Host `X.X.X.X` was not connected to because it violates local access rules. → [Fix here](https://help.nextcloud.com/t/violates-local-access-rules-in-talk-9/84471/2)
 * Change trash bin configuration: [see this article](https://docs.nextcloud.com/server/latest/admin_manual/configuration_files/trashbin_configuration.html)
 * If you have `sudo: nextcloud.occ: command not found`, then maybe your system doesn't add `/snap/bin` to the PATH → Use `sudo /snap/bin/nextcloud.occ`
-### Cloudflare Tunnel
+### [[Fail2Ban]]
+- See [docs](https://docs.nextcloud.com/server/19/admin_manual/installation/harden_server.html?highlight=fail2ban#setup-fail2ban)
+- `nextcloud.log` directory in Nextcloud AIO is in the `nextcloud_aio_nextcloud` container, in `data/nextcloud.log`
 ## Integrations with other devices
 ### Outlook calendar
 Use [Outlook CalDav Synchronizer](https://github.com/aluxnimm/outlookcaldavsynchronizer) - but untestes

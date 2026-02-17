@@ -1,0 +1,1 @@
+Is a box that can control 1+ [[computer]] physically or remotely

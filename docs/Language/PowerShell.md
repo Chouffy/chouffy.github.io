@@ -153,6 +153,9 @@ See the [[powershell-cheat-sheet.pdf]] - [Source](http://ramblingcookiemonster.g
 	- `get-process`
 - Events
 	- `get-eventlog`
+### Output
+#### Error Codes
+- `Exit 0` means no issue, while non-zero value means error
 ## Usage
 - Check that you're admin before doing something
 ### Setup
@@ -247,7 +250,7 @@ Verb-Noun
 	- `-Command "& '/path/to/script.ps1'` to run a script
 	- `-File "/path/to/script.ps"` to run a script 
 	- `-NoExit` to keep the window open
-	- `-WindowStyle Hidden` to hide the window - Seems to work only with admin privilege
+	- `-WindowStyle Hidden` to hide/minimize the window - Seems to work only with admin privilege
 	- `-ExecutionPolicy Bypass` to bypass the [[PowerShell#Security]] check
 - Scheduling: See [[Windows Task Scheduler#Schedule PowerShell scripts]]
 ## Ressources

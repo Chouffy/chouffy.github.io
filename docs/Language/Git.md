@@ -32,6 +32,7 @@ Some projects require a sign-off, which add `Signed-off-by: NAME <MAIL@EXAMPLE.C
 `git clone` - copy the latest repo from remote  
 `git push` - push to remote  
 `git pull` - pull latest from remote  
+	and `git pull origin pull/#/head` to fetch a PR on [[GitHub]]
 ### `.gitignore`
 Is a file to manage what should be in git and what not
 ```gitignore

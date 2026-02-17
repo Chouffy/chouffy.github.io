@@ -72,7 +72,7 @@ entities:
     1. remove integration in HA via the UI
     1. redownload app and do onboarding
     1. after onboarding restart HA and keep your app alive (so screen on)
-- If notifications doesn't work, check that [[Firebase]] domain isn't blocked 
+- If notifications doesn't work, check that [[Firebase]] domain isn't blocked (`firebaseinstallations.googleapis.com`)
 ### Integrations
 #### Calendar from Nextcloud
 * Useful to silence notification: just use a calendar to set "Silence" days
@@ -136,6 +136,16 @@ sqlite3 home-assistant_v2.db
 .mode column
 .width 50, 10,
 SELECT states_meta.entity_id as Entity, count(states.metadata_id) as Count FROM states INNER JOIN states_meta ON states.metadata_id = states_meta.metadata_id GROUP BY states.metadata_id ORDER BY count(states.metadata_id) DESC LIMIT 30;
+```
+#### Get details statistics from an entity
+- Use the SQLite add-on
+- Browse the `statistics_meta` to discover the `id`
+- Query the table with:
+```sql
+SELECT *
+FROM "statistics"
+WHERE "metadata_id" = <ID Provided>
+ORDER BY "id"
 ```
 ### Templates
 "allows creating entities which derive their values from other data."

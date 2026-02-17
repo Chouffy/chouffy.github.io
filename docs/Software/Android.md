@@ -40,5 +40,7 @@ Keys | Usage
 ## Reverse engineering
 ### Decompiling APK
 - [This blog post](https://yasoob.me/posts/reverse-engineering-android-apps-apktool/) has some good suggestions using `apktool`
+- [How to sign an apk](https://3os.org/android/apktool/)
 * [JADX](https://github.com/skylot/jadx) Dex to Java decompiler
 	* [Online version](http://www.javadecompilers.com/apk)
+	* [Blog post](https://3os.org/android/jadx-decompiler/)

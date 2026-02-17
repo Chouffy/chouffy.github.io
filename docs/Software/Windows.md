@@ -30,6 +30,7 @@ Run `OOBE\BYPASSNRO` in command line (`Shift + F10`)
 ### CPU & Processes
 * Start a software on login with admin: create a scheduled task
 * Find which software blocks a file: open Sysinternals Process Explorer → Find → Find Handle or DLL
+* Traces can be done using [UIforETW](https://github.com/randomascii/UIforETW) ([docs](https://randomascii.wordpress.com/2015/09/24/etw-central/))
 ### Power & Battery
 * Modern Standby: [Check S states](https://www.laptopmag.com/articles/how-to-use-modern-standby)
 ### Data & Files
@@ -63,6 +64,10 @@ Run `OOBE\BYPASSNRO` in command line (`Shift + F10`)
 * View active network connections: TCPView by Sysinternals to know the executable, PID and service
 * Connect to a SMB share without being tied to your domain: `localhost\username`
 * Avoid automatic setup of network devices: *Settings → Advanced network settings → Advanced sharing settings → Private network* → Untick "Set up network connected devices automatically"
+#### Printer
+- Add a printer using IP address and avoid using WSD:
+	- Go to Printer setting, Add a device and wait for the "Search Manually"
+	- Select IP Printer and input the IP/DNS name of the printer
 #### File Sharing
 - Test access with `\\localhost` before trying on the remote host
 #### Wi-Fi Hotspot
