@@ -1,4 +1,4 @@
-Is a terminal multiplexer in [[Linux]]
+Is a [[terminal multiplexer]] in [[Linux]]
 ## Reference
 [Complete guide here](https://www.howtogeek.com/662422/how-to-use-linuxs-screen-command/)
 * Start `screen`

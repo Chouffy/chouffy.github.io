@@ -95,6 +95,7 @@ See the [[powershell-cheat-sheet.pdf]] - [Source](http://ramblingcookiemonster.g
 - If in a script, parameters variables can also be defined in `param ()` - see [[PowerShell#Functions]]
 - Advanced help: `get-help *variable*`
 - Environment variable in [[Batch]] are defined as `$Env:ENVIRONMENT_VARIABLE_NAME`
+	- Like `$Env:PATH`, so you can do `$Env:PATH = "$Env:PATH;path\to\something"`
 ### Interaction with CLI
 - Input
 	- `read-host`

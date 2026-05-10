@@ -17,5 +17,7 @@ Is the [[Zigbee]] implementation used in [[Home Assistant]]
 ```yaml
 zha:
      enable_quirks: true
-     custom_quirks_path: /config/zha_quirks/
+     custom_quirks_path: zha_quirks/
 ```
+
+- `custom_quirks_path` without leading `/` gives the same root directory as `configuration.yaml` 

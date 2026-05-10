@@ -17,3 +17,6 @@ Is a [[Software]] [[password manager]], alternative to [[KeePass]]
 	- Don't forget to block `/admin` too
 ## Client Setup
 - Autofill isn't supported, see [forum thread](https://community.bitwarden.com/t/auto-type-autofill-for-logging-into-other-desktop-apps/158)
+- Migration from [[KeePass]] to [[Bitwarden]], see [this tool](https://github.com/jampe/kp2bw)
+## Usage
+- Skip Passkey notification in Browser addon → Notifications → Excluded domains

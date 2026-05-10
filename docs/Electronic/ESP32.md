@@ -19,6 +19,8 @@ Is an [[Electronic]] board perfect for [[DIY project]] developed by [[Espressif]
 	- Imax = 260mA - see [this](https://lastminuteengineers.com/esp32-sleep-modes-power-consumption/)
 	- [Reference guide from Expressif](https://docs.espressif.com/projects/esp-iot-solution/en/latest/hw-reference/ESP-Prog_guide.html)
 	- See [ESP32-With-ESP-PROG-Demo - GitHub](https://github.com/PBearson/ESP32-With-ESP-PROG-Demo)
+### Debugging
+- `poweron_reset` in the logs  → check power supply
 
 ## Arduino environment
 This board can run [[docs/Software/Arduino|Arduino]] code - see the [online documentation](https://docs.espressif.com/projects/arduino-esp32/en/latest/)

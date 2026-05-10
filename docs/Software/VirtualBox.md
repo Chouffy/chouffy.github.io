@@ -3,6 +3,7 @@ Is a [[Virtualization]] [[Software]] that can runs on [[MacOS]], [[Windows]], [[
 - Nested [[Virtualization]] cannot be enabled on [[Windows|Windows 11]] as [[Hyper-V]] is active by default
 ### On [[Windows]]
 - Change Host-Only adapter name → [[Windows#Change names in Device Manager]]
+- Access shared folder: `\\vboxsvr`
 ### On [[Linux]]
 * Install VirtualBox Guests Addons manually on Ubuntu
 	1. `sudo apt install gcc make perl` 

@@ -1,3 +1,7 @@
+---
+aliases:
+  - Huawei Balong Modem
+---
 Is a [[WWAN]] [[Universal Serial Bus]] modem
 ## Characteristics
 - 2G/3G/4G, up to 150 Mbps
@@ -9,7 +13,18 @@ Is a [[WWAN]] [[Universal Serial Bus]] modem
 ## Notes
 - HiLink is the NAT mode, where the stick act as a RNDIS interface in Windows
 - TTY is the console mode, more compatible with [[Linux]] via [[Gammu]] for instance
+- See also
+	- [GitHub - Huawei LTE Routers Mods](https://github.com/Huawei-LTE-routers-mods)
 ### Switch from HiLink to TTY
+#### Using Windows
+- ⚠️ You need to use a Windows 7 PC
+	- If you use a [[Virtualization|VM]], use [[VMWare Workstation]]
+	- [[VirtualBox]] crashes with this USB activity
+- See [this](https://blog.le-vert.net/?p=196) tutorial
+	- Mobile Partner can also be downloaded from [this website](https://www.huaweiflashfiles.com/p/download-mobile-partner-dashboard-all.html)
+		- It also contains NCM drivers for Windows
+- `AT^SETPORT="FF;10,12,16,A1,A2"` if you want all the features
+#### Using Linux
 - This is required if you want to use the stick in [[Home Assistant]] for instance.
 - Open the case, and plug the device while shorting the boot pin
 	- Next to the microSD card reader
@@ -18,7 +33,7 @@ Is a [[WWAN]] [[Universal Serial Bus]] modem
 	- If successful, the device should appear as a TTY USB0 - check with `ls /dev/*USB*`
 - Download each repo and do a `make`:
 	- `git clone https://github.com/forth32/balongflash.git`
-	- `https://github.com/forth32/balong-usbdload.git`
+	- `make`
 	- You may need to  `apt install libz-dev`
 - Download the firmware on [routerunlock](https://routerunlock.com/download-huawei-e3272-modem-firmware-software-update-free/)
 	- AT interface should be present with firmware `21.420.07.00.00`
@@ -35,7 +50,10 @@ Is a [[WWAN]] [[Universal Serial Bus]] modem
 	- On Windows, try to connect to COMx via [[KiTTY]]
 		- Issue the `AT` command
 		- It should answer `OK`
+		- Note: don't use back key!
 - Set the profile in the TTY: `AT^SETPORT="FF;10,12"` then `AT^RESET`
+	- Or `AT^SETPORT="A1,A2;10,12,16,A1,A2"` to use with [[OpenWrt]]
+	- Note the double `"…"`
 ### AT Commands
 - Always put a space at the end, before the command!
 - Multiple commands can be combined with `;`
@@ -48,7 +66,9 @@ Is a [[WWAN]] [[Universal Serial Bus]] modem
 | `AT^SETPORT?`  | List current profile         | 
 | `AT^SETPORT=?` | List available profiles      |
 | `AT^RESET`     | Reset the device             |
-
+#### `AT^SETPORT` Commands
+- Start with `FF` to avoid using USB switch
+- Always keep the UI interface
 ## Ressources
 - [Example of AT commands on a Huawei modem](https://openwrt.org/docs/guide-user/network/wan/wwan/at_commands#huawei_e392)
 - [Disable HiLink mode and force tty modem on NEW Huawei E3272 - blog.le-vert.net](https://blog.le-vert.net/?p=196)

@@ -8,7 +8,7 @@ Is a [[serial]] [[bus]] to connect [[Microcontroller]] to transmit [[Music|sound
 - While naming is similar, it's completely different than [[Inter-Integrated Circuit|I²C]]
 - Require
 	- Ground
-	- SCK / BC(L)K: Serial Clock
+	- SCK / BC(L)K: Serial Clock / Clock GPIO
 	- WS / L(R)CLK / FS: Word Select
 	- SD(ATA) / (S)DIN / SDOUT / DACDAT / ADCDAT: Serial Data
 - Optional

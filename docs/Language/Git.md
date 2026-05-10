@@ -62,3 +62,5 @@ Is a file to manage what should be in git and what not
 	git checkout
 	```
 - Ignore changes tracking on existing file like `.gitignore` ([source](https://stackoverflow.com/a/4949978)): `git update-index --assume-unchanged .gitignore`
+## Debugging
+- Credential Helper Selector: Use `manager` in doubt 
