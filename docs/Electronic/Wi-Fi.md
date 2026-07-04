@@ -15,6 +15,8 @@ Is a [[wireless]] [[network]] protocol
 	- Japan: restricted above 144
 	- Some device: restricted at or above 140 
 - Some channels can have restricted transmit power
+### 6 GHz
+
 ## Notes
 * [Wi-Fi password to QR Code](https://qifi.org/)
     * Also works by creating a QR code that contains `WIFI:S:SSID;T:WPA;P:PASSWORD;;`

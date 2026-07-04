@@ -1,6 +1,7 @@
 Is a [[Nvidia Graphic Cards software|Nvidia Graphic Card]] made by [[Nvidia]] for [[computer]] and [[server]]
 ## Notes
 - If the system crashes, disable ASPM (energy management) in [[BIOS]]
+- The 1st video out (for BIOS) is the one closest to the motherboard 
 ## Specifications
 - Note on naming: Nvidia RTX ≠ Nvidia GeForce RTX
 - GPU: GA106

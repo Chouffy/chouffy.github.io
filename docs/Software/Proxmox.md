@@ -12,7 +12,7 @@ Is a [[Virtualization|Supervisor]] [[Operating System]]
 - [[Secure Shell Protocol|SSH]] port shouldn't be changed as it is used for cluster things
 	- Setup [[Cloudflare]] DNS with Proxmox: [Guide](https://3os.org/infrastructure/proxmox/lets-encrypt-cloudflare/)
 ### Activate IOMMU / PCIe Passthrough
-- See this [Wiki page](https://pve.proxmox.com/wiki/PCI_Passthrough) and [this documentation page](https://pve.proxmox.com/pve-docs/chapter-qm.html#qm_pci_passthrough)
+- See this [Wiki page](https://pve.proxmox.com/wiki/PCI_Passthrough),  [this documentation page](https://pve.proxmox.com/pve-docs/chapter-qm.html#qm_pci_passthrough) and this one about [GPU passthrough](https://clayfreeman.github.io/gpu-passthrough/)
 - Add `intel_iommu=on` or `amd_iommu=on` to the [[GRUB#Kernel Command Lines]] or [[systemd-boot#Kernel Command Lines]] (in [[Unified Extensible Firmware Interface|UEFI]])
 	- IOMMU Passthrough can also be added if supported with `iommu=pt`
 - Edit `/etc/modules` and add 

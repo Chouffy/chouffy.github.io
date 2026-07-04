@@ -40,3 +40,15 @@ Are types of [[Music|audio]] [[Hardware]] used to amplify sounds
 ## Resources 
 - [The Ultimate PC Sound System (Build Guide) - DIY Perks](https://diyperks.com/the-ultimate-pc-sound-system/)
 - [Building EXCEPTIONAL speakers using MODERN TECHNIQUES - DIY Perks](https://www.youtube.com/watch?v=XEspOD1NHr0&app=desktop)
+## Available amplifiers
+- `ZK-TB21`
+	- 50Wx2+100W
+	- TPA3116D2
+- `ZK-HT21`
+	- 160Wx2+220W
+	- TDA7498E
+- `ZK-MT21`
+	- 2x50W+100W 
+	- CS8673E
+- `Aiyima TPA`
+- `nobsound `

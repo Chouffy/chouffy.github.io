@@ -24,7 +24,7 @@ Data are in `/var/lib/docker/volumes/`.
 Install guide for Linux [here](https://docs.docker.com/engine/install/ubuntu/).
 Don't forget to add yourself to the docker group: `usermod -a -G docker $USER`
 ### Container management
-* Run `docker run -d --name container_name image` with *image* `nginx` for example
+* Run `docker run -d --name container_name image` with *image* `nginx` or `debian` for example
 * Stop `docker stop container_name`
 * Restart `docker restart container_name`
 * Pause `docker pause container_name` and `docker unpause container_name`

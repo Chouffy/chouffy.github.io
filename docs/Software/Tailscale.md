@@ -1,7 +1,7 @@
 Is a [[Virtual Private Network|VPN]] to access internal [[network]] ressources from the internet.
 ## Notes
 - Exit nodes to have a full-VPN
-- IP ranges ([source](https://tailscale.com/kb/1033/ip-and-dns-addresses)): `100.0.0.0/8` and `fd7a:115c:a1e0::/48`
+- IP ranges ([source](https://tailscale.com/kb/1033/ip-and-dns-addresses)): `100.64.0.0/10` and `fd7a:115c:a1e0::/48`
 ## Setup
 ### [[OpenWrt]]
 To expose a subnet to Tailscale - see [source](https://www.wundertech.net/how-to-set-up-tailscale-on-openwrt/)

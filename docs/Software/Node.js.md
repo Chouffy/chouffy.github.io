@@ -10,6 +10,7 @@ Is a [[server]] [[Software]] that interprets [[JavaScript]]
 		- `callbackFunction` is called without `()` as we need the actual function, not the value out of it
 		- `delayInMilliseconds` is a *minimum time*, not the exact time
 ## Usage
+- Call with `npm run dev`, if `dev` is defined in `package.json`
 ### Define a callable script
 - Define a module
 ```js
